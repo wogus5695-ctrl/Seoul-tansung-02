@@ -208,7 +208,13 @@ export function SecondaryButton({ children, onClick, style = {} }) {
 export function ImagePlaceholder({ label, ratio = '16:9', size = 'Recommended: 800x450' }) {
   // Map labels to siteImages keys
   let imageSrc = null;
-  if (label === 'BATHROOM_GROUT_IMAGE' || label === 'GROUT_HERO') {
+  const isGroutKeyword = label === 'BATHROOM_GROUT_IMAGE' || 
+                         label === 'GROUT_HERO' || 
+                         label === 'ENTRANCE_GROUT_IMAGE' || 
+                         label === 'BALCONY_GROUT_IMAGE' || 
+                         label === 'TOILET_GROUT_IMAGE';
+
+  if (isGroutKeyword) {
     imageSrc = '/bathroom_grout_hero.png';
   } else if (label === 'GROUT_SERVICE_IMAGE' || label === 'GROUT_PANEL') {
     imageSrc = '/bathroom_grout_panel.png';
