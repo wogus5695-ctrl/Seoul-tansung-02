@@ -765,22 +765,12 @@ function App() {
               </div>
             </div>
 
-            <div style={{ position: 'relative' }}>
+            <div>
               <ImagePlaceholder 
                 label={parsedKeyword ? parsedKeyword.service.imagePlaceholderKey : 'HERO_IMAGE_PLACEHOLDER'} 
                 ratio="4:5" 
                 size="Main image (4:5 / Recommended: 800x1000)" 
               />
-              <div style={{
-                position: 'absolute',
-                bottom: '-20px',
-                right: isDesktop ? '-20px' : '10px',
-                width: '40%',
-                border: '4px solid var(--warm-white)',
-                borderRadius: '4px'
-              }}>
-                <ImagePlaceholder label="HERO_DETAIL_IMAGE_PLACEHOLDER" ratio="1:1" size="Detail overlay 1:1" />
-              </div>
             </div>
           </div>
         </SectionContainer>
