@@ -891,8 +891,8 @@ function App() {
               description="욕실과 현관 등 타일 틈의 기존 줄눈 상태를 확인하고, 공간의 사용 환경에 맞는 자재와 색상을 안내합니다."
             >
               <div style={{ display: 'grid', gridTemplateColumns: isDesktop ? '1fr 1fr' : '1fr', gap: '20px', marginTop: '20px', textAlign: 'left' }}>
-                <ImagePlaceholder label="GROUT_BEFORE" ratio="4:3" size="Before 이미지" />
-                <ImagePlaceholder label="GROUT_AFTER" ratio="4:3" size="After 이미지" />
+                <ImagePlaceholder label="GROUT_SERVICE_BEFORE" ratio="4:3" size="Before 이미지" />
+                <ImagePlaceholder label="GROUT_SERVICE_AFTER" ratio="4:3" size="After 이미지" />
               </div>
               <div style={{ marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '8px', textAlign: 'left', fontSize: '0.95rem' }}>
                 <p><strong>적용 공간:</strong> 욕실 · 화장실 · 현관 · 베란다</p>
