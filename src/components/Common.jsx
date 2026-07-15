@@ -249,6 +249,8 @@ export function ImagePlaceholder({ label, ratio = '16:9', size = 'Recommended: 8
     imageSrc = '/utility_guide.png';
   } else if (label === 'ELASTIC_CONSULTATION_IMAGE_PATTERN') {
     imageSrc = '/consultation_peeling.png';
+  } else if (label === 'GROUT_CONSULTATION_IMAGE_PATTERN') {
+    imageSrc = '/consultation_grout.png';
   }
 
   if (imageSrc) {

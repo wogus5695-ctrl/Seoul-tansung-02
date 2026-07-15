@@ -1402,7 +1402,10 @@ function App() {
             </div>
             <div>
               <ImagePlaceholder 
-                label={activeGroup === 'elastic' ? 'ELASTIC_CONSULTATION_IMAGE_PATTERN' : 'CONSULTATION_IMAGE_PATTERN'} 
+                label={activeGroup === 'grout' 
+                  ? 'GROUT_CONSULTATION_IMAGE_PATTERN' 
+                  : (activeGroup === 'elastic' ? 'ELASTIC_CONSULTATION_IMAGE_PATTERN' : 'CONSULTATION_IMAGE_PATTERN')
+                } 
                 ratio="16:9" 
                 size="Recommended: 800x450" 
               />
