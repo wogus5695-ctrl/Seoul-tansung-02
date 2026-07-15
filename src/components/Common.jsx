@@ -31,7 +31,6 @@ export function Header({ onNavigate, currentPath }) {
   const menuItems = [
     { label: '탄성코트', href: '#elastic-coating' },
     { label: '줄눈시공', href: '#grout' },
-    { label: '시공 사례', href: '#portfolio' },
     { label: '시공 과정', href: '#process' },
     { label: 'FAQ', href: '#faq' },
   ];
