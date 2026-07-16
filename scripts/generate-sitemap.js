@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Base SITE_URL (Default to placeholder, can be replaced by env)
-const SITE_URL = process.env.SITE_URL || 'https://bareum-space.com';
+const SITE_URL = process.env.SITE_URL || 'https://seoul-tansung-01.vercel.app';
 
 async function generateSitemap() {
   console.log('Generating sitemap.xml for target domain:', SITE_URL);

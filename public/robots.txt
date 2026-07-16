@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bareum-space.com/sitemap.xml
-
+Sitemap: https://seoul-tansung-01.vercel.app/sitemap.xml
