@@ -347,39 +347,47 @@ function App() {
     updateMetaTag('meta[property="og:title"]', 'content', titleStr);
     updateMetaTag('meta[property="og:description"]', 'content', descStr);
 
-    let canonicalUrl = siteConfig.siteUrl + (path === '/' ? '' : path);
-    if (kParam && !isKeywordInvalid) {
-      // Decode and cleanly re-encode k parameter to ensure safe URL parsing without utm tracking
-      const sortedKeywords = [...serviceKeywords].sort((a, b) => b.keyword.length - a.keyword.length);
-      let matchedService = null;
-      let extractedRegionName = '';
-      for (const s of sortedKeywords) {
-        if (kParam.endsWith(`-${s.keyword}`)) {
-          matchedService = s;
-          extractedRegionName = kParam.substring(0, kParam.length - s.keyword.length - 1);
-          break;
+    let canonicalUrl = "";
+    if (!isKeywordInvalid) {
+      canonicalUrl = siteConfig.siteUrl + (path === '/' ? '' : path);
+      if (kParam) {
+        // Decode and cleanly re-encode k parameter to ensure safe URL parsing without utm tracking
+        const sortedKeywords = [...serviceKeywords].sort((a, b) => b.keyword.length - a.keyword.length);
+        let matchedService = null;
+        let extractedRegionName = '';
+        for (const s of sortedKeywords) {
+          if (kParam.endsWith(`-${s.keyword}`)) {
+            matchedService = s;
+            extractedRegionName = kParam.substring(0, kParam.length - s.keyword.length - 1);
+            break;
+          }
+        }
+        if (matchedService && extractedRegionName) {
+          canonicalUrl += `?k=${encodeURIComponent(extractedRegionName + '-' + matchedService.keyword)}`;
         }
       }
-      if (matchedService && extractedRegionName) {
-        canonicalUrl += `?k=${encodeURIComponent(extractedRegionName + '-' + matchedService.keyword)}`;
-      }
     }
-    let linkEl = document.querySelector('link[rel="canonical"]');
-    if (!linkEl) {
-      linkEl = document.createElement('link');
-      linkEl.setAttribute('rel', 'canonical');
-      document.head.appendChild(linkEl);
-    }
-    linkEl.setAttribute('href', canonicalUrl);
 
-    // og:url synchronization
-    updateMetaTag('meta[property="og:url"]', 'content', canonicalUrl);
+    let linkEl = document.querySelector('link[rel="canonical"]');
+    if (canonicalUrl) {
+      if (!linkEl) {
+        linkEl = document.createElement('link');
+        linkEl.setAttribute('rel', 'canonical');
+        document.head.appendChild(linkEl);
+      }
+      linkEl.setAttribute('href', canonicalUrl);
+      updateMetaTag('meta[property="og:url"]', 'content', canonicalUrl);
+    } else {
+      if (linkEl) linkEl.remove();
+      const existingOgUrl = document.querySelector('meta[property="og:url"]');
+      if (existingOgUrl) existingOgUrl.remove();
+    }
 
     // Sync JSON-LD structured script tag
     let scriptEl = document.getElementById('jsonld-schema');
     if (scriptEl) scriptEl.remove();
 
-    if (schemas.length > 0) {
+    if (!isKeywordInvalid && schemas.length > 0) {
       scriptEl = document.createElement('script');
       scriptEl.id = 'jsonld-schema';
       scriptEl.type = 'application/ld+json';

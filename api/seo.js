@@ -210,6 +210,36 @@ export default async function handler(req, res) {
       html = html.replace('<div id="root"></div>', `<div id="root">${bodyHtml}</div>`);
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
       return res.status(200).send(html);
+    } else {
+      // Return HTTP 404 with standard Error HTML and noindex
+      const errorTitle = "페이지를 찾을 수 없습니다";
+      const errorDesc = "요청하신 시공 정보 또는 지역명이 정확하지 않습니다.";
+
+      html = html.replace(/<title>.*?<\/title>/, `<title>${errorTitle}</title>`);
+      html = html.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${errorDesc}" />`);
+      html = html.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${errorTitle}" />`);
+      html = html.replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${errorDesc}" />`);
+
+      // Inject noindex meta, remove og:url / canonical tags
+      html = html.replace('</head>', `<meta name="robots" content="noindex, follow" />\n</head>`);
+
+      const errorBody = `
+        <div style="padding: 80px 20px; font-family: sans-serif; text-align: center;">
+          <h1 style="font-size: 2rem; color: #183f35; margin-bottom: 16px;">요청한 페이지를 찾을 수 없습니다</h1>
+          <p style="color: #666; margin-bottom: 30px; font-size: 1.05rem; line-height: 1.6;">
+            입력한 지역명 또는 시공 서비스가 등록되어 있지 않습니다.<br />
+            지역별 페이지 안내에서 정상적인 서비스 페이지를 확인해 주세요.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 16px;">
+            <a href="/" style="display: inline-block; padding: 12px 24px; background-color: #183f35; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold;">메인 페이지로 이동</a>
+            <a href="/sitemap-seoul" style="display: inline-block; padding: 12px 24px; border: 1px solid #183f35; color: #183f35; text-decoration: none; border-radius: 4px; font-weight: bold;">서울 지역별 페이지 확인</a>
+          </div>
+        </div>
+      `;
+      html = html.replace('<div id="root"></div>', `<div id="root">${errorBody}</div>`);
+      
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      return res.status(404).send(html);
     }
   }
 
