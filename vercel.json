@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/sitemap-seoul",
+      "destination": "/index.html"
+    }
+  ]
+}
