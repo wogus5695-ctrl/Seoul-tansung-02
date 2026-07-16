@@ -757,8 +757,13 @@ function App() {
     return (
       <>
         {parsedKeyword && (
-          <div style={{ backgroundColor: 'var(--light-sand)', padding: '12px 20px', textAlign: 'center', fontSize: '0.9rem' }}>
-            <strong>{parsedKeyword.region.displayName}</strong> 지역을 위한 맞춤형 <strong>{parsedKeyword.service.keyword}</strong> 제안입니다.
+          <div className="dynamic-notice-bar" style={{ backgroundColor: 'var(--light-sand)', padding: '12px 20px', textAlign: 'center', fontSize: '0.9rem' }}>
+            <span className="notice-pc-only" style={{ display: isDesktop ? 'inline' : 'none' }}>
+              <strong>{parsedKeyword.region.displayName}</strong> 지역을 위한 맞춤형 <strong>{parsedKeyword.service.keyword}</strong> 제안입니다.
+            </span>
+            <span className="notice-mobile-only" style={{ display: isDesktop ? 'none' : 'inline', fontWeight: 'bold' }}>
+              {parsedKeyword.region.displayName} {parsedKeyword.service.keyword} 시공 안내
+            </span>
           </div>
         )}
 
@@ -774,16 +779,41 @@ function App() {
               <span style={{ fontSize: '0.9rem', color: 'var(--forest-green-sub)', letterSpacing: '1px', fontWeight: '600' }}>
                 탄성코트 · 줄눈시공 전문
               </span>
-              <h1 style={{ lineHeight: '1.2', fontSize: isDesktop ? '3rem' : '2.25rem' }}>
-                {parsedKeyword 
-                  ? `${parsedKeyword.region.displayName} ${parsedKeyword.service.keyword}`
-                  : '공간을 오래 깨끗하게 만드는'
-                }
-                <br />
-                {parsedKeyword 
-                  ? parsedKeyword.service.heroTitleTemplate
-                  : '탄성코트·줄눈시공'
-                }
+              <h1 className="dynamic-hero-title" style={{
+                lineHeight: '1.2',
+                fontSize: isDesktop ? '3.5rem' : '2.25rem',
+                wordBreak: 'keep-all',
+                overflowWrap: 'normal',
+                textWrap: 'balance'
+              }}>
+                {parsedKeyword ? (
+                  <>
+                    <span className="dynamic-hero-region" style={{ display: 'inline-block', marginRight: '8px' }}>
+                      {parsedKeyword.region.displayName}
+                    </span>
+                    <span className="dynamic-hero-service" style={{ display: 'inline-block' }}>
+                      {parsedKeyword.service.breakParts && parsedKeyword.service.breakParts.length > 1 ? (
+                        <>
+                          {parsedKeyword.service.breakParts[0]}
+                          <wbr />
+                          {parsedKeyword.service.breakParts[1]}
+                        </>
+                      ) : (
+                        parsedKeyword.service.keyword
+                      )}
+                    </span>
+                    <br />
+                    <span className="dynamic-hero-message" style={{ display: 'block', marginTop: '4px', fontWeight: '500', color: 'var(--forest-green-sub)', fontSize: isDesktop ? '2rem' : '1.35rem' }}>
+                      {parsedKeyword.service.heroTitleTemplate}
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    공간을 오래 깨끗하게 만드는
+                    <br />
+                    탄성코트·줄눈시공
+                  </>
+                )}
               </h1>
               <p style={{ opacity: 0.85, fontSize: '1.05rem', lineHeight: 1.6 }}>
                 {parsedKeyword 

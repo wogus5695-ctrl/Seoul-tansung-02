@@ -5,6 +5,7 @@ export const serviceKeywords = [
   // ---------------- 탄성코트 서비스군 (6개) ----------------
   {
     keyword: '탄성코트',
+    breakParts: ['탄성코트'],
     serviceGroup: 'elastic',
     searchIntent: 'general',
     primarySpace: '베란다 · 세탁실 · 다용도실',
@@ -25,6 +26,7 @@ export const serviceKeywords = [
   },
   {
     keyword: '탄성코트시공',
+    breakParts: ['탄성코트', '시공'],
     serviceGroup: 'elastic',
     searchIntent: 'intent',
     primarySpace: '베란다 · 세탁실 · 다용도실',
@@ -44,10 +46,11 @@ export const serviceKeywords = [
   },
   {
     keyword: '베란다탄성코트',
+    breakParts: ['베란다', '탄성코트'],
     serviceGroup: 'elastic',
     searchIntent: 'space',
     primarySpace: '베란다',
-    heroTitleTemplate: '베란다 온도차를 고려한 마감',
+    heroTitleTemplate: '온도차와 습기를 고려한 마감',
     heroDescriptionTemplate: '베란다 내외벽의 습기 노출도와 기존 도장 균열을 진단하여 밀착력 높은 세라믹 탄성 마감을 안내합니다.',
     metaTitleTemplate: '베란다탄성코트 시공 안내 | 오염 및 들뜸 예방',
     metaDescriptionTemplate: '베란다 벽면 탄성코트 시공 정보입니다. 창틀 주변 크랙 및 들뜬 도막 정돈을 중심으로 세밀하게 마감합니다.',
@@ -63,10 +66,11 @@ export const serviceKeywords = [
   },
   {
     keyword: '세탁실탄성코트',
+    breakParts: ['세탁실', '탄성코트'],
     serviceGroup: 'elastic',
     searchIntent: 'space',
     primarySpace: '세탁실',
-    heroTitleTemplate: '세탁실 높은 습기를 방어하는 마감',
+    heroTitleTemplate: '높은 습기를 방어하는 마감',
     heroDescriptionTemplate: '지속적인 배수와 환기 부족으로 오염되기 쉬운 세탁실 벽체의 기존 마감 상태를 정밀 진단합니다.',
     metaTitleTemplate: '세탁실탄성코트 맞춤형 벽면 관리 가이드',
     metaDescriptionTemplate: '세탁실 벽면 탄성코트 안내입니다. 배관 주위와 하단 코너의 곰팡이 방지 보수 및 탄성 마감을 제공합니다.',
@@ -82,6 +86,7 @@ export const serviceKeywords = [
   },
   {
     keyword: '아파트탄성코트',
+    breakParts: ['아파트', '탄성코트'],
     serviceGroup: 'elastic',
     searchIntent: 'space',
     primarySpace: '아파트 발코니 전역',
@@ -101,6 +106,7 @@ export const serviceKeywords = [
   },
   {
     keyword: '탄성코트업체',
+    breakParts: ['탄성코트', '업체'],
     serviceGroup: 'elastic',
     searchIntent: 'agency',
     primarySpace: '베란다 · 세탁실 벽체',
@@ -122,6 +128,7 @@ export const serviceKeywords = [
   // ---------------- 줄눈시공 서비스군 (6개) ----------------
   {
     keyword: '줄눈시공',
+    breakParts: ['줄눈시공'],
     serviceGroup: 'grout',
     searchIntent: 'general',
     primarySpace: '욕실 · 화장실 · 현관 · 베란다',
@@ -131,7 +138,7 @@ export const serviceKeywords = [
     metaDescriptionTemplate: '욕실 및 현관 타일 줄눈시공 안내입니다. 백시멘트 탈락 및 오염 상태를 진단하고 알맞은 친환경 줄눈제를 추천합니다.',
     faqSet: [
       '기존 줄눈을 제거하고 시공하나요?',
-      '욕실 and 현관에 같은 자재를 사용하나요?', // mapped slightly differently to avoid match errors
+      '욕실와 현관에 같은 자재를 사용하나요?',
       '줄눈 일부만 보수할 수 있나요?',
       '시공 후 언제부터 물을 사용할 수 있나요?',
       '타일 색상에 맞춰 줄눈 색상을 선택할 수 있나요?',
@@ -142,10 +149,11 @@ export const serviceKeywords = [
   },
   {
     keyword: '욕실줄눈시공',
+    breakParts: ['욕실', '줄눈시공'],
     serviceGroup: 'grout',
     searchIntent: 'space',
     primarySpace: '욕실 바닥 및 샤워부스 벽면',
-    heroTitleTemplate: '욕실 오염과 균열을 방지하는 정돈',
+    heroTitleTemplate: '오염과 균열을 방지하는 정돈',
     heroDescriptionTemplate: '항상 물이 고이고 세제가 도포되는 욕실 바닥 타일의 백시멘트 부식을 진단하고, 방습력이 우수한 마감을 안내합니다.',
     metaTitleTemplate: '욕실줄눈시공 자재 선택과 청결 관리 가이드',
     metaDescriptionTemplate: '욕실 타일 줄눈시공 정보입니다. 변기 테두리 오염과 줄눈 갈라짐 현상을 해결하는 정교한 마감 방식을 설명합니다.',
