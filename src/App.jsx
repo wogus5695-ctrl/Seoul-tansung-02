@@ -1092,13 +1092,34 @@ function App() {
             gridTemplateColumns: isDesktop ? '250px 1fr' : '1fr',
             gap: '40px'
           }}>
-            <div style={{ display: 'flex', flexDirection: isDesktop ? 'column' : 'row', gap: '8px', overflowX: 'auto', paddingBottom: '12px' }}>
+            <div 
+              role="tablist"
+              className="space-tabs"
+              style={{
+                display: 'flex',
+                flexDirection: isDesktop ? 'column' : 'row',
+                gap: '8px',
+                overflowX: 'auto',
+                paddingBottom: '12px',
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none',
+                overscrollBehaviorX: 'contain',
+              }}
+            >
+              {/* Hide Webkit Scrollbars */}
+              <style dangerouslySetInnerHTML={{__html: `
+                .space-tabs::-webkit-scrollbar { display: none; }
+              `}} />
               {spaceGuideKeys.map((k, idx) => (
                 <button
                   key={k}
+                  role="tab"
+                  aria-selected={activeSpaceIndex === idx}
+                  aria-controls={`space-panel-${k}`}
+                  id={`space-tab-${k}`}
                   onClick={() => setActiveSpaceIndex(idx)}
                   style={{
-                    textAlign: 'left',
+                    textAlign: 'center',
                     padding: '14px 20px',
                     borderRadius: '4px',
                     fontSize: '0.95rem',
@@ -1107,8 +1128,11 @@ function App() {
                     color: activeSpaceIndex === idx ? 'var(--white)' : 'var(--charcoal-text)',
                     border: '1px solid var(--light-sand)',
                     fontWeight: activeSpaceIndex === idx ? '600' : 'normal',
-                    width: isDesktop ? '100%' : 'auto',
-                    minWidth: isDesktop ? 'none' : '120px'
+                    width: isDesktop ? '100%' : '1fr',
+                    flex: isDesktop ? 'none' : '1',
+                    minWidth: isDesktop ? 'none' : '100px',
+                    minHeight: '48px',
+                    cursor: 'pointer'
                   }}
                 >
                   {SPACE_GUIDE_DATA[k].name}
@@ -1116,27 +1140,41 @@ function App() {
               ))}
             </div>
 
-            <div style={{
-              backgroundColor: 'var(--white)',
-              padding: '30px',
-              borderRadius: '6px',
-              display: 'grid',
-              gridTemplateColumns: isDesktop ? '1fr 1.2fr' : '1fr',
-              gap: '24px',
-              alignItems: 'center'
-            }}>
+            <div 
+              role="tabpanel"
+              id={`space-panel-${activeSpaceKey}`}
+              aria-labelledby={`space-tab-${activeSpaceKey}`}
+              style={{
+                backgroundColor: 'var(--white)',
+                padding: isDesktop ? '30px' : '24px 24px 28px 24px',
+                borderRadius: '6px',
+                display: 'grid',
+                gridTemplateColumns: isDesktop ? '1fr 1.2fr' : '1fr',
+                gap: isDesktop ? '24px' : '20px',
+                alignItems: 'center',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
+              }}
+            >
               <ImagePlaceholder 
                 label={parsedKeyword ? `${parsedKeyword.region.displayName}_${SPACE_GUIDE_DATA[activeSpaceKey].img}` : SPACE_GUIDE_DATA[activeSpaceKey].img} 
                 ratio="4:3" 
                 size="Recommended: 500x375" 
               />
-              <div style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <h3 style={{ fontSize: '1.4rem' }}>{SPACE_GUIDE_DATA[activeSpaceKey].name} 안내</h3>
-                <p style={{ opacity: 0.8, fontSize: '0.95rem', lineHeight: 1.6 }}>
+              <div style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <h3 style={{ fontSize: '1.4rem', color: 'var(--forest-green-main)' }}>{SPACE_GUIDE_DATA[activeSpaceKey].name} 안내</h3>
+                <p style={{
+                  opacity: 0.8,
+                  fontSize: '1rem',
+                  lineHeight: '1.65',
+                  color: 'var(--charcoal-text)',
+                  wordBreak: 'keep-all',
+                  overflowWrap: 'normal',
+                  margin: 0
+                }}>
                   {SPACE_GUIDE_DATA[activeSpaceKey].desc}
                 </p>
-                <div>
-                  <SecondaryButton onClick={handleCTA} style={{ fontSize: '0.9rem', padding: '10px 20px', minHeight: '40px' }}>
+                <div style={{ marginTop: '8px' }}>
+                  <SecondaryButton onClick={handleCTA} style={{ fontSize: '0.9rem', padding: '10px 20px', minHeight: '48px' }}>
                     상세 정보 보기
                   </SecondaryButton>
                 </div>
@@ -1594,7 +1632,10 @@ function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header onNavigate={navigate} currentPath={path} />
-      <main style={{ flex: 1 }}>
+      <main style={{ 
+        flex: 1,
+        paddingBottom: (path !== '/sitemap-seoul' && !isDesktop) ? 'calc(88px + env(safe-area-inset-bottom))' : '0px'
+      }}>
         {renderContent()}
       </main>
       <Footer onNavigate={navigate} />
