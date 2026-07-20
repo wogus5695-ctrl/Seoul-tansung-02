@@ -16,7 +16,7 @@ import {
 // Ingest datasets
 import { seoulRegions } from './data/seoulRegions';
 import { serviceKeywords } from './data/serviceKeywords';
-import { parseAndValidateK, getActiveRegions } from './data/regionResolver';
+import { parseAndValidateK, getActiveRegions, ENABLE_CAPITAL_REGION_EXPANSION } from './data/regionResolver';
 import { incheonRegions } from './data/incheonRegions';
 import { gyeonggiRegions } from './data/gyeonggiRegions';
 
