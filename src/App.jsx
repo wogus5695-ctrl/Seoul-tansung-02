@@ -134,31 +134,10 @@ function App() {
   let isKeywordInvalid = false;
 
   if (kParam) {
-    const sortedKeywords = [...serviceKeywords].sort((a, b) => b.keyword.length - a.keyword.length);
-    let matchedService = null;
-    let extractedRegionName = '';
-
-    for (const s of sortedKeywords) {
-      if (kParam.endsWith(`-${s.keyword}`)) {
-        matchedService = s;
-        extractedRegionName = kParam.substring(0, kParam.length - s.keyword.length - 1);
-        break;
-      }
-    }
-
-    if (matchedService && extractedRegionName) {
-      const matchedRegion = seoulRegions.find(
-        r => r.displayName === extractedRegionName || r.normalizedName === extractedRegionName
-      );
-
-      if (matchedRegion) {
-        parsedKeyword = {
-          region: matchedRegion,
-          service: matchedService
-        };
-      } else {
-        isKeywordInvalid = true;
-      }
+    const usePreview = searchParams.get('preview') === 'true';
+    const result = parseAndValidateK(kParam, usePreview);
+    if (result.isValid) {
+      parsedKeyword = result;
     } else {
       isKeywordInvalid = true;
     }
@@ -166,14 +145,20 @@ function App() {
 
   // Pre-calculate Hub parameters and metrics for high performance
   const metrics = useMemo(() => {
-    // 25 Districts (gu units)
-    const uniqueDistricts = Array.from(new Set(seoulRegions.map(r => r.districtName))).sort();
+    const activeList = getActiveRegions();
+    const isSeoulOnly = !ENABLE_CAPITAL_REGION_EXPANSION;
+
+    // Filter list based on expansion setting
+    const list = isSeoulOnly ? activeList.filter(r => r.metro === '서울') : activeList;
+
+    // Grouping keys: For Seoul, we group by districtName. For Incheon/Gyeonggi, we group by groupName.
+    const uniqueDistricts = Array.from(new Set(list.map(r => r.metro === '서울' ? r.districtName : r.groupName))).sort();
     
     // Total Dongs (dong units)
-    const dongsCount = seoulRegions.filter(r => r.regionType === 'dong').length;
+    const dongsCount = list.filter(r => r.regionType === 'dong').length;
     
     // Total regions (display names)
-    const totalRegionsCount = seoulRegions.length;
+    const totalRegionsCount = list.length;
     
     // Total tasks
     const totalTasksCount = serviceKeywords.length;
@@ -185,10 +170,10 @@ function App() {
     const elasticTasks = serviceKeywords.filter(k => k.serviceGroup === 'elastic');
     const groutTasks = serviceKeywords.filter(k => k.serviceGroup === 'grout');
 
-    // Group regions by District
+    // Group regions by District/GroupName
     const groupedRegions = {};
     uniqueDistricts.forEach(dist => {
-      groupedRegions[dist] = seoulRegions.filter(r => r.districtName === dist);
+      groupedRegions[dist] = list.filter(r => (r.metro === '서울' ? r.districtName : r.groupName) === dist);
     });
 
     return {
@@ -597,6 +582,26 @@ function App() {
               ))}
             </div>
 
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', borderTop: '1px dashed var(--sand-beige)', paddingTop: '16px' }}>
+              {['전체', '서울', '인천', '경기'].map(btn => (
+                <button
+                  key={btn}
+                  onClick={() => setMetroFilter(btn)}
+                  style={{
+                    padding: '6px 16px',
+                    borderRadius: '4px',
+                    fontWeight: '600',
+                    fontSize: '0.85rem',
+                    backgroundColor: metroFilter === btn ? 'var(--forest-green-sub)' : 'var(--white)',
+                    color: metroFilter === btn ? 'var(--white)' : 'var(--charcoal-text)',
+                    border: '1px solid var(--sand-beige)'
+                  }}
+                >
+                  {btn} 권역
+                </button>
+              ))}
+            </div>
+
             <div style={{
               display: 'grid',
               gridTemplateColumns: isDesktop ? '1fr 1fr' : '1fr',
@@ -688,8 +693,10 @@ function App() {
             {metrics.uniqueDistricts.map(distName => {
               const regionList = metrics.groupedRegions[distName];
               
+              const isMetroMatched = metroFilter === '전체' || regionList.some(r => r.metro === metroFilter);
+              
               // Filter check: are there ANY matching elements in this district?
-              const matchesSearch = regionList.some(r => {
+              const matchesSearch = isMetroMatched && regionList.some(r => {
                 const regionMatches = r.displayName.includes(regionSearch) || r.normalizedName.includes(regionSearch);
                 const taskMatches = serviceKeywords.some(tk => tk.keyword.includes(taskSearch));
                 return regionMatches && taskMatches;
@@ -762,7 +769,7 @@ function App() {
                                 return (
                                   <a
                                     key={tk.keyword}
-                                    href={`/?k=${encodeURIComponent(reg.displayName + '-' + tk.keyword)}`}
+                                    href={`/?k=${encodeURIComponent(reg.urlRegion + '-' + tk.keyword)}`}
                                     style={{
                                       display: (isFilterMatched && isTaskSearchMatched) ? 'inline-block' : 'none',
                                       padding: '8px 12px',
