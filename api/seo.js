@@ -200,7 +200,7 @@ export default async function handler(req, res) {
     if (parseResult.isValid) {
       const matchedRegion = parseResult.region;
       const matchedService = parseResult.service;
-      const regionName = matchedRegion.displayName;
+      const regionName = matchedRegion.name;
       const taskName = matchedService.keyword;
 
       // 1. Dynamic Title Mapping

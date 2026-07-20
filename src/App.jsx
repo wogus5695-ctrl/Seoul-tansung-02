@@ -239,7 +239,7 @@ function App() {
       descStr = '요청하신 시공 정보 또는 지역명이 정확하지 않습니다.';
       updateMetaTag('meta[name="robots"]', 'content', 'noindex, nofollow');
     } else if (parsedKeyword) {
-      const regionName = parsedKeyword.region.displayName;
+      const regionName = parsedKeyword.region.name;
       const taskName = parsedKeyword.service.keyword;
       
       if (parsedKeyword.service.serviceGroup === 'elastic') {
@@ -455,15 +455,15 @@ function App() {
     : activePortfolios.filter(p => p.serviceType === portfolioFilter);
 
   const relatedServicesLinks = parsedKeyword ? parsedKeyword.service.relatedServices.map(task => ({
-    label: `${parsedKeyword.region.displayName} ${task}`,
-    href: `/?k=${encodeURIComponent(parsedKeyword.region.displayName + '-' + task)}`
+    label: `${parsedKeyword.region.name} ${task}`,
+    href: `/?k=${encodeURIComponent(parsedKeyword.region.urlRegion + '-' + task)}`
   })) : null;
 
-  const relatedRegionsLinks = parsedKeyword ? seoulRegions.filter(
-    r => r.districtName === parsedKeyword.region.districtName && r.displayName !== parsedKeyword.region.displayName && r.regionType === 'dong'
+  const relatedRegionsLinks = parsedKeyword ? getActiveRegions().filter(
+    r => r.parentId === parsedKeyword.region.parentId && r.id !== parsedKeyword.region.id
   ).slice(0, 6).map(reg => ({
-    label: `${reg.displayName} ${parsedKeyword.service.keyword}`,
-    href: `/?k=${encodeURIComponent(reg.displayName + '-' + parsedKeyword.service.keyword)}`
+    label: `${reg.name} ${parsedKeyword.service.keyword}`,
+    href: `/?k=${encodeURIComponent(reg.urlRegion + '-' + parsedKeyword.service.keyword)}`
   })) : null;
 
   // Toggle district view
