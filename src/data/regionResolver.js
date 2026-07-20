@@ -100,7 +100,7 @@ function buildIndexes() {
     const entry = {
       ...r,
       id: uniqueId,
-      name: r.displayName, // name field mapping
+      name: r.officialName, // name field mapping to clean officialName
       type: type,
       parentId: parentId,
       generateKeyword: true,
@@ -145,7 +145,7 @@ function buildIndexes() {
     const entry = {
       ...r,
       id: uniqueId,
-      name: r.displayName,
+      name: r.officialName, // name field mapping to clean officialName
       type: type,
       parentId: parentId,
       generateKeyword: true,
