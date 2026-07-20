@@ -52,6 +52,11 @@ function buildIndexes() {
     
     const seoulEntry = {
       ...r,
+      id: `seoul-${r.displayName}`,
+      name: r.displayName, // name field mapping for SEO page rendering
+      type: r.regionType || 'dong', // type field mapping
+      parentId: `seoul-${r.districtName}`,
+      generateKeyword: true,
       metro: '서울',
       city: '서울시',
       groupName: r.districtName,
