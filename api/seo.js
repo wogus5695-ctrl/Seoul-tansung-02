@@ -22,51 +22,80 @@ export default async function handler(req, res) {
 
   // Check if we are requesting sitemap-seoul
   if (pathname === '/sitemap-seoul') {
-    const hubTitle = "서울 탄성코트·줄눈시공 서비스 구역 안내 | 바름공간";
-    const hubDesc = "서울시 25개 자치구 및 전체 행정동별 탄성코트 및 줄눈시공 동적 랜딩 페이지 리스트를 한눈에 안내해 드립니다.";
+    const hubTitle = "서울·인천·경기 탄성코트·줄눈시공 지역별 페이지 | 바름공간";
+    const hubDesc = "서울·인천·경기 주요 시·구·읍·면·동 단위의 탄성코트 및 줄눈시공 서비스 페이지를 확인할 수 있습니다.";
     
     const hubCanonical = "https://seoul-tansung-01.vercel.app/sitemap-seoul";
 
     // Replace Meta Tags
-    html = html.replace(/<title>.*?<\/title>/, `<title>${hubTitle}</title>`);
-    html = html.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${hubDesc}" />`);
-    html = html.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${hubTitle}" />`);
-    html = html.replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${hubDesc}" />`);
+    html = html.replace(/<title>.*?<\/title>/, "<title>" + hubTitle + "</title>");
+    html = html.replace(/<meta name="description" content=".*?" \/>/, '<meta name="description" content="' + hubDesc + '" />');
+    html = html.replace(/<meta property="og:title" content=".*?" \/>/, '<meta property="og:title" content="' + hubTitle + '" />');
+    html = html.replace(/<meta property="og:description" content=".*?" \/>/, '<meta property="og:description" content="' + hubDesc + '" />');
 
     // Inject canonical & og:url tags
-    html = html.replace('</head>', `<link rel="canonical" href="${hubCanonical}" />\n<meta property="og:url" content="${hubCanonical}" />\n</head>`);
+    html = html.replace('</head>', '<link rel="canonical" href="' + hubCanonical + '" />\n<meta property="og:url" content="' + hubCanonical + '" />\n</head>');
 
-    // Pre-inject visible sitemap components for search engines
-    const uniqueDistricts = Array.from(new Set(seoulRegions.map(r => r.districtName))).sort();
-    const groupedRegions = {};
-    uniqueDistricts.forEach(dist => {
-      groupedRegions[dist] = seoulRegions.filter(r => r.districtName === dist);
+    // Fetch all active production regions
+    const activeList = getActiveRegions();
+    const seoulList = activeList.filter(r => r.metro === '서울');
+    const incheonList = activeList.filter(r => r.metro === '인천');
+    const gyeonggiList = activeList.filter(r => r.metro === '경기');
+
+    const seoulDistricts = Array.from(new Set(seoulList.map(r => r.districtName))).sort();
+    const seoulGrouped = {};
+    seoulDistricts.forEach(dist => {
+      seoulGrouped[dist] = seoulList.filter(r => r.districtName === dist);
     });
 
-    const seoContent = `
-      <div style="padding: 40px; max-width: 1200px; margin: 0 auto; font-family: sans-serif;">
-        <h1 style="font-size: 2rem; color: #183f35; margin-bottom: 20px;">서울 탄성코트·줄눈시공 지역별 페이지 안내</h1>
-        <p style="color: #666; margin-bottom: 40px;">서울시 전체 25개 자치구와 행정동 단위의 상세 탄성코트 및 줄눈시공 서비스 연결 리스트입니다.</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
-          ${uniqueDistricts.map(distName => `
-            <div style="border: 1px solid #e5e5e5; padding: 20px; border-radius: 4px; background: #fff;">
-              <h2 style="font-size: 1.25rem; color: #183f35; border-bottom: 2px solid #183f35; padding-bottom: 8px; margin-bottom: 12px;">${distName}</h2>
-              ${groupedRegions[distName].map(reg => `
-                <div style="margin-bottom: 14px;">
-                  <h3 style="font-size: 0.95rem; color: #555; margin: 4px 0;">${reg.displayName}</h3>
-                  <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.6; font-size: 0.85rem;">
-                    ${serviceKeywords.map(k => `
-                      <li><a href="/?k=${encodeURIComponent(reg.displayName + '-' + k.keyword)}" style="color: #0076ff; text-decoration: none;">${reg.displayName} ${k.keyword}</a></li>
-                    `).join('')}
-                  </ul>
-                </div>
-              `).join('')}
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    `;
-    html = html.replace('<div id="root"></div>', `<div id="root">${seoContent}</div>`);
+    const incheonDistricts = Array.from(new Set(incheonList.map(r => r.groupName))).sort();
+    const incheonGrouped = {};
+    incheonDistricts.forEach(dist => {
+      incheonGrouped[dist] = incheonList.filter(r => r.groupName === dist);
+    });
+
+    const gyeonggiDistricts = Array.from(new Set(gyeonggiList.map(r => r.groupName))).sort();
+    const gyeonggiGrouped = {};
+    gyeonggiDistricts.forEach(dist => {
+      gyeonggiGrouped[dist] = gyeonggiList.filter(r => r.groupName === dist);
+    });
+
+    const metroGroups = [
+      { label: '서울 권역', districts: seoulDistricts, grouped: seoulGrouped },
+      { label: '인천 권역', districts: incheonDistricts, grouped: incheonGrouped },
+      { label: '경기 권역', districts: gyeonggiDistricts, grouped: gyeonggiGrouped }
+    ];
+
+    let seoContent = '<div style="padding: 40px; max-width: 1200px; margin: 0 auto; font-family: sans-serif;">';
+    seoContent += '<h1 style="font-size: 2rem; color: #183f35; margin-bottom: 20px;">서울·인천·경기 탄성코트·줄눈시공 지역별 페이지 안내</h1>';
+    seoContent += '<p style="color: #666; margin-bottom: 40px;">서울·인천·경기 주요 시·구·읍·면·동 단위의 탄성코트 및 줄눈시공 서비스 페이지안내 목록입니다.</p>';
+
+    for (const metro of metroGroups) {
+      seoContent += '<div style="margin-bottom: 50px;">';
+      seoContent += '<h2 style="font-size: 1.6rem; color: #183f35; border-bottom: 3px solid #183f35; padding-bottom: 10px; margin-bottom: 24px;">' + metro.label + '</h2>';
+      seoContent += '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">';
+      for (const distName of metro.districts) {
+        seoContent += '<div style="border: 1px solid #e5e5e5; padding: 20px; border-radius: 4px; background: #fff;">';
+        seoContent += '<h3 style="font-size: 1.2rem; color: #183f35; border-bottom: 1px solid #e5e5e5; padding-bottom: 8px; margin-bottom: 12px;">' + distName + '</h3>';
+        for (const reg of metro.grouped[distName]) {
+          seoContent += '<div style="margin-bottom: 14px;">';
+          seoContent += '<h4 style="font-size: 0.95rem; color: #555; margin: 4px 0;">' + reg.displayName + '</h4>';
+          seoContent += '<ul style="list-style: none; padding: 0; margin: 0; line-height: 1.6; font-size: 0.85rem;">';
+          for (const k of serviceKeywords) {
+            const encoded = encodeURIComponent(reg.urlRegion + '-' + k.keyword);
+            seoContent += '<li><a href="/?k=' + encoded + '" style="color: #0076ff; text-decoration: none;">' + reg.displayName + ' ' + k.keyword + '</a></li>';
+          }
+          seoContent += '</ul>';
+          seoContent += '</div>';
+        }
+        seoContent += '</div>';
+      }
+      seoContent += '</div>';
+      seoContent += '</div>';
+    }
+    seoContent += '</div>';
+
+    html = html.replace('<div id="root"></div>', '<div id="root">' + seoContent + '</div>');
 
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     return res.status(200).send(html);

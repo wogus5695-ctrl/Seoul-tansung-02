@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://seoul-tansung-01.vercel.app/sitemap.xml
+Sitemap: https://www.barumspace.co.kr/sitemap.xml

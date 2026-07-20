@@ -16,6 +16,9 @@ import {
 // Ingest datasets
 import { seoulRegions } from './data/seoulRegions';
 import { serviceKeywords } from './data/serviceKeywords';
+import { parseAndValidateK, getActiveRegions } from './data/regionResolver';
+import { incheonRegions } from './data/incheonRegions';
+import { gyeonggiRegions } from './data/gyeonggiRegions';
 
 // Space Guide static descriptions (1-2 sentences)
 const SPACE_GUIDE_DATA = {
@@ -92,6 +95,7 @@ function App() {
 
   // Sitemap Hub Search & Filter States
   const [sitemapFilter, setSitemapFilter] = useState('전체'); // '전체' | '탄성코트' | '줄눈시공'
+  const [metroFilter, setMetroFilter] = useState('전체'); // '전체' | '서울' | '인천' | '경기'
   const [regionSearch, setRegionSearch] = useState('');
   const [taskSearch, setTaskSearch] = useState('');
   
@@ -287,7 +291,7 @@ function App() {
         '@type': 'BreadcrumbList',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '홈', 'item': defaultSiteUrl },
-          { '@type': 'ListItem', 'position': 2, 'name': '서울 지역별 안내', 'item': `${defaultSiteUrl}/sitemap-seoul` },
+          { '@type': 'ListItem', 'position': 2, 'name': '수도권 지역별 안내', 'item': `${defaultSiteUrl}/sitemap-seoul` },
           { '@type': 'ListItem', 'position': 3, 'name': `${regionName} ${taskName}`, 'item': `${defaultSiteUrl}/?k=${encodeURIComponent(kParam)}` }
         ]
       });
@@ -671,10 +675,10 @@ function App() {
 
           {/* Bulk accordion buttons */}
           <div style={{ display: 'flex', gap: '12px', marginBottom: '24px', justifyContent: 'flex-end' }}>
-            <SecondaryButton style={{ minHeight: '36px', padding: '6px 16px', fontSize: '0.85rem' }} onClick={() => setAllDistricts(true)}>
+            <SecondaryButton style={{ minHeight: '36px', padding: '6px 16px', fontSize: '0.85rem' }} onClick={() => handleToggleAll(true)}>
               모두 펼치기
             </SecondaryButton>
-            <SecondaryButton style={{ minHeight: '36px', padding: '6px 16px', fontSize: '0.85rem' }} onClick={() => setAllDistricts(false)}>
+            <SecondaryButton style={{ minHeight: '36px', padding: '6px 16px', fontSize: '0.85rem' }} onClick={() => handleToggleAll(false)}>
               모두 접기
             </SecondaryButton>
           </div>
