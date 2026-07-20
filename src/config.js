@@ -2,7 +2,7 @@
 // No real names or urls are configured.
 
 export const siteConfig = {
-  brandName: '올케어 서비스',
+  brandName: '바름공간',
   phoneNumber: '010-8189-6900',
   consultationUrl: 'https://open.kakao.com/o/sP3eGghg',
   businessInformation: '올케어 서비스 | 대표: 김재현 | 사업자등록번호: 405-15-02677',

@@ -22,7 +22,7 @@ export default async function handler(req, res) {
 
   // Check if we are requesting sitemap-seoul
   if (pathname === '/sitemap-seoul') {
-    const hubTitle = "서울 탄성코트·줄눈시공 서비스 구역 안내 | 올케어 서비스";
+    const hubTitle = "서울 탄성코트·줄눈시공 서비스 구역 안내 | 바름공간";
     const hubDesc = "서울시 25개 자치구 및 전체 행정동별 탄성코트 및 줄눈시공 동적 랜딩 페이지 리스트를 한눈에 안내해 드립니다.";
     
     const hubCanonical = "https://seoul-tansung-01.vercel.app/sitemap-seoul";
@@ -121,7 +121,7 @@ export default async function handler(req, res) {
       } else if (taskName === '화장실줄눈시공') {
         title = `${regionName} 화장실줄눈시공 | 타일 틈새 정리와 시공`;
       } else {
-        title = `${regionName} ${taskName} 시공 | 올케어 서비스`;
+        title = `${regionName} ${taskName} 시공 | 바름공간`;
       }
 
       // 2. Dynamic Meta Description Mapping
@@ -149,10 +149,10 @@ export default async function handler(req, res) {
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="1200" />
 <meta property="og:image:type" content="image/png" />
-<meta property="og:image:alt" content="올케어 서비스 탄성코트·줄눈시공 전문 업체" />
+<meta property="og:image:alt" content="바름공간 탄성코트·줄눈시공 전문 업체" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="${seoThumbnailUrl}" />
-<meta name="twitter:image:alt" content="올케어 서비스 탄성코트·줄눈시공 전문 업체" />
+<meta name="twitter:image:alt" content="바름공간 탄성코트·줄눈시공 전문 업체" />
 <link rel="image_src" href="${seoThumbnailUrl}" />
 <script type="application/ld+json">
 {

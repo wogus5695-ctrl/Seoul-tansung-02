@@ -357,11 +357,11 @@ function App() {
       updateMetaTag('meta[property="og:image:width"]', 'content', '1200');
       updateMetaTag('meta[property="og:image:height"]', 'content', '1200');
       updateMetaTag('meta[property="og:image:type"]', 'content', 'image/png');
-      updateMetaTag('meta[property="og:image:alt"]', 'content', '올케어 서비스 탄성코트·줄눈시공 전문 업체');
+      updateMetaTag('meta[property="og:image:alt"]', 'content', '바름공간 탄성코트·줄눈시공 전문 업체');
 
       updateMetaTag('meta[name="twitter:card"]', 'content', 'summary_large_image');
       updateMetaTag('meta[name="twitter:image"]', 'content', seoThumbnailUrl);
-      updateMetaTag('meta[name="twitter:image:alt"]', 'content', '올케어 서비스 탄성코트·줄눈시공 전문 업체');
+      updateMetaTag('meta[name="twitter:image:alt"]', 'content', '바름공간 탄성코트·줄눈시공 전문 업체');
 
       if (!imageSrcEl) {
         imageSrcEl = document.createElement('link');
