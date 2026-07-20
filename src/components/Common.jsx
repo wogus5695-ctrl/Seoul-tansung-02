@@ -56,7 +56,7 @@ export function Header({ onNavigate, currentPath }) {
     <header style={styles.header}>
       <div style={styles.headerContainer}>
         <a href="/" onClick={(e) => { e.preventDefault(); onNavigate('/'); }} style={{ ...styles.logo, display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <img src="/logo.png" alt="바름공간 로고" style={{ width: '32px', height: '32px', borderRadius: '4px' }} />
+          <img src="/logo.png" alt="올케어 서비스 로고" style={{ width: '32px', height: '32px', borderRadius: '4px' }} />
           <span>{siteConfig.brandName}</span>
         </a>
 
@@ -259,7 +259,7 @@ export function ImagePlaceholder({ label, ratio = '16:9', size = 'Recommended: 8
       <div style={{ ...styles.placeholderContainer, border: 'none', backgroundColor: 'transparent' }}>
         <img 
           src={imageSrc} 
-          alt={isElastic ? "바름공간 탄성코트 시공" : "바름공간 줄눈시공"} 
+          alt={isElastic ? "올케어 서비스 탄성코트 시공" : "올케어 서비스 줄눈시공"} 
           style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '4px' }} 
         />
       </div>
