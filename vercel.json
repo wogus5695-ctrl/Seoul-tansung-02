@@ -1,4 +1,9 @@
 {
+  "functions": {
+    "api/seo.js": {
+      "includeFiles": "dist/index.html"
+    }
+  },
   "rewrites": [
     {
       "source": "/sitemap-seoul",
