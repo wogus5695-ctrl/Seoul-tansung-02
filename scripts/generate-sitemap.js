@@ -1,4 +1,4 @@
-// Node.js script to dynamically generate standard-compliant sitemap.xml.
+// Node.js script to dynamically generate standard-compliant sitemap.xml for Neo Coat.
 // Reads direct active regions from regionResolver and serviceKeywords.
 
 import fs from 'fs';
@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Base SITE_URL (Default to placeholder, can be replaced by env or set to production domain)
-const SITE_URL = process.env.SITE_URL || 'https://www.barumspace.co.kr';
+const SITE_URL = process.env.SITE_URL || '';
 
 async function generateSitemap() {
   console.log('Generating sitemap.xml for target domain:', SITE_URL);
@@ -25,7 +25,11 @@ async function generateSitemap() {
   // 2. Directory hub /sitemap-seoul
   urls.push(`${SITE_URL}/sitemap-seoul`);
 
-  // 3. Dynamic keywords combinations using correct urlRegion token
+  // 3. Privacy Policy & Terms pages
+  urls.push(`${SITE_URL}/privacy-policy`);
+  urls.push(`${SITE_URL}/terms`);
+
+  // 4. Dynamic keywords combinations using correct urlRegion token
   let count = 0;
   activeRegions.forEach(reg => {
     serviceKeywords.forEach(tk => {

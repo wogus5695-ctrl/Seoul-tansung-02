@@ -1,97 +1,65 @@
-@font-face {
-  font-family: 'S-Core Dream';
-  font-weight: 100;
-  font-style: normal;
-  src: url('/fonts/SCDream1.otf') format('opentype');
-}
-@font-face {
-  font-family: 'S-Core Dream';
-  font-weight: 200;
-  font-style: normal;
-  src: url('/fonts/SCDream2.otf') format('opentype');
-}
-@font-face {
-  font-family: 'S-Core Dream';
-  font-weight: 300;
-  font-style: normal;
-  src: url('/fonts/SCDream3.otf') format('opentype');
-}
-@font-face {
-  font-family: 'S-Core Dream';
-  font-weight: 400;
-  font-style: normal;
-  src: url('/fonts/SCDream4.otf') format('opentype');
-}
-@font-face {
-  font-family: 'S-Core Dream';
-  font-weight: 500;
-  font-style: normal;
-  src: url('/fonts/SCDream5.otf') format('opentype');
-}
-@font-face {
-  font-family: 'S-Core Dream';
-  font-weight: 600;
-  font-style: normal;
-  src: url('/fonts/SCDream6.otf') format('opentype');
-}
-@font-face {
-  font-family: 'S-Core Dream';
-  font-weight: 700;
-  font-style: normal;
-  src: url('/fonts/SCDream7.otf') format('opentype');
-}
-@font-face {
-  font-family: 'S-Core Dream';
-  font-weight: 800;
-  font-style: normal;
-  src: url('/fonts/SCDream8.otf') format('opentype');
-}
-@font-face {
-  font-family: 'S-Core Dream';
-  font-weight: 900;
-  font-style: normal;
-  src: url('/fonts/SCDream9.otf') format('opentype');
-}
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 
 :root {
-  /* Color Palette System */
-  --forest-green-main: #183F35;
-  --forest-green-sub: #315E50;
-  --sand-beige: #DED0B6;
-  --light-sand: #F0E9DC;
-  --warm-white: #FAF9F5;
-  --white: #FFFFFF;
-  --charcoal-text: #28312E;
+  /* =========================================
+     네오코트(Neo Coat) 공식 디자인 토큰
+     ========================================= */
 
-  /* Fonts */
-  --sans: 'S-Core Dream', system-ui, -apple-system, sans-serif;
-  --heading: 'S-Core Dream', system-ui, -apple-system, sans-serif;
+  /* 메인 브랜드 컬러 */
+  --neo-color-primary: #1E3A8A;       /* Deep Ocean Blue: 주요 제목, 헤더, 테두리 */
+  --neo-color-accent: #0D9488;        /* Neo Teal: 주요 CTA, 선택 탭, 포인트 */
 
-  /* Dimensions */
+  /* 기본 배경 컬러 */
+  --neo-color-bg-main: #F8FAFC;      /* Slate Light White: 메인 배경 */
+  --neo-color-bg-white: #FFFFFF;     /* Pure White: 카드, 모달, 순백 배경 */
+  --neo-color-bg-blue-light: #EFF6FF;/* Light Blue: 보조 hover, 강조 카드 */
+  --neo-color-bg-teal-light: #ECFDF5;/* Light Teal: 성공/포인트 카드 배경 */
+
+  /* 텍스트 컬러 */
+  --neo-color-text-primary: #0F172A;  /* Primary Text: 주요 본문 */
+  --neo-color-text-secondary: #475569;/* Secondary Text: 부제목, 보조 문구 */
+  --neo-color-text-muted: #64748B;    /* Muted Text: 캡션, 비활성 텍스트 */
+
+  /* 보조/상태 컬러 */
+  --neo-color-border: #E2E8F0;       /* Border: 구분선, 카드 테두리 */
+  --neo-color-warning: #F59E0B;      /* Warning */
+  --neo-color-error: #DC2626;        /* Error */
+  --neo-color-success: #0D9488;      /* Success */
+
+  /* 호환성 매핑 (기존 바름공간 변수 대체) */
+  --forest-green-main: var(--neo-color-primary);
+  --forest-green-sub: var(--neo-color-accent);
+  --sand-beige: var(--neo-color-border);
+  --light-sand: var(--neo-color-bg-main);
+  --warm-white: var(--neo-color-bg-main);
+  --white: var(--neo-color-bg-white);
+  --charcoal-text: var(--neo-color-text-primary);
+
+  /* 폰트 지정 (Pretendard -> Noto Sans KR -> System) */
+  --sans: "Pretendard Variable", Pretendard, "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --heading: "Pretendard Variable", Pretendard, "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* 규격 토큰 */
+  --desktop-max-width: 1280px;
   --mobile-side-margin: 20px;
-  --desktop-max-width: 1200px;
-
-  /* Styles Reset & Customization */
-  background-color: var(--warm-white);
-  color: var(--charcoal-text);
-  font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.6;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Base Styles Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--warm-white);
+html, body {
+  background-color: var(--neo-color-bg-main);
+  color: var(--neo-color-text-primary);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
@@ -102,51 +70,208 @@ body {
   flex-direction: column;
 }
 
+/* =========================================
+   타이포그래피 클래스 시스템
+   ========================================= */
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading);
-  color: var(--forest-green-main);
-  font-weight: 600;
+  color: var(--neo-color-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* 모바일 기본 타이포그래피 */
+h1, .hero-h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h2, .section-h2 {
+  font-size: 28px;
   line-height: 1.25;
+  letter-spacing: -0.015em;
 }
 
-h1 {
-  font-size: 2.25rem; /* 36px on mobile base */
+h3, .card-h3 {
+  font-size: 20px;
+  line-height: 1.3;
 }
 
-h2 {
-  font-size: 1.75rem; /* 28px */
+.body-large {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--neo-color-text-primary);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.body-default {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--neo-color-text-primary);
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-family: inherit;
+.caption {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--neo-color-text-muted);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.uppercase-track {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--neo-color-accent);
 }
 
-/* PC adjustment */
+/* PC 확장 타이포그래피 (min-width: 1024px) */
 @media (min-width: 1024px) {
-  :root {
-    font-size: 18px;
-  }
-  
-  h1 {
-    font-size: 3.5rem;
+  h1, .hero-h1 {
+    font-size: 56px;
+    line-height: 1.15;
   }
 
-  h2 {
-    font-size: 2.25rem;
+  h2, .section-h2 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  h3, .card-h3 {
+    font-size: 22px;
+    line-height: 1.35;
+  }
+
+  .body-large {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .body-default {
+    font-size: 16.5px;
+    line-height: 1.7;
+  }
+
+  .caption {
+    font-size: 14.5px;
+    line-height: 1.55;
   }
 }
 
+/* =========================================
+   공통 카드 스타일 토큰
+   ========================================= */
+
+.neo-card {
+  background-color: var(--neo-color-bg-white);
+  border: 1px solid var(--neo-color-border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (min-width: 1024px) {
+  .neo-card {
+    padding: 32px;
+    border-radius: 20px;
+  }
+}
+
+.neo-card:hover {
+  transform: translateY(-4px);
+  border-color: #CBD5E1;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================================
+   공통 버튼 시스템
+   ========================================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--neo-color-accent);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 16px;
+  height: 52px;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background-color: #0F766E; /* Slightly darker teal */
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--neo-color-bg-white);
+  color: var(--neo-color-primary);
+  border: 1px solid var(--neo-color-primary);
+  font-weight: 600;
+  font-size: 16px;
+  height: 52px;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  background-color: var(--neo-color-bg-blue-light);
+}
+
+.btn-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--neo-color-primary);
+  font-weight: 600;
+  font-size: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.btn-text-link:hover {
+  text-decoration: underline;
+  color: var(--neo-color-accent);
+}
+
+@media (min-width: 1024px) {
+  .btn-primary, .btn-secondary {
+    height: 56px;
+    border-radius: 14px;
+    font-size: 17px;
+  }
+}
+
+/* Focus Accessibility */
+button:focus-visible, a:focus-visible, input:focus-visible {
+  outline: 2px solid var(--neo-color-accent);
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

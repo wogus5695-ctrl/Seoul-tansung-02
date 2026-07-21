@@ -1,0 +1,21 @@
+{
+  "name": "네오코트",
+  "short_name": "네오코트",
+  "description": "공간을 오래 지키는 새로운 코팅 기준 - 탄성코트·줄눈시공 전문",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1E3A8A",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,8 +1,23 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { siteConfig } from './config';
+import { NeoCoatHeader } from './components/NeoCoatHeader';
+import { NeoCoatHero } from './components/NeoCoatHero';
+import { NeoCoatTrustStrip } from './components/NeoCoatTrustStrip';
+import { NeoCoatDiagnosis } from './components/NeoCoatDiagnosis';
+import { NeoCoatServices } from './components/NeoCoatServices';
+import { NeoCoatSpaces } from './components/NeoCoatSpaces';
+import { NeoCoatStandard } from './components/NeoCoatStandard';
+import { NeoCoatProcess } from './components/NeoCoatProcess';
+import { NeoCoatCases } from './components/NeoCoatCases';
+import { NeoCoatFaq } from './components/NeoCoatFaq';
+import { NeoCoatContact } from './components/NeoCoatContact';
+import { NeoCoatFinalCTA } from './components/NeoCoatFinalCTA';
+import { NeoCoatMobileStickyCTA } from './components/NeoCoatMobileStickyCTA';
+import { NeoCoatFooter } from './components/NeoCoatFooter';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
+import { TermsPage } from './pages/TermsPage';
+import { getSeoMetadata } from './data/seoTemplates';
 import {
-  Header,
-  Footer,
   SectionContainer,
   PrimaryButton,
   SecondaryButton,
@@ -192,6 +207,18 @@ function App() {
     }
   }
 
+  // Service Tab State (elasticCoat vs grout)
+  const [serviceTab, setServiceTab] = useState('elasticCoat');
+
+  // Sync serviceTab automatically when parsedKeyword changes
+  useEffect(() => {
+    if (parsedKeyword) {
+      setServiceTab(parsedKeyword.service.serviceGroup === 'elastic' ? 'elasticCoat' : 'grout');
+    } else {
+      setServiceTab('elasticCoat');
+    }
+  }, [kParam]);
+
   // Pre-calculate Hub parameters and metrics for high performance
   const metrics = useMemo(() => {
     const list = getActiveRegions();
@@ -291,8 +318,8 @@ function App() {
   useEffect(() => {
     let titleStr = `탄성코트·줄눈시공 전문`;
     let descStr = `베란다·세탁실 탄성코트와 욕실·현관 줄눈시공을 안내합니다. 기존 벽면과 타일 상태를 확인하고 공간에 필요한 시공 범위를 상담해 드립니다.`;
-    const defaultSiteUrl = siteConfig.siteUrl;
-    const seoThumbnailUrl = `${siteConfig.siteUrl}/images/seo/bareumgonggan-search-thumbnail-v1.png`;
+    const defaultSiteUrl = siteConfig.siteUrl || '';
+    const seoThumbnailUrl = defaultSiteUrl ? `${defaultSiteUrl}/images/seo/bareumgonggan-search-thumbnail-v1.png` : '';
     
     // Schema generation arrays
     const schemas = [];
@@ -353,15 +380,17 @@ function App() {
       });
 
       // 2. Breadcrumb schema
-      schemas.push({
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': '홈', 'item': defaultSiteUrl },
-          { '@type': 'ListItem', 'position': 2, 'name': '수도권 지역별 안내', 'item': `${defaultSiteUrl}/sitemap-seoul` },
-          { '@type': 'ListItem', 'position': 3, 'name': `${regionName} ${taskName}`, 'item': generateAbsoluteDynamicUrl(defaultSiteUrl, parsedKeyword.region.urlRegion, parsedKeyword.service.keyword) }
-        ]
-      });
+      if (defaultSiteUrl) {
+        schemas.push({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          'itemListElement': [
+            { '@type': 'ListItem', 'position': 1, 'name': '홈', 'item': defaultSiteUrl },
+            { '@type': 'ListItem', 'position': 2, 'name': '수도권 지역별 안내', 'item': `${defaultSiteUrl}/sitemap-seoul` },
+            { '@type': 'ListItem', 'position': 3, 'name': `${regionName} ${taskName}`, 'item': generateAbsoluteDynamicUrl(defaultSiteUrl, parsedKeyword.region.urlRegion, parsedKeyword.service.keyword) }
+          ]
+        });
+      }
 
       // 3. FAQPage schema
       schemas.push({
@@ -382,36 +411,40 @@ function App() {
       descStr = `서울 자치구와 동 단위 지역별 탄성코트·줄눈시공 페이지를 확인할 수 있습니다. 지역명과 시공 서비스를 선택해 필요한 정보를 확인해 보세요.`;
 
       // Sitemap Page Schemas
-      schemas.push({
-        '@context': 'https://schema.org',
-        '@type': 'CollectionPage',
-        'name': titleStr,
-        'description': descStr,
-        'url': `${defaultSiteUrl}/sitemap-seoul`
-      });
+      if (defaultSiteUrl) {
+        schemas.push({
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          'name': titleStr,
+          'description': descStr,
+          'url': `${defaultSiteUrl}/sitemap-seoul`
+        });
 
-      schemas.push({
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': '홈', 'item': defaultSiteUrl },
-          { '@type': 'ListItem', 'position': 2, 'name': '서울 지역별 안내', 'item': `${defaultSiteUrl}/sitemap-seoul` }
-        ]
-      });
+        schemas.push({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          'itemListElement': [
+            { '@type': 'ListItem', 'position': 1, 'name': '홈', 'item': defaultSiteUrl },
+            { '@type': 'ListItem', 'position': 2, 'name': '서울 지역별 안내', 'item': `${defaultSiteUrl}/sitemap-seoul` }
+          ]
+        });
+      }
     } else {
       // Main Page schemas
-      schemas.push({
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        'name': titleStr,
-        'url': defaultSiteUrl
-      });
-      schemas.push({
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
-        'name': siteConfig.brandName,
-        'url': defaultSiteUrl
-      });
+      if (defaultSiteUrl) {
+        schemas.push({
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          'name': titleStr,
+          'url': defaultSiteUrl
+        });
+        schemas.push({
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          'name': siteConfig.brandName,
+          'url': defaultSiteUrl
+        });
+      }
     }
 
     document.title = titleStr;
@@ -423,16 +456,16 @@ function App() {
     // Sync SEO Search Thumbnail dynamically for normal dynamic landing pages
     let imageSrcEl = document.querySelector('link[rel="image_src"]');
 
-    if (parsedKeyword) {
+    if (parsedKeyword && seoThumbnailUrl) {
       updateMetaTag('meta[property="og:image"]', 'content', seoThumbnailUrl);
       updateMetaTag('meta[property="og:image:width"]', 'content', '1200');
       updateMetaTag('meta[property="og:image:height"]', 'content', '1200');
       updateMetaTag('meta[property="og:image:type"]', 'content', 'image/png');
-      updateMetaTag('meta[property="og:image:alt"]', 'content', '바름공간 탄성코트·줄눈시공 전문 업체');
+      updateMetaTag('meta[property="og:image:alt"]', 'content', `${siteConfig.brandName} 탄성코트·줄눈시공 전문`);
 
       updateMetaTag('meta[name="twitter:card"]', 'content', 'summary_large_image');
       updateMetaTag('meta[name="twitter:image"]', 'content', seoThumbnailUrl);
-      updateMetaTag('meta[name="twitter:image:alt"]', 'content', '바름공간 탄성코트·줄눈시공 전문 업체');
+      updateMetaTag('meta[name="twitter:image:alt"]', 'content', `${siteConfig.brandName} 탄성코트·줄눈시공 전문`);
 
       if (!imageSrcEl) {
         imageSrcEl = document.createElement('link');
@@ -568,6 +601,84 @@ function App() {
     window.addEventListener('resize', checkWidth);
     return () => window.removeEventListener('resize', checkWidth);
   }, []);
+
+  // Synchronize Document Title, Meta Description, Canonical, OG Tags, and FAQPage JSON-LD
+  useEffect(() => {
+    const seoMeta = getSeoMetadata({
+      parsedKeyword,
+      path,
+      isNotFound: isKeywordInvalid
+    });
+
+    if (seoMeta) {
+      document.title = seoMeta.title;
+
+      // Meta Description
+      let descMeta = document.querySelector('meta[name="description"]');
+      if (!descMeta) {
+        descMeta = document.createElement('meta');
+        descMeta.setAttribute('name', 'description');
+        document.head.appendChild(descMeta);
+      }
+      descMeta.setAttribute('content', seoMeta.description);
+
+      // Meta Robots
+      let robotsMeta = document.querySelector('meta[name="robots"]');
+      if (!robotsMeta) {
+        robotsMeta = document.createElement('meta');
+        robotsMeta.setAttribute('name', 'robots');
+        document.head.appendChild(robotsMeta);
+      }
+      robotsMeta.setAttribute('content', seoMeta.robots);
+
+      // Canonical
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (!canonicalLink) {
+        canonicalLink = document.createElement('link');
+        canonicalLink.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonicalLink);
+      }
+      canonicalLink.setAttribute('href', seoMeta.canonical);
+
+      // OG Title & Description & URL
+      let ogTitle = document.querySelector('meta[property="og:title"]');
+      if (!ogTitle) {
+        ogTitle = document.createElement('meta');
+        ogTitle.setAttribute('property', 'og:title');
+        document.head.appendChild(ogTitle);
+      }
+      ogTitle.setAttribute('content', seoMeta.ogTitle);
+
+      let ogDesc = document.querySelector('meta[property="og:description"]');
+      if (!ogDesc) {
+        ogDesc = document.createElement('meta');
+        ogDesc.setAttribute('property', 'og:description');
+        document.head.appendChild(ogDesc);
+      }
+      ogDesc.setAttribute('content', seoMeta.ogDescription);
+
+      let ogUrl = document.querySelector('meta[property="og:url"]');
+      if (!ogUrl) {
+        ogUrl = document.createElement('meta');
+        ogUrl.setAttribute('property', 'og:url');
+        document.head.appendChild(ogUrl);
+      }
+      ogUrl.setAttribute('content', seoMeta.ogUrl);
+
+      // FAQPage JSON-LD Script Tag
+      const existingScript = document.getElementById('neo-faq-jsonld');
+      if (existingScript) {
+        existingScript.remove();
+      }
+      if (seoMeta.faqJsonLd) {
+        const script = document.createElement('script');
+        script.id = 'neo-faq-jsonld';
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(seoMeta.faqJsonLd);
+        document.head.appendChild(script);
+      }
+    }
+  }, [parsedKeyword, path, isKeywordInvalid]);
 
   const renderContent = () => {
     if (isKeywordInvalid) {
@@ -945,7 +1056,15 @@ function App() {
       );
     }
 
-    // C: Main Page & Dynamic Landing Page    // C: Main Page & Dynamic Landing Page
+    if (path === '/privacy-policy') {
+      return <PrivacyPolicyPage onNavigate={navigate} currentPath={path} />;
+    }
+
+    if (path === '/terms') {
+      return <TermsPage onNavigate={navigate} currentPath={path} />;
+    }
+
+    // C: Main Page & Dynamic Landing Page
     return (
       <>
         {parsedKeyword && (
@@ -960,88 +1079,50 @@ function App() {
         )}
 
         {/* 1. HERO SECTION */}
-        <SectionContainer id="hero" padding="60px 20px">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: isDesktop ? '45fr 55fr' : '1fr',
-            gap: '40px',
-            alignItems: 'center'
-          }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', textAlign: 'left' }}>
-              <span style={{ fontSize: '0.9rem', color: 'var(--forest-green-sub)', letterSpacing: '1px', fontWeight: '600' }}>
-                탄성코트 · 줄눈시공 전문
-              </span>
-              <h1 className="dynamic-hero-title" style={{
-                lineHeight: '1.2',
-                fontSize: isDesktop ? '3.5rem' : '2.25rem',
-                wordBreak: 'keep-all',
-                overflowWrap: 'normal',
-                textWrap: 'balance'
-              }}>
-                {parsedKeyword ? (
-                  <>
-                    <span className="dynamic-hero-region" style={{ display: 'inline-block', marginRight: '8px' }}>
-                      {parsedKeyword.region.displayName}
-                    </span>
-                    <span className="dynamic-hero-service" style={{ display: 'inline-block' }}>
-                      {parsedKeyword.service.breakParts && parsedKeyword.service.breakParts.length > 1 ? (
-                        <>
-                          {parsedKeyword.service.breakParts[0]}
-                          <wbr />
-                          {parsedKeyword.service.breakParts[1]}
-                        </>
-                      ) : (
-                        parsedKeyword.service.keyword
-                      )}
-                    </span>
-                    <br />
-                    <span className="dynamic-hero-message" style={{ display: 'block', marginTop: '4px', fontWeight: '500', color: 'var(--forest-green-sub)', fontSize: isDesktop ? '2rem' : '1.35rem' }}>
-                      {parsedKeyword.service.heroTitleTemplate}
-                    </span>
-                  </>
-                ) : (
-                  <>
-                    공간을 오래 깨끗하게 만드는
-                    <br />
-                    탄성코트·줄눈시공
-                  </>
-                )}
-              </h1>
-              <p style={{ opacity: 0.85, fontSize: '1.05rem', lineHeight: 1.6 }}>
-                {parsedKeyword 
-                  ? parsedKeyword.service.heroDescriptionTemplate
-                  : '베란다와 세탁실 벽면부터 욕실과 현관의 타일 틈까지, 기존 상태를 확인하고 공간에 필요한 마감 시공을 안내합니다.'
-                }
-              </p>
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-                gap: '12px',
-                marginTop: '12px'
-              }}>
-                <PrimaryButton onClick={handleCTA}>
-                  <span className="cta-pc-only" style={{ display: isDesktop ? 'inline' : 'none' }}>사진으로 시공 상담</span>
-                  <span className="cta-mobile-only" style={{ display: isDesktop ? 'none' : 'inline' }}>사진 상담</span>
-                </PrimaryButton>
-                <SecondaryButton onClick={handlePhoneCall}>
-                  <span className="cta-pc-only" style={{ display: isDesktop ? 'inline' : 'none' }}>전화로 바로 문의</span>
-                  <span className="cta-mobile-only" style={{ display: isDesktop ? 'none' : 'inline' }}>전화 문의</span>
-                </SecondaryButton>
-              </div>
-            </div>
+        <NeoCoatHero parsedKeyword={parsedKeyword} onNavigate={navigate} />
 
-            <div>
-              <ImagePlaceholder 
-                label={parsedKeyword 
-                  ? parsedKeyword.service.imagePlaceholderKey 
-                  : (activeHeroSlide === 0 ? 'ELASTIC_COATING_HERO' : 'GROUT_HERO')
-                } 
-                ratio="4:5" 
-                size="Main image (4:5 / Recommended: 800x1000)" 
-              />
-            </div>
-          </div>
-        </SectionContainer>
+        {/* 1b. TRUST STRIP & PROBLEM DIAGNOSIS SECTIONS */}
+        <NeoCoatTrustStrip />
+        <NeoCoatDiagnosis parsedKeyword={parsedKeyword} />
+
+        {/* 1c. SERVICES SELECTION & SPACES MAPPING SECTIONS */}
+        <NeoCoatServices
+          activeTab={serviceTab}
+          onTabChange={setServiceTab}
+          parsedKeyword={parsedKeyword}
+          onNavigate={navigate}
+        />
+        <NeoCoatSpaces
+          activeTab={serviceTab}
+          parsedKeyword={parsedKeyword}
+        />
+
+        {/* 1d. NEO COAT STANDARD & PROCESS SECTIONS */}
+        <NeoCoatStandard />
+        <NeoCoatProcess
+          activeTab={serviceTab}
+          onTabChange={setServiceTab}
+          parsedKeyword={parsedKeyword}
+        />
+
+        {/* 1e. CASES & BEFORE-AFTER COMPARISON SECTION */}
+        <NeoCoatCases
+          activeTab={serviceTab}
+          onTabChange={setServiceTab}
+          parsedKeyword={parsedKeyword}
+        />
+
+        {/* 1f. TECHNICAL FAQ SECTION */}
+        <NeoCoatFaq
+          parsedKeyword={parsedKeyword}
+          onNavigate={navigate}
+        />
+
+        {/* 1g. FINAL CTA SECTION */}
+        <NeoCoatFinalCTA
+          parsedKeyword={parsedKeyword}
+          onNavigate={navigate}
+        />
 
         {/* 2. SERVICE SELECTION SECTION */}
         {activeGroup === 'both' && (
@@ -1823,17 +1904,17 @@ function App() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Header onNavigate={navigate} currentPath={path} />
+      <NeoCoatHeader onNavigate={navigate} currentPath={path} />
       <main style={{ 
         flex: 1,
         paddingBottom: (path !== '/sitemap-seoul' && !isDesktop) ? 'calc(88px + env(safe-area-inset-bottom))' : '0px'
       }}>
         {renderContent()}
       </main>
-      <Footer onNavigate={navigate} />
-      {/* Hide Fixed CTA only on sitemap directory page */}
+      <NeoCoatFooter onNavigate={navigate} isSimple={path === '/sitemap-seoul'} />
+      {/* NeoCoat Mobile Sticky CTA */}
       {path !== '/sitemap-seoul' && (
-        <MobileFixedCTA onPhoneClick={handlePhoneCall} onChatClick={handleCTA} />
+        <NeoCoatMobileStickyCTA parsedKeyword={parsedKeyword} onNavigate={navigate} />
       )}
     </div>
   );

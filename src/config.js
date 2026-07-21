@@ -1,28 +1,47 @@
-// Application placeholder configuration & image path registry.
-// No real names or urls are configured.
+import { brandConfig } from './config/brandConfig.js';
+import { contactConfig } from './config/contactConfig.js';
+import { imageConfig } from './config/imageConfig.js';
 
+export { brandConfig, contactConfig, imageConfig };
+
+// 네오코트 공통 사이트 설정 (siteConfig)
 export const siteConfig = {
-  brandName: '바름공간',
-  phoneNumber: '010-8189-6900',
-  consultationUrl: 'https://open.kakao.com/o/sP3eGghg',
-  businessInformation: '올케어 서비스 | 대표: 김재현 | 사업자등록번호: 405-15-02677',
-  operatingHours: '평일 09:00 - 18:00 (토/일 휴무)',
+  siteUrl: contactConfig.siteUrl || "", // 환경변수 또는 domain 설정값 (미설정 시 상대경로/현재 origin 사용)
+  siteName: brandConfig.brandName || "네오코트",
+  englishName: brandConfig.englishName || "Neo Coat",
+  defaultLocale: "ko_KR",
+
+  // 기존 호환성 필드
+  brandName: brandConfig.brandName,
+  phoneNumber: contactConfig.phone,
+  consultationUrl: contactConfig.kakaoUrl,
+  businessInformation: contactConfig.businessNumber ? `${contactConfig.representative} | 사업자등록번호: ${contactConfig.businessNumber}` : '',
+  operatingHours: contactConfig.operatingHours,
   pricingPlaceholder: '상담 시 안내',
   warrantyPlaceholder: '시공 후 개별 안내',
-  siteUrl: 'https://www.barumspace.co.kr',
+};
+
+// SEO 독립 이미지 필드 분리 관리 (seoImages)
+export const seoImages = {
+  defaultOgImage: imageConfig.ogImage || "",
+  elasticCoatOgImage: "",
+  groutOgImage: "",
+  searchThumbnail: imageConfig.searchThumbnail || "",
+  logoImage: imageConfig.logoImage || "",
+  faviconImage: imageConfig.faviconImage || "",
 };
 
 export const siteImages = {
-  hero: null,
-  searchThumbnail: '/images/seo/bareumgonggan-search-thumbnail-v1.png',
-  elasticServiceBefore: '/elastic_before.png',
-  elasticServiceAfter: '/elastic_after.png',
-  elasticClosetBefore: '/closet_before.png',
-  elasticClosetAfter: '/closet_after.png',
-  groutHero: '/bathroom_grout_hero.png',
-  groutPanel: '/bathroom_grout_panel.png',
-  groutBefore: '/grout_before.png',
-  groutAfter: '/grout_after.png',
+  hero: imageConfig.heroImage || null,
+  searchThumbnail: imageConfig.searchThumbnail || null,
+  elasticServiceBefore: null,
+  elasticServiceAfter: null,
+  elasticClosetBefore: null,
+  elasticClosetAfter: null,
+  groutHero: null,
+  groutPanel: null,
+  groutBefore: null,
+  groutAfter: null,
   process01: null,
   portfolio01: null,
 };

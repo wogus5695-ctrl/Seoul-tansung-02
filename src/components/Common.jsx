@@ -56,7 +56,7 @@ export function Header({ onNavigate, currentPath }) {
     <header style={styles.header}>
       <div style={styles.headerContainer}>
         <a href="/" onClick={(e) => { e.preventDefault(); onNavigate('/'); }} style={{ ...styles.logo, display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <img src="/logo.png" alt="바름공간 로고" style={{ width: '32px', height: '32px', borderRadius: '4px' }} />
+          <img src="/logo.png" alt={`${siteConfig.brandName} 로고`} style={{ width: '32px', height: '32px', borderRadius: '4px' }} />
           <span>{siteConfig.brandName}</span>
         </a>
 
@@ -146,13 +146,13 @@ export function Footer({ onNavigate }) {
         <div style={styles.footerGrid}>
           <div>
             <h3 style={styles.footerBrand}>{siteConfig.brandName}</h3>
-            <p style={styles.footerText}>대표번호: {siteConfig.phoneNumber}</p>
-            <p style={styles.footerText}>운영시간: {siteConfig.operatingHours}</p>
+            {siteConfig.phoneNumber && <p style={styles.footerText}>대표번호: {siteConfig.phoneNumber}</p>}
+            {siteConfig.operatingHours && <p style={styles.footerText}>운영시간: {siteConfig.operatingHours}</p>}
           </div>
           <div>
-            <p style={styles.footerText}>사업자 정보: {siteConfig.businessInformation}</p>
+            {siteConfig.businessInformation && <p style={styles.footerText}>사업자 정보: {siteConfig.businessInformation}</p>}
             <div style={styles.footerLinks}>
-              <a href="#privacy" onClick={(e) => { e.preventDefault(); alert('개인정보처리방침 안내 플레이스홀더'); }} style={styles.footerLink}>
+              <a href="#privacy" onClick={(e) => { e.preventDefault(); alert('개인정보처리방침 안내 준비 중입니다.'); }} style={styles.footerLink}>
                 개인정보처리방침
               </a>
               <span style={{ opacity: 0.3 }}>|</span>
