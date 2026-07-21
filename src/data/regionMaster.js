@@ -872,7 +872,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "역삼-dong",
+      "slugKey": "역삼동",
+      "legacySlug": "역삼-dong",
+      "originalSlug": "yeoksam-dong",
       "sortOrder": 1
     },
     {
@@ -891,7 +893,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "삼성-dong",
+      "slugKey": "삼성동",
+      "legacySlug": "삼성-dong",
+      "originalSlug": "samseong-dong",
       "sortOrder": 1
     },
     {
@@ -910,7 +914,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "청담-dong",
+      "slugKey": "청담동",
+      "legacySlug": "청담-dong",
+      "originalSlug": "cheongdam-dong",
       "sortOrder": 1
     },
     {
@@ -929,7 +935,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "개포-dong",
+      "slugKey": "개포동",
+      "legacySlug": "개포-dong",
+      "originalSlug": "gaepo-dong",
       "sortOrder": 1
     },
     {
@@ -948,7 +956,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "논현-dong",
+      "slugKey": "논현동",
+      "legacySlug": "논현-dong",
+      "originalSlug": "nonhyeon-dong",
       "sortOrder": 1
     },
     {
@@ -967,7 +977,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "대치-dong",
+      "slugKey": "대치동",
+      "legacySlug": "대치-dong",
+      "originalSlug": "daechi-dong",
       "sortOrder": 1
     },
     {
@@ -986,7 +998,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "도곡-dong",
+      "slugKey": "도곡동",
+      "legacySlug": "도곡-dong",
+      "originalSlug": "dogok-dong",
       "sortOrder": 1
     },
     {
@@ -1005,7 +1019,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "세곡-dong",
+      "slugKey": "세곡동",
+      "legacySlug": "세곡-dong",
+      "originalSlug": "segok-dong",
       "sortOrder": 1
     },
     {
@@ -1024,7 +1040,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "수서-dong",
+      "slugKey": "수서동",
+      "legacySlug": "수서-dong",
+      "originalSlug": "suseo-dong",
       "sortOrder": 1
     },
     {
@@ -1043,7 +1061,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sinsa-dong-gangnam",
+      "slugKey": "신사동",
+      "legacySlug": "신사-dong",
+      "originalSlug": "sinsa-dong-gangnam",
       "sortOrder": 1
     },
     {
@@ -1062,7 +1082,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "압구정-dong",
+      "slugKey": "압구정동",
+      "legacySlug": "압구정-dong",
+      "originalSlug": "apgujeong-dong",
       "sortOrder": 1
     },
     {
@@ -1081,7 +1103,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "일원-dong",
+      "slugKey": "일원동",
+      "legacySlug": "일원-dong",
+      "originalSlug": "ilwon-dong",
       "sortOrder": 1
     },
     {
@@ -1100,7 +1124,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "자곡-dong",
+      "slugKey": "자곡동",
+      "legacySlug": "자곡-dong",
+      "originalSlug": "jagok-dong",
       "sortOrder": 1
     },
     {
@@ -1119,7 +1145,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "율현-dong",
+      "slugKey": "율현동",
+      "legacySlug": "율현-dong",
+      "originalSlug": "yulhyeon-dong",
       "sortOrder": 1
     },
     {
@@ -1138,7 +1166,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "포이-dong",
+      "slugKey": "포이동",
+      "legacySlug": "포이-dong",
+      "originalSlug": "poi-dong",
       "sortOrder": 1
     },
     {
@@ -1157,7 +1187,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "화곡-dong",
+      "slugKey": "화곡동",
+      "legacySlug": "화곡-dong",
+      "originalSlug": "hwagok-dong",
       "sortOrder": 1
     },
     {
@@ -1176,7 +1208,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "화곡본-dong",
+      "slugKey": "화곡본동",
+      "legacySlug": "화곡본-dong",
+      "originalSlug": "hwagokbon-dong",
       "sortOrder": 1
     },
     {
@@ -1195,7 +1229,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "등촌-dong",
+      "slugKey": "등촌동",
+      "legacySlug": "등촌-dong",
+      "originalSlug": "deungchon-dong",
       "sortOrder": 1
     },
     {
@@ -1214,7 +1250,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "가양-dong",
+      "slugKey": "가양동",
+      "legacySlug": "가양-dong",
+      "originalSlug": "gayang-dong",
       "sortOrder": 1
     },
     {
@@ -1233,7 +1271,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "발산-dong",
+      "slugKey": "발산동",
+      "legacySlug": "발산-dong",
+      "originalSlug": "balsan-dong",
       "sortOrder": 1
     },
     {
@@ -1252,7 +1292,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "공항-dong",
+      "slugKey": "공항동",
+      "legacySlug": "공항-dong",
+      "originalSlug": "gonghang-dong",
       "sortOrder": 1
     },
     {
@@ -1271,7 +1313,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "방화-dong",
+      "slugKey": "방화동",
+      "legacySlug": "방화-dong",
+      "originalSlug": "banghwa-dong",
       "sortOrder": 1
     },
     {
@@ -1290,7 +1334,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "염창-dong",
+      "slugKey": "염창동",
+      "legacySlug": "염창-dong",
+      "originalSlug": "yeomchang-dong",
       "sortOrder": 1
     },
     {
@@ -1309,7 +1355,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "내발산-dong",
+      "slugKey": "내발산동",
+      "legacySlug": "내발산-dong",
+      "originalSlug": "naebalsan-dong",
       "sortOrder": 1
     },
     {
@@ -1328,7 +1376,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "외발산-dong",
+      "slugKey": "외발산동",
+      "legacySlug": "외발산-dong",
+      "originalSlug": "oebalsan-dong",
       "sortOrder": 1
     },
     {
@@ -1347,7 +1397,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "과해-dong",
+      "slugKey": "과해동",
+      "legacySlug": "과해-dong",
+      "originalSlug": "gwahae-dong",
       "sortOrder": 1
     },
     {
@@ -1366,7 +1418,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "오곡-dong",
+      "slugKey": "오곡동",
+      "legacySlug": "오곡-dong",
+      "originalSlug": "ogok-dong",
       "sortOrder": 1
     },
     {
@@ -1385,7 +1439,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "오쇠-dong",
+      "slugKey": "오쇠동",
+      "legacySlug": "오쇠-dong",
+      "originalSlug": "osoe-dong",
       "sortOrder": 1
     },
     {
@@ -1404,7 +1460,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "천호-dong",
+      "slugKey": "천호동",
+      "legacySlug": "천호-dong",
+      "originalSlug": "cheonho-dong",
       "sortOrder": 1
     },
     {
@@ -1423,7 +1481,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "길-dong",
+      "slugKey": "길동",
+      "legacySlug": "길-dong",
+      "originalSlug": "gil-dong",
       "sortOrder": 1
     },
     {
@@ -1442,7 +1502,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "둔촌-dong",
+      "slugKey": "둔촌동",
+      "legacySlug": "둔촌-dong",
+      "originalSlug": "dunchon-dong",
       "sortOrder": 1
     },
     {
@@ -1461,7 +1523,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "명일-dong",
+      "slugKey": "명일동",
+      "legacySlug": "명일-dong",
+      "originalSlug": "myeongil-dong",
       "sortOrder": 1
     },
     {
@@ -1480,7 +1544,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "고덕-dong",
+      "slugKey": "고덕동",
+      "legacySlug": "고덕-dong",
+      "originalSlug": "godeok-dong",
       "sortOrder": 1
     },
     {
@@ -1499,7 +1565,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "상일-dong",
+      "slugKey": "상일동",
+      "legacySlug": "상일-dong",
+      "originalSlug": "sangil-dong",
       "sortOrder": 1
     },
     {
@@ -1518,7 +1586,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "성내-dong",
+      "slugKey": "성내동",
+      "legacySlug": "성내-dong",
+      "originalSlug": "seongnae-dong",
       "sortOrder": 1
     },
     {
@@ -1537,7 +1607,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "암사-dong",
+      "slugKey": "암사동",
+      "legacySlug": "암사-dong",
+      "originalSlug": "amsa-dong",
       "sortOrder": 1
     },
     {
@@ -1556,7 +1628,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "강일-dong",
+      "slugKey": "강일동",
+      "legacySlug": "강일-dong",
+      "originalSlug": "gangil-dong",
       "sortOrder": 1
     },
     {
@@ -1575,7 +1649,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "미아-dong",
+      "slugKey": "미아동",
+      "legacySlug": "미아-dong",
+      "originalSlug": "mia-dong",
       "sortOrder": 1
     },
     {
@@ -1594,7 +1670,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "번-dong",
+      "slugKey": "번동",
+      "legacySlug": "번-dong",
+      "originalSlug": "beon-dong",
       "sortOrder": 1
     },
     {
@@ -1613,7 +1691,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "수유-dong",
+      "slugKey": "수유동",
+      "legacySlug": "수유-dong",
+      "originalSlug": "suyu-dong",
       "sortOrder": 1
     },
     {
@@ -1632,7 +1712,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "우이-dong",
+      "slugKey": "우이동",
+      "legacySlug": "우이-dong",
+      "originalSlug": "ui-dong",
       "sortOrder": 1
     },
     {
@@ -1651,7 +1733,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신림-dong",
+      "slugKey": "신림동",
+      "legacySlug": "신림-dong",
+      "originalSlug": "sillim-dong",
       "sortOrder": 1
     },
     {
@@ -1670,7 +1754,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "봉천-dong",
+      "slugKey": "봉천동",
+      "legacySlug": "봉천-dong",
+      "originalSlug": "bongcheon-dong",
       "sortOrder": 1
     },
     {
@@ -1689,7 +1775,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "남현-dong",
+      "slugKey": "남현동",
+      "legacySlug": "남현-dong",
+      "originalSlug": "namhyeon-dong",
       "sortOrder": 1
     },
     {
@@ -1708,7 +1796,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "자양-dong",
+      "slugKey": "자양동",
+      "legacySlug": "자양-dong",
+      "originalSlug": "jayang-dong",
       "sortOrder": 1
     },
     {
@@ -1727,7 +1817,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "구의-dong",
+      "slugKey": "구의동",
+      "legacySlug": "구의-dong",
+      "originalSlug": "guui-dong",
       "sortOrder": 1
     },
     {
@@ -1746,7 +1838,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "화양-dong",
+      "slugKey": "화양동",
+      "legacySlug": "화양-dong",
+      "originalSlug": "hwayang-dong",
       "sortOrder": 1
     },
     {
@@ -1765,7 +1859,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "중곡-dong",
+      "slugKey": "중곡동",
+      "legacySlug": "중곡-dong",
+      "originalSlug": "junggok-dong",
       "sortOrder": 1
     },
     {
@@ -1784,7 +1880,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "능-dong",
+      "slugKey": "능동",
+      "legacySlug": "능-dong",
+      "originalSlug": "neung-dong",
       "sortOrder": 1
     },
     {
@@ -1803,7 +1901,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "군자-dong",
+      "slugKey": "군자동",
+      "legacySlug": "군자-dong",
+      "originalSlug": "gunja-dong",
       "sortOrder": 1
     },
     {
@@ -1822,7 +1922,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "광장-dong",
+      "slugKey": "광장동",
+      "legacySlug": "광장-dong",
+      "originalSlug": "gwangjang-dong",
       "sortOrder": 1
     },
     {
@@ -1841,7 +1943,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "구로-dong",
+      "slugKey": "구로동",
+      "legacySlug": "구로-dong",
+      "originalSlug": "guro-dong",
       "sortOrder": 1
     },
     {
@@ -1860,7 +1964,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신도림-dong",
+      "slugKey": "신도림동",
+      "legacySlug": "신도림-dong",
+      "originalSlug": "sindorim-dong",
       "sortOrder": 1
     },
     {
@@ -1879,7 +1985,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "개봉-dong",
+      "slugKey": "개봉동",
+      "legacySlug": "개봉-dong",
+      "originalSlug": "gaebong-dong",
       "sortOrder": 1
     },
     {
@@ -1898,7 +2006,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "고척-dong",
+      "slugKey": "고척동",
+      "legacySlug": "고척-dong",
+      "originalSlug": "gocheok-dong",
       "sortOrder": 1
     },
     {
@@ -1917,7 +2027,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "오류-dong",
+      "slugKey": "오류동",
+      "legacySlug": "오류-dong",
+      "originalSlug": "oryu-dong",
       "sortOrder": 1
     },
     {
@@ -1936,7 +2048,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "온수-dong",
+      "slugKey": "온수동",
+      "legacySlug": "온수-dong",
+      "originalSlug": "onsu-dong",
       "sortOrder": 1
     },
     {
@@ -1955,7 +2069,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "천왕-dong",
+      "slugKey": "천왕동",
+      "legacySlug": "천왕-dong",
+      "originalSlug": "cheonwang-dong",
       "sortOrder": 1
     },
     {
@@ -1974,7 +2090,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "항-dong",
+      "slugKey": "항동",
+      "legacySlug": "항-dong",
+      "originalSlug": "hang-dong",
       "sortOrder": 1
     },
     {
@@ -1993,7 +2111,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "궁-dong",
+      "slugKey": "궁동",
+      "legacySlug": "궁-dong",
+      "originalSlug": "gung-dong",
       "sortOrder": 1
     },
     {
@@ -2012,7 +2132,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "수궁-dong",
+      "slugKey": "수궁동",
+      "legacySlug": "수궁-dong",
+      "originalSlug": "sugung-dong",
       "sortOrder": 1
     },
     {
@@ -2031,7 +2153,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "가리봉-dong",
+      "slugKey": "가리봉동",
+      "legacySlug": "가리봉-dong",
+      "originalSlug": "garibong-dong",
       "sortOrder": 1
     },
     {
@@ -2050,7 +2174,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "가산-dong",
+      "slugKey": "가산동",
+      "legacySlug": "가산-dong",
+      "originalSlug": "gasan-dong",
       "sortOrder": 1
     },
     {
@@ -2069,7 +2195,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "독산-dong",
+      "slugKey": "독산동",
+      "legacySlug": "독산-dong",
+      "originalSlug": "doksan-dong",
       "sortOrder": 1
     },
     {
@@ -2088,7 +2216,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "시흥-dong",
+      "slugKey": "시흥동",
+      "legacySlug": "시흥-dong",
+      "originalSlug": "siheung-dong",
       "sortOrder": 1
     },
     {
@@ -2107,7 +2237,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "상계-dong",
+      "slugKey": "상계동",
+      "legacySlug": "상계-dong",
+      "originalSlug": "sanggye-dong",
       "sortOrder": 1
     },
     {
@@ -2126,7 +2258,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "중계-dong",
+      "slugKey": "중계동",
+      "legacySlug": "중계-dong",
+      "originalSlug": "junggye-dong",
       "sortOrder": 1
     },
     {
@@ -2145,7 +2279,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "하계-dong",
+      "slugKey": "하계동",
+      "legacySlug": "하계-dong",
+      "originalSlug": "hagye-dong",
       "sortOrder": 1
     },
     {
@@ -2164,7 +2300,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "월계-dong",
+      "slugKey": "월계동",
+      "legacySlug": "월계-dong",
+      "originalSlug": "wolgye-dong",
       "sortOrder": 1
     },
     {
@@ -2183,7 +2321,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "공릉-dong",
+      "slugKey": "공릉동",
+      "legacySlug": "공릉-dong",
+      "originalSlug": "gongneung-dong",
       "sortOrder": 1
     },
     {
@@ -2202,7 +2342,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "방학-dong",
+      "slugKey": "방학동",
+      "legacySlug": "방학-dong",
+      "originalSlug": "banghak-dong",
       "sortOrder": 1
     },
     {
@@ -2221,7 +2363,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "쌍문-dong",
+      "slugKey": "쌍문동",
+      "legacySlug": "쌍문-dong",
+      "originalSlug": "ssangmun-dong",
       "sortOrder": 1
     },
     {
@@ -2240,7 +2384,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "창-dong",
+      "slugKey": "창동",
+      "legacySlug": "창-dong",
+      "originalSlug": "chang-dong",
       "sortOrder": 1
     },
     {
@@ -2259,7 +2405,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "도봉-dong",
+      "slugKey": "도봉동",
+      "legacySlug": "도봉-dong",
+      "originalSlug": "dobong-dong",
       "sortOrder": 1
     },
     {
@@ -2278,7 +2426,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "장안-dong",
+      "slugKey": "장안동",
+      "legacySlug": "장안-dong",
+      "originalSlug": "jangan-dong",
       "sortOrder": 1
     },
     {
@@ -2297,7 +2447,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "전농-dong",
+      "slugKey": "전농동",
+      "legacySlug": "전농-dong",
+      "originalSlug": "jeonnong-dong",
       "sortOrder": 1
     },
     {
@@ -2316,7 +2468,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "답십리-dong",
+      "slugKey": "답십리동",
+      "legacySlug": "답십리-dong",
+      "originalSlug": "dapsimni-dong",
       "sortOrder": 1
     },
     {
@@ -2335,7 +2489,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "이문-dong",
+      "slugKey": "이문동",
+      "legacySlug": "이문-dong",
+      "originalSlug": "imun-dong",
       "sortOrder": 1
     },
     {
@@ -2354,7 +2510,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "회기-dong",
+      "slugKey": "회기동",
+      "legacySlug": "회기-dong",
+      "originalSlug": "hoegi-dong",
       "sortOrder": 1
     },
     {
@@ -2373,7 +2531,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "휘경-dong",
+      "slugKey": "휘경동",
+      "legacySlug": "휘경-dong",
+      "originalSlug": "hwigyeong-dong",
       "sortOrder": 1
     },
     {
@@ -2392,7 +2552,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "청량리-dong",
+      "slugKey": "청량리동",
+      "legacySlug": "청량리-dong",
+      "originalSlug": "cheongnyangni-dong",
       "sortOrder": 1
     },
     {
@@ -2411,7 +2573,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "용두-dong",
+      "slugKey": "용두동",
+      "legacySlug": "용두-dong",
+      "originalSlug": "yongdu-dong",
       "sortOrder": 1
     },
     {
@@ -2430,7 +2594,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신설-dong",
+      "slugKey": "신설동",
+      "legacySlug": "신설-dong",
+      "originalSlug": "sinseol-dong",
       "sortOrder": 1
     },
     {
@@ -2449,7 +2615,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "제기-dong",
+      "slugKey": "제기동",
+      "legacySlug": "제기-dong",
+      "originalSlug": "jegi-dong",
       "sortOrder": 1
     },
     {
@@ -2468,7 +2636,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "사당-dong",
+      "slugKey": "사당동",
+      "legacySlug": "사당-dong",
+      "originalSlug": "sadang-dong",
       "sortOrder": 1
     },
     {
@@ -2487,7 +2657,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "상도-dong",
+      "slugKey": "상도동",
+      "legacySlug": "상도-dong",
+      "originalSlug": "sangdo-dong",
       "sortOrder": 1
     },
     {
@@ -2506,7 +2678,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "흑석-dong",
+      "slugKey": "흑석동",
+      "legacySlug": "흑석-dong",
+      "originalSlug": "heukseok-dong",
       "sortOrder": 1
     },
     {
@@ -2525,7 +2699,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "대방-dong",
+      "slugKey": "대방동",
+      "legacySlug": "대방-dong",
+      "originalSlug": "daebang-dong",
       "sortOrder": 1
     },
     {
@@ -2544,7 +2720,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신대방-dong",
+      "slugKey": "신대방동",
+      "legacySlug": "신대방-dong",
+      "originalSlug": "sindaebang-dong",
       "sortOrder": 1
     },
     {
@@ -2563,7 +2741,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "노량진-dong",
+      "slugKey": "노량진동",
+      "legacySlug": "노량진-dong",
+      "originalSlug": "noryangjin-dong",
       "sortOrder": 1
     },
     {
@@ -2582,7 +2762,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "본-dong",
+      "slugKey": "본동",
+      "legacySlug": "본-dong",
+      "originalSlug": "bon-dong",
       "sortOrder": 1
     },
     {
@@ -2601,7 +2783,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "망원-dong",
+      "slugKey": "망원동",
+      "legacySlug": "망원-dong",
+      "originalSlug": "mangwon-dong",
       "sortOrder": 1
     },
     {
@@ -2620,7 +2804,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "합정-dong",
+      "slugKey": "합정동",
+      "legacySlug": "합정-dong",
+      "originalSlug": "hapjeong-dong",
       "sortOrder": 1
     },
     {
@@ -2639,7 +2825,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "서교-dong",
+      "slugKey": "서교동",
+      "legacySlug": "서교-dong",
+      "originalSlug": "seogyo-dong",
       "sortOrder": 1
     },
     {
@@ -2658,7 +2846,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "상암-dong",
+      "slugKey": "상암동",
+      "legacySlug": "상암-dong",
+      "originalSlug": "sangam-dong",
       "sortOrder": 1
     },
     {
@@ -2677,7 +2867,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "공덕-dong",
+      "slugKey": "공덕동",
+      "legacySlug": "공덕-dong",
+      "originalSlug": "gongdeok-dong",
       "sortOrder": 1
     },
     {
@@ -2696,7 +2888,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "아현-dong",
+      "slugKey": "아현동",
+      "legacySlug": "아현-dong",
+      "originalSlug": "ahyeon-dong",
       "sortOrder": 1
     },
     {
@@ -2715,7 +2909,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "성산-dong",
+      "slugKey": "성산동",
+      "legacySlug": "성산-dong",
+      "originalSlug": "seongsan-dong",
       "sortOrder": 1
     },
     {
@@ -2734,7 +2930,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신수-dong",
+      "slugKey": "신수동",
+      "legacySlug": "신수-dong",
+      "originalSlug": "sinsu-dong",
       "sortOrder": 1
     },
     {
@@ -2753,7 +2951,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "염리-dong",
+      "slugKey": "염리동",
+      "legacySlug": "염리-dong",
+      "originalSlug": "yeomri-dong",
       "sortOrder": 1
     },
     {
@@ -2772,7 +2972,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "대흥-dong",
+      "slugKey": "대흥동",
+      "legacySlug": "대흥-dong",
+      "originalSlug": "daeheung-dong",
       "sortOrder": 1
     },
     {
@@ -2791,7 +2993,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "용강-dong",
+      "slugKey": "용강동",
+      "legacySlug": "용강-dong",
+      "originalSlug": "yonggang-dong",
       "sortOrder": 1
     },
     {
@@ -2810,7 +3014,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "도화-dong",
+      "slugKey": "도화동",
+      "legacySlug": "도화-dong",
+      "originalSlug": "dohwa-dong",
       "sortOrder": 1
     },
     {
@@ -2829,7 +3035,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "중-dong",
+      "slugKey": "중동",
+      "legacySlug": "중-dong",
+      "originalSlug": "jung-dong-mapo",
       "sortOrder": 1
     },
     {
@@ -2848,7 +3056,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "홍제-dong",
+      "slugKey": "홍제동",
+      "legacySlug": "홍제-dong",
+      "originalSlug": "hongje-dong",
       "sortOrder": 1
     },
     {
@@ -2867,7 +3077,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "홍은-dong",
+      "slugKey": "홍은동",
+      "legacySlug": "홍은-dong",
+      "originalSlug": "hongeun-dong",
       "sortOrder": 1
     },
     {
@@ -2886,7 +3098,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "남가좌-dong",
+      "slugKey": "남가좌동",
+      "legacySlug": "남가좌-dong",
+      "originalSlug": "namgajwa-dong",
       "sortOrder": 1
     },
     {
@@ -2905,7 +3119,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "북가좌-dong",
+      "slugKey": "북가좌동",
+      "legacySlug": "북가좌-dong",
+      "originalSlug": "bukgajwa-dong",
       "sortOrder": 1
     },
     {
@@ -2924,7 +3140,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "연희-dong",
+      "slugKey": "연희동",
+      "legacySlug": "연희-dong",
+      "originalSlug": "yeonhui-dong",
       "sortOrder": 1
     },
     {
@@ -2943,7 +3161,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "북아현-dong",
+      "slugKey": "북아현동",
+      "legacySlug": "북아현-dong",
+      "originalSlug": "bugahyeon-dong",
       "sortOrder": 1
     },
     {
@@ -2962,7 +3182,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "충정로-dong",
+      "slugKey": "충정로동",
+      "legacySlug": "충정로-dong",
+      "originalSlug": "chungjeongro-dong",
       "sortOrder": 1
     },
     {
@@ -2981,7 +3203,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "창천-dong",
+      "slugKey": "창천동",
+      "legacySlug": "창천-dong",
+      "originalSlug": "changcheon-dong",
       "sortOrder": 1
     },
     {
@@ -3000,7 +3224,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "서초-dong",
+      "slugKey": "서초동",
+      "legacySlug": "서초-dong",
+      "originalSlug": "seocho-dong",
       "sortOrder": 1
     },
     {
@@ -3019,7 +3245,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "반포-dong",
+      "slugKey": "반포동",
+      "legacySlug": "반포-dong",
+      "originalSlug": "banpo-dong",
       "sortOrder": 1
     },
     {
@@ -3038,7 +3266,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "방배-dong",
+      "slugKey": "방배동",
+      "legacySlug": "방배-dong",
+      "originalSlug": "bangbae-dong",
       "sortOrder": 1
     },
     {
@@ -3057,7 +3287,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "양재-dong",
+      "slugKey": "양재동",
+      "legacySlug": "양재-dong",
+      "originalSlug": "yangjae-dong",
       "sortOrder": 1
     },
     {
@@ -3076,7 +3308,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "우면-dong",
+      "slugKey": "우면동",
+      "legacySlug": "우면-dong",
+      "originalSlug": "umyeon-dong",
       "sortOrder": 1
     },
     {
@@ -3095,7 +3329,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "원지-dong",
+      "slugKey": "원지동",
+      "legacySlug": "원지-dong",
+      "originalSlug": "wonji-dong",
       "sortOrder": 1
     },
     {
@@ -3114,7 +3350,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "잠원-dong",
+      "slugKey": "잠원동",
+      "legacySlug": "잠원-dong",
+      "originalSlug": "jamwon-dong",
       "sortOrder": 1
     },
     {
@@ -3133,7 +3371,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "내곡-dong",
+      "slugKey": "내곡동",
+      "legacySlug": "내곡-dong",
+      "originalSlug": "naegok-dong",
       "sortOrder": 1
     },
     {
@@ -3152,7 +3392,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "염곡-dong",
+      "slugKey": "염곡동",
+      "legacySlug": "염곡-dong",
+      "originalSlug": "yeomgok-dong",
       "sortOrder": 1
     },
     {
@@ -3171,7 +3413,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신원-dong",
+      "slugKey": "신원동",
+      "legacySlug": "신원-dong",
+      "originalSlug": "sinwon-dong",
       "sortOrder": 1
     },
     {
@@ -3190,7 +3434,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "성수-dong",
+      "slugKey": "성수동",
+      "legacySlug": "성수-dong",
+      "originalSlug": "seongsu-dong",
       "sortOrder": 1
     },
     {
@@ -3209,7 +3455,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "금호-dong",
+      "slugKey": "금호동",
+      "legacySlug": "금호-dong",
+      "originalSlug": "geumho-dong",
       "sortOrder": 1
     },
     {
@@ -3228,7 +3476,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "옥수-dong",
+      "slugKey": "옥수동",
+      "legacySlug": "옥수-dong",
+      "originalSlug": "oksu-dong",
       "sortOrder": 1
     },
     {
@@ -3247,7 +3497,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "행당-dong",
+      "slugKey": "행당동",
+      "legacySlug": "행당-dong",
+      "originalSlug": "haengdang-dong",
       "sortOrder": 1
     },
     {
@@ -3266,7 +3518,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "응봉-dong",
+      "slugKey": "응봉동",
+      "legacySlug": "응봉-dong",
+      "originalSlug": "eungbong-dong",
       "sortOrder": 1
     },
     {
@@ -3285,7 +3539,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "마장-dong",
+      "slugKey": "마장동",
+      "legacySlug": "마장-dong",
+      "originalSlug": "majang-dong",
       "sortOrder": 1
     },
     {
@@ -3304,7 +3560,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "사근-dong",
+      "slugKey": "사근동",
+      "legacySlug": "사근-dong",
+      "originalSlug": "sageun-dong",
       "sortOrder": 1
     },
     {
@@ -3323,7 +3581,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "송정-dong",
+      "slugKey": "송정동",
+      "legacySlug": "송정-dong",
+      "originalSlug": "songjeong-dong",
       "sortOrder": 1
     },
     {
@@ -3342,7 +3602,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "용답-dong",
+      "slugKey": "용답동",
+      "legacySlug": "용답-dong",
+      "originalSlug": "yongdap-dong",
       "sortOrder": 1
     },
     {
@@ -3361,7 +3623,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "도선-dong",
+      "slugKey": "도선동",
+      "legacySlug": "도선-dong",
+      "originalSlug": "doseon-dong",
       "sortOrder": 1
     },
     {
@@ -3380,7 +3644,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "홍익-dong",
+      "slugKey": "홍익동",
+      "legacySlug": "홍익-dong",
+      "originalSlug": "hongik-dong",
       "sortOrder": 1
     },
     {
@@ -3399,7 +3665,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "하왕십리-dong",
+      "slugKey": "하왕십리동",
+      "legacySlug": "하왕십리-dong",
+      "originalSlug": "hawangsimni-dong",
       "sortOrder": 1
     },
     {
@@ -3418,7 +3686,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "상왕십리-dong",
+      "slugKey": "상왕십리동",
+      "legacySlug": "상왕십리-dong",
+      "originalSlug": "sawangsimni-dong",
       "sortOrder": 1
     },
     {
@@ -3437,7 +3707,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "길음-dong",
+      "slugKey": "길음동",
+      "legacySlug": "길음-dong",
+      "originalSlug": "gireum-dong",
       "sortOrder": 1
     },
     {
@@ -3456,7 +3728,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "종암-dong",
+      "slugKey": "종암동",
+      "legacySlug": "종암-dong",
+      "originalSlug": "jongam-dong",
       "sortOrder": 1
     },
     {
@@ -3475,7 +3749,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "돈암-dong",
+      "slugKey": "돈암동",
+      "legacySlug": "돈암-dong",
+      "originalSlug": "donam-dong",
       "sortOrder": 1
     },
     {
@@ -3494,7 +3770,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "정릉-dong",
+      "slugKey": "정릉동",
+      "legacySlug": "정릉-dong",
+      "originalSlug": "jeongneung-dong",
       "sortOrder": 1
     },
     {
@@ -3513,7 +3791,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "석관-dong",
+      "slugKey": "석관동",
+      "legacySlug": "석관-dong",
+      "originalSlug": "seokgwan-dong",
       "sortOrder": 1
     },
     {
@@ -3532,7 +3812,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "삼선-dong",
+      "slugKey": "삼선동",
+      "legacySlug": "삼선-dong",
+      "originalSlug": "samseon-dong",
       "sortOrder": 1
     },
     {
@@ -3551,7 +3833,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "동선-dong",
+      "slugKey": "동선동",
+      "legacySlug": "동선-dong",
+      "originalSlug": "dongseon-dong",
       "sortOrder": 1
     },
     {
@@ -3570,7 +3854,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "안암-dong",
+      "slugKey": "안암동",
+      "legacySlug": "안암-dong",
+      "originalSlug": "anam-dong",
       "sortOrder": 1
     },
     {
@@ -3589,7 +3875,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "보문-dong",
+      "slugKey": "보문동",
+      "legacySlug": "보문-dong",
+      "originalSlug": "bomun-dong",
       "sortOrder": 1
     },
     {
@@ -3608,7 +3896,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "성북-dong",
+      "slugKey": "성북동",
+      "legacySlug": "성북-dong",
+      "originalSlug": "seongbuk-dong",
       "sortOrder": 1
     },
     {
@@ -3627,7 +3917,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "동소문-dong",
+      "slugKey": "동소문동",
+      "legacySlug": "동소문-dong",
+      "originalSlug": "dongsomun-dong",
       "sortOrder": 1
     },
     {
@@ -3646,7 +3938,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "하월곡-dong",
+      "slugKey": "하월곡동",
+      "legacySlug": "하월곡-dong",
+      "originalSlug": "hawolgok-dong",
       "sortOrder": 1
     },
     {
@@ -3665,7 +3959,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "상월곡-dong",
+      "slugKey": "상월곡동",
+      "legacySlug": "상월곡-dong",
+      "originalSlug": "sawolgok-dong",
       "sortOrder": 1
     },
     {
@@ -3684,7 +3980,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "장위-dong",
+      "slugKey": "장위동",
+      "legacySlug": "장위-dong",
+      "originalSlug": "jangwi-dong",
       "sortOrder": 1
     },
     {
@@ -3703,7 +4001,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "잠실-dong",
+      "slugKey": "잠실동",
+      "legacySlug": "잠실-dong",
+      "originalSlug": "jamsil-dong",
       "sortOrder": 1
     },
     {
@@ -3722,7 +4022,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "가락-dong",
+      "slugKey": "가락동",
+      "legacySlug": "가락-dong",
+      "originalSlug": "garak-dong",
       "sortOrder": 1
     },
     {
@@ -3741,7 +4043,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "문정-dong",
+      "slugKey": "문정동",
+      "legacySlug": "문정-dong",
+      "originalSlug": "munjeong-dong",
       "sortOrder": 1
     },
     {
@@ -3760,7 +4064,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "방이-dong",
+      "slugKey": "방이동",
+      "legacySlug": "방이-dong",
+      "originalSlug": "bangi-dong",
       "sortOrder": 1
     },
     {
@@ -3779,7 +4085,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "오금-dong",
+      "slugKey": "오금동",
+      "legacySlug": "오금-dong",
+      "originalSlug": "ogeum-dong",
       "sortOrder": 1
     },
     {
@@ -3798,7 +4106,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "삼전-dong",
+      "slugKey": "삼전동",
+      "legacySlug": "삼전-dong",
+      "originalSlug": "samjeon-dong",
       "sortOrder": 1
     },
     {
@@ -3817,7 +4127,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "석촌-dong",
+      "slugKey": "석촌동",
+      "legacySlug": "석촌-dong",
+      "originalSlug": "seokchon-dong",
       "sortOrder": 1
     },
     {
@@ -3836,7 +4148,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "풍납-dong",
+      "slugKey": "풍납동",
+      "legacySlug": "풍납-dong",
+      "originalSlug": "pungnap-dong",
       "sortOrder": 1
     },
     {
@@ -3855,7 +4169,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "거여-dong",
+      "slugKey": "거여동",
+      "legacySlug": "거여-dong",
+      "originalSlug": "geoyeon-dong",
       "sortOrder": 1
     },
     {
@@ -3874,7 +4190,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "마천-dong",
+      "slugKey": "마천동",
+      "legacySlug": "마천-dong",
+      "originalSlug": "macheon-dong",
       "sortOrder": 1
     },
     {
@@ -3893,7 +4211,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "장지-dong",
+      "slugKey": "장지동",
+      "legacySlug": "장지-dong",
+      "originalSlug": "jangji-dong",
       "sortOrder": 1
     },
     {
@@ -3912,7 +4232,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "송파-dong",
+      "slugKey": "송파동",
+      "legacySlug": "송파-dong",
+      "originalSlug": "songpa-dong",
       "sortOrder": 1
     },
     {
@@ -3931,7 +4253,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신천-dong",
+      "slugKey": "신천동",
+      "legacySlug": "신천-dong",
+      "originalSlug": "sincheon-dong",
       "sortOrder": 1
     },
     {
@@ -3950,7 +4274,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "목-dong",
+      "slugKey": "목동",
+      "legacySlug": "목-dong",
+      "originalSlug": "mok-dong",
       "sortOrder": 1
     },
     {
@@ -3969,7 +4295,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신정-dong",
+      "slugKey": "신정동",
+      "legacySlug": "신정-dong",
+      "originalSlug": "sinjeong-dong",
       "sortOrder": 1
     },
     {
@@ -3988,7 +4316,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신월-dong",
+      "slugKey": "신월동",
+      "legacySlug": "신월-dong",
+      "originalSlug": "sinwol-dong",
       "sortOrder": 1
     },
     {
@@ -4007,7 +4337,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "여의도-dong",
+      "slugKey": "여의도동",
+      "legacySlug": "여의도-dong",
+      "originalSlug": "yeouido-dong",
       "sortOrder": 1
     },
     {
@@ -4026,7 +4358,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "당산-dong",
+      "slugKey": "당산동",
+      "legacySlug": "당산-dong",
+      "originalSlug": "dangsan-dong",
       "sortOrder": 1
     },
     {
@@ -4045,7 +4379,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "문래-dong",
+      "slugKey": "문래동",
+      "legacySlug": "문래-dong",
+      "originalSlug": "mullae-dong",
       "sortOrder": 1
     },
     {
@@ -4064,7 +4400,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "양평-dong",
+      "slugKey": "양평동",
+      "legacySlug": "양평-dong",
+      "originalSlug": "yangpyeong-dong",
       "sortOrder": 1
     },
     {
@@ -4083,7 +4421,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신길-dong",
+      "slugKey": "신길동",
+      "legacySlug": "신길-dong",
+      "originalSlug": "singil-dong",
       "sortOrder": 1
     },
     {
@@ -4102,7 +4442,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "대림-dong",
+      "slugKey": "대림동",
+      "legacySlug": "대림-dong",
+      "originalSlug": "daerim-dong",
       "sortOrder": 1
     },
     {
@@ -4121,7 +4463,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "영등포-dong",
+      "slugKey": "영등포동",
+      "legacySlug": "영등포-dong",
+      "originalSlug": "yeongdeungpo-dong",
       "sortOrder": 1
     },
     {
@@ -4140,7 +4484,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "도림-dong",
+      "slugKey": "도림동",
+      "legacySlug": "도림-dong",
+      "originalSlug": "dorim-dong",
       "sortOrder": 1
     },
     {
@@ -4159,7 +4505,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "한남-dong",
+      "slugKey": "한남동",
+      "legacySlug": "한남-dong",
+      "originalSlug": "hannam-dong",
       "sortOrder": 1
     },
     {
@@ -4178,7 +4526,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "이태원-dong",
+      "slugKey": "이태원동",
+      "legacySlug": "이태원-dong",
+      "originalSlug": "itaewon-dong",
       "sortOrder": 1
     },
     {
@@ -4197,7 +4547,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "서빙고-dong",
+      "slugKey": "서빙고동",
+      "legacySlug": "서빙고-dong",
+      "originalSlug": "seobinggo-dong",
       "sortOrder": 1
     },
     {
@@ -4216,7 +4568,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "이촌-dong",
+      "slugKey": "이촌동",
+      "legacySlug": "이촌-dong",
+      "originalSlug": "ichon-dong",
       "sortOrder": 1
     },
     {
@@ -4235,7 +4589,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "후암-dong",
+      "slugKey": "후암동",
+      "legacySlug": "후암-dong",
+      "originalSlug": "huam-dong",
       "sortOrder": 1
     },
     {
@@ -4254,7 +4610,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "갈월-dong",
+      "slugKey": "갈월동",
+      "legacySlug": "갈월-dong",
+      "originalSlug": "galwol-dong",
       "sortOrder": 1
     },
     {
@@ -4273,7 +4631,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "남영-dong",
+      "slugKey": "남영동",
+      "legacySlug": "남영-dong",
+      "originalSlug": "namyeong-dong",
       "sortOrder": 1
     },
     {
@@ -4292,7 +4652,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "동자-dong",
+      "slugKey": "동자동",
+      "legacySlug": "동자-dong",
+      "originalSlug": "dongja-dong",
       "sortOrder": 1
     },
     {
@@ -4311,7 +4673,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "서계-dong",
+      "slugKey": "서계동",
+      "legacySlug": "서계-dong",
+      "originalSlug": "seogye-dong",
       "sortOrder": 1
     },
     {
@@ -4330,7 +4694,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신계-dong",
+      "slugKey": "신계동",
+      "legacySlug": "신계-dong",
+      "originalSlug": "singye-dong",
       "sortOrder": 1
     },
     {
@@ -4349,7 +4715,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "원효로-dong",
+      "slugKey": "원효로동",
+      "legacySlug": "원효로-dong",
+      "originalSlug": "wonhyoro-dong",
       "sortOrder": 1
     },
     {
@@ -4368,7 +4736,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "효창-dong",
+      "slugKey": "효창동",
+      "legacySlug": "효창-dong",
+      "originalSlug": "hyochang-dong",
       "sortOrder": 1
     },
     {
@@ -4387,7 +4757,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "용문-dong",
+      "slugKey": "용문동",
+      "legacySlug": "용문-dong",
+      "originalSlug": "yongmun-dong",
       "sortOrder": 1
     },
     {
@@ -4406,7 +4778,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "보광-dong",
+      "slugKey": "보광동",
+      "legacySlug": "보광-dong",
+      "originalSlug": "bogwang-dong",
       "sortOrder": 1
     },
     {
@@ -4425,7 +4799,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "갈현-dong",
+      "slugKey": "갈현동",
+      "legacySlug": "갈현-dong",
+      "originalSlug": "galhyeon-dong",
       "sortOrder": 1
     },
     {
@@ -4444,7 +4820,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "불광-dong",
+      "slugKey": "불광동",
+      "legacySlug": "불광-dong",
+      "originalSlug": "bulgwang-dong",
       "sortOrder": 1
     },
     {
@@ -4463,7 +4841,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "녹번-dong",
+      "slugKey": "녹번동",
+      "legacySlug": "녹번-dong",
+      "originalSlug": "nokbeon-dong",
       "sortOrder": 1
     },
     {
@@ -4482,7 +4862,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "대조-dong",
+      "slugKey": "대조동",
+      "legacySlug": "대조-dong",
+      "originalSlug": "daejo-dong",
       "sortOrder": 1
     },
     {
@@ -4501,7 +4883,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "응암-dong",
+      "slugKey": "응암동",
+      "legacySlug": "응암-dong",
+      "originalSlug": "eungam-dong",
       "sortOrder": 1
     },
     {
@@ -4520,7 +4904,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "역촌-dong",
+      "slugKey": "역촌동",
+      "legacySlug": "역촌-dong",
+      "originalSlug": "yeokchon-dong",
       "sortOrder": 1
     },
     {
@@ -4539,7 +4925,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sinsa-dong-eunpyeong",
+      "slugKey": "신사동",
+      "legacySlug": "신사-dong",
+      "originalSlug": "sinsa-dong-eunpyeong",
       "sortOrder": 1
     },
     {
@@ -4558,7 +4946,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "구산-dong",
+      "slugKey": "구산동",
+      "legacySlug": "구산-dong",
+      "originalSlug": "gusan-dong",
       "sortOrder": 1
     },
     {
@@ -4577,7 +4967,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "증산-dong",
+      "slugKey": "증산동",
+      "legacySlug": "증산-dong",
+      "originalSlug": "jeungsan-dong",
       "sortOrder": 1
     },
     {
@@ -4596,7 +4988,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "수색-dong",
+      "slugKey": "수색동",
+      "legacySlug": "수색-dong",
+      "originalSlug": "susaek-dong",
       "sortOrder": 1
     },
     {
@@ -4615,7 +5009,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "진관-dong",
+      "slugKey": "진관동",
+      "legacySlug": "진관-dong",
+      "originalSlug": "jingwan-dong",
       "sortOrder": 1
     },
     {
@@ -4634,7 +5030,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "혜화-dong",
+      "slugKey": "혜화동",
+      "legacySlug": "혜화-dong",
+      "originalSlug": "hyehwa-dong",
       "sortOrder": 1
     },
     {
@@ -4653,7 +5051,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "평창-dong",
+      "slugKey": "평창동",
+      "legacySlug": "평창-dong",
+      "originalSlug": "pyeongchang-dong",
       "sortOrder": 1
     },
     {
@@ -4672,7 +5072,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "삼청-dong",
+      "slugKey": "삼청동",
+      "legacySlug": "삼청-dong",
+      "originalSlug": "samcheong-dong",
       "sortOrder": 1
     },
     {
@@ -4691,7 +5093,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "부암-dong",
+      "slugKey": "부암동",
+      "legacySlug": "부암-dong",
+      "originalSlug": "buam-dong",
       "sortOrder": 1
     },
     {
@@ -4710,7 +5114,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "무악-dong",
+      "slugKey": "무악동",
+      "legacySlug": "무악-dong",
+      "originalSlug": "muak-dong",
       "sortOrder": 1
     },
     {
@@ -4729,7 +5135,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "교남-dong",
+      "slugKey": "교남동",
+      "legacySlug": "교남-dong",
+      "originalSlug": "gyonam-dong",
       "sortOrder": 1
     },
     {
@@ -4748,7 +5156,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "숭인-dong",
+      "slugKey": "숭인동",
+      "legacySlug": "숭인-dong",
+      "originalSlug": "sungin-dong",
       "sortOrder": 1
     },
     {
@@ -4767,7 +5177,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "창신-dong",
+      "slugKey": "창신동",
+      "legacySlug": "창신-dong",
+      "originalSlug": "changsin-dong",
       "sortOrder": 1
     },
     {
@@ -4786,7 +5198,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "가회-dong",
+      "slugKey": "가회동",
+      "legacySlug": "가회-dong",
+      "originalSlug": "gahoe-dong",
       "sortOrder": 1
     },
     {
@@ -4805,7 +5219,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "이화-dong",
+      "slugKey": "이화동",
+      "legacySlug": "이화-dong",
+      "originalSlug": "ihwa-dong",
       "sortOrder": 1
     },
     {
@@ -4824,7 +5240,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "사직-dong",
+      "slugKey": "사직동",
+      "legacySlug": "사직-dong",
+      "originalSlug": "sajik-dong",
       "sortOrder": 1
     },
     {
@@ -4843,7 +5261,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "명-dong",
+      "slugKey": "명동",
+      "legacySlug": "명-dong",
+      "originalSlug": "myeong-dong",
       "sortOrder": 1
     },
     {
@@ -4862,7 +5282,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "을지로-dong",
+      "slugKey": "을지로동",
+      "legacySlug": "을지로-dong",
+      "originalSlug": "euljiro-dong",
       "sortOrder": 1
     },
     {
@@ -4881,7 +5303,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "광희-dong",
+      "slugKey": "광희동",
+      "legacySlug": "광희-dong",
+      "originalSlug": "gwanghui-dong",
       "sortOrder": 1
     },
     {
@@ -4900,7 +5324,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신당-dong",
+      "slugKey": "신당동",
+      "legacySlug": "신당-dong",
+      "originalSlug": "sindang-dong",
       "sortOrder": 1
     },
     {
@@ -4919,7 +5345,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "황학-dong",
+      "slugKey": "황학동",
+      "legacySlug": "황학-dong",
+      "originalSlug": "hwanghak-dong",
       "sortOrder": 1
     },
     {
@@ -4938,7 +5366,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "중림-dong",
+      "slugKey": "중림동",
+      "legacySlug": "중림-dong",
+      "originalSlug": "junglim-dong",
       "sortOrder": 1
     },
     {
@@ -4957,7 +5387,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "회현-dong",
+      "slugKey": "회현동",
+      "legacySlug": "회현-dong",
+      "originalSlug": "hoehyeon-dong",
       "sortOrder": 1
     },
     {
@@ -4976,7 +5408,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "필-dong",
+      "slugKey": "필동",
+      "legacySlug": "필-dong",
+      "originalSlug": "pil-dong",
       "sortOrder": 1
     },
     {
@@ -4995,7 +5429,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "장충-dong",
+      "slugKey": "장충동",
+      "legacySlug": "장충-dong",
+      "originalSlug": "jangchung-dong",
       "sortOrder": 1
     },
     {
@@ -5014,7 +5450,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "다산-dong",
+      "slugKey": "다산동",
+      "legacySlug": "다산-dong",
+      "originalSlug": "dasan-dong",
       "sortOrder": 1
     },
     {
@@ -5033,7 +5471,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "약수-dong",
+      "slugKey": "약수동",
+      "legacySlug": "약수-dong",
+      "originalSlug": "yaksu-dong",
       "sortOrder": 1
     },
     {
@@ -5052,7 +5492,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "청구-dong",
+      "slugKey": "청구동",
+      "legacySlug": "청구-dong",
+      "originalSlug": "cheonggu-dong",
       "sortOrder": 1
     },
     {
@@ -5071,7 +5513,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "동화-dong",
+      "slugKey": "동화동",
+      "legacySlug": "동화-dong",
+      "originalSlug": "donghwa-dong",
       "sortOrder": 1
     },
     {
@@ -5090,7 +5534,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "면목-dong",
+      "slugKey": "면목동",
+      "legacySlug": "면목-dong",
+      "originalSlug": "myeonmok-dong",
       "sortOrder": 1
     },
     {
@@ -5109,7 +5555,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "상봉-dong",
+      "slugKey": "상봉동",
+      "legacySlug": "상봉-dong",
+      "originalSlug": "sangbong-dong",
       "sortOrder": 1
     },
     {
@@ -5128,7 +5576,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "중화-dong",
+      "slugKey": "중화동",
+      "legacySlug": "중화-dong",
+      "originalSlug": "junghwa-dong",
       "sortOrder": 1
     },
     {
@@ -5147,7 +5597,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "묵-dong",
+      "slugKey": "묵동",
+      "legacySlug": "묵-dong",
+      "originalSlug": "muk-dong",
       "sortOrder": 1
     },
     {
@@ -5166,7 +5618,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "망우-dong",
+      "slugKey": "망우동",
+      "legacySlug": "망우-dong",
+      "originalSlug": "mangu-dong",
       "sortOrder": 1
     },
     {
@@ -5185,7 +5639,9 @@ export const regionMaster = {
       "status": "active",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신내-dong",
+      "slugKey": "신내동",
+      "legacySlug": "신내-dong",
+      "originalSlug": "sinnae-dong",
       "sortOrder": 1
     },
     {
@@ -5205,7 +5661,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gyesan-dong",
+      "slugKey": "계산동",
+      "legacySlug": "gyesan-dong",
+      "originalSlug": "gyesan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5227,7 +5685,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hyoseong-dong",
+      "slugKey": "효성동",
+      "legacySlug": "hyoseong-dong",
+      "originalSlug": "hyoseong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5250,6 +5710,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "작전동",
+      "legacySlug": "계양-작전동",
+      "originalSlug": "계양-작전동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -5271,7 +5733,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seowun-dong",
+      "slugKey": "서운동",
+      "legacySlug": "seowun-dong",
+      "originalSlug": "seowun-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5293,7 +5757,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "imhak-dong",
+      "slugKey": "임학동",
+      "legacySlug": "imhak-dong",
+      "originalSlug": "imhak-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5315,7 +5781,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yongjong-dong",
+      "slugKey": "용종동",
+      "legacySlug": "yongjong-dong",
+      "originalSlug": "yongjong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5337,7 +5805,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "byeongbang-dong",
+      "slugKey": "병방동",
+      "legacySlug": "byeongbang-dong",
+      "originalSlug": "byeongbang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5359,7 +5829,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bangchuk-dong",
+      "slugKey": "방축동",
+      "legacySlug": "bangchuk-dong",
+      "originalSlug": "bangchuk-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5381,7 +5853,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bakchon-dong",
+      "slugKey": "박촌동",
+      "legacySlug": "bakchon-dong",
+      "originalSlug": "bakchon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5403,7 +5877,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "dongyang-dong",
+      "slugKey": "동양동",
+      "legacySlug": "dongyang-dong",
+      "originalSlug": "dongyang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5425,7 +5901,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gyulhyeon-dong",
+      "slugKey": "귤현동",
+      "legacySlug": "gyulhyeon-dong",
+      "originalSlug": "gyulhyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5447,7 +5925,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sangya-dong",
+      "slugKey": "상야동",
+      "legacySlug": "sangya-dong",
+      "originalSlug": "sangya-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5469,7 +5949,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "haya-dong",
+      "slugKey": "하야동",
+      "legacySlug": "haya-dong",
+      "originalSlug": "haya-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5492,6 +5974,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "평동",
+      "legacySlug": "계양-평동",
+      "originalSlug": "계양-평동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -5513,7 +5997,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "nooji-dong",
+      "slugKey": "노오지동",
+      "legacySlug": "nooji-dong",
+      "originalSlug": "nooji-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5535,7 +6021,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seonjuji-dong",
+      "slugKey": "선주지동",
+      "legacySlug": "seonjuji-dong",
+      "originalSlug": "seonjuji-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5558,6 +6046,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "이화동",
+      "legacySlug": "계양-이화동",
+      "originalSlug": "계양-이화동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -5580,6 +6070,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "오류동",
+      "legacySlug": "계양-오류동",
+      "originalSlug": "계양-오류동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -5602,6 +6094,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "갈현동",
+      "legacySlug": "계양-갈현동",
+      "originalSlug": "계양-갈현동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -5623,7 +6117,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "duksil-dong",
+      "slugKey": "둑실동",
+      "legacySlug": "duksil-dong",
+      "originalSlug": "duksil-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5645,7 +6141,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "moksang-dong",
+      "slugKey": "목상동",
+      "legacySlug": "moksang-dong",
+      "originalSlug": "moksang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5667,7 +6165,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "danam-dong",
+      "slugKey": "다남동",
+      "legacySlug": "danam-dong",
+      "originalSlug": "danam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5690,6 +6190,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "장기동",
+      "legacySlug": "계양-장기동",
+      "originalSlug": "계양-장기동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -5711,7 +6213,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bupyeong-dong",
+      "slugKey": "부평동",
+      "legacySlug": "bupyeong-dong",
+      "originalSlug": "bupyeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5733,7 +6237,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sipjeong-dong",
+      "slugKey": "십정동",
+      "legacySlug": "sipjeong-dong",
+      "originalSlug": "sipjeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5756,6 +6262,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "산곡동",
+      "legacySlug": "부평-산곡동",
+      "originalSlug": "부평-산곡동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -5777,7 +6285,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "cheongcheon-dong",
+      "slugKey": "청천동",
+      "legacySlug": "cheongcheon-dong",
+      "originalSlug": "cheongcheon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5799,7 +6309,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "galsan-dong",
+      "slugKey": "갈산동",
+      "legacySlug": "galsan-dong",
+      "originalSlug": "galsan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5821,7 +6333,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "samsan-dong",
+      "slugKey": "삼산동",
+      "legacySlug": "samsan-dong",
+      "originalSlug": "samsan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5843,7 +6357,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bugae-dong",
+      "slugKey": "부개동",
+      "legacySlug": "bugae-dong",
+      "originalSlug": "bugae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5865,7 +6381,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ilsin-dong",
+      "slugKey": "일신동",
+      "legacySlug": "ilsin-dong",
+      "originalSlug": "ilsin-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5888,6 +6406,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "구산동",
+      "legacySlug": "부평-구산동",
+      "originalSlug": "부평-구산동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -5909,7 +6429,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sungui-dong",
+      "slugKey": "숭의동",
+      "legacySlug": "sungui-dong",
+      "originalSlug": "sungui-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5932,6 +6454,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "용현동",
+      "legacySlug": "미추홀-용현동",
+      "originalSlug": "미추홀-용현동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -5953,7 +6477,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hagik-dong",
+      "slugKey": "학익동",
+      "legacySlug": "hagik-dong",
+      "originalSlug": "hagik-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -5976,6 +6502,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "도화동",
+      "legacySlug": "미추홀-도화동",
+      "originalSlug": "미추홀-도화동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -5997,7 +6525,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "juan-dong",
+      "slugKey": "주안동",
+      "legacySlug": "juan-dong",
+      "originalSlug": "juan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6019,7 +6549,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gwangyo-dong",
+      "slugKey": "관교동",
+      "legacySlug": "gwangyo-dong",
+      "originalSlug": "gwangyo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6041,7 +6573,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "munhak-dong",
+      "slugKey": "문학동",
+      "legacySlug": "munhak-dong",
+      "originalSlug": "munhak-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6063,7 +6597,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "guwol-dong",
+      "slugKey": "구월동",
+      "legacySlug": "guwol-dong",
+      "originalSlug": "guwol-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6085,7 +6621,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ganseok-dong",
+      "slugKey": "간석동",
+      "legacySlug": "ganseok-dong",
+      "originalSlug": "ganseok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6107,7 +6645,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "mansu-dong",
+      "slugKey": "만수동",
+      "legacySlug": "mansu-dong",
+      "originalSlug": "mansu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6129,7 +6669,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jangsu-dong",
+      "slugKey": "장수동",
+      "legacySlug": "jangsu-dong",
+      "originalSlug": "jangsu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6151,7 +6693,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seochang-dong",
+      "slugKey": "서창동",
+      "legacySlug": "seochang-dong",
+      "originalSlug": "seochang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6173,7 +6717,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "unyeon-dong",
+      "slugKey": "운연동",
+      "legacySlug": "unyeon-dong",
+      "originalSlug": "unyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6195,7 +6741,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "namchon-dong",
+      "slugKey": "남촌동",
+      "legacySlug": "namchon-dong",
+      "originalSlug": "namchon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6218,6 +6766,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "도림동",
+      "legacySlug": "남동-도림동",
+      "originalSlug": "남동-도림동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -6239,7 +6789,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "susan-dong",
+      "slugKey": "수산동",
+      "legacySlug": "susan-dong",
+      "originalSlug": "susan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6262,6 +6814,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "논현동",
+      "legacySlug": "남동-논현동",
+      "originalSlug": "남동-논현동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -6284,6 +6838,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "고잔동",
+      "legacySlug": "남동-고잔동",
+      "originalSlug": "남동-고잔동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -6305,7 +6861,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ongnyeon-dong",
+      "slugKey": "옥련동",
+      "legacySlug": "ongnyeon-dong",
+      "originalSlug": "ongnyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6327,7 +6885,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seonhak-dong",
+      "slugKey": "선학동",
+      "legacySlug": "seonhak-dong",
+      "originalSlug": "seonhak-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6349,7 +6909,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yeonsu-dong",
+      "slugKey": "연수동",
+      "legacySlug": "yeonsu-dong",
+      "originalSlug": "yeonsu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6371,7 +6933,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "cheonghak-dong",
+      "slugKey": "청학동",
+      "legacySlug": "cheonghak-dong",
+      "originalSlug": "cheonghak-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6393,7 +6957,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "dongchun-dong",
+      "slugKey": "동춘동",
+      "legacySlug": "dongchun-dong",
+      "originalSlug": "dongchun-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6415,7 +6981,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "songdo-dong",
+      "slugKey": "송도동",
+      "legacySlug": "songdo-dong",
+      "originalSlug": "songdo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6437,7 +7005,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "geomam-dong",
+      "slugKey": "검암동",
+      "legacySlug": "geomam-dong",
+      "originalSlug": "geomam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6459,7 +7029,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gyeongseo-dong",
+      "slugKey": "경서동",
+      "legacySlug": "gyeongseo-dong",
+      "originalSlug": "gyeongseo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6481,7 +7053,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gongchon-dong",
+      "slugKey": "공촌동",
+      "legacySlug": "gongchon-dong",
+      "originalSlug": "gongchon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6504,6 +7078,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "연희동",
+      "legacySlug": "인천-연희동",
+      "originalSlug": "인천-연희동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -6526,6 +7102,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "심곡동",
+      "legacySlug": "인천-심곡동",
+      "originalSlug": "인천-심곡동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -6547,7 +7125,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "cheongna-dong",
+      "slugKey": "청라동",
+      "legacySlug": "cheongna-dong",
+      "originalSlug": "cheongna-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6569,7 +7149,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gajeong-dong",
+      "slugKey": "가정동",
+      "legacySlug": "gajeong-dong",
+      "originalSlug": "gajeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6591,7 +7173,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sinhyeon-dong",
+      "slugKey": "신현동",
+      "legacySlug": "sinhyeon-dong",
+      "originalSlug": "sinhyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6613,7 +7197,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wonchang-dong",
+      "slugKey": "원창동",
+      "legacySlug": "wonchang-dong",
+      "originalSlug": "wonchang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6635,7 +7221,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seognam-dong",
+      "slugKey": "석남동",
+      "legacySlug": "seognam-dong",
+      "originalSlug": "seognam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6658,6 +7246,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "가좌동",
+      "legacySlug": "인천-가좌동",
+      "originalSlug": "인천-가좌동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -6680,6 +7270,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "금곡동",
+      "legacySlug": "검단-금곡동",
+      "originalSlug": "검단-금곡동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -6702,6 +7294,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "마전동",
+      "legacySlug": "검단-마전동",
+      "originalSlug": "검단-마전동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -6723,7 +7317,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "dangha-dong",
+      "slugKey": "당하동",
+      "legacySlug": "dangha-dong",
+      "originalSlug": "dangha-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6746,6 +7342,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "원당동",
+      "legacySlug": "검단-원당동",
+      "originalSlug": "검단-원당동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -6767,7 +7365,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "daegok-dong",
+      "slugKey": "대곡동",
+      "legacySlug": "daegok-dong",
+      "originalSlug": "daegok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6790,6 +7390,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "오류동",
+      "legacySlug": "검단-오류동",
+      "originalSlug": "검단-오류동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -6811,7 +7413,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wanggil-dong",
+      "slugKey": "왕길동",
+      "legacySlug": "wanggil-dong",
+      "originalSlug": "wanggil-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6833,7 +7437,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bullo-dong",
+      "slugKey": "불로동",
+      "legacySlug": "bullo-dong",
+      "originalSlug": "bullo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6855,7 +7461,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ara-dong",
+      "slugKey": "아라동",
+      "legacySlug": "ara-dong",
+      "originalSlug": "ara-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6877,7 +7485,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "manseok-dong",
+      "slugKey": "만석동",
+      "legacySlug": "manseok-dong",
+      "originalSlug": "manseok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6899,7 +7509,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hwasu-dong",
+      "slugKey": "화수동",
+      "legacySlug": "hwasu-dong",
+      "originalSlug": "hwasu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6921,7 +7533,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hwapyeong-dong",
+      "slugKey": "화평동",
+      "legacySlug": "hwapyeong-dong",
+      "originalSlug": "hwapyeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6943,7 +7557,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "songhyeon-dong",
+      "slugKey": "송현동",
+      "legacySlug": "songhyeon-dong",
+      "originalSlug": "songhyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6965,7 +7581,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "songnim-dong",
+      "slugKey": "송림동",
+      "legacySlug": "songnim-dong",
+      "originalSlug": "songnim-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -6988,6 +7606,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "금곡동",
+      "legacySlug": "제물포-금곡동",
+      "originalSlug": "제물포-금곡동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -7009,7 +7629,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "changyeong-dong",
+      "slugKey": "창영동",
+      "legacySlug": "changyeong-dong",
+      "originalSlug": "changyeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7031,7 +7653,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gochon-eup",
+      "slugKey": "고촌읍",
+      "legacySlug": "gochon-eup",
+      "originalSlug": "gochon-eup",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7053,7 +7677,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yangchon-eup",
+      "slugKey": "양촌읍",
+      "legacySlug": "yangchon-eup",
+      "originalSlug": "yangchon-eup",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7075,7 +7701,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "tongjin-eup",
+      "slugKey": "통진읍",
+      "legacySlug": "tongjin-eup",
+      "originalSlug": "tongjin-eup",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7097,7 +7725,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "daegot-myeon",
+      "slugKey": "대곶면",
+      "legacySlug": "daegot-myeon",
+      "originalSlug": "daegot-myeon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7119,7 +7749,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wolgot-myeon",
+      "slugKey": "월곶면",
+      "legacySlug": "wolgot-myeon",
+      "originalSlug": "wolgot-myeon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7141,7 +7773,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "haseong-myeon",
+      "slugKey": "하성면",
+      "legacySlug": "haseong-myeon",
+      "originalSlug": "haseong-myeon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7163,7 +7797,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bukbyeon-dong",
+      "slugKey": "북변동",
+      "legacySlug": "bukbyeon-dong",
+      "originalSlug": "bukbyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7185,7 +7821,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "geolpo-dong",
+      "slugKey": "걸포동",
+      "legacySlug": "geolpo-dong",
+      "originalSlug": "geolpo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7207,7 +7845,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gamjeong-dong",
+      "slugKey": "감정동",
+      "legacySlug": "gamjeong-dong",
+      "originalSlug": "gamjeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7229,7 +7869,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sau-dong",
+      "slugKey": "사우동",
+      "legacySlug": "sau-dong",
+      "originalSlug": "sau-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7251,7 +7893,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "pungmu-dong",
+      "slugKey": "풍무동",
+      "legacySlug": "pungmu-dong",
+      "originalSlug": "pungmu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7273,7 +7917,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "masan-dong",
+      "slugKey": "마산동",
+      "legacySlug": "masan-dong",
+      "originalSlug": "masan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7295,7 +7941,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gurae-dong",
+      "slugKey": "구래동",
+      "legacySlug": "gurae-dong",
+      "originalSlug": "gurae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7318,6 +7966,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "장기동",
+      "legacySlug": "장기동",
+      "originalSlug": "김포-장기동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -7339,7 +7989,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "unyang-dong",
+      "slugKey": "운양동",
+      "legacySlug": "unyang-dong",
+      "originalSlug": "unyang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7361,7 +8013,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jugyo-dong",
+      "slugKey": "주교동",
+      "legacySlug": "jugyo-dong",
+      "originalSlug": "jugyo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7384,6 +8038,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "원당동",
+      "legacySlug": "원당동",
+      "originalSlug": "고양-원당동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -7406,6 +8062,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "신원동",
+      "legacySlug": "신원동",
+      "originalSlug": "고양-신원동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -7427,7 +8085,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seongsa-dong",
+      "slugKey": "성사동",
+      "legacySlug": "seongsa-dong",
+      "originalSlug": "seongsa-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7449,7 +8109,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bukhan-dong",
+      "slugKey": "북한동",
+      "legacySlug": "bukhan-dong",
+      "originalSlug": "bukhan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7471,7 +8133,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hyoja-dong",
+      "slugKey": "효자동",
+      "legacySlug": "hyoja-dong",
+      "originalSlug": "hyoja-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7493,7 +8157,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jichuk-dong",
+      "slugKey": "지축동",
+      "legacySlug": "jichuk-dong",
+      "originalSlug": "jichuk-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7516,6 +8182,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "오금동",
+      "legacySlug": "오금동",
+      "originalSlug": "고양-오금동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -7537,7 +8205,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "samsong-dong",
+      "slugKey": "삼송동",
+      "legacySlug": "samsong-dong",
+      "originalSlug": "samsong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7559,7 +8229,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "dongsan-dong",
+      "slugKey": "동산동",
+      "legacySlug": "dongsan-dong",
+      "originalSlug": "dongsan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7582,6 +8254,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "용두동",
+      "legacySlug": "용두동",
+      "originalSlug": "고양-용두동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -7603,7 +8277,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sindo-dong",
+      "slugKey": "신도동",
+      "legacySlug": "sindo-dong",
+      "originalSlug": "sindo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7625,7 +8301,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hyeoncheon-dong",
+      "slugKey": "현천동",
+      "legacySlug": "hyeoncheon-dong",
+      "originalSlug": "hyeoncheon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7647,7 +8325,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "deogeun-dong",
+      "slugKey": "덕은동",
+      "legacySlug": "deogeun-dong",
+      "originalSlug": "deogeun-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7669,7 +8349,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hwajeon-dong",
+      "slugKey": "화전동",
+      "legacySlug": "hwajeon-dong",
+      "originalSlug": "hwajeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7691,7 +8373,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hyangdong-dong",
+      "slugKey": "향동동",
+      "legacySlug": "hyangdong-dong",
+      "originalSlug": "hyangdong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7713,7 +8397,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "haengsin-dong",
+      "slugKey": "행신동",
+      "legacySlug": "haengsin-dong",
+      "originalSlug": "haengsin-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7735,7 +8421,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "donae-dong",
+      "slugKey": "도내동",
+      "legacySlug": "donae-dong",
+      "originalSlug": "donae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7758,6 +8446,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "화정동",
+      "legacySlug": "화정동",
+      "originalSlug": "고양-화정동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -7779,7 +8469,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "haengjunae-dong",
+      "slugKey": "행주내동",
+      "legacySlug": "haengjunae-dong",
+      "originalSlug": "haengjunae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7801,7 +8493,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "haengjuoe-dong",
+      "slugKey": "행주외동",
+      "legacySlug": "haengjuoe-dong",
+      "originalSlug": "haengjuoe-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7823,7 +8517,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "todang-dong",
+      "slugKey": "토당동",
+      "legacySlug": "todang-dong",
+      "originalSlug": "todang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7846,6 +8542,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "내곡동",
+      "legacySlug": "내곡동",
+      "originalSlug": "고양-내곡동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -7868,6 +8566,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "대장동",
+      "legacySlug": "대장동",
+      "originalSlug": "고양-대장동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -7889,7 +8589,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gwansan-dong",
+      "slugKey": "관산동",
+      "legacySlug": "gwansan-dong",
+      "originalSlug": "gwansan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7911,7 +8613,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "naeyu-dong",
+      "slugKey": "내유동",
+      "legacySlug": "naeyu-dong",
+      "originalSlug": "naeyu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7933,7 +8637,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "daeja-dong",
+      "slugKey": "대자동",
+      "legacySlug": "daeja-dong",
+      "originalSlug": "daeja-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7955,7 +8661,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "byeokje-dong",
+      "slugKey": "벽제동",
+      "legacySlug": "byeokje-dong",
+      "originalSlug": "byeokje-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7977,7 +8685,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wonsin-dong",
+      "slugKey": "원신동",
+      "legacySlug": "wonsin-dong",
+      "originalSlug": "wonsin-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -7999,7 +8709,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "heungdo-dong",
+      "slugKey": "흥도동",
+      "legacySlug": "heungdo-dong",
+      "originalSlug": "heungdo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8021,7 +8733,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "changneung-dong",
+      "slugKey": "창릉동",
+      "legacySlug": "changneung-dong",
+      "originalSlug": "changneung-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8043,7 +8757,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "goyang-dong",
+      "slugKey": "고양동",
+      "legacySlug": "goyang-dong",
+      "originalSlug": "goyang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8065,7 +8781,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "siksa-dong",
+      "slugKey": "식사동",
+      "legacySlug": "siksa-dong",
+      "originalSlug": "siksa-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8087,7 +8805,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jungsan-dong",
+      "slugKey": "중산동",
+      "legacySlug": "jungsan-dong",
+      "originalSlug": "jungsan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8109,7 +8829,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jeongbalsan-dong",
+      "slugKey": "정발산동",
+      "legacySlug": "jeongbalsan-dong",
+      "originalSlug": "jeongbalsan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8131,7 +8853,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "janghang-dong",
+      "slugKey": "장항동",
+      "legacySlug": "janghang-dong",
+      "originalSlug": "janghang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8153,7 +8877,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "madu-dong",
+      "slugKey": "마두동",
+      "legacySlug": "madu-dong",
+      "originalSlug": "madu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8175,7 +8901,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "baekseok-dong",
+      "slugKey": "백석동",
+      "legacySlug": "baekseok-dong",
+      "originalSlug": "baekseok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8197,7 +8925,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "pung-dong",
+      "slugKey": "풍동",
+      "legacySlug": "pung-dong",
+      "originalSlug": "pung-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8219,7 +8949,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sanhwang-dong",
+      "slugKey": "산황동",
+      "legacySlug": "sanhwang-dong",
+      "originalSlug": "sanhwang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8241,7 +8973,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sarihyeon-dong",
+      "slugKey": "사리현동",
+      "legacySlug": "sarihyeon-dong",
+      "originalSlug": "sarihyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8263,7 +8997,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jiyeong-dong",
+      "slugKey": "지영동",
+      "legacySlug": "jiyeong-dong",
+      "originalSlug": "jiyeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8285,7 +9021,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seolmun-dong",
+      "slugKey": "설문동",
+      "legacySlug": "seolmun-dong",
+      "originalSlug": "seolmun-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8307,7 +9045,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "munbong-dong",
+      "slugKey": "문봉동",
+      "legacySlug": "munbong-dong",
+      "originalSlug": "munbong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8329,7 +9069,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seongseok-dong",
+      "slugKey": "성석동",
+      "legacySlug": "seongseok-dong",
+      "originalSlug": "seongseok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8352,6 +9094,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "풍산동",
+      "legacySlug": "풍산동",
+      "originalSlug": "고양-풍산동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -8373,7 +9117,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gobong-dong",
+      "slugKey": "고봉동",
+      "legacySlug": "gobong-dong",
+      "originalSlug": "gobong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8395,7 +9141,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ilsan-dong",
+      "slugKey": "일산동",
+      "legacySlug": "ilsan-dong",
+      "originalSlug": "ilsan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8417,7 +9165,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "tanhyeon-dong",
+      "slugKey": "탄현동",
+      "legacySlug": "tanhyeon-dong",
+      "originalSlug": "tanhyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8439,7 +9189,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "juyeop-dong",
+      "slugKey": "주엽동",
+      "legacySlug": "juyeop-dong",
+      "originalSlug": "juyeop-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8461,7 +9213,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "daehwa-dong",
+      "slugKey": "대화동",
+      "legacySlug": "daehwa-dong",
+      "originalSlug": "daehwa-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8484,6 +9238,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "가좌동",
+      "legacySlug": "가좌동",
+      "originalSlug": "고양-가좌동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -8506,6 +9262,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "구산동",
+      "legacySlug": "구산동",
+      "originalSlug": "고양-구산동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -8527,7 +9285,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "deogi-dong",
+      "slugKey": "덕이동",
+      "legacySlug": "deogi-dong",
+      "originalSlug": "deogi-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8549,7 +9309,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "beopgot-dong",
+      "slugKey": "법곳동",
+      "legacySlug": "beopgot-dong",
+      "originalSlug": "beopgot-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8571,7 +9333,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "songpo-dong",
+      "slugKey": "송포동",
+      "legacySlug": "songpo-dong",
+      "originalSlug": "songpo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8593,7 +9357,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "songsan-dong",
+      "slugKey": "송산동",
+      "legacySlug": "songsan-dong",
+      "originalSlug": "songsan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8615,7 +9381,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "baekseok-eup",
+      "slugKey": "백석읍",
+      "legacySlug": "baekseok-eup",
+      "originalSlug": "baekseok-eup",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8637,7 +9405,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "eunhyeon-myeon",
+      "slugKey": "은현면",
+      "legacySlug": "eunhyeon-myeon",
+      "originalSlug": "eunhyeon-myeon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8659,7 +9429,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "nam-myeon",
+      "slugKey": "남면",
+      "legacySlug": "nam-myeon",
+      "originalSlug": "nam-myeon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8681,7 +9453,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gwangjeok-myeon",
+      "slugKey": "광적면",
+      "legacySlug": "gwangjeok-myeon",
+      "originalSlug": "gwangjeok-myeon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8703,7 +9477,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jangheung-myeon",
+      "slugKey": "장흥면",
+      "legacySlug": "jangheung-myeon",
+      "originalSlug": "jangheung-myeon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8725,7 +9501,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yuyang-dong",
+      "slugKey": "유양동",
+      "legacySlug": "yuyang-dong",
+      "originalSlug": "yuyang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8747,7 +9525,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "eodun-dong",
+      "slugKey": "어둔동",
+      "legacySlug": "eodun-dong",
+      "originalSlug": "eodun-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8769,7 +9549,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "nambang-dong",
+      "slugKey": "남방동",
+      "legacySlug": "nambang-dong",
+      "originalSlug": "nambang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8792,6 +9574,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "마전동",
+      "legacySlug": "마전동",
+      "originalSlug": "양주-마전동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -8813,7 +9597,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sanbuk-dong",
+      "slugKey": "산북동",
+      "legacySlug": "sanbuk-dong",
+      "originalSlug": "sanbuk-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8835,7 +9621,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gwangsa-dong",
+      "slugKey": "광사동",
+      "legacySlug": "gwangsa-dong",
+      "originalSlug": "gwangsa-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8857,7 +9645,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "mansong-dong",
+      "slugKey": "만송동",
+      "legacySlug": "mansong-dong",
+      "originalSlug": "mansong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8879,7 +9669,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "samseung-dong",
+      "slugKey": "삼숭동",
+      "legacySlug": "samseung-dong",
+      "originalSlug": "samseung-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8901,7 +9693,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "goeup-dong",
+      "slugKey": "고읍동",
+      "legacySlug": "goeup-dong",
+      "originalSlug": "goeup-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8923,7 +9717,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "deokjeong-dong",
+      "slugKey": "덕정동",
+      "legacySlug": "deokjeong-dong",
+      "originalSlug": "deokjeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8945,7 +9741,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bongyang-dong",
+      "slugKey": "봉양동",
+      "legacySlug": "bongyang-dong",
+      "originalSlug": "bongyang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8967,7 +9765,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hoeam-dong",
+      "slugKey": "회암동",
+      "legacySlug": "hoeam-dong",
+      "originalSlug": "hoeam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -8989,7 +9789,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yuljeong-dong",
+      "slugKey": "율정동",
+      "legacySlug": "yuljeong-dong",
+      "originalSlug": "yuljeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9011,7 +9813,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "okjeong-dong",
+      "slugKey": "옥정동",
+      "legacySlug": "okjeong-dong",
+      "originalSlug": "okjeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9033,7 +9837,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "goam-dong",
+      "slugKey": "고암동",
+      "legacySlug": "goam-dong",
+      "originalSlug": "goam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9055,7 +9861,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "deokgye-dong",
+      "slugKey": "덕계동",
+      "legacySlug": "deokgye-dong",
+      "originalSlug": "deokgye-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9077,7 +9885,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hoejeong-dong",
+      "slugKey": "회정동",
+      "legacySlug": "hoejeong-dong",
+      "originalSlug": "hoejeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9099,7 +9909,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wabu-eup",
+      "slugKey": "와부읍",
+      "legacySlug": "wabu-eup",
+      "originalSlug": "wabu-eup",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9121,7 +9933,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jinjeop-eup",
+      "slugKey": "진접읍",
+      "legacySlug": "jinjeop-eup",
+      "originalSlug": "jinjeop-eup",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9143,7 +9957,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hwado-eup",
+      "slugKey": "화도읍",
+      "legacySlug": "hwado-eup",
+      "originalSlug": "hwado-eup",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9165,7 +9981,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jingeon-eup",
+      "slugKey": "진건읍",
+      "legacySlug": "jingeon-eup",
+      "originalSlug": "jingeon-eup",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9187,7 +10005,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "onam-eup",
+      "slugKey": "오남읍",
+      "legacySlug": "onam-eup",
+      "originalSlug": "onam-eup",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9209,7 +10029,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "toegyewon-eup",
+      "slugKey": "퇴계원읍",
+      "legacySlug": "toegyewon-eup",
+      "originalSlug": "toegyewon-eup",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9231,7 +10053,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "byeollae-myeon",
+      "slugKey": "별내면",
+      "legacySlug": "byeollae-myeon",
+      "originalSlug": "byeollae-myeon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9253,7 +10077,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sudong-myeon",
+      "slugKey": "수동면",
+      "legacySlug": "sudong-myeon",
+      "originalSlug": "sudong-myeon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9275,7 +10101,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "joan-myeon",
+      "slugKey": "조안면",
+      "legacySlug": "joan-myeon",
+      "originalSlug": "joan-myeon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9297,7 +10125,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hopyeong-dong",
+      "slugKey": "호평동",
+      "legacySlug": "hopyeong-dong",
+      "originalSlug": "hopyeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9319,7 +10149,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "pyeongnae-dong",
+      "slugKey": "평내동",
+      "legacySlug": "pyeongnae-dong",
+      "originalSlug": "pyeongnae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9342,6 +10174,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "금곡동",
+      "legacySlug": "금곡동",
+      "originalSlug": "남양주-금곡동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -9363,7 +10197,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ilpae-dong",
+      "slugKey": "일패동",
+      "legacySlug": "ilpae-dong",
+      "originalSlug": "ilpae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9385,7 +10221,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ipae-dong",
+      "slugKey": "이패동",
+      "legacySlug": "ipae-dong",
+      "originalSlug": "ipae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9407,7 +10245,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sampae-dong",
+      "slugKey": "삼패동",
+      "legacySlug": "sampae-dong",
+      "originalSlug": "sampae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9429,7 +10269,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "suseok-dong",
+      "slugKey": "수석동",
+      "legacySlug": "suseok-dong",
+      "originalSlug": "suseok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9451,7 +10293,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jigeum-dong",
+      "slugKey": "지금동",
+      "legacySlug": "jigeum-dong",
+      "originalSlug": "jigeum-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9473,7 +10317,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "donong-dong",
+      "slugKey": "도농동",
+      "legacySlug": "donong-dong",
+      "originalSlug": "donong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9495,7 +10341,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "byeollae-dong",
+      "slugKey": "별내동",
+      "legacySlug": "byeollae-dong",
+      "originalSlug": "byeollae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9518,6 +10366,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "다산동",
+      "legacySlug": "다산동",
+      "originalSlug": "남양주-다산동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -9539,7 +10389,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "galmae-dong",
+      "slugKey": "갈매동",
+      "legacySlug": "galmae-dong",
+      "originalSlug": "galmae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9561,7 +10413,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sano-dong",
+      "slugKey": "사노동",
+      "legacySlug": "sano-dong",
+      "originalSlug": "sano-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9583,7 +10437,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "inchang-dong",
+      "slugKey": "인창동",
+      "legacySlug": "inchang-dong",
+      "originalSlug": "inchang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9605,7 +10461,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gyomun-dong",
+      "slugKey": "교문동",
+      "legacySlug": "gyomun-dong",
+      "originalSlug": "gyomun-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9627,7 +10485,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sutaek-dong",
+      "slugKey": "수택동",
+      "legacySlug": "sutaek-dong",
+      "originalSlug": "sutaek-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9649,7 +10509,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "acheon-dong",
+      "slugKey": "아천동",
+      "legacySlug": "acheon-dong",
+      "originalSlug": "acheon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9671,7 +10533,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "topyeong-dong",
+      "slugKey": "토평동",
+      "legacySlug": "topyeong-dong",
+      "originalSlug": "topyeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9693,7 +10557,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "cheonhyeon-dong",
+      "slugKey": "천현동",
+      "legacySlug": "cheonhyeon-dong",
+      "originalSlug": "cheonhyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9715,7 +10581,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hasangok-dong",
+      "slugKey": "하산곡동",
+      "legacySlug": "hasangok-dong",
+      "originalSlug": "hasangok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9737,7 +10605,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sangsangok-dong",
+      "slugKey": "상산곡동",
+      "legacySlug": "sangsangok-dong",
+      "originalSlug": "sangsangok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9759,7 +10629,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "deokpung-dong",
+      "slugKey": "덕풍동",
+      "legacySlug": "deokpung-dong",
+      "originalSlug": "deokpung-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9781,7 +10653,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "mangwol-dong",
+      "slugKey": "망월동",
+      "legacySlug": "mangwol-dong",
+      "originalSlug": "mangwol-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9804,6 +10678,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "풍산동",
+      "legacySlug": "풍산동",
+      "originalSlug": "하남-풍산동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -9825,7 +10701,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "misa-dong",
+      "slugKey": "미사동",
+      "legacySlug": "misa-dong",
+      "originalSlug": "misa-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9847,7 +10725,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sinjang-dong",
+      "slugKey": "신장동",
+      "legacySlug": "sinjang-dong",
+      "originalSlug": "sinjang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9870,6 +10750,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "당정동",
+      "legacySlug": "당정동",
+      "originalSlug": "하남-당정동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -9891,7 +10773,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "changwoo-dong",
+      "slugKey": "창우동",
+      "legacySlug": "changwoo-dong",
+      "originalSlug": "changwoo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9913,7 +10797,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "baealmi-dong",
+      "slugKey": "배알미동",
+      "legacySlug": "baealmi-dong",
+      "originalSlug": "baealmi-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9935,7 +10821,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "choi-dong",
+      "slugKey": "초이동",
+      "legacySlug": "choi-dong",
+      "originalSlug": "choi-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9957,7 +10845,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "choil-dong",
+      "slugKey": "초일동",
+      "legacySlug": "choil-dong",
+      "originalSlug": "choil-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -9979,7 +10869,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gwangam-dong",
+      "slugKey": "광암동",
+      "legacySlug": "gwangam-dong",
+      "originalSlug": "gwangam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10001,7 +10893,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gambuk-dong",
+      "slugKey": "감북동",
+      "legacySlug": "gambuk-dong",
+      "originalSlug": "gambuk-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10023,7 +10917,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gamcho-dong",
+      "slugKey": "감초동",
+      "legacySlug": "gamcho-dong",
+      "originalSlug": "gamcho-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10045,7 +10941,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gami-dong",
+      "slugKey": "감이동",
+      "legacySlug": "gami-dong",
+      "originalSlug": "gami-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10067,7 +10965,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gamil-dong",
+      "slugKey": "감일동",
+      "legacySlug": "gamil-dong",
+      "originalSlug": "gamil-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10089,7 +10989,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hagam-dong",
+      "slugKey": "학암동",
+      "legacySlug": "hagam-dong",
+      "originalSlug": "hagam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10111,7 +11013,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gyosan-dong",
+      "slugKey": "교산동",
+      "legacySlug": "gyosan-dong",
+      "originalSlug": "gyosan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10133,7 +11037,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "chungung-dong",
+      "slugKey": "춘궁동",
+      "legacySlug": "chungung-dong",
+      "originalSlug": "chungung-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10155,7 +11061,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hasachang-dong",
+      "slugKey": "하사창동",
+      "legacySlug": "hasachang-dong",
+      "originalSlug": "hasachang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10177,7 +11085,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sangsachang-dong",
+      "slugKey": "상사창동",
+      "legacySlug": "sangsachang-dong",
+      "originalSlug": "sangsachang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10200,6 +11110,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "항동",
+      "legacySlug": "항동",
+      "originalSlug": "하남-항동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -10222,6 +11134,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "신흥동",
+      "legacySlug": "신흥동",
+      "originalSlug": "성남-신흥동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -10243,7 +11157,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "taepyeong-dong",
+      "slugKey": "태평동",
+      "legacySlug": "taepyeong-dong",
+      "originalSlug": "taepyeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10265,7 +11181,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sujin-dong",
+      "slugKey": "수진동",
+      "legacySlug": "sujin-dong",
+      "originalSlug": "sujin-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10287,7 +11205,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "dandae-dong",
+      "slugKey": "단대동",
+      "legacySlug": "dandae-dong",
+      "originalSlug": "dandae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10309,7 +11229,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sanseong-dong",
+      "slugKey": "산성동",
+      "legacySlug": "sanseong-dong",
+      "originalSlug": "sanseong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10331,7 +11253,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yangji-dong-seongnam",
+      "slugKey": "양지동",
+      "legacySlug": "yangji-dong-seongnam",
+      "originalSlug": "yangji-dong-seongnam",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10353,7 +11277,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bokjeong-dong",
+      "slugKey": "복정동",
+      "legacySlug": "bokjeong-dong",
+      "originalSlug": "bokjeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10375,7 +11301,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "changgok-dong",
+      "slugKey": "창곡동",
+      "legacySlug": "changgok-dong",
+      "originalSlug": "changgok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10397,7 +11325,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sinchon-dong-seongnam",
+      "slugKey": "신촌동",
+      "legacySlug": "sinchon-dong-seongnam",
+      "originalSlug": "sinchon-dong-seongnam",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10419,7 +11349,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "oya-dong",
+      "slugKey": "오야동",
+      "legacySlug": "oya-dong",
+      "originalSlug": "oya-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10442,6 +11374,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "심곡동",
+      "legacySlug": "심곡동",
+      "originalSlug": "성남-심곡동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -10464,6 +11398,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "고등동",
+      "legacySlug": "고등동",
+      "originalSlug": "성남-고등동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -10485,7 +11421,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sangjeok-dong",
+      "slugKey": "상적동",
+      "legacySlug": "sangjeok-dong",
+      "originalSlug": "sangjeok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10507,7 +11445,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "dunjeon-dong",
+      "slugKey": "둔전동",
+      "legacySlug": "dunjeon-dong",
+      "originalSlug": "dunjeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10530,6 +11470,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "시흥동",
+      "legacySlug": "시흥동",
+      "originalSlug": "성남-시흥동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -10551,7 +11493,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "geumto-dong",
+      "slugKey": "금토동",
+      "legacySlug": "geumto-dong",
+      "originalSlug": "geumto-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10573,7 +11517,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sasong-dong",
+      "slugKey": "사송동",
+      "legacySlug": "sasong-dong",
+      "originalSlug": "sasong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10595,7 +11541,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seongnam-dong",
+      "slugKey": "성남동",
+      "legacySlug": "seongnam-dong",
+      "originalSlug": "seongnam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10617,7 +11565,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "geumgwang-dong",
+      "slugKey": "금광동",
+      "legacySlug": "geumgwang-dong",
+      "originalSlug": "geumgwang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10640,6 +11590,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "은행동",
+      "legacySlug": "은행동",
+      "originalSlug": "성남-은행동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -10661,7 +11613,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sangdaewon-dong",
+      "slugKey": "상대원동",
+      "legacySlug": "sangdaewon-dong",
+      "originalSlug": "sangdaewon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10683,7 +11637,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yeosu-dong",
+      "slugKey": "여수동",
+      "legacySlug": "yeosu-dong",
+      "originalSlug": "yeosu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10705,7 +11661,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "dochon-dong",
+      "slugKey": "도촌동",
+      "legacySlug": "dochon-dong",
+      "originalSlug": "dochon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10728,6 +11686,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "갈현동",
+      "legacySlug": "갈현동",
+      "originalSlug": "성남-갈현동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -10749,7 +11709,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hadaewon-dong",
+      "slugKey": "하대원동",
+      "legacySlug": "hadaewon-dong",
+      "originalSlug": "hadaewon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10772,6 +11734,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "중앙동",
+      "legacySlug": "중앙동",
+      "originalSlug": "성남-중앙동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -10793,7 +11757,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bundang-dong",
+      "slugKey": "분당동",
+      "legacySlug": "bundang-dong",
+      "originalSlug": "bundang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10815,7 +11781,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sunae-dong",
+      "slugKey": "수내동",
+      "legacySlug": "sunae-dong",
+      "originalSlug": "sunae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10838,6 +11806,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "정자동",
+      "legacySlug": "정자동",
+      "originalSlug": "성남-정자동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -10859,7 +11829,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yul-dong",
+      "slugKey": "율동",
+      "legacySlug": "yul-dong",
+      "originalSlug": "yul-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10881,7 +11853,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seohyeon-dong",
+      "slugKey": "서현동",
+      "legacySlug": "seohyeon-dong",
+      "originalSlug": "seohyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10903,7 +11877,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "imae-dong",
+      "slugKey": "이매동",
+      "legacySlug": "imae-dong",
+      "originalSlug": "imae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10925,7 +11901,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yatap-dong",
+      "slugKey": "야탑동",
+      "legacySlug": "yatap-dong",
+      "originalSlug": "yatap-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10947,7 +11925,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "pangyo-dong",
+      "slugKey": "판교동",
+      "legacySlug": "pangyo-dong",
+      "originalSlug": "pangyo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10969,7 +11949,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sampyeong-dong",
+      "slugKey": "삼평동",
+      "legacySlug": "sampyeong-dong",
+      "originalSlug": "sampyeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -10991,7 +11973,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "baekhyeon-dong",
+      "slugKey": "백현동",
+      "legacySlug": "baekhyeon-dong",
+      "originalSlug": "baekhyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11014,6 +11998,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "금곡동",
+      "legacySlug": "금곡동",
+      "originalSlug": "성남-금곡동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -11035,7 +12021,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gungnae-dong",
+      "slugKey": "궁내동",
+      "legacySlug": "gungnae-dong",
+      "originalSlug": "gungnae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11057,7 +12045,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "dongwon-dong",
+      "slugKey": "동원동",
+      "legacySlug": "dongwon-dong",
+      "originalSlug": "dongwon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11079,7 +12069,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gumi-dong",
+      "slugKey": "구미동",
+      "legacySlug": "gumi-dong",
+      "originalSlug": "gumi-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11101,7 +12093,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "unjung-dong",
+      "slugKey": "운중동",
+      "legacySlug": "unjung-dong",
+      "originalSlug": "unjung-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11124,6 +12118,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "대장동",
+      "legacySlug": "대장동",
+      "originalSlug": "성남-대장동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -11145,7 +12141,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seokun-dong",
+      "slugKey": "석운동",
+      "legacySlug": "seokun-dong",
+      "originalSlug": "seokun-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11167,7 +12165,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hasanun-dong",
+      "slugKey": "하산운동",
+      "legacySlug": "hasanun-dong",
+      "originalSlug": "hasanun-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11189,7 +12189,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "uijeongbu-dong",
+      "slugKey": "의정부동",
+      "legacySlug": "uijeongbu-dong",
+      "originalSlug": "uijeongbu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11211,7 +12213,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "howon-dong",
+      "slugKey": "호원동",
+      "legacySlug": "howon-dong",
+      "originalSlug": "howon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11233,7 +12237,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jangam-dong",
+      "slugKey": "장암동",
+      "legacySlug": "jangam-dong",
+      "originalSlug": "jangam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11255,7 +12261,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "singok-dong",
+      "slugKey": "신곡동",
+      "legacySlug": "singok-dong",
+      "originalSlug": "singok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11278,6 +12286,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "용현동",
+      "legacySlug": "용현동",
+      "originalSlug": "의정부-용현동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -11299,7 +12309,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "millak-dong",
+      "slugKey": "민락동",
+      "legacySlug": "millak-dong",
+      "originalSlug": "millak-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11321,7 +12333,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "nakyang-dong",
+      "slugKey": "낙양동",
+      "legacySlug": "nakyang-dong",
+      "originalSlug": "nakyang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11343,7 +12357,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "geumo-dong",
+      "slugKey": "금오동",
+      "legacySlug": "geumo-dong",
+      "originalSlug": "geumo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11365,7 +12381,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jail-dong",
+      "slugKey": "자일동",
+      "legacySlug": "jail-dong",
+      "originalSlug": "jail-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11387,7 +12405,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gosan-dong",
+      "slugKey": "고산동",
+      "legacySlug": "gosan-dong",
+      "originalSlug": "gosan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11410,6 +12430,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "산곡동",
+      "legacySlug": "산곡동",
+      "originalSlug": "의정부-산곡동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -11431,7 +12453,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ganeung-dong",
+      "slugKey": "가능동",
+      "legacySlug": "ganeung-dong",
+      "originalSlug": "ganeung-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11453,7 +12477,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "nogyang-dong",
+      "slugKey": "녹양동",
+      "legacySlug": "nogyang-dong",
+      "originalSlug": "nogyang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11475,7 +12501,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gwanmun-dong",
+      "slugKey": "관문동",
+      "legacySlug": "gwanmun-dong",
+      "originalSlug": "gwanmun-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11497,7 +12525,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "munwon-dong",
+      "slugKey": "문원동",
+      "legacySlug": "munwon-dong",
+      "originalSlug": "munwon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11520,6 +12550,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "갈현동",
+      "legacySlug": "갈현동",
+      "originalSlug": "과천-갈현동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -11541,7 +12573,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "makgye-dong",
+      "slugKey": "막계동",
+      "legacySlug": "makgye-dong",
+      "originalSlug": "makgye-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11563,7 +12597,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gwacheon-dong",
+      "slugKey": "과천동",
+      "legacySlug": "gwacheon-dong",
+      "originalSlug": "gwacheon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11585,7 +12621,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "juam-dong",
+      "slugKey": "주암동",
+      "legacySlug": "juam-dong",
+      "originalSlug": "juam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11608,6 +12646,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "중앙동",
+      "legacySlug": "중앙동",
+      "originalSlug": "과천-중앙동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -11629,7 +12669,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wonmun-dong",
+      "slugKey": "원문동",
+      "legacySlug": "wonmun-dong",
+      "originalSlug": "wonmun-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11651,7 +12693,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "byeolyang-dong",
+      "slugKey": "별양동",
+      "legacySlug": "byeolyang-dong",
+      "originalSlug": "byeolyang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11673,7 +12717,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "burim-dong-gwacheon",
+      "slugKey": "부림동",
+      "legacySlug": "burim-dong-gwacheon",
+      "originalSlug": "burim-dong-gwacheon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11695,7 +12741,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gocheon-dong",
+      "slugKey": "고천동",
+      "legacySlug": "gocheon-dong",
+      "originalSlug": "gocheon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11717,7 +12765,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wanggok-dong",
+      "slugKey": "왕곡동",
+      "legacySlug": "wanggok-dong",
+      "originalSlug": "wanggok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11739,7 +12789,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ojeon-dong",
+      "slugKey": "오전동",
+      "legacySlug": "ojeon-dong",
+      "originalSlug": "ojeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11761,7 +12813,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "naeson-dong",
+      "slugKey": "내손동",
+      "legacySlug": "naeson-dong",
+      "originalSlug": "naeson-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11783,7 +12837,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "cheonggye-dong",
+      "slugKey": "청계동",
+      "legacySlug": "cheonggye-dong",
+      "originalSlug": "cheonggye-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11805,7 +12861,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hagi-dong",
+      "slugKey": "학의동",
+      "legacySlug": "hagi-dong",
+      "originalSlug": "hagi-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11827,7 +12885,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "poil-dong",
+      "slugKey": "포일동",
+      "legacySlug": "poil-dong",
+      "originalSlug": "poil-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11849,7 +12909,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sam-dong",
+      "slugKey": "삼동",
+      "legacySlug": "sam-dong",
+      "originalSlug": "sam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11871,7 +12933,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wolam-dong",
+      "slugKey": "월암동",
+      "legacySlug": "wolam-dong",
+      "originalSlug": "wolam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11894,6 +12958,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "이동",
+      "legacySlug": "이동",
+      "originalSlug": "의왕-이동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -11915,7 +12981,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "chopyeong-dong",
+      "slugKey": "초평동",
+      "legacySlug": "chopyeong-dong",
+      "originalSlug": "chopyeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11937,7 +13005,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "pajang-dong",
+      "slugKey": "파장동",
+      "legacySlug": "pajang-dong",
+      "originalSlug": "pajang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11959,7 +13029,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "imok-dong",
+      "slugKey": "이목동",
+      "legacySlug": "imok-dong",
+      "originalSlug": "imok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -11981,7 +13053,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yuljeon-dong",
+      "slugKey": "율전동",
+      "legacySlug": "yuljeon-dong",
+      "originalSlug": "yuljeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12003,7 +13077,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "cheoncheon-dong",
+      "slugKey": "천천동",
+      "legacySlug": "cheoncheon-dong",
+      "originalSlug": "cheoncheon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12026,6 +13102,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "정자동",
+      "legacySlug": "정자동",
+      "originalSlug": "수원-정자동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -12047,7 +13125,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yeonghwa-dong",
+      "slugKey": "영화동",
+      "legacySlug": "yeonghwa-dong",
+      "originalSlug": "yeonghwa-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12069,7 +13149,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "songjuk-dong",
+      "slugKey": "송죽동",
+      "legacySlug": "songjuk-dong",
+      "originalSlug": "songjuk-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12091,7 +13173,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jowon-dong",
+      "slugKey": "조원동",
+      "legacySlug": "jowon-dong",
+      "originalSlug": "jowon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12113,7 +13197,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yeonmu-dong",
+      "slugKey": "연무동",
+      "legacySlug": "yeonmu-dong",
+      "originalSlug": "yeonmu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12135,7 +13221,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sanggwanggyo-dong",
+      "slugKey": "상광교동",
+      "legacySlug": "sanggwanggyo-dong",
+      "originalSlug": "sanggwanggyo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12157,7 +13245,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hagwanggyo-dong",
+      "slugKey": "하광교동",
+      "legacySlug": "hagwanggyo-dong",
+      "originalSlug": "hagwanggyo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12179,7 +13269,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seryu-dong",
+      "slugKey": "세류동",
+      "legacySlug": "seryu-dong",
+      "originalSlug": "seryu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12202,6 +13294,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "평동",
+      "legacySlug": "평동",
+      "originalSlug": "수원-평동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -12223,7 +13317,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gosaek-dong",
+      "slugKey": "고색동",
+      "legacySlug": "gosaek-dong",
+      "originalSlug": "gosaek-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12245,7 +13341,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "omokcheon-dong",
+      "slugKey": "오목천동",
+      "legacySlug": "omokcheon-dong",
+      "originalSlug": "omokcheon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12267,7 +13365,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "pyeongri-dong",
+      "slugKey": "평리동",
+      "legacySlug": "pyeongri-dong",
+      "originalSlug": "pyeongri-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12289,7 +13389,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seodun-dong",
+      "slugKey": "서둔동",
+      "legacySlug": "seodun-dong",
+      "originalSlug": "seodun-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12311,7 +13413,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "tap-dong",
+      "slugKey": "탑동",
+      "legacySlug": "tap-dong",
+      "originalSlug": "tap-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12333,7 +13437,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "guun-dong",
+      "slugKey": "구운동",
+      "legacySlug": "guun-dong",
+      "originalSlug": "guun-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12356,6 +13462,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "금곡동",
+      "legacySlug": "금곡동",
+      "originalSlug": "수원-금곡동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -12377,7 +13485,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "homaesil-dong",
+      "slugKey": "호매실동",
+      "legacySlug": "homaesil-dong",
+      "originalSlug": "homaesil-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12399,7 +13509,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gokbanjeong-dong",
+      "slugKey": "곡반정동",
+      "legacySlug": "gokbanjeong-dong",
+      "originalSlug": "gokbanjeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12421,7 +13533,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "daehwanggyo-dong",
+      "slugKey": "대황교동",
+      "legacySlug": "daehwanggyo-dong",
+      "originalSlug": "daehwanggyo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12443,7 +13557,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ipbuk-dong",
+      "slugKey": "입북동",
+      "legacySlug": "ipbuk-dong",
+      "originalSlug": "ipbuk-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12465,7 +13581,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "dangsu-dong",
+      "slugKey": "당수동",
+      "legacySlug": "dangsu-dong",
+      "originalSlug": "dangsu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12487,7 +13605,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gwonseon-dong",
+      "slugKey": "권선동",
+      "legacySlug": "gwonseon-dong",
+      "originalSlug": "gwonseon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12509,7 +13629,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ji-dong",
+      "slugKey": "지동",
+      "legacySlug": "ji-dong",
+      "originalSlug": "ji-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12531,7 +13653,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "uman-dong",
+      "slugKey": "우만동",
+      "legacySlug": "uman-dong",
+      "originalSlug": "uman-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12553,7 +13677,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ingye-dong",
+      "slugKey": "인계동",
+      "legacySlug": "ingye-dong",
+      "originalSlug": "ingye-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12575,7 +13701,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hwaseo-dong",
+      "slugKey": "화서동",
+      "legacySlug": "hwaseo-dong",
+      "originalSlug": "hwaseo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12597,7 +13725,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "maesan-dong",
+      "slugKey": "매산동",
+      "legacySlug": "maesan-dong",
+      "originalSlug": "maesan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12619,7 +13749,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "maegyo-dong",
+      "slugKey": "매교동",
+      "legacySlug": "maegyo-dong",
+      "originalSlug": "maegyo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12642,6 +13774,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "고등동",
+      "legacySlug": "고등동",
+      "originalSlug": "수원-고등동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -12664,6 +13798,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "중동",
+      "legacySlug": "중동",
+      "originalSlug": "수원-중동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -12685,7 +13821,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "haenggung-dong",
+      "slugKey": "행궁동",
+      "legacySlug": "haenggung-dong",
+      "originalSlug": "haenggung-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12707,7 +13845,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "maetan-dong",
+      "slugKey": "매탄동",
+      "legacySlug": "maetan-dong",
+      "originalSlug": "maetan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12729,7 +13869,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "woncheon-dong",
+      "slugKey": "원천동",
+      "legacySlug": "woncheon-dong",
+      "originalSlug": "woncheon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12751,7 +13893,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "uiui-dong",
+      "slugKey": "이의동",
+      "legacySlug": "uiui-dong",
+      "originalSlug": "uiui-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12773,7 +13917,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ha-dong-suwon",
+      "slugKey": "하동",
+      "legacySlug": "ha-dong-suwon",
+      "originalSlug": "ha-dong-suwon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12795,7 +13941,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yeongtong-dong",
+      "slugKey": "영통동",
+      "legacySlug": "yeongtong-dong",
+      "originalSlug": "yeongtong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12817,7 +13965,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "mangpo-dong",
+      "slugKey": "망포동",
+      "legacySlug": "mangpo-dong",
+      "originalSlug": "mangpo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12839,7 +13989,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sin-dong-suwon",
+      "slugKey": "신동",
+      "legacySlug": "sin-dong-suwon",
+      "originalSlug": "sin-dong-suwon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12861,7 +14013,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "dang-dong",
+      "slugKey": "당동",
+      "legacySlug": "dang-dong",
+      "originalSlug": "dang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12884,6 +14038,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "당정동",
+      "legacySlug": "당정동",
+      "originalSlug": "군포-당정동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -12905,7 +14061,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sanbon-dong",
+      "slugKey": "산본동",
+      "legacySlug": "sanbon-dong",
+      "originalSlug": "sanbon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12927,7 +14085,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "geumjeong-dong",
+      "slugKey": "금정동",
+      "legacySlug": "geumjeong-dong",
+      "originalSlug": "geumjeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12949,7 +14109,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "dundae-dong",
+      "slugKey": "둔대동",
+      "legacySlug": "dundae-dong",
+      "originalSlug": "dundae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12971,7 +14133,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sokdal-dong",
+      "slugKey": "속달동",
+      "legacySlug": "sokdal-dong",
+      "originalSlug": "sokdal-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -12993,7 +14157,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "daeyami-dong",
+      "slugKey": "대야미동",
+      "legacySlug": "daeyami-dong",
+      "originalSlug": "daeyami-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13015,7 +14181,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "domagyo-dong",
+      "slugKey": "도마교동",
+      "legacySlug": "domagyo-dong",
+      "originalSlug": "domagyo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13038,6 +14206,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "부곡동",
+      "legacySlug": "부곡동",
+      "originalSlug": "군포-부곡동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -13059,7 +14229,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "anyang-dong",
+      "slugKey": "안양동",
+      "legacySlug": "anyang-dong",
+      "originalSlug": "anyang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13081,7 +14253,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seoksu-dong",
+      "slugKey": "석수동",
+      "legacySlug": "seoksu-dong",
+      "originalSlug": "seoksu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13103,7 +14277,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bakdal-dong",
+      "slugKey": "박달동",
+      "legacySlug": "bakdal-dong",
+      "originalSlug": "bakdal-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13125,7 +14301,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bisan-dong",
+      "slugKey": "비산동",
+      "legacySlug": "bisan-dong",
+      "originalSlug": "bisan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13147,7 +14325,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gwanyang-dong",
+      "slugKey": "관양동",
+      "legacySlug": "gwanyang-dong",
+      "originalSlug": "gwanyang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13169,7 +14349,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "pyeoengchon-dong",
+      "slugKey": "평촌동",
+      "legacySlug": "pyeoengchon-dong",
+      "originalSlug": "pyeoengchon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13191,7 +14373,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hogye-dong",
+      "slugKey": "호계동",
+      "legacySlug": "hogye-dong",
+      "originalSlug": "hogye-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13213,7 +14397,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gwangmyeong-dong",
+      "slugKey": "광명동",
+      "legacySlug": "gwangmyeong-dong",
+      "originalSlug": "gwangmyeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13235,7 +14421,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "cheolsan-dong",
+      "slugKey": "철산동",
+      "legacySlug": "cheolsan-dong",
+      "originalSlug": "cheolsan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13257,7 +14445,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "haan-dong",
+      "slugKey": "하안동",
+      "legacySlug": "haan-dong",
+      "originalSlug": "haan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13279,7 +14469,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "soha-dong",
+      "slugKey": "소하동",
+      "legacySlug": "soha-dong",
+      "originalSlug": "soha-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13301,7 +14493,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "noonse-dong",
+      "slugKey": "노온사동",
+      "legacySlug": "noonse-dong",
+      "originalSlug": "noonse-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13323,7 +14517,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gahak-dong",
+      "slugKey": "가학동",
+      "legacySlug": "gahak-dong",
+      "originalSlug": "gahak-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13345,7 +14541,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "iljik-dong",
+      "slugKey": "일직동",
+      "legacySlug": "iljik-dong",
+      "originalSlug": "iljik-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13368,6 +14566,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "옥길동",
+      "legacySlug": "옥길동",
+      "originalSlug": "광명-옥길동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -13389,7 +14589,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "daeya-dong",
+      "slugKey": "대야동",
+      "legacySlug": "daeya-dong",
+      "originalSlug": "daeya-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13412,6 +14614,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "신천동",
+      "legacySlug": "신천동",
+      "originalSlug": "시흥-신천동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -13433,7 +14637,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bangsan-dong",
+      "slugKey": "방산동",
+      "legacySlug": "bangsan-dong",
+      "originalSlug": "bangsan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13455,7 +14661,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "po-dong",
+      "slugKey": "포동",
+      "legacySlug": "po-dong",
+      "originalSlug": "po-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13477,7 +14685,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "misan-dong",
+      "slugKey": "미산동",
+      "legacySlug": "misan-dong",
+      "originalSlug": "misan-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13500,6 +14710,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "은행동",
+      "legacySlug": "은행동",
+      "originalSlug": "시흥-은행동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -13521,7 +14733,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "anhyeon-dong",
+      "slugKey": "안현동",
+      "legacySlug": "anhyeon-dong",
+      "originalSlug": "anhyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13543,7 +14757,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "maehwa-dong",
+      "slugKey": "매화동",
+      "legacySlug": "maehwa-dong",
+      "originalSlug": "maehwa-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13565,7 +14781,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "dochang-dong",
+      "slugKey": "도창동",
+      "legacySlug": "dochang-dong",
+      "originalSlug": "dochang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13587,7 +14805,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "geumi-dong",
+      "slugKey": "금이동",
+      "legacySlug": "geumi-dong",
+      "originalSlug": "geumi-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13609,7 +14829,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "mulwang-dong",
+      "slugKey": "물왕동",
+      "legacySlug": "mulwang-dong",
+      "originalSlug": "mulwang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13631,7 +14853,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sanhyeon-dong",
+      "slugKey": "산현동",
+      "legacySlug": "sanhyeon-dong",
+      "originalSlug": "sanhyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13653,7 +14877,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jonam-dong",
+      "slugKey": "조남동",
+      "legacySlug": "jonam-dong",
+      "originalSlug": "jonam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13675,7 +14901,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "nongok-dong",
+      "slugKey": "논곡동",
+      "legacySlug": "nongok-dong",
+      "originalSlug": "nongok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13697,7 +14925,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gwangseok-dong",
+      "slugKey": "광석동",
+      "legacySlug": "gwangseok-dong",
+      "originalSlug": "gwangseok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13719,7 +14949,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hajung-dong",
+      "slugKey": "하중동",
+      "legacySlug": "hajung-dong",
+      "originalSlug": "hajung-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13741,7 +14973,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "hasang-dong",
+      "slugKey": "하상동",
+      "legacySlug": "hasang-dong",
+      "originalSlug": "hasang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13763,7 +14997,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "janghyeon-dong",
+      "slugKey": "장현동",
+      "legacySlug": "janghyeon-dong",
+      "originalSlug": "janghyeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13785,7 +15021,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "janggok-dong",
+      "slugKey": "장곡동",
+      "legacySlug": "janggok-dong",
+      "originalSlug": "janggok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13807,7 +15045,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wolgot-dong",
+      "slugKey": "월곶동",
+      "legacySlug": "wolgot-dong",
+      "originalSlug": "wolgot-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13830,6 +15070,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "군자동",
+      "legacySlug": "군자동",
+      "originalSlug": "시흥-군자동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -13851,7 +15093,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "geomo-dong",
+      "slugKey": "거모동",
+      "legacySlug": "geomo-dong",
+      "originalSlug": "geomo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13873,7 +15117,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jungyul-dong",
+      "slugKey": "죽율동",
+      "legacySlug": "jungyul-dong",
+      "originalSlug": "jungyul-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13895,7 +15141,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jeongwang-dong",
+      "slugKey": "정왕동",
+      "legacySlug": "jeongwang-dong",
+      "originalSlug": "jeongwang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13917,7 +15165,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "baegot-dong",
+      "slugKey": "배곧동",
+      "legacySlug": "baegot-dong",
+      "originalSlug": "baegot-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13939,7 +15189,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gwarim-dong",
+      "slugKey": "과림동",
+      "legacySlug": "gwarim-dong",
+      "originalSlug": "gwarim-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13961,7 +15213,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "mujinae-dong",
+      "slugKey": "무지내동",
+      "legacySlug": "mujinae-dong",
+      "originalSlug": "mujinae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -13983,7 +15237,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "mokgam-dong",
+      "slugKey": "목감동",
+      "legacySlug": "mokgam-dong",
+      "originalSlug": "mokgam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14005,7 +15261,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wonmi-dong",
+      "slugKey": "원미동",
+      "legacySlug": "wonmi-dong",
+      "originalSlug": "wonmi-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14028,6 +15286,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "심곡동",
+      "legacySlug": "심곡동",
+      "originalSlug": "부천-심곡동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -14049,7 +15309,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "chuni-dong",
+      "slugKey": "춘의동",
+      "legacySlug": "chuni-dong",
+      "originalSlug": "chuni-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14071,7 +15333,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "dodang-dong",
+      "slugKey": "도당동",
+      "legacySlug": "dodang-dong",
+      "originalSlug": "dodang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14093,7 +15357,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yakdae-dong",
+      "slugKey": "약대동",
+      "legacySlug": "yakdae-dong",
+      "originalSlug": "yakdae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14115,7 +15381,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sosa-dong",
+      "slugKey": "소사동",
+      "legacySlug": "sosa-dong",
+      "originalSlug": "sosa-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14137,7 +15405,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yeokgok-dong",
+      "slugKey": "역곡동",
+      "legacySlug": "yeokgok-dong",
+      "originalSlug": "yeokgok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14160,6 +15430,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "중동",
+      "legacySlug": "중동",
+      "originalSlug": "부천-중동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -14181,7 +15453,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sang-dong-bucheon",
+      "slugKey": "상동",
+      "legacySlug": "sang-dong-bucheon",
+      "originalSlug": "sang-dong-bucheon",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14203,7 +15477,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sosabon-dong",
+      "slugKey": "소사본동",
+      "legacySlug": "sosabon-dong",
+      "originalSlug": "sosabon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14225,7 +15501,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "simgokbon-dong",
+      "slugKey": "심곡본동",
+      "legacySlug": "simgokbon-dong",
+      "originalSlug": "simgokbon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14247,7 +15525,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "beombak-dong",
+      "slugKey": "범박동",
+      "legacySlug": "beombak-dong",
+      "originalSlug": "beombak-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14269,7 +15549,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "goean-dong",
+      "slugKey": "괴안동",
+      "legacySlug": "goean-dong",
+      "originalSlug": "goean-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14291,7 +15573,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "songnae-dong",
+      "slugKey": "송내동",
+      "legacySlug": "songnae-dong",
+      "originalSlug": "songnae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14314,6 +15598,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "옥길동",
+      "legacySlug": "옥길동",
+      "originalSlug": "부천-옥길동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -14335,7 +15621,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gyesu-dong",
+      "slugKey": "계수동",
+      "legacySlug": "gyesu-dong",
+      "originalSlug": "gyesu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14357,7 +15645,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "ojeong-dong",
+      "slugKey": "오정동",
+      "legacySlug": "ojeong-dong",
+      "originalSlug": "ojeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14379,7 +15669,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "yeowol-dong",
+      "slugKey": "여월동",
+      "legacySlug": "yeowol-dong",
+      "originalSlug": "yeowol-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14402,6 +15694,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "작전동",
+      "legacySlug": "작전동",
+      "originalSlug": "부천-작전동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -14423,7 +15717,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wonjong-dong",
+      "slugKey": "원종동",
+      "legacySlug": "wonjong-dong",
+      "originalSlug": "wonjong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14445,7 +15741,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "gogang-dong",
+      "slugKey": "고강동",
+      "legacySlug": "gogang-dong",
+      "originalSlug": "gogang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14468,6 +15766,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "대장동",
+      "legacySlug": "대장동",
+      "originalSlug": "부천-대장동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -14489,7 +15789,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "samjeong-dong",
+      "slugKey": "삼정동",
+      "legacySlug": "samjeong-dong",
+      "originalSlug": "samjeong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14511,7 +15813,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "nae-dong",
+      "slugKey": "내동",
+      "legacySlug": "nae-dong",
+      "originalSlug": "nae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14534,6 +15838,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "신흥동",
+      "legacySlug": "신흥동",
+      "originalSlug": "부천-신흥동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -14555,7 +15861,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "il-dong-ansan",
+      "slugKey": "일동",
+      "legacySlug": "il-dong-ansan",
+      "originalSlug": "il-dong-ansan",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14578,6 +15886,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "이동",
+      "legacySlug": "이동",
+      "originalSlug": "안산-이동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -14599,7 +15909,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sa-dong",
+      "slugKey": "사동",
+      "legacySlug": "sa-dong",
+      "originalSlug": "sa-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14621,7 +15933,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "bono-dong",
+      "slugKey": "본오동",
+      "legacySlug": "bono-dong",
+      "originalSlug": "bono-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14643,7 +15957,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "palgogi-dong",
+      "slugKey": "팔곡이동",
+      "legacySlug": "palgogi-dong",
+      "originalSlug": "palgogi-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14665,7 +15981,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "palgogil-dong",
+      "slugKey": "팔곡일동",
+      "legacySlug": "palgogil-dong",
+      "originalSlug": "palgogil-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14687,7 +16005,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "geongeon-dong",
+      "slugKey": "건건동",
+      "legacySlug": "geongeon-dong",
+      "originalSlug": "geongeon-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14709,7 +16029,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "sasa-dong",
+      "slugKey": "사사동",
+      "legacySlug": "sasa-dong",
+      "originalSlug": "sasa-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14731,7 +16053,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "suam-dong",
+      "slugKey": "수암동",
+      "legacySlug": "suam-dong",
+      "originalSlug": "suam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14753,7 +16077,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jangsang-dong",
+      "slugKey": "장상동",
+      "legacySlug": "jangsang-dong",
+      "originalSlug": "jangsang-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14775,7 +16101,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "jangha-dong",
+      "slugKey": "장하동",
+      "legacySlug": "jangha-dong",
+      "originalSlug": "jangha-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14798,6 +16126,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "부곡동",
+      "legacySlug": "부곡동",
+      "originalSlug": "안산-부곡동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -14819,7 +16149,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wolpi-dong",
+      "slugKey": "월피동",
+      "legacySlug": "wolpi-dong",
+      "originalSlug": "wolpi-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14841,7 +16173,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seongpo-dong",
+      "slugKey": "성포동",
+      "legacySlug": "seongpo-dong",
+      "originalSlug": "seongpo-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14864,6 +16198,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "고잔동",
+      "legacySlug": "고잔동",
+      "originalSlug": "안산-고잔동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -14885,7 +16221,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wa-dong",
+      "slugKey": "와동",
+      "legacySlug": "wa-dong",
+      "originalSlug": "wa-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14908,6 +16246,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "신길동",
+      "legacySlug": "신길동",
+      "originalSlug": "안산-신길동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -14929,7 +16269,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seonggok-dong",
+      "slugKey": "성곡동",
+      "legacySlug": "seonggok-dong",
+      "originalSlug": "seonggok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14951,7 +16293,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "mongnae-dong",
+      "slugKey": "목내동",
+      "legacySlug": "mongnae-dong",
+      "originalSlug": "mongnae-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14973,7 +16317,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "choji-dong",
+      "slugKey": "초지동",
+      "legacySlug": "choji-dong",
+      "originalSlug": "choji-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -14995,7 +16341,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "wongok-dong",
+      "slugKey": "원곡동",
+      "legacySlug": "wongok-dong",
+      "originalSlug": "wongok-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -15017,7 +16365,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seonbu-dong",
+      "slugKey": "선부동",
+      "legacySlug": "seonbu-dong",
+      "originalSlug": "seonbu-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -15039,7 +16389,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "daebudong-dong",
+      "slugKey": "대부동동",
+      "legacySlug": "daebudong-dong",
+      "originalSlug": "daebudong-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -15061,7 +16413,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "daebubuk-dong",
+      "slugKey": "대부북동",
+      "legacySlug": "daebubuk-dong",
+      "originalSlug": "daebubuk-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -15083,7 +16437,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "daebunam-dong",
+      "slugKey": "대부남동",
+      "legacySlug": "daebunam-dong",
+      "originalSlug": "daebunam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -15105,7 +16461,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "seongam-dong",
+      "slugKey": "선감동",
+      "legacySlug": "seongam-dong",
+      "originalSlug": "seongam-dong",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -15127,7 +16485,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "pungdo-dong-ansan",
+      "slugKey": "풍도동",
+      "legacySlug": "pungdo-dong-ansan",
+      "originalSlug": "pungdo-dong-ansan",
       "sortOrder": 1,
       "collisionResolved": false,
       "requiresCollisionReview": false
@@ -15150,6 +16510,8 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "slugKey": "화정동",
+      "legacySlug": "화정동",
+      "originalSlug": "안산-화정동",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -15171,7 +16533,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "부흥-dong",
+      "slugKey": "부흥동",
+      "legacySlug": "부흥-dong",
+      "originalSlug": "부흥-dong",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -15193,7 +16557,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "달안-dong",
+      "slugKey": "달안동",
+      "legacySlug": "달안-dong",
+      "originalSlug": "달안-dong",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -15215,7 +16581,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "평안-dong",
+      "slugKey": "평안동",
+      "legacySlug": "평안-dong",
+      "originalSlug": "평안-dong",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -15237,7 +16605,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "범계-dong",
+      "slugKey": "범계동",
+      "legacySlug": "범계-dong",
+      "originalSlug": "범계-dong",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -15259,7 +16629,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "신촌-dong",
+      "slugKey": "신촌동",
+      "legacySlug": "신촌-dong",
+      "originalSlug": "신촌-dong",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -15281,7 +16653,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "갈산-dong",
+      "slugKey": "갈산동",
+      "legacySlug": "갈산-dong",
+      "originalSlug": "갈산-dong",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -15303,7 +16677,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "명학-dong",
+      "slugKey": "명학동",
+      "legacySlug": "명학-dong",
+      "originalSlug": "명학-dong",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -15325,7 +16701,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "병목안-dong",
+      "slugKey": "병목안동",
+      "legacySlug": "병목안-dong",
+      "originalSlug": "병목안-dong",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -15347,7 +16725,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "충훈-dong",
+      "slugKey": "충훈동",
+      "legacySlug": "충훈-dong",
+      "originalSlug": "충훈-dong",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -15369,7 +16749,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "호현-dong",
+      "slugKey": "호현동",
+      "legacySlug": "호현-dong",
+      "originalSlug": "호현-dong",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -15391,7 +16773,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "인덕원-dong",
+      "slugKey": "인덕원동",
+      "legacySlug": "인덕원-dong",
+      "originalSlug": "인덕원-dong",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -15413,7 +16797,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "부림-dong",
+      "slugKey": "부림동",
+      "legacySlug": "부림-dong",
+      "originalSlug": "부림-dong",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
@@ -15435,7 +16821,9 @@ export const regionMaster = {
       "status": "inactive",
       "enabled": true,
       "generatePage": true,
-      "slugKey": "귀인-dong",
+      "slugKey": "귀인동",
+      "legacySlug": "귀인-dong",
+      "originalSlug": "귀인-dong",
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false

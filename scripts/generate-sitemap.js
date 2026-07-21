@@ -4,7 +4,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getActiveRegions } from '../src/data/regionResolver.js';
+import { getActiveRegions, generateAbsoluteDynamicUrl } from '../src/data/regionResolver.js';
 import { serviceKeywords } from '../src/data/serviceKeywords.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -29,9 +29,7 @@ async function generateSitemap() {
   let count = 0;
   activeRegions.forEach(reg => {
     serviceKeywords.forEach(tk => {
-      const paramStr = `${reg.urlRegion}-${tk.keyword}`;
-      const encodedParam = encodeURIComponent(paramStr);
-      urls.push(`${SITE_URL}/?k=${encodedParam}`);
+      urls.push(generateAbsoluteDynamicUrl(SITE_URL, reg.urlRegion, tk.keyword));
       count++;
     });
   });

@@ -106,7 +106,7 @@ function buildIndexes() {
 
     const entry = {
       id: item.type === 'alias' ? `${item.regionId}-alias` : item.regionId,
-      name: item.displayRegion,
+      name: item.keywordName || item.displayRegion,
       type: type,
       parentId: masterEntity?.parentId || metro,
       generateKeyword: true,
@@ -114,13 +114,15 @@ function buildIndexes() {
       city: city,
       groupName: groupName,
       officialName: officialName,
-      displayName: item.displayRegion,
+      displayName: item.keywordName || item.displayRegion,
       urlRegion: item.routeKey,
       aliases: [],
       collisionResolved: true,
       requiresCollisionReview: false,
       active: true
     };
+
+    const legacySlug = normalizeKeywordParam(item.legacySlug);
 
     if (displaySlug) {
       activeRegionIndex.set(displaySlug, entry);
@@ -129,6 +131,10 @@ function buildIndexes() {
     if (slug && slug !== displaySlug) {
       activeRegionIndex.set(slug, entry);
       previewRegionIndex.set(slug, entry);
+    }
+    if (legacySlug && legacySlug !== slug && legacySlug !== displaySlug) {
+      activeRegionIndex.set(legacySlug, entry);
+      previewRegionIndex.set(legacySlug, entry);
     }
   });
 }
@@ -175,4 +181,17 @@ export function getActiveRegions() {
     list.push(region);
   }
   return list;
+}
+
+export function generateDynamicUrl(routeKey, keyword) {
+  const params = new URLSearchParams();
+  params.set('k', `${routeKey}-${keyword}`);
+  return `/?${params.toString()}`;
+}
+
+export function generateAbsoluteDynamicUrl(siteUrl, routeKey, keyword) {
+  const params = new URLSearchParams();
+  params.set('k', `${routeKey}-${keyword}`);
+  const base = siteUrl.endsWith('/') ? siteUrl.slice(0, -1) : siteUrl;
+  return `${base}/?${params.toString()}`;
 }

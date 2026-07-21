@@ -16,7 +16,7 @@ import {
 // Ingest datasets
 import { seoulRegions } from './data/seoulRegions';
 import { serviceKeywords } from './data/serviceKeywords';
-import { parseAndValidateK, getActiveRegions, ENABLE_CAPITAL_REGION_EXPANSION } from './data/regionResolver';
+import { parseAndValidateK, getActiveRegions, ENABLE_CAPITAL_REGION_EXPANSION, generateDynamicUrl, generateAbsoluteDynamicUrl } from './data/regionResolver';
 import { incheonRegions } from './data/incheonRegions';
 import { gyeonggiRegions } from './data/gyeonggiRegions';
 
@@ -310,7 +310,7 @@ function App() {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': '홈', 'item': defaultSiteUrl },
           { '@type': 'ListItem', 'position': 2, 'name': '수도권 지역별 안내', 'item': `${defaultSiteUrl}/sitemap-seoul` },
-          { '@type': 'ListItem', 'position': 3, 'name': `${regionName} ${taskName}`, 'item': `${defaultSiteUrl}/?k=${encodeURIComponent(kParam)}` }
+          { '@type': 'ListItem', 'position': 3, 'name': `${regionName} ${taskName}`, 'item': generateAbsoluteDynamicUrl(defaultSiteUrl, parsedKeyword.region.urlRegion, parsedKeyword.service.keyword) }
         ]
       });
 
@@ -412,22 +412,10 @@ function App() {
 
     let canonicalUrl = "";
     if (!isKeywordInvalid) {
-      canonicalUrl = siteConfig.siteUrl + (path === '/' ? '' : path);
-      if (kParam) {
-        // Decode and cleanly re-encode k parameter to ensure safe URL parsing without utm tracking
-        const sortedKeywords = [...serviceKeywords].sort((a, b) => b.keyword.length - a.keyword.length);
-        let matchedService = null;
-        let extractedRegionName = '';
-        for (const s of sortedKeywords) {
-          if (kParam.endsWith(`-${s.keyword}`)) {
-            matchedService = s;
-            extractedRegionName = kParam.substring(0, kParam.length - s.keyword.length - 1);
-            break;
-          }
-        }
-        if (matchedService && extractedRegionName) {
-          canonicalUrl += `?k=${encodeURIComponent(extractedRegionName + '-' + matchedService.keyword)}`;
-        }
+      if (parsedKeyword) {
+        canonicalUrl = generateAbsoluteDynamicUrl(siteConfig.siteUrl, parsedKeyword.region.urlRegion, parsedKeyword.service.keyword);
+      } else {
+        canonicalUrl = siteConfig.siteUrl + (path === '/' ? '' : path);
       }
     }
 
@@ -489,14 +477,14 @@ function App() {
 
   const relatedServicesLinks = parsedKeyword ? parsedKeyword.service.relatedServices.map(task => ({
     label: `${parsedKeyword.region.name} ${task}`,
-    href: `/?k=${encodeURIComponent(parsedKeyword.region.urlRegion + '-' + task)}`
+    href: generateDynamicUrl(parsedKeyword.region.urlRegion, task)
   })) : null;
 
   const relatedRegionsLinks = parsedKeyword ? getActiveRegions().filter(
     r => r.parentId === parsedKeyword.region.parentId && r.id !== parsedKeyword.region.id
   ).slice(0, 6).map(reg => ({
     label: `${reg.name} ${parsedKeyword.service.keyword}`,
-    href: `/?k=${encodeURIComponent(reg.urlRegion + '-' + parsedKeyword.service.keyword)}`
+    href: generateDynamicUrl(reg.urlRegion, parsedKeyword.service.keyword)
   })) : null;
 
   // Toggle district view
@@ -865,7 +853,7 @@ function App() {
                                                     return (
                                                       <a
                                                         key={tk.keyword}
-                                                        href={`/?k=${encodeURIComponent(reg.urlRegion + '-' + tk.keyword)}`}
+                                                        href={generateDynamicUrl(reg.urlRegion, tk.keyword)}
                                                         style={{
                                                           fontSize: '0.85rem',
                                                           color: 'var(--forest-green-sub)',

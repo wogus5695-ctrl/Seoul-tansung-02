@@ -1,5 +1,5 @@
 import { keywordMetadata } from '../src/data/keywordMetadata.js';
-import { parseAndValidateK, getActiveRegions } from '../src/data/regionResolver.js';
+import { parseAndValidateK, getActiveRegions, generateDynamicUrl, generateAbsoluteDynamicUrl } from '../src/data/regionResolver.js';
 import { serviceKeywords } from '../src/data/serviceKeywords.js';
 import { seoulRegions } from '../src/data/seoulRegions.js';
 import fs from 'fs';
@@ -30,34 +30,36 @@ export default async function handler(req, res) {
 
 
     if (matchedService && prefix) {
-      // Find if prefix matches any clean routeKey
-      const directMatch = keywordMetadata.find(km => km.routeKey === prefix);
+      // 1. Check legacySlug/originalSlug mapping first
+      const legacyMatch = keywordMetadata.find(km => km.legacySlug === prefix || km.originalSlug === prefix);
       let targetRouteKey = null;
 
-
-      if (directMatch) {
-        // Already clean or matched
+      if (legacyMatch && legacyMatch.routeKey !== prefix) {
+        targetRouteKey = legacyMatch.routeKey;
       } else {
-        // If not direct match, extract parent prefix and clean dong name
-        const parts = prefix.split('-');
-        const dongName = parts[parts.length - 1];
-        const parentPrefix = parts.slice(0, -1).join('-');
+        // 2. Direct match
+        const directMatch = keywordMetadata.find(km => km.routeKey === prefix);
+        if (!directMatch) {
+          // 3. Normalize parts (parent prefix resolution)
+          const parts = prefix.split('-');
+          const dongName = parts[parts.length - 1];
+          const parentPrefix = parts.slice(0, -1).join('-');
 
-        const candidates = keywordMetadata.filter(km => km.displayRegion === dongName && km.type === 'dong');
-        if (candidates.length === 1) {
-          targetRouteKey = candidates[0].routeKey;
-        } else if (candidates.length > 1 && parentPrefix) {
-          const cleanParentPrefix = parentPrefix.replace(/구$/, '').replace(/시$/, '');
-          const matchedTarget = candidates.find(cand => {
-            const parentClean = cand.parentRegion.replace(/구/g, '').replace(/시/g, '').replace(/권/g, '');
-            return parentClean.includes(cleanParentPrefix);
-          });
-          if (matchedTarget) {
-            targetRouteKey = matchedTarget.routeKey;
+          const candidates = keywordMetadata.filter(km => km.displayRegion === dongName && km.type === 'dong');
+          if (candidates.length === 1) {
+            targetRouteKey = candidates[0].routeKey;
+          } else if (candidates.length > 1 && parentPrefix) {
+            const cleanParentPrefix = parentPrefix.replace(/구$/, '').replace(/시$/, '');
+            const matchedTarget = candidates.find(cand => {
+              const parentClean = cand.parentRegion.replace(/구/g, '').replace(/시/g, '').replace(/권/g, '');
+              return parentClean.includes(cleanParentPrefix);
+            });
+            if (matchedTarget) {
+              targetRouteKey = matchedTarget.routeKey;
+            }
           }
         }
       }
-
 
       if (targetRouteKey) {
         const redirectUrl = `https://www.barumspace.co.kr/?k=${encodeURIComponent(targetRouteKey + '-' + matchedService.keyword)}`;
@@ -175,8 +177,8 @@ export default async function handler(req, res) {
             seoContent += '<h5 style="font-size: 0.9rem; color: #333; font-weight: bold; margin: 0 0 8px 0;">' + reg.name + '</h5>';
             seoContent += '<ul style="list-style: none; padding: 0; margin: 0; line-height: 1.6; font-size: 0.85rem;">';
             serviceKeywords.forEach(k => {
-              const encoded = encodeURIComponent(reg.urlRegion + '-' + k.keyword);
-              seoContent += '<li><a href="/?k=' + encoded + '" style="color: #0076ff; text-decoration: none;">' + reg.displayName + ' ' + k.keyword + '</a></li>';
+              const dynUrl = generateDynamicUrl(reg.urlRegion, k.keyword);
+              seoContent += '<li><a href="' + dynUrl + '" style="color: #0076ff; text-decoration: none;">' + reg.displayName + ' ' + k.keyword + '</a></li>';
             });
             seoContent += '</ul></div>';
           });
@@ -250,9 +252,7 @@ export default async function handler(req, res) {
       html = html.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${title}" />`);
       html = html.replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${desc}" />`);
 
-      // Clean parameter representation (strips tracking tags)
-      const cleanParam = encodeURIComponent(matchedRegion.urlRegion + '-' + matchedService.keyword);
-      const cleanUrl = `https://www.barumspace.co.kr/?k=${cleanParam}`;
+      const cleanUrl = generateAbsoluteDynamicUrl('https://www.barumspace.co.kr', matchedRegion.urlRegion, matchedService.keyword);
 
       // Inject Canonical & OpenGraph URL
       html = html.replace('</head>', `<link rel="canonical" href="${cleanUrl}" />\n<meta property="og:url" content="${cleanUrl}" />\n</head>`);
