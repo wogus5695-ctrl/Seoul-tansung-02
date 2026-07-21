@@ -19,6 +19,7 @@ import { serviceKeywords } from './data/serviceKeywords';
 import { parseAndValidateK, getActiveRegions, ENABLE_CAPITAL_REGION_EXPANSION, generateDynamicUrl, generateAbsoluteDynamicUrl } from './data/regionResolver';
 import { incheonRegions } from './data/incheonRegions';
 import { gyeonggiRegions } from './data/gyeonggiRegions';
+import { keywordMetadata } from './data/keywordMetadata';
 
 // Space Guide static descriptions (1-2 sentences)
 const SPACE_GUIDE_DATA = {
@@ -111,6 +112,54 @@ function App() {
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
+
+  // Client-side URL redirection fallback for older legacy URLs
+  useEffect(() => {
+    const kParam = searchParams.get('k')?.trim() || '';
+    if (kParam) {
+      const sortedKeywords = [...serviceKeywords].sort((a, b) => b.keyword.length - a.keyword.length);
+      let matchedService = null;
+      let prefix = '';
+      for (const s of sortedKeywords) {
+        if (kParam.endsWith(`-${s.keyword}`)) {
+          matchedService = s;
+          prefix = kParam.substring(0, kParam.length - s.keyword.length - 1);
+          break;
+        }
+      }
+      if (matchedService && prefix) {
+        const legacyMatch = keywordMetadata.find(km => km.legacySlug === prefix || km.originalSlug === prefix);
+        let targetRouteKey = null;
+        if (legacyMatch && legacyMatch.routeKey !== prefix) {
+          targetRouteKey = legacyMatch.routeKey;
+        } else {
+          const directMatch = keywordMetadata.find(km => km.routeKey === prefix);
+          if (!directMatch) {
+            const parts = prefix.split('-');
+            const dongName = parts[parts.length - 1];
+            const parentPrefix = parts.slice(0, -1).join('-');
+            const candidates = keywordMetadata.filter(km => km.displayRegion === dongName && km.type === 'dong');
+            if (candidates.length === 1) {
+              targetRouteKey = candidates[0].routeKey;
+            } else if (candidates.length > 1 && parentPrefix) {
+              const cleanParentPrefix = parentPrefix.replace(/구$/, '').replace(/시$/, '');
+              const matchedTarget = candidates.find(cand => {
+                const parentClean = cand.parentRegion.replace(/구/g, '').replace(/시/g, '').replace(/권/g, '');
+                return parentClean.includes(cleanParentPrefix);
+              });
+              if (matchedTarget) {
+                targetRouteKey = matchedTarget.routeKey;
+              }
+            }
+          }
+        }
+        if (targetRouteKey) {
+          const newUrl = `/?k=${encodeURIComponent(targetRouteKey + '-' + matchedService.keyword)}`;
+          window.location.replace(newUrl);
+        }
+      }
+    }
+  }, [searchParams]);
 
   // Interval hook to slide Hero images on Main Page
   useEffect(() => {
