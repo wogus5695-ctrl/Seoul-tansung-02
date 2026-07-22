@@ -86,7 +86,7 @@ export function NeoCoatFaq({ parsedKeyword, onNavigate }) {
             시공 전에 많이 묻는 내용을<br />먼저 정리했습니다
           </h2>
           <p
-            className="body-default"
+            className="body-default faq-intro-desc"
             style={{
               color: 'var(--neo-color-text-secondary, #475569)',
               maxWidth: '600px',
@@ -94,7 +94,8 @@ export function NeoCoatFaq({ parsedKeyword, onNavigate }) {
               wordBreak: 'keep-all',
             }}
           >
-            공간 상태와 기존 마감에 따라 작업 범위와 사용 가능 시점이 달라질 수 있습니다. 상담 전에 자주 확인하는 내용을 살펴보세요.
+            <span className="pc-only-faq-desc">공간 상태와 기존 마감에 따라 작업 범위와 사용 가능 시점이 달라질 수 있습니다. 상담 전에 자주 확인하는 내용을 살펴보세요.</span>
+            <span className="mobile-only-faq-desc">공간 상태에 따라 작업 범위와 사용 가능 시점이 달라질 수 있습니다.</span>
           </p>
         </div>
 
@@ -269,10 +270,33 @@ export function NeoCoatFaq({ parsedKeyword, onNavigate }) {
           text-align: left;
         }
 
-        @media (min-width: 640px) {
+        .mobile-only-faq-desc {
+          display: none;
+        }
+        .pc-only-faq-desc {
+          display: inline;
+        }
+
+        @media (max-width: 767px) {
+          .mobile-only-faq-desc {
+            display: inline !important;
+          }
+          .pc-only-faq-desc {
+            display: none !important;
+          }
           .neo-faq-contact-prompt {
-            flex-direction: row;
-            gap: 16px;
+            display: none !important;
+          }
+          .neo-faq-btn {
+            padding: 14px 18px !important;
+            font-size: 15px !important;
+          }
+          .neo-faq-panel {
+            padding: 0 18px 16px 18px !important;
+          }
+          .neo-faq-panel p {
+            font-size: 13.5px !important;
+            line-height: 1.55 !important;
           }
         }
       `,

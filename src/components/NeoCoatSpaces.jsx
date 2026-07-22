@@ -11,6 +11,7 @@ import { getSpacesByGroupAndTask } from '../data/serviceSpaceContent.js';
  */
 export function NeoCoatSpaces({ activeTab, parsedKeyword }) {
   const [imgError, setImgError] = useState({});
+  const [showMore, setShowMore] = useState(false);
 
   const taskName = parsedKeyword ? parsedKeyword.service.keyword : '';
   const spaceList = getSpacesByGroupAndTask(activeTab, taskName);
@@ -83,7 +84,7 @@ export function NeoCoatSpaces({ activeTab, parsedKeyword }) {
         <div className="neo-spaces-magazine-grid">
           {/* Top Row: 2 Primary Large Space Cards */}
           <div className="primary-spaces-row">
-            {primarySpaces.map((sp) => {
+            {(showMore ? primarySpaces : primarySpaces.slice(0, 1)).map((sp) => {
               const imageKey = `${activeTab}_${sp.id}`;
               const spImgSrc = imageConfig.spaceImages[imageKey] || imageConfig.spaceImages[sp.id] || '';
 
@@ -123,7 +124,7 @@ export function NeoCoatSpaces({ activeTab, parsedKeyword }) {
 
           {/* Bottom Row: 4 Secondary Small Space Cards (2x2 Grid) */}
           <div className="secondary-spaces-grid">
-            {secondarySpaces.map((sp) => {
+            {(showMore ? secondarySpaces : secondarySpaces.slice(0, 2)).map((sp) => {
               const spImgSrc = imageConfig.spaceImages[sp.id] || '';
 
               return (
@@ -144,6 +145,47 @@ export function NeoCoatSpaces({ activeTab, parsedKeyword }) {
               );
             })}
           </div>
+
+          {/* Show More toggle button for mobile */}
+          {spaceList.length > 3 && (
+            <button
+              type="button"
+              onClick={() => setShowMore(!showMore)}
+              className="spaces-show-more-btn"
+              style={{
+                width: '100%',
+                height: '44px',
+                border: '1px solid var(--neo-color-border, #E2E8F0)',
+                backgroundColor: 'var(--neo-color-bg-white, #FFFFFF)',
+                borderRadius: '8px',
+                fontSize: '14.5px',
+                fontWeight: '600',
+                color: 'var(--neo-color-primary, #1E3A8A)',
+                cursor: 'pointer',
+                marginTop: '12px',
+                display: 'none',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '6px'
+              }}
+            >
+              <span>{showMore ? '적용 공간 접기' : '다른 적용 공간 3곳 보기'}</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                style={{
+                  transform: showMore ? 'rotate(180deg)' : 'rotate(0deg)',
+                  transition: 'transform 0.25s ease'
+                }}
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+          )}
         </div>
       </div>
 
@@ -270,6 +312,26 @@ export function NeoCoatSpaces({ activeTab, parsedKeyword }) {
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
+        }
+
+        @media (max-width: 767px) {
+          .spaces-show-more-btn {
+            display: flex !important;
+          }
+          .neo-secondary-space-card {
+            padding: 14px 18px !important;
+            gap: 6px !important;
+          }
+          .neo-primary-space-card {
+            border-radius: 12px !important;
+          }
+          .primary-space-info {
+            padding: 16px !important;
+          }
+          .primary-space-info p {
+            font-size: 13.5px !important;
+            line-height: 1.5 !important;
+          }
         }
       `,
         }}

@@ -12,6 +12,7 @@ import { getDiagnosisItems } from '../data/diagnosisContent.js';
  */
 export function NeoCoatDiagnosis({ parsedKeyword }) {
   const [openIndex, setOpenIndex] = useState(0); // 첫 번째 항목 기본 열림
+  const [showMore, setShowMore] = useState(false);
   const [imgError, setImgError] = useState(false);
 
   // 동적/메인 구분
@@ -130,12 +131,13 @@ export function NeoCoatDiagnosis({ parsedKeyword }) {
                 overflowWrap: 'normal',
               }}
             >
-              표면의 문제보다<br />발생 원인을 먼저 확인합니다
+              <span className="pc-only-title">표면의 문제보다<br />발생 원인을 먼저 확인합니다</span>
+              <span className="mobile-only-title">시공 전,<br />원인부터 확인합니다</span>
             </h2>
 
             {/* 3. Introduction Description */}
             <p
-              className="body-default"
+              className="body-default diagnosis-intro-desc"
               style={{
                 color: 'var(--neo-color-text-secondary, #475569)',
                 marginBottom: '28px',
@@ -144,12 +146,13 @@ export function NeoCoatDiagnosis({ parsedKeyword }) {
                 lineHeight: '1.65',
               }}
             >
-              곰팡이와 오염, 도막 들뜸이나 줄눈 변색은 공간의 습도와 사용 환경, 기존 마감 상태에 따라 원인이 달라질 수 있습니다. 시공 전 현재 상태와 작업 범위를 구분해서 확인해야 합니다.
+              <span className="pc-only-desc">곰팡이와 오염, 도막 들뜸이나 줄눈 변색은 공간의 습도와 사용 환경, 기존 마감 상태에 따라 원인이 달라질 수 있습니다. 시공 전 현재 상태와 작업 범위를 구분해서 확인해야 합니다.</span>
+              <span className="mobile-only-desc">곰팡이와 들뜸은 습도, 결로, 누수, 기존 도막 상태에 따라 원인이 달라질 수 있습니다.</span>
             </p>
 
             {/* 4. Diagnosis Accordion List */}
             <div className="neo-accordion-group">
-              {items.map((item, idx) => {
+              {(showMore ? items : items.slice(0, 3)).map((item, idx) => {
                 const isOpen = openIndex === idx;
                 const accordionHeaderId = `diagnosis-header-${idx}`;
                 const accordionPanelId = `diagnosis-panel-${idx}`;
@@ -207,6 +210,46 @@ export function NeoCoatDiagnosis({ parsedKeyword }) {
               })}
             </div>
 
+            {/* Show More toggle button for mobile */}
+            {items.length > 3 && (
+              <button
+                type="button"
+                onClick={() => setShowMore(!showMore)}
+                className="diagnosis-show-more-btn"
+                style={{
+                  width: '100%',
+                  height: '44px',
+                  border: '1px solid var(--neo-color-border, #E2E8F0)',
+                  backgroundColor: 'var(--neo-color-bg-white, #FFFFFF)',
+                  borderRadius: '8px',
+                  fontSize: '14.5px',
+                  fontWeight: '600',
+                  color: 'var(--neo-color-primary, #1E3A8A)',
+                  cursor: 'pointer',
+                  marginBottom: '20px',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '6px'
+                }}
+              >
+                <span>{showMore ? '확인사항 접기' : '다른 확인사항 보기'}</span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  style={{
+                    transform: showMore ? 'rotate(180deg)' : 'rotate(0deg)',
+                    transition: 'transform 0.25s ease'
+                  }}
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+            )}
+
             {/* 5. Informational Caution Box */}
             <div className="neo-diagnosis-caution-box">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--neo-color-primary, #1E3A8A)" strokeWidth="2" style={{ flexShrink: 0, marginTop: '2px' }}>
@@ -214,7 +257,7 @@ export function NeoCoatDiagnosis({ parsedKeyword }) {
                 <line x1="12" y1="8" x2="12" y2="12" />
                 <line x1="12" y1="16" x2="12.01" y2="16" />
               </svg>
-              <span style={{ fontSize: '13.5px', color: 'var(--neo-color-text-secondary, #475569)', lineHeight: '1.55', wordBreak: 'keep-all' }}>
+              <span className="caution-box-text" style={{ fontSize: '13.5px', color: 'var(--neo-color-text-secondary, #475569)', lineHeight: '1.55', wordBreak: 'keep-all' }}>
                 결로, 곰팡이, 누수, 도막 손상은 발생 원인이 다를 수 있습니다. 현장 상태에 따라 탄성코트나 줄눈시공 외의 보수 작업이 먼저 필요할 수 있습니다.
               </span>
             </div>
@@ -369,6 +412,40 @@ export function NeoCoatDiagnosis({ parsedKeyword }) {
           border: 1px solid rgba(30, 58, 138, 0.15);
           padding: 14px 18px;
           border-radius: 12px;
+        }
+
+        .mobile-only-title,
+        .mobile-only-desc {
+          display: none;
+        }
+        .pc-only-title,
+        .pc-only-desc {
+          display: inline;
+        }
+
+        @media (max-width: 767px) {
+          .mobile-only-title,
+          .mobile-only-desc {
+            display: inline !important;
+          }
+          .pc-only-title,
+          .pc-only-desc {
+            display: none !important;
+          }
+          .diagnosis-show-more-btn {
+            display: flex !important;
+          }
+          .neo-diagnosis-caution-box {
+            padding: 12px 14px !important;
+          }
+          .caution-box-text::before {
+            content: "결로, 곰팡이, 누수 등은 원인이 다를 수 있으므로 상태에 따른 사전 보수 작업이 먼저 필요할 수 있습니다.";
+            display: block;
+          }
+          .caution-box-text {
+            font-size: 0px !important;
+            color: transparent !important;
+          }
         }
       `,
         }}

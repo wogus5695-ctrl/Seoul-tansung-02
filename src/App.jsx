@@ -80,6 +80,9 @@ function App() {
   
   const [activeSpaceIndex, setActiveSpaceIndex] = useState(0);
 
+  const [showMoreServices, setShowMoreServices] = useState(false);
+  const [showMoreRegions, setShowMoreRegions] = useState(false);
+
   // Sitemap Hub Search & Filter States
   const [sitemapFilter, setSitemapFilter] = useState('전체'); // '전체' | '탄성코트' | '줄눈시공'
   const [metroFilter, setMetroFilter] = useState('전체'); // '전체' | '서울' | '인천' | '경기'
@@ -1006,13 +1009,10 @@ function App() {
     // C: Main Page & Dynamic Landing Page
     return (
       <>
-        {parsedKeyword && (
+        {parsedKeyword && isDesktop && (
           <div className="dynamic-notice-bar" style={{ backgroundColor: 'var(--light-sand)', padding: '12px 20px', textAlign: 'center', fontSize: '0.9rem' }}>
-            <span className="notice-pc-only" style={{ display: isDesktop ? 'inline' : 'none' }}>
+            <span className="notice-pc-only" style={{ display: 'inline' }}>
               <strong>{parsedKeyword.region.displayName}</strong> 지역을 위한 맞춤형 <strong>{parsedKeyword.service.keyword}</strong> 제안입니다.
-            </span>
-            <span className="notice-mobile-only" style={{ display: isDesktop ? 'none' : 'inline', fontWeight: 'bold' }}>
-              {parsedKeyword.region.displayName} {parsedKeyword.service.keyword} 시공 안내
             </span>
           </div>
         )}
@@ -1067,8 +1067,8 @@ function App() {
               {relatedServicesLinks && relatedServicesLinks.length > 0 && (
                 <div>
                   <h4 style={{ marginBottom: '12px', fontSize: '1rem', color: 'var(--forest-green-sub)' }}>관련 서비스 정보</h4>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-                    {relatedServicesLinks.map((link, idx) => (
+                  <div className="linking-links-wrapper" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                    {(isDesktop || showMoreServices ? relatedServicesLinks : relatedServicesLinks.slice(0, 4)).map((link, idx) => (
                       <a
                         key={idx}
                         href={link.href}
@@ -1090,14 +1090,33 @@ function App() {
                       </a>
                     ))}
                   </div>
+                  {!isDesktop && relatedServicesLinks.length > 4 && (
+                    <button
+                      type="button"
+                      onClick={() => setShowMoreServices(!showMoreServices)}
+                      style={{
+                        marginTop: '12px',
+                        padding: '6px 12px',
+                        fontSize: '0.82rem',
+                        fontWeight: '600',
+                        color: 'var(--forest-green-main)',
+                        backgroundColor: 'transparent',
+                        border: '1px solid var(--light-sand)',
+                        borderRadius: '4px',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      {showMoreServices ? '관련 서비스 접기' : '관련 서비스 더 보기'}
+                    </button>
+                  )}
                 </div>
               )}
 
               {relatedRegionsLinks && relatedRegionsLinks.length > 0 && (
                 <div>
                   <h4 style={{ marginBottom: '12px', fontSize: '1rem', color: 'var(--forest-green-sub)' }}>인근 시공 지역 바로가기</h4>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-                    {relatedRegionsLinks.map((link, idx) => (
+                  <div className="linking-links-wrapper" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                    {(isDesktop || showMoreRegions ? relatedRegionsLinks : relatedRegionsLinks.slice(0, 4)).map((link, idx) => (
                       <a
                         key={idx}
                         href={link.href}
@@ -1119,6 +1138,25 @@ function App() {
                       </a>
                     ))}
                   </div>
+                  {!isDesktop && relatedRegionsLinks.length > 4 && (
+                    <button
+                      type="button"
+                      onClick={() => setShowMoreRegions(!showMoreRegions)}
+                      style={{
+                        marginTop: '12px',
+                        padding: '6px 12px',
+                        fontSize: '0.82rem',
+                        fontWeight: '600',
+                        color: 'var(--forest-green-main)',
+                        backgroundColor: 'transparent',
+                        border: '1px solid var(--light-sand)',
+                        borderRadius: '4px',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      {showMoreRegions ? '인근 지역 접기' : '인근 지역 더 보기'}
+                    </button>
+                  )}
                 </div>
               )}
             </div>
@@ -1133,18 +1171,20 @@ function App() {
     );
   };
 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <NeoCoatHeader onNavigate={navigate} currentPath={path} />
+      <NeoCoatHeader onNavigate={navigate} currentPath={path} onMenuOpenChange={setIsMobileMenuOpen} />
       <main style={{ 
         flex: 1,
-        paddingBottom: (path !== '/sitemap-seoul' && !isDesktop) ? 'calc(88px + env(safe-area-inset-bottom))' : '0px'
+        paddingBottom: (path !== '/sitemap-seoul' && !isDesktop) ? 'calc(58px + env(safe-area-inset-bottom) + 16px)' : '0px'
       }}>
         {renderContent()}
       </main>
       <NeoCoatFooter onNavigate={navigate} isSimple={path === '/sitemap-seoul'} />
       {/* NeoCoat Mobile Sticky CTA */}
-      {path !== '/sitemap-seoul' && (
+      {path !== '/sitemap-seoul' && !isMobileMenuOpen && (
         <NeoCoatMobileStickyCTA parsedKeyword={parsedKeyword} onNavigate={navigate} />
       )}
     </div>

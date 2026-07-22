@@ -10,9 +10,16 @@ import { NeoCoatLogo } from './NeoCoatLogo.jsx';
  * - 모바일: 햄버거 슬라이드/확장 드로어, ESC/외부클릭/메뉴선택 시 자동 닫기, 스크롤 방지
  * - 동적 랜딩 페이지 접속 시 메인 기준 /#id 링크 렌더링
  */
-export function NeoCoatHeader({ onNavigate, currentPath = '/' }) {
+export function NeoCoatHeader({ onNavigate, currentPath = '/', onMenuOpenChange }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  // Notify parent on mobile menu state changes
+  useEffect(() => {
+    if (onMenuOpenChange) {
+      onMenuOpenChange(menuOpen);
+    }
+  }, [menuOpen, onMenuOpenChange]);
 
   // 스크롤 감지 (Sticky header height adjustment)
   useEffect(() => {
@@ -271,6 +278,15 @@ export function NeoCoatHeader({ onNavigate, currentPath = '/' }) {
       <style
         dangerouslySetInnerHTML={{
           __html: `
+        @media (max-width: 767px) {
+          header {
+            height: 64px !important;
+          }
+          .mobile-hamburger-btn {
+            width: 40px !important;
+            height: 40px !important;
+          }
+        }
         @media (min-width: 1024px) {
           .pc-only-nav {
             display: flex !important;

@@ -20,6 +20,26 @@ export function NeoCoatMobileStickyCTA({ parsedKeyword, onNavigate }) {
   const phoneHref = hasPhone ? `tel:${contactConfig.phone.replace(/-/g, '')}` : null;
   const quoteHref = getContactHref();
 
+  const [isKeyboardVisible, setIsKeyboardVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleFocus = () => setIsKeyboardVisible(true);
+    const handleBlur = () => setIsKeyboardVisible(false);
+
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(el => {
+      el.addEventListener('focus', handleFocus);
+      el.addEventListener('blur', handleBlur);
+    });
+
+    return () => {
+      inputs.forEach(el => {
+        el.removeEventListener('focus', handleFocus);
+        el.removeEventListener('blur', handleBlur);
+      });
+    };
+  }, []);
+
   const handleQuoteClick = (e) => {
     if (quoteHref.startsWith('#') || quoteHref.startsWith('/#')) {
       e.preventDefault();
@@ -35,6 +55,10 @@ export function NeoCoatMobileStickyCTA({ parsedKeyword, onNavigate }) {
       }
     }
   };
+
+  if (isKeyboardVisible) {
+    return null;
+  }
 
   return (
     <div className="neo-mobile-sticky-cta-bar" role="region" aria-label="모바일 상담 바로가기">

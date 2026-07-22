@@ -11,7 +11,7 @@ export function NeoCoatTrustStrip() {
     {
       id: 'state-check',
       title: '공간 상태 확인',
-      description: '벽면의 오염과 들뜸, 기존 도막 상태 또는 타일 틈의 손상 여부를 먼저 확인합니다.',
+      description: '오염·들뜸·기존 도막 상태를 먼저 확인합니다.',
       accentDot: false,
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--neo-color-primary, #1E3A8A)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -24,7 +24,7 @@ export function NeoCoatTrustStrip() {
     {
       id: 'process-guide',
       title: '공정별 작업 안내',
-      description: '보양과 바탕 정리부터 시공과 마감까지 필요한 작업 범위를 단계별로 안내합니다.',
+      description: '보양부터 바탕 정리와 마감까지 필요한 범위를 안내합니다.',
       accentDot: false,
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--neo-color-primary, #1E3A8A)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -37,7 +37,7 @@ export function NeoCoatTrustStrip() {
     {
       id: 'completion-review',
       title: '시공 후 마감 확인',
-      description: '작업 부위의 마감 상태와 주변 오염 여부를 확인한 뒤 공간을 정리합니다.',
+      description: '마감 상태와 주변 오염 여부를 확인합니다.',
       accentDot: true,
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--neo-color-primary, #1E3A8A)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -144,6 +144,36 @@ export function NeoCoatTrustStrip() {
           height: 1px;
           width: 100%;
           background-color: var(--neo-color-border, #E2E8F0);
+        }
+
+        @media (max-width: 767px) {
+          .neo-trust-container {
+            padding: 16px 18px !important;
+            gap: 12px !important;
+            border-radius: 12px !important;
+          }
+          .neo-trust-card-item {
+            gap: 12px !important;
+          }
+          .trust-icon-wrapper {
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 8px !important;
+          }
+          .trust-icon-wrapper svg {
+            width: 18px !important;
+            height: 18px !important;
+          }
+          .trust-text-block h3 {
+            font-size: 15.5px !important;
+            margin-bottom: 2px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+          }
+          .trust-text-block p {
+            font-size: 13.5px !important;
+            line-height: 1.5 !important;
+          }
         }
 
         @media (min-width: 1024px) {

@@ -233,6 +233,40 @@ export function NeoCoatStandard() {
           margin-left: 20px;
         }
 
+        @media (max-width: 767px) {
+          .neo-standard-timeline {
+            gap: 16px !important;
+          }
+          .neo-standard-step-item {
+            padding-bottom: 8px !important;
+          }
+          .mobile-timeline-line {
+            height: 16px !important;
+            margin-top: 8px !important;
+            margin-bottom: 8px !important;
+          }
+          .step-num-icon-row {
+            margin-bottom: 8px !important;
+          }
+          .step-icon-box {
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 8px !important;
+          }
+          .step-icon-box svg {
+            width: 16px !important;
+            height: 16px !important;
+          }
+          .step-text-content h3 {
+            font-size: 15.5px !important;
+            margin-bottom: 2px !important;
+          }
+          .step-text-content p {
+            font-size: 13.5px !important;
+            line-height: 1.5 !important;
+          }
+        }
+
         @media (min-width: 1024px) {
           .mobile-timeline-line {
             display: none;

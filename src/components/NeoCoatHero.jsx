@@ -186,7 +186,7 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
 
             {/* 3. Sub-description */}
             <p
-              className="body-large"
+              className="body-large hero-sub-desc"
               style={{
                 color: 'var(--neo-color-text-secondary, #475569)',
                 marginBottom: '32px',
@@ -204,7 +204,7 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
               <a
                 href={getContactHref()}
                 onClick={(e) => handleCTAClick(e, getContactHref(), '#contact')}
-                className="btn-primary"
+                className="btn-primary hero-btn-primary"
                 style={{ textDecoration: 'none' }}
               >
                 견적 문의하기
@@ -441,6 +441,35 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
           font-size: 12.5px;
           font-weight: 600;
           box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
+        }
+
+        @media (max-width: 767px) {
+          .neo-trust-points {
+            display: none !important;
+          }
+          .hero-btn-primary {
+            display: none !important;
+          }
+          .neo-hero-cta-group .btn-secondary {
+            flex: 1;
+            width: 100%;
+          }
+          .hero-h1 {
+            font-size: 32px !important;
+            line-height: 1.25 !important;
+            letter-spacing: -0.01em !important;
+          }
+          .hero-sub-desc::before {
+            content: "습기와 오염, 기존 도막 상태를 확인한 뒤\\A현재 공간에 필요한 작업 범위를 안내합니다.";
+            display: block;
+            white-space: pre-line;
+          }
+          .hero-sub-desc {
+            font-size: 16px !important;
+            line-height: 1.65 !important;
+            font-size: 0px !important;
+            color: transparent !important;
+          }
         }
 
         .badge-dot {

@@ -46,6 +46,7 @@ export function NeoCoatFinalCTA({ parsedKeyword, onNavigate }) {
 
   return (
     <section
+      className="neo-final-cta-section"
       aria-labelledby="final-cta-title"
       style={{
         backgroundColor: 'var(--neo-color-primary, #1E3A8A)',
@@ -226,6 +227,12 @@ export function NeoCoatFinalCTA({ parsedKeyword, onNavigate }) {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+
+        @media (max-width: 767px) {
+          .neo-final-cta-section {
+            display: none !important;
+          }
         }
       `,
         }}

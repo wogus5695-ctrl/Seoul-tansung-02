@@ -118,10 +118,11 @@ export function NeoCoatServices({ activeTab, onTabChange, parsedKeyword, onNavig
               wordBreak: 'keep-all',
             }}
           >
-            공간과 마감 상태에 맞는<br />시공 서비스를 확인해보세요
+            <span className="pc-only-services-title">공간과 마감 상태에 맞는<br />시공 서비스를 확인해보세요</span>
+            <span className="mobile-only-services-title">현재 공간에 필요한<br />시공 범위를 확인하세요</span>
           </h2>
           <p
-            className="body-default"
+            className="body-default services-intro-desc"
             style={{
               color: 'var(--neo-color-text-secondary, #475569)',
               maxWidth: '640px',
@@ -222,7 +223,7 @@ export function NeoCoatServices({ activeTab, onTabChange, parsedKeyword, onNavig
                 </div>
               )}
 
-              <div style={{ marginTop: '24px', paddingTop: '16px', borderTop: '1px solid var(--neo-color-border, #E2E8F0)' }}>
+              <div className="services-consultation-cta-container" style={{ marginTop: '24px', paddingTop: '16px', borderTop: '1px solid var(--neo-color-border, #E2E8F0)' }}>
                 <a
                   href={getContactHref()}
                   onClick={handleCTAClick}
@@ -237,7 +238,7 @@ export function NeoCoatServices({ activeTab, onTabChange, parsedKeyword, onNavig
 
           {/* RIGHT: 작은 보조 서비스 카드 3개 스택 (45~52%) */}
           <div className="neo-secondary-services-stack">
-            {secondary.map((sec) => {
+            {secondary.slice(0, 2).map((sec) => {
               const secImgSrc = imageConfig.serviceImages[sec.id] || '';
 
               return (
@@ -413,6 +414,38 @@ export function NeoCoatServices({ activeTab, onTabChange, parsedKeyword, onNavig
 
         .sec-content-box {
           flex: 1;
+        }
+
+        .mobile-only-services-title {
+          display: none;
+        }
+        .pc-only-services-title {
+          display: inline;
+        }
+
+        @media (max-width: 767px) {
+          .mobile-only-services-title {
+            display: inline !important;
+          }
+          .pc-only-services-title {
+            display: none !important;
+          }
+          .services-consultation-cta-container {
+            display: none !important;
+          }
+          .neo-secondary-service-card {
+            padding: 16px 20px !important;
+            gap: 12px !important;
+          }
+          .sec-icon-box {
+            width: 36px !important;
+            height: 36px !important;
+            border-radius: 8px !important;
+          }
+          .sec-icon-box svg {
+            width: 18px !important;
+            height: 18px !important;
+          }
         }
       `,
         }}
