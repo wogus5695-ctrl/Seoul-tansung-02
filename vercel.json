@@ -4,6 +4,19 @@
       "includeFiles": "dist/index.html"
     }
   },
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "neocoat.co.kr"
+        }
+      ],
+      "destination": "https://www.neocoat.co.kr/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/sitemap-seoul",
