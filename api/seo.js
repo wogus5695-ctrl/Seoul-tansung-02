@@ -10,7 +10,14 @@ export default async function handler(req, res) {
   const kParam = url.searchParams.get('k')?.trim() || '';
   const pathname = url.pathname;
 
-  // 1. Check for invalid or unknown paths (404 Page)
+  // 1. Check for empty k query (?k=) and redirect to main page (308 Permanent)
+  const rawQuery = url.search;
+  if (rawQuery.includes('k=') && !kParam) {
+    res.setHeader('Location', 'https://www.neocoat.co.kr/');
+    return res.status(308).send('Redirecting to main page...');
+  }
+
+  // 2. Check for invalid or unknown paths (404 Page)
   const validPaths = ['/', '/sitemap-seoul', '/privacy-policy', '/terms'];
   if (!validPaths.includes(pathname)) {
     let htmlPath = path.join(process.cwd(), 'dist', 'index.html');
@@ -21,6 +28,15 @@ export default async function handler(req, res) {
     html = html.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`);
     html = html.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${meta.description}" />`);
     html = html.replace('</head>', `<meta name="robots" content="noindex,nofollow" />\n<link rel="canonical" href="${meta.canonical}" />\n</head>`);
+
+    // H1 and navigation for not found page
+    let botContent = `\n<div style="display:none;" id="seo-pre-rendered">\n`;
+    botContent += `  <h1>${meta.h1}</h1>\n`;
+    botContent += `  <p>${meta.description}</p>\n`;
+    botContent += `  <a href="/">홈으로 이동</a>\n`;
+    botContent += `  <a href="/sitemap-seoul">지역별 서비스 안내</a>\n`;
+    botContent += `</div>\n`;
+    html = html.replace('<div id="root"></div>', `<div id="root"></div>\n${botContent}`);
 
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     return res.status(404).send(html);
@@ -122,6 +138,15 @@ export default async function handler(req, res) {
       html = html.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`);
       html = html.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${meta.description}" />`);
       html = html.replace('</head>', `<meta name="robots" content="noindex,nofollow" />\n<link rel="canonical" href="${meta.canonical}" />\n</head>`);
+
+      // Pre-render not found screen content for search crawlers
+      let botContent = `\n<div style="display:none;" id="seo-pre-rendered">\n`;
+      botContent += `  <h1>${meta.h1}</h1>\n`;
+      botContent += `  <p>${meta.description}</p>\n`;
+      botContent += `  <a href="/">홈으로 이동</a>\n`;
+      botContent += `  <a href="/sitemap-seoul">지역별 서비스 안내</a>\n`;
+      botContent += `</div>\n`;
+      html = html.replace('<div id="root"></div>', `<div id="root"></div>\n${botContent}`);
 
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
       return res.status(404).send(html);
