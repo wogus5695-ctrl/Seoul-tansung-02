@@ -9,7 +9,7 @@ import { getSpacesByGroupAndTask } from '../data/serviceSpaceContent.js';
  * - 서비스군(elasticCoat vs grout) 및 동적 작업명에 따라 대표 공간 우선순위 정렬 (중복 없음)
  * - 이미지 유/무/에러 시 안전한 중립 아이콘 Placeholder 지원
  */
-export function NeoCoatSpaces({ activeTab, parsedKeyword }) {
+export function NeoCoatSpaces({ activeTab, parsedKeyword, isDesktop }) {
   const [imgError, setImgError] = useState({});
   const [showMore, setShowMore] = useState(false);
 
@@ -84,7 +84,7 @@ export function NeoCoatSpaces({ activeTab, parsedKeyword }) {
         <div className="neo-spaces-magazine-grid">
           {/* Top Row: 2 Primary Large Space Cards */}
           <div className="primary-spaces-row">
-            {(showMore ? primarySpaces : primarySpaces.slice(0, 1)).map((sp) => {
+            {(isDesktop || showMore ? primarySpaces : primarySpaces.slice(0, 1)).map((sp) => {
               const imageKey = `${activeTab}_${sp.id}`;
               const spImgSrc = imageConfig.spaceImages[imageKey] || imageConfig.spaceImages[sp.id] || '';
 
@@ -124,7 +124,7 @@ export function NeoCoatSpaces({ activeTab, parsedKeyword }) {
 
           {/* Bottom Row: 4 Secondary Small Space Cards (2x2 Grid) */}
           <div className="secondary-spaces-grid">
-            {(showMore ? secondarySpaces : secondarySpaces.slice(0, 2)).map((sp) => {
+            {(isDesktop || showMore ? secondarySpaces : secondarySpaces.slice(0, 2)).map((sp) => {
               const spImgSrc = imageConfig.spaceImages[sp.id] || '';
 
               return (
@@ -147,7 +147,7 @@ export function NeoCoatSpaces({ activeTab, parsedKeyword }) {
           </div>
 
           {/* Show More toggle button for mobile */}
-          {spaceList.length > 3 && (
+          {!isDesktop && spaceList.length > 3 && (
             <button
               type="button"
               onClick={() => setShowMore(!showMore)}

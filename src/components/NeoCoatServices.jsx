@@ -10,7 +10,7 @@ import { getServicesByGroupAndTask } from '../data/serviceSpaceContent.js';
  * - 대표 카드 하단에만 '시공 범위 상담하기' CTA 배치
  * - 이미지가 존재할 때만 표시하고, 미등록 시 중립 아이콘 Placeholder 안전 노출
  */
-export function NeoCoatServices({ activeTab, onTabChange, parsedKeyword, onNavigate }) {
+export function NeoCoatServices({ activeTab, onTabChange, parsedKeyword, onNavigate, isDesktop }) {
   const [imgError, setImgError] = useState({});
 
   const taskName = parsedKeyword ? parsedKeyword.service.keyword : '';
@@ -238,7 +238,7 @@ export function NeoCoatServices({ activeTab, onTabChange, parsedKeyword, onNavig
 
           {/* RIGHT: 작은 보조 서비스 카드 3개 스택 (45~52%) */}
           <div className="neo-secondary-services-stack">
-            {secondary.slice(0, 2).map((sec) => {
+            {secondary.slice(0, isDesktop ? 3 : 2).map((sec) => {
               const secImgSrc = imageConfig.serviceImages[sec.id] || '';
 
               return (

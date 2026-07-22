@@ -1030,10 +1030,12 @@ function App() {
           onTabChange={setServiceTab}
           parsedKeyword={parsedKeyword}
           onNavigate={navigate}
+          isDesktop={isDesktop}
         />
         <NeoCoatSpaces
           activeTab={serviceTab}
           parsedKeyword={parsedKeyword}
+          isDesktop={isDesktop}
         />
 
         {/* 4. NEO COAT STANDARD */}
