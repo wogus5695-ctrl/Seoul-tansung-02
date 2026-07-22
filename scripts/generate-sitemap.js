@@ -7,11 +7,13 @@ import { fileURLToPath } from 'url';
 import { getActiveRegions, generateAbsoluteDynamicUrl } from '../src/data/regionResolver.js';
 import { serviceKeywords } from '../src/data/serviceKeywords.js';
 
+import { contactConfig } from '../src/config/contactConfig.js';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Base SITE_URL (Default to placeholder, can be replaced by env or set to production domain)
-const SITE_URL = process.env.SITE_URL || '';
+// Read SITE_URL from contactConfig.js configuration file
+const SITE_URL = contactConfig.siteUrl ? contactConfig.siteUrl.replace(/\/$/, '') : 'https://www.neocoat.co.kr';
 
 async function generateSitemap() {
   console.log('Generating sitemap.xml for target domain:', SITE_URL);

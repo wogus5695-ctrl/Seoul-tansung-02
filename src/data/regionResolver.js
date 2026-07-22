@@ -176,8 +176,9 @@ export function getActiveRegions() {
   const seen = new Set();
   
   for (const region of activeRegionIndex.values()) {
-    if (seen.has(region.id)) continue;
-    seen.add(region.id);
+    const key = normalizeKeywordParam(region.urlRegion);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
     list.push(region);
   }
   return list;

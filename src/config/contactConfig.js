@@ -8,5 +8,5 @@ export const contactConfig = {
   email: "",
   operatingHours: "",
   privacyManager: "",
-  siteUrl: "", // 상대경로 또는 설정 시 도메인
+  siteUrl: "https://www.neocoat.co.kr", // 상대경로 또는 설정 시 도메인
 };
