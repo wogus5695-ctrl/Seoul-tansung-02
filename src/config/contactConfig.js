@@ -1,9 +1,9 @@
 // 연락처 및 사업자정보 분리 설정 (미확정 항목 빈 값)
 export const contactConfig = {
-  phone: "",
+  phone: "010-8189-6900",
   kakaoUrl: "",
   representative: "",
-  businessNumber: "",
+  businessNumber: "405-12-02677",
   address: "",
   email: "",
   operatingHours: "",
