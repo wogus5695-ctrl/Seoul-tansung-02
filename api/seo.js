@@ -74,11 +74,44 @@ export default async function handler(req, res) {
       }
       html = html.replace('</head>', `${headTags}</head>`);
 
-      // Pre-rendered H1 for bots
-      let botContent = `<div style="display:none;" id="seo-pre-rendered">`;
-      botContent += `<h1>${meta.h1}</h1>`;
-      botContent += `<p>${meta.description}</p>`;
-      botContent += `</div>`;
+      // 5. Pre-rendered SEO content for search bots (H1, description, FAQ list, and internal linking links)
+      let botContent = `\n<div style="display:none;" id="seo-pre-rendered">\n`;
+      botContent += `  <h1>${meta.h1}</h1>\n`;
+      botContent += `  <p>${meta.description}</p>\n`;
+
+      // Pre-render FAQs
+      const faqItems = getFaqItems(parseResult);
+      if (faqItems && faqItems.length > 0) {
+        botContent += `  <h2>자주 묻는 질문</h2>\n`;
+        faqItems.forEach(item => {
+          botContent += `  <div>\n    <h3>${item.question}</h3>\n    <p>${item.answer}</p>\n  </div>\n`;
+        });
+      }
+
+      // Pre-render related linking links
+      const relatedServices = parseResult.service.relatedServices || [];
+      if (relatedServices.length > 0) {
+        botContent += `  <h2>관련 서비스 정보</h2>\n  <ul>\n`;
+        relatedServices.forEach(task => {
+          const href = generateDynamicUrl(parseResult.region.urlRegion, task);
+          botContent += `    <li><a href="${href}">${parseResult.region.name} ${task}</a></li>\n`;
+        });
+        botContent += `  </ul>\n`;
+      }
+
+      const activeRegions = getActiveRegions().filter(
+        r => r.parentId === parseResult.region.parentId && r.id !== parseResult.region.id
+      ).slice(0, 6);
+      if (activeRegions.length > 0) {
+        botContent += `  <h2>인근 시공 지역 바로가기</h2>\n  <ul>\n`;
+        activeRegions.forEach(reg => {
+          const href = generateDynamicUrl(reg.urlRegion, parseResult.service.keyword);
+          botContent += `    <li><a href="${href}">${reg.name} ${parseResult.service.keyword}</a></li>\n`;
+        });
+        botContent += `  </ul>\n`;
+      }
+
+      botContent += `</div>\n`;
       html = html.replace('<div id="root"></div>', `<div id="root"></div>\n${botContent}`);
 
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
@@ -107,6 +140,21 @@ export default async function handler(req, res) {
     headTags += `<script type="application/ld+json">\n${JSON.stringify(meta.faqJsonLd, null, 2)}\n</script>\n`;
   }
   html = html.replace('</head>', `${headTags}</head>`);
+
+  // Pre-rendered content for bots on main page
+  let botContent = `\n<div style="display:none;" id="seo-pre-rendered">\n`;
+  botContent += `  <h1>${meta.h1}</h1>\n`;
+  botContent += `  <p>${meta.description}</p>\n`;
+
+  const mainFaqs = getFaqItems(null);
+  if (mainFaqs && mainFaqs.length > 0) {
+    botContent += `  <h2>자주 묻는 질문</h2>\n`;
+    mainFaqs.forEach(item => {
+      botContent += `  <div>\n    <h3>${item.question}</h3>\n    <p>${item.answer}</p>\n  </div>\n`;
+    });
+  }
+  botContent += `</div>\n`;
+  html = html.replace('<div id="root"></div>', `<div id="root"></div>\n${botContent}`);
 
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
   return res.status(200).send(html);
