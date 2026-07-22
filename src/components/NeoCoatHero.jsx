@@ -200,15 +200,43 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
             </p>
 
             {/* 4. Dual CTA Buttons */}
-            <div className="neo-hero-cta-group">
+            <div className="neo-hero-cta-group" style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
               <a
-                href={getContactHref()}
-                onClick={(e) => handleCTAClick(e, getContactHref(), '#contact')}
-                className="btn-primary hero-btn-primary"
-                style={{ textDecoration: 'none' }}
+                href={`tel:${contactConfig.phone}`}
+                className="btn-secondary hero-btn-secondary"
+                style={{
+                  textDecoration: 'none',
+                  border: '1px solid rgba(30, 58, 138, 0.2)',
+                  backgroundColor: 'var(--neo-color-bg-blue-light, #EFF6FF)',
+                  color: 'var(--neo-color-primary, #1E3A8A)',
+                  fontWeight: '700'
+                }}
               >
-                견적 문의하기
+                전화 문의
               </a>
+              {contactConfig.kakaoUrl && contactConfig.kakaoUrl.trim() !== '' ? (
+                <a
+                  href={contactConfig.kakaoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary hero-btn-primary"
+                  style={{ textDecoration: 'none', fontWeight: '700' }}
+                >
+                  카카오 문의
+                </a>
+              ) : (
+                <button
+                  disabled
+                  className="btn-primary hero-btn-primary"
+                  style={{
+                    opacity: 0.5,
+                    cursor: 'not-allowed',
+                    fontWeight: '700'
+                  }}
+                >
+                  카카오 문의 (준비중)
+                </button>
+              )}
               <a
                 href={getServicesHref()}
                 onClick={(e) => handleCTAClick(e, getServicesHref(), '#services')}

@@ -171,21 +171,71 @@ export function NeoCoatFaq({ parsedKeyword, onNavigate }) {
             </span>
           </div>
 
-          <a
-            href={getContactHref()}
-            onClick={handleCTAClick}
-            className="btn-secondary"
-            style={{
-              height: '40px',
-              padding: '0 16px',
-              fontSize: '14px',
-              borderRadius: '10px',
-              textDecoration: 'none',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            시공 범위 문의하기 →
-          </a>
+          <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <a
+              href={`tel:${contactConfig.phone}`}
+              className="btn-secondary"
+              style={{
+                height: '40px',
+                padding: '0 16px',
+                fontSize: '14px',
+                borderRadius: '10px',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: '700',
+                border: '1px solid rgba(30, 58, 138, 0.2)',
+                backgroundColor: 'var(--neo-color-bg-blue-light, #EFF6FF)',
+                color: 'var(--neo-color-primary, #1E3A8A)'
+              }}
+            >
+              전화 문의
+            </a>
+            {contactConfig.kakaoUrl && contactConfig.kakaoUrl.trim() !== '' ? (
+              <a
+                href={contactConfig.kakaoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+                style={{
+                  height: '40px',
+                  padding: '0 16px',
+                  fontSize: '14px',
+                  borderRadius: '10px',
+                  textDecoration: 'none',
+                  whiteSpace: 'nowrap',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: '700'
+                }}
+              >
+                카카오 문의
+              </a>
+            ) : (
+              <button
+                disabled
+                className="btn-primary"
+                style={{
+                  height: '40px',
+                  padding: '0 16px',
+                  fontSize: '14px',
+                  borderRadius: '10px',
+                  opacity: 0.5,
+                  cursor: 'not-allowed',
+                  whiteSpace: 'nowrap',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: '700'
+                }}
+              >
+                카카오 문의 (준비중)
+              </button>
+            )}
+          </div>
         </div>
       </div>
 

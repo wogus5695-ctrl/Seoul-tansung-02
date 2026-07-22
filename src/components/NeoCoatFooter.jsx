@@ -104,18 +104,18 @@ export function NeoCoatFooter({ onNavigate, isSimple = false }) {
             <div className="footer-info-block">
               {hasPhone ? (
                 <p className="info-row">
-                  <strong>대표 전화:</strong> <a href={phoneHref} className="phone-link">{phoneDisplay}</a>
+                  <strong>전화 문의:</strong> <a href={phoneHref} className="phone-link">{phoneDisplay}</a>
                 </p>
               ) : (
-                <p className="info-row text-muted"><strong>대표 전화:</strong> 등록 예정</p>
+                <p className="info-row text-muted"><strong>전화 문의:</strong> 등록 예정</p>
               )}
 
               {hasKakao ? (
                 <p className="info-row">
-                  <strong>사진 상담:</strong> <a href={contactConfig.kakaoUrl} target="_blank" rel="noopener noreferrer" className="kakao-link">상담 채널 바로가기 ↗</a>
+                  <strong>카카오 문의:</strong> <a href={contactConfig.kakaoUrl} target="_blank" rel="noopener noreferrer" className="kakao-link">카카오 채널 연결 ↗</a>
                 </p>
               ) : (
-                <p className="info-row text-muted"><strong>사진 상담:</strong> 채널 등록 예정</p>
+                <p className="info-row text-muted"><strong>카카오 문의:</strong> 채널 등록 예정</p>
               )}
 
               {contactConfig.operatingHours && (

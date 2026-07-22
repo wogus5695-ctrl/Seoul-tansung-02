@@ -110,53 +110,66 @@ export function NeoCoatFinalCTA({ parsedKeyword, onNavigate }) {
 
             <div className="final-cta-btn-group">
               <a
-                href={photoHref}
-                onClick={(e) => handleCTAClick(e, photoHref)}
-                className="btn-primary"
+                href={`tel:${contactConfig.phone}`}
+                className="btn-secondary"
                 style={{
                   height: '52px',
                   padding: '0 28px',
                   fontSize: '16px',
                   borderRadius: '12px',
+                  backgroundColor: 'transparent',
+                  color: '#FFFFFF',
+                  borderColor: 'rgba(255, 255, 255, 0.4)',
+                  borderWidth: '1px',
+                  borderStyle: 'solid',
                   textDecoration: 'none',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: '700'
                 }}
               >
-                사진으로 시공 문의
+                전화 문의
               </a>
 
-              {phoneHref ? (
+              {contactConfig.kakaoUrl && contactConfig.kakaoUrl.trim() !== '' ? (
                 <a
-                  href={phoneHref}
-                  className="btn-secondary"
+                  href={contactConfig.kakaoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
                   style={{
                     height: '52px',
                     padding: '0 28px',
                     fontSize: '16px',
                     borderRadius: '12px',
-                    backgroundColor: 'transparent',
-                    color: '#FFFFFF',
-                    borderColor: 'rgba(255, 255, 255, 0.4)',
                     textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontWeight: '700'
                   }}
                 >
-                  전화 상담
+                  카카오 문의
                 </a>
               ) : (
                 <button
                   disabled
-                  className="btn-secondary"
+                  className="btn-primary"
                   style={{
                     height: '52px',
                     padding: '0 24px',
                     fontSize: '15px',
                     borderRadius: '12px',
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                    color: 'rgba(255, 255, 255, 0.5)',
-                    borderColor: 'transparent',
+                    opacity: 0.5,
                     cursor: 'not-allowed',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontWeight: '700'
                   }}
                 >
-                  전화 상담 (번호 등록 예정)
+                  카카오 문의 (준비중)
                 </button>
               )}
             </div>

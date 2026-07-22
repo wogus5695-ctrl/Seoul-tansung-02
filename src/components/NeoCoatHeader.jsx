@@ -160,21 +160,67 @@ export function NeoCoatHeader({ onNavigate, currentPath = '/', onMenuOpenChange 
         </nav>
 
         {/* 3. PC CTA 버튼 (1024px 이상 시 노출) */}
-        <div className="pc-only-cta">
+        <div className="pc-only-cta" style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
           <a
-            href={getContactHref()}
-            onClick={handleCTAClick}
-            className="btn-primary"
+            href={`tel:${contactConfig.phone}`}
+            className="btn-secondary"
             style={{
               height: '46px',
               fontSize: '15px',
               borderRadius: '12px',
-              padding: '0 20px',
+              padding: '0 16px',
               textDecoration: 'none',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              border: '1px solid rgba(30, 58, 138, 0.2)',
+              backgroundColor: 'var(--neo-color-bg-blue-light, #EFF6FF)',
+              color: 'var(--neo-color-primary, #1E3A8A)',
+              fontWeight: '700'
             }}
           >
-            견적 문의하기
+            전화 문의
           </a>
+          {contactConfig.kakaoUrl && contactConfig.kakaoUrl.trim() !== '' ? (
+            <a
+              href={contactConfig.kakaoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+              style={{
+                height: '46px',
+                fontSize: '15px',
+                borderRadius: '12px',
+                padding: '0 16px',
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: '700'
+              }}
+            >
+              카카오 문의
+            </a>
+          ) : (
+            <button
+              disabled
+              className="btn-primary"
+              style={{
+                height: '46px',
+                fontSize: '15px',
+                borderRadius: '12px',
+                padding: '0 16px',
+                opacity: 0.5,
+                cursor: 'not-allowed',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: '700'
+              }}
+            >
+              카카오 문의 (준비중)
+            </button>
+          )}
         </div>
 
         {/* 4. 모바일 햄버거 버튼 (1024px 미만 시 노출) */}
@@ -250,25 +296,71 @@ export function NeoCoatHeader({ onNavigate, currentPath = '/', onMenuOpenChange 
               ))}
             </nav>
 
-            <div style={{ marginTop: 'auto', paddingTop: '24px' }}>
+            <div style={{ marginTop: 'auto', paddingTop: '24px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <a
-                href={getContactHref()}
-                onClick={(e) => {
-                  setMenuOpen(false);
-                  handleCTAClick(e);
-                }}
-                className="btn-primary"
+                href={`tel:${contactConfig.phone}`}
+                onClick={() => setMenuOpen(false)}
+                className="btn-secondary"
                 style={{
                   width: '100%',
-                  height: '52px',
-                  fontSize: '16px',
+                  height: '48px',
+                  fontSize: '15px',
                   borderRadius: '12px',
                   textDecoration: 'none',
                   boxSizing: 'border-box',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: '700',
+                  border: '1px solid rgba(30, 58, 138, 0.2)',
+                  backgroundColor: 'var(--neo-color-bg-blue-light, #EFF6FF)',
+                  color: 'var(--neo-color-primary, #1E3A8A)'
                 }}
               >
-                견적 문의하기
+                전화 문의
               </a>
+              {contactConfig.kakaoUrl && contactConfig.kakaoUrl.trim() !== '' ? (
+                <a
+                  href={contactConfig.kakaoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMenuOpen(false)}
+                  className="btn-primary"
+                  style={{
+                    width: '100%',
+                    height: '48px',
+                    fontSize: '15px',
+                    borderRadius: '12px',
+                    textDecoration: 'none',
+                    boxSizing: 'border-box',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontWeight: '700'
+                  }}
+                >
+                  카카오 문의
+                </a>
+              ) : (
+                <button
+                  disabled
+                  className="btn-primary"
+                  style={{
+                    width: '100%',
+                    height: '48px',
+                    fontSize: '15px',
+                    borderRadius: '12px',
+                    opacity: 0.5,
+                    cursor: 'not-allowed',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontWeight: '700'
+                  }}
+                >
+                  카카오 문의 (준비중)
+                </button>
+              )}
             </div>
           </div>
         </div>
