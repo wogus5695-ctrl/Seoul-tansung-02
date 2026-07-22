@@ -45,3 +45,8 @@ export const siteImages = {
   process01: null,
   portfolio01: null,
 };
+
+export const featureConfig = {
+  caseStudies: false
+};
+

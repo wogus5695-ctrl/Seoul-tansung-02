@@ -144,8 +144,7 @@ export function NeoCoatFooter({ onNavigate, isSimple = false }) {
             <ul className="footer-link-list">
               <li><a href="/" onClick={(e) => handleLinkClick(e, '/')}>홈</a></li>
               <li><a href="/#services" onClick={(e) => handleLinkClick(e, '/#services')}>서비스</a></li>
-              <li><a href="/#cases" onClick={(e) => handleLinkClick(e, '/#cases')}>시공 사례</a></li>
-              <li><a href="/#process" onClick={(e) => handleLinkClick(e, '/#process')}>작업 과정</a></li>
+              <li><a href="/#standard" onClick={(e) => handleLinkClick(e, '/#standard')}>시공 원칙</a></li>
               <li><a href="/#faq" onClick={(e) => handleLinkClick(e, '/#faq')}>FAQ</a></li>
               <li><a href="/#contact" onClick={(e) => handleLinkClick(e, '/#contact')}>문의</a></li>
               <li style={{ marginTop: '8px' }}>

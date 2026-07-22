@@ -53,8 +53,7 @@ export function NeoCoatHeader({ onNavigate, currentPath = '/' }) {
   // 메뉴 리스트 정의
   const menuItems = [
     { label: '서비스', anchor: '#services' },
-    { label: '시공 사례', anchor: '#cases' },
-    { label: '시공 과정', anchor: '#process' },
+    { label: '시공 원칙', anchor: '#standard' },
     { label: 'FAQ', anchor: '#faq' },
     { label: '문의', anchor: '#contact' },
   ];

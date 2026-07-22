@@ -55,6 +55,7 @@ export function NeoCoatStandard() {
 
   return (
     <section
+      id="standard"
       aria-labelledby="standard-title"
       style={{
         backgroundColor: 'var(--neo-color-primary, #1E3A8A)',

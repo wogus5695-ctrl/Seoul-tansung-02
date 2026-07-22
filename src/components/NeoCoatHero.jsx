@@ -25,9 +25,9 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
     return parsedKeyword ? '/#contact' : '#contact';
   };
 
-  // 사례 보기 CTA 안전 링크 구하기
-  const getCasesHref = () => {
-    return parsedKeyword ? '/#cases' : '#cases';
+  // 서비스 확인 CTA 안전 링크 구하기
+  const getServicesHref = () => {
+    return parsedKeyword ? '/#services' : '#services';
   };
 
   const handleCTAClick = (e, targetHref, anchorId) => {
@@ -210,12 +210,12 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
                 견적 문의하기
               </a>
               <a
-                href={getCasesHref()}
-                onClick={(e) => handleCTAClick(e, getCasesHref(), '#cases')}
+                href={getServicesHref()}
+                onClick={(e) => handleCTAClick(e, getServicesHref(), '#services')}
                 className="btn-secondary"
                 style={{ textDecoration: 'none' }}
               >
-                시공 사례 보기
+                서비스 확인
               </a>
             </div>
 
