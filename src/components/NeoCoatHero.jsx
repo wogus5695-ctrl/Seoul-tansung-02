@@ -200,51 +200,89 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
             </p>
 
             {/* 4. Dual CTA Buttons */}
-            <div className="neo-hero-cta-group" style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            <div className="neo-hero-cta-group" style={{ display: 'flex', gap: '8px', width: '100%' }}>
               <a
                 href={`tel:${contactConfig.phone}`}
-                className="btn-secondary hero-btn-secondary"
+                className="mobile-cta-btn phone-btn"
                 style={{
+                  flex: '42',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  height: '48px',
+                  borderRadius: '12px',
                   textDecoration: 'none',
                   border: '1px solid rgba(30, 58, 138, 0.2)',
                   backgroundColor: 'var(--neo-color-bg-blue-light, #EFF6FF)',
                   color: 'var(--neo-color-primary, #1E3A8A)',
-                  fontWeight: '700'
+                  fontWeight: '700',
+                  fontSize: '14px',
+                  whiteSpace: 'nowrap',
+                  gap: '6px'
                 }}
               >
-                전화 문의
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span>전화 문의</span>
               </a>
+
               {contactConfig.kakaoUrl && contactConfig.kakaoUrl.trim() !== '' ? (
                 <a
                   href={contactConfig.kakaoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary hero-btn-primary"
-                  style={{ textDecoration: 'none', fontWeight: '700' }}
+                  className="mobile-cta-btn quote-btn"
+                  style={{
+                    flex: '58',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    height: '48px',
+                    borderRadius: '12px',
+                    textDecoration: 'none',
+                    backgroundColor: '#FEE500',
+                    color: '#191919',
+                    fontWeight: '700',
+                    fontSize: '14px',
+                    whiteSpace: 'nowrap',
+                    gap: '6px'
+                  }}
                 >
-                  카카오 문의
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 3c-4.97 0-9 3.185-9 7.11 0 2.507 1.642 4.718 4.12 5.922-.162.59-.586 2.138-.67 2.458-.105.39.135.385.285.285.118-.08 1.888-1.285 2.64-1.8 1.134.336 2.378.515 3.625.515 4.97 0 9-3.185 9-7.11S16.97 3 12 3z" />
+                  </svg>
+                  <span>카카오톡 문의하기</span>
                 </a>
               ) : (
                 <button
                   disabled
-                  className="btn-primary hero-btn-primary"
+                  aria-disabled="true"
+                  className="mobile-cta-btn quote-btn"
                   style={{
+                    flex: '58',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    height: '48px',
+                    borderRadius: '12px',
                     opacity: 0.5,
                     cursor: 'not-allowed',
-                    fontWeight: '700'
+                    backgroundColor: '#E2E8F0',
+                    color: '#94A3B8',
+                    fontWeight: '700',
+                    fontSize: '14px',
+                    border: 'none',
+                    whiteSpace: 'nowrap',
+                    gap: '6px'
                   }}
                 >
-                  카카오 문의 (준비중)
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 3c-4.97 0-9 3.185-9 7.11 0 2.507 1.642 4.718 4.12 5.922-.162.59-.586 2.138-.67 2.458-.105.39.135.385.285.285.118-.08 1.888-1.285 2.64-1.8 1.134.336 2.378.515 3.625.515 4.97 0 9-3.185 9-7.11S16.97 3 12 3z" />
+                  </svg>
+                  <span>카카오톡 문의하기 (준비중)</span>
                 </button>
               )}
-              <a
-                href={getServicesHref()}
-                onClick={(e) => handleCTAClick(e, getServicesHref(), '#services')}
-                className="btn-secondary"
-                style={{ textDecoration: 'none' }}
-              >
-                서비스 확인
-              </a>
             </div>
 
             {/* 5. Trust Points List */}
@@ -474,13 +512,6 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
         @media (max-width: 767px) {
           .neo-trust-points {
             display: none !important;
-          }
-          .hero-btn-primary {
-            display: none !important;
-          }
-          .neo-hero-cta-group .btn-secondary {
-            flex: 1;
-            width: 100%;
           }
           .hero-h1 {
             font-size: 32px !important;

@@ -68,7 +68,7 @@ export function NeoCoatMobileStickyCTA({ parsedKeyword, onNavigate }) {
           <a
             href={phoneHref}
             className="mobile-cta-btn phone-btn"
-            style={{ flex: hasKakao ? '42' : '100' }}
+            style={{ flex: '42', whiteSpace: 'nowrap' }}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
@@ -83,23 +83,33 @@ export function NeoCoatMobileStickyCTA({ parsedKeyword, onNavigate }) {
             target="_blank"
             rel="noopener noreferrer"
             className="mobile-cta-btn quote-btn"
-            style={{ flex: '58' }}
+            style={{ flex: '58', whiteSpace: 'nowrap', backgroundColor: '#FEE500', color: '#191919' }}
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 3c-4.97 0-9 3.185-9 7.11 0 2.507 1.642 4.718 4.12 5.922-.162.59-.586 2.138-.67 2.458-.105.39.135.385.285.285.118-.08 1.888-1.285 2.64-1.8 1.134.336 2.378.515 3.625.515 4.97 0 9-3.185 9-7.11S16.97 3 12 3z" />
             </svg>
-            <span>카카오 문의</span>
+            <span>카카오톡 문의하기</span>
           </a>
         ) : (
-          !hasPhone && (
-            <button
-              disabled
-              className="mobile-cta-btn quote-btn"
-              style={{ flex: '1', opacity: 0.5, cursor: 'not-allowed' }}
-            >
-              카카오 문의 (준비중)
-            </button>
-          )
+          <button
+            disabled
+            aria-disabled="true"
+            className="mobile-cta-btn quote-btn"
+            style={{
+              flex: '58',
+              whiteSpace: 'nowrap',
+              backgroundColor: '#E2E8F0',
+              color: '#94A3B8',
+              opacity: 0.7,
+              cursor: 'not-allowed',
+              border: 'none'
+            }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 3c-4.97 0-9 3.185-9 7.11 0 2.507 1.642 4.718 4.12 5.922-.162.59-.586 2.138-.67 2.458-.105.39.135.385.285.285.118-.08 1.888-1.285 2.64-1.8 1.134.336 2.378.515 3.625.515 4.97 0 9-3.185 9-7.11S16.97 3 12 3z" />
+            </svg>
+            <span>카카오톡 문의하기 (준비중)</span>
+          </button>
         )}
       </div>
 
