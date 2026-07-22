@@ -9,7 +9,6 @@ import { NeoCoatSpaces } from './components/NeoCoatSpaces';
 import { NeoCoatStandard } from './components/NeoCoatStandard';
 import { NeoCoatCases } from './components/NeoCoatCases';
 import { NeoCoatFaq } from './components/NeoCoatFaq';
-import { NeoCoatContact } from './components/NeoCoatContact';
 import { NeoCoatFinalCTA } from './components/NeoCoatFinalCTA';
 import { NeoCoatMobileStickyCTA } from './components/NeoCoatMobileStickyCTA';
 import { NeoCoatFooter } from './components/NeoCoatFooter';
@@ -1054,9 +1053,6 @@ function App() {
           parsedKeyword={parsedKeyword}
           onNavigate={navigate}
         />
-
-        {/* 7. ASK FOR CONSULTATION (CONTACT) SECTION */}
-        <NeoCoatContact parsedKeyword={parsedKeyword} />
 
         {/* 8. FINAL CTA SECTION */}
         <NeoCoatFinalCTA
