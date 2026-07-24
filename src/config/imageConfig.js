@@ -56,8 +56,8 @@ export const imageConfig = {
     grout: []
   },
   finalCtaImage: "",
-  searchThumbnail: "",
-  ogImage: "",
+  searchThumbnail: "/images/seo/neocoat-search-thumbnail.jpg",
+  ogImage: "/images/seo/neocoat-search-thumbnail.jpg",
   logoImage: "/brand/neocoat-logo.png",
   faviconImage: "/favicon.ico",
 };

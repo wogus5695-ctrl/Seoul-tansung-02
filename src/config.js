@@ -23,10 +23,10 @@ export const siteConfig = {
 
 // SEO 독립 이미지 필드 분리 관리 (seoImages)
 export const seoImages = {
-  defaultOgImage: imageConfig.ogImage || "",
+  searchThumbnail: imageConfig.searchThumbnail || "/images/seo/neocoat-search-thumbnail.jpg",
+  defaultOgImage: imageConfig.ogImage || "/images/seo/neocoat-search-thumbnail.jpg",
   elasticCoatOgImage: "",
   groutOgImage: "",
-  searchThumbnail: imageConfig.searchThumbnail || "",
   logoImage: imageConfig.logoImage || "",
   faviconImage: imageConfig.faviconImage || "",
 };

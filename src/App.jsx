@@ -284,8 +284,8 @@ function App() {
   useEffect(() => {
     let titleStr = `탄성코트·줄눈시공 전문`;
     let descStr = `베란다·세탁실 탄성코트와 욕실·현관 줄눈시공을 안내합니다. 기존 벽면과 타일 상태를 확인하고 공간에 필요한 시공 범위를 상담해 드립니다.`;
-    const defaultSiteUrl = siteConfig.siteUrl || '';
-    const seoThumbnailUrl = defaultSiteUrl ? `${defaultSiteUrl}/images/seo/bareumgonggan-search-thumbnail-v1.png` : '';
+    const defaultSiteUrl = siteConfig.siteUrl || 'https://www.neocoat.co.kr';
+    const seoThumbnailUrl = `${defaultSiteUrl}/images/seo/neocoat-search-thumbnail.jpg`;
     
     // Schema generation arrays
     const schemas = [];
@@ -418,44 +418,26 @@ function App() {
     updateMetaTag('meta[property="og:title"]', 'content', titleStr);
     updateMetaTag('meta[property="og:description"]', 'content', descStr);
 
-    // Sync SEO Search Thumbnail dynamically for normal dynamic landing pages
+    // Sync SEO Search Thumbnail dynamically for all pages (fallback to common search thumbnail)
     let imageSrcEl = document.querySelector('link[rel="image_src"]');
 
-    if (parsedKeyword && seoThumbnailUrl) {
-      updateMetaTag('meta[property="og:image"]', 'content', seoThumbnailUrl);
-      updateMetaTag('meta[property="og:image:width"]', 'content', '1200');
-      updateMetaTag('meta[property="og:image:height"]', 'content', '1200');
-      updateMetaTag('meta[property="og:image:type"]', 'content', 'image/png');
-      updateMetaTag('meta[property="og:image:alt"]', 'content', `${siteConfig.brandName} 탄성코트·줄눈시공 전문`);
+    updateMetaTag('meta[property="og:image"]', 'content', seoThumbnailUrl);
+    updateMetaTag('meta[property="og:image:secure_url"]', 'content', seoThumbnailUrl);
+    updateMetaTag('meta[property="og:image:width"]', 'content', '1200');
+    updateMetaTag('meta[property="og:image:height"]', 'content', '1200');
+    updateMetaTag('meta[property="og:image:type"]', 'content', 'image/jpeg');
+    updateMetaTag('meta[property="og:image:alt"]', 'content', '탄성코트와 줄눈 전문 시공 네오코트');
 
-      updateMetaTag('meta[name="twitter:card"]', 'content', 'summary_large_image');
-      updateMetaTag('meta[name="twitter:image"]', 'content', seoThumbnailUrl);
-      updateMetaTag('meta[name="twitter:image:alt"]', 'content', `${siteConfig.brandName} 탄성코트·줄눈시공 전문`);
+    updateMetaTag('meta[name="twitter:card"]', 'content', 'summary_large_image');
+    updateMetaTag('meta[name="twitter:image"]', 'content', seoThumbnailUrl);
+    updateMetaTag('meta[name="twitter:image:alt"]', 'content', '탄성코트와 줄눈 전문 시공 네오코트');
 
-      if (!imageSrcEl) {
-        imageSrcEl = document.createElement('link');
-        imageSrcEl.setAttribute('rel', 'image_src');
-        document.head.appendChild(imageSrcEl);
-      }
-      imageSrcEl.setAttribute('href', seoThumbnailUrl);
-    } else {
-      // Revert/Clean up image tags for non-dynamic landing pages
-      const tagsToCleanup = [
-        'meta[property="og:image"]',
-        'meta[property="og:image:width"]',
-        'meta[property="og:image:height"]',
-        'meta[property="og:image:type"]',
-        'meta[property="og:image:alt"]',
-        'meta[name="twitter:card"]',
-        'meta[name="twitter:image"]',
-        'meta[name="twitter:image:alt"]'
-      ];
-      tagsToCleanup.forEach(sel => {
-        const el = document.querySelector(sel);
-        if (el) el.remove();
-      });
-      if (imageSrcEl) imageSrcEl.remove();
+    if (!imageSrcEl) {
+      imageSrcEl = document.createElement('link');
+      imageSrcEl.setAttribute('rel', 'image_src');
+      document.head.appendChild(imageSrcEl);
     }
+    imageSrcEl.setAttribute('href', seoThumbnailUrl);
 
     let canonicalUrl = "";
     if (!isKeywordInvalid) {

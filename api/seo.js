@@ -1,8 +1,49 @@
 import { parseAndValidateK, getActiveRegions, generateDynamicUrl } from '../src/data/regionResolver.js';
 import { serviceKeywords } from '../src/data/serviceKeywords.js';
 import { getSeoMetadata } from '../src/data/seoTemplates.js';
+import { getFaqItems } from '../src/data/faqData.js';
 import fs from 'fs';
 import path from 'path';
+
+function injectSeoHead(html, meta) {
+  // Clean up existing dynamic/default og, twitter, description, title, and canonical tags to prevent duplicates
+  html = html.replace(/<link rel="canonical".*?>\s*/gi, '');
+  html = html.replace(/<meta property="og:.*?".*?>\s*/gi, '');
+  html = html.replace(/<meta name="twitter:.*?".*?>\s*/gi, '');
+  html = html.replace(/<meta name="description".*?>\s*/gi, '');
+  html = html.replace(/<title>.*?<\/title>\s*/gi, '');
+
+  const ogImage = meta.ogImage || 'https://www.neocoat.co.kr/images/seo/neocoat-search-thumbnail.jpg';
+  const ogWidth = meta.ogImageWidth || 1200;
+  const ogHeight = meta.ogImageHeight || 1200;
+  const ogType = meta.ogImageType || 'image/jpeg';
+  const ogAlt = meta.ogImageAlt || '탄성코트와 줄눈 전문 시공 네오코트';
+
+  let headTags = `<title>${meta.title}</title>\n`;
+  headTags += `<meta name="description" content="${meta.description}" />\n`;
+  headTags += `<link rel="canonical" href="${meta.canonical}" />\n`;
+  headTags += `<meta property="og:title" content="${meta.ogTitle || meta.title}" />\n`;
+  headTags += `<meta property="og:description" content="${meta.ogDescription || meta.description}" />\n`;
+  headTags += `<meta property="og:url" content="${meta.ogUrl || meta.canonical}" />\n`;
+  headTags += `<meta property="og:image" content="${ogImage}" />\n`;
+  headTags += `<meta property="og:image:secure_url" content="${ogImage}" />\n`;
+  headTags += `<meta property="og:image:width" content="${ogWidth}" />\n`;
+  headTags += `<meta property="og:image:height" content="${ogHeight}" />\n`;
+  headTags += `<meta property="og:image:type" content="${ogType}" />\n`;
+  headTags += `<meta property="og:image:alt" content="${ogAlt}" />\n`;
+  headTags += `<meta name="twitter:card" content="summary_large_image" />\n`;
+  headTags += `<meta name="twitter:image" content="${ogImage}" />\n`;
+  headTags += `<meta name="twitter:image:alt" content="${ogAlt}" />\n`;
+
+  if (meta.robots) {
+    headTags += `<meta name="robots" content="${meta.robots}" />\n`;
+  }
+  if (meta.faqJsonLd) {
+    headTags += `<script type="application/ld+json">\n${JSON.stringify(meta.faqJsonLd, null, 2)}\n</script>\n`;
+  }
+
+  return html.replace('</head>', `${headTags}</head>`);
+}
 
 // Vercel / Netlify Serverless Function handler for Neo Coat SEO injection & 301 redirects
 export default async function handler(req, res) {
@@ -17,17 +58,16 @@ export default async function handler(req, res) {
     return res.status(308).send('Redirecting to main page...');
   }
 
+  // Read template index.html
+  let htmlPath = path.join(process.cwd(), 'dist', 'index.html');
+  if (!fs.existsSync(htmlPath)) htmlPath = path.join(process.cwd(), 'index.html');
+  let html = fs.readFileSync(htmlPath, 'utf-8');
+
   // 2. Check for invalid or unknown paths (404 Page)
   const validPaths = ['/', '/sitemap-seoul', '/privacy-policy', '/terms'];
   if (!validPaths.includes(pathname)) {
-    let htmlPath = path.join(process.cwd(), 'dist', 'index.html');
-    if (!fs.existsSync(htmlPath)) htmlPath = path.join(process.cwd(), 'index.html');
-    let html = fs.readFileSync(htmlPath, 'utf-8');
-
     const meta = getSeoMetadata({ isNotFound: true, path: pathname });
-    html = html.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`);
-    html = html.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${meta.description}" />`);
-    html = html.replace('</head>', `<meta name="robots" content="noindex,nofollow" />\n<link rel="canonical" href="${meta.canonical}" />\n</head>`);
+    html = injectSeoHead(html, meta);
 
     // H1 and navigation for not found page
     let botContent = `\n<div style="display:none;" id="seo-pre-rendered">\n`;
@@ -42,55 +82,34 @@ export default async function handler(req, res) {
     return res.status(404).send(html);
   }
 
-  // Read template index.html
-  let htmlPath = path.join(process.cwd(), 'dist', 'index.html');
-  if (!fs.existsSync(htmlPath)) htmlPath = path.join(process.cwd(), 'index.html');
-  let html = fs.readFileSync(htmlPath, 'utf-8');
-
-  // 2. /sitemap-seoul (Directory Hub)
+  // 3. /sitemap-seoul (Directory Hub)
   if (pathname === '/sitemap-seoul') {
     const meta = getSeoMetadata({ path: '/sitemap-seoul' });
-    html = html.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`);
-    html = html.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${meta.description}" />`);
-    html = html.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${meta.ogTitle}" />`);
-    html = html.replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${meta.ogDescription}" />`);
-    html = html.replace('</head>', `<link rel="canonical" href="${meta.canonical}" />\n<meta property="og:url" content="${meta.ogUrl}" />\n<meta property="og:image" content="${meta.ogImage}" />\n</head>`);
+    html = injectSeoHead(html, meta);
 
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     return res.status(200).send(html);
   }
 
-  // 3. /privacy-policy or /terms
+  // 4. /privacy-policy or /terms
   if (pathname === '/privacy-policy' || pathname === '/terms') {
     const meta = getSeoMetadata({ path: pathname });
-    html = html.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`);
-    html = html.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${meta.description}" />`);
-    html = html.replace('</head>', `<link rel="canonical" href="${meta.canonical}" />\n<meta property="og:url" content="${meta.ogUrl}" />\n</head>`);
+    html = injectSeoHead(html, meta);
 
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     return res.status(200).send(html);
   }
 
-  // 4. Dynamic landing pages with ?k=
+  // 5. Dynamic landing pages with ?k=
   if (kParam) {
     const usePreview = url.searchParams.get('preview') === 'true';
     const parseResult = parseAndValidateK(kParam, usePreview);
 
     if (parseResult.isValid) {
       const meta = getSeoMetadata({ parsedKeyword: parseResult });
+      html = injectSeoHead(html, meta);
 
-      html = html.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`);
-      html = html.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${meta.description}" />`);
-      html = html.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${meta.ogTitle}" />`);
-      html = html.replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${meta.ogDescription}" />`);
-
-      let headTags = `<link rel="canonical" href="${meta.canonical}" />\n<meta property="og:url" content="${meta.ogUrl}" />\n<meta property="og:image" content="${meta.ogImage}" />\n`;
-      if (meta.faqJsonLd) {
-        headTags += `<script type="application/ld+json">\n${JSON.stringify(meta.faqJsonLd, null, 2)}\n</script>\n`;
-      }
-      html = html.replace('</head>', `${headTags}</head>`);
-
-      // 5. Pre-rendered SEO content for search bots (H1, description, FAQ list, and internal linking links)
+      // Pre-rendered SEO content for search bots (H1, description, FAQ list, and internal linking links)
       let botContent = `\n<div style="display:none;" id="seo-pre-rendered">\n`;
       botContent += `  <h1>${meta.h1}</h1>\n`;
       botContent += `  <p>${meta.description}</p>\n`;
@@ -135,9 +154,7 @@ export default async function handler(req, res) {
     } else {
       // Invalid kParam -> Soft 404 / Invalid k handling
       const meta = getSeoMetadata({ isNotFound: true, path: '/' });
-      html = html.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`);
-      html = html.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${meta.description}" />`);
-      html = html.replace('</head>', `<meta name="robots" content="noindex,nofollow" />\n<link rel="canonical" href="${meta.canonical}" />\n</head>`);
+      html = injectSeoHead(html, meta);
 
       // Pre-render not found screen content for search crawlers
       let botContent = `\n<div style="display:none;" id="seo-pre-rendered">\n`;
@@ -153,18 +170,9 @@ export default async function handler(req, res) {
     }
   }
 
-  // 5. Root Main Page /
+  // 6. Root Main Page /
   const meta = getSeoMetadata({ path: '/' });
-  html = html.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`);
-  html = html.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${meta.description}" />`);
-  html = html.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${meta.ogTitle}" />`);
-  html = html.replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${meta.ogDescription}" />`);
-
-  let headTags = `<link rel="canonical" href="${meta.canonical}" />\n<meta property="og:url" content="${meta.ogUrl}" />\n<meta property="og:image" content="${meta.ogImage}" />\n`;
-  if (meta.faqJsonLd) {
-    headTags += `<script type="application/ld+json">\n${JSON.stringify(meta.faqJsonLd, null, 2)}\n</script>\n`;
-  }
-  html = html.replace('</head>', `${headTags}</head>`);
+  html = injectSeoHead(html, meta);
 
   // Pre-rendered content for bots on main page
   let botContent = `\n<div style="display:none;" id="seo-pre-rendered">\n`;

@@ -98,7 +98,14 @@ export function getWorkTypeDescription(displayRegion, workType, serviceGroup) {
  * 통합 SEO 메타데이터 및 구조화 데이터 추출 함수
  */
 export function getSeoMetadata({ pageType, parsedKeyword, path = '/', isNotFound = false }) {
-  const baseUrl = siteConfig.siteUrl ? siteConfig.siteUrl.replace(/\/$/, '') : '';
+  const baseUrl = (siteConfig.siteUrl ? siteConfig.siteUrl.replace(/\/$/, '') : '') || 'https://www.neocoat.co.kr';
+
+  const defaultOgPath = seoImages.defaultOgImage || "/images/seo/neocoat-search-thumbnail.jpg";
+  const defaultOgImage = defaultOgPath.startsWith('http') ? defaultOgPath : `${baseUrl}${defaultOgPath}`;
+  const ogImageWidth = 1200;
+  const ogImageHeight = 1200;
+  const ogImageType = "image/jpeg";
+  const ogImageAlt = "탄성코트와 줄눈 전문 시공 네오코트";
 
   // 1. 404 또는 잘못된 k값
   if (isNotFound) {
@@ -110,7 +117,11 @@ export function getSeoMetadata({ pageType, parsedKeyword, path = '/', isNotFound
       ogTitle: SEO_MASTERS.notFound.title,
       ogDescription: SEO_MASTERS.notFound.description,
       ogUrl: `${baseUrl}${path}`,
-      ogImage: seoImages.defaultOgImage,
+      ogImage: defaultOgImage,
+      ogImageWidth,
+      ogImageHeight,
+      ogImageType,
+      ogImageAlt,
       h1: SEO_MASTERS.notFound.h1,
       faqJsonLd: null
     };
@@ -126,7 +137,11 @@ export function getSeoMetadata({ pageType, parsedKeyword, path = '/', isNotFound
       ogTitle: SEO_MASTERS.sitemapHub.title,
       ogDescription: SEO_MASTERS.sitemapHub.description,
       ogUrl: `${baseUrl}/sitemap-seoul`,
-      ogImage: seoImages.defaultOgImage,
+      ogImage: defaultOgImage,
+      ogImageWidth,
+      ogImageHeight,
+      ogImageType,
+      ogImageAlt,
       h1: SEO_MASTERS.sitemapHub.h1,
       faqJsonLd: null
     };
@@ -142,7 +157,11 @@ export function getSeoMetadata({ pageType, parsedKeyword, path = '/', isNotFound
       ogTitle: SEO_MASTERS.privacyPolicy.title,
       ogDescription: SEO_MASTERS.privacyPolicy.description,
       ogUrl: `${baseUrl}/privacy-policy`,
-      ogImage: seoImages.defaultOgImage,
+      ogImage: defaultOgImage,
+      ogImageWidth,
+      ogImageHeight,
+      ogImageType,
+      ogImageAlt,
       h1: SEO_MASTERS.privacyPolicy.h1,
       faqJsonLd: null
     };
@@ -158,7 +177,11 @@ export function getSeoMetadata({ pageType, parsedKeyword, path = '/', isNotFound
       ogTitle: SEO_MASTERS.terms.title,
       ogDescription: SEO_MASTERS.terms.description,
       ogUrl: `${baseUrl}/terms`,
-      ogImage: seoImages.defaultOgImage,
+      ogImage: defaultOgImage,
+      ogImageWidth,
+      ogImageHeight,
+      ogImageType,
+      ogImageAlt,
       h1: SEO_MASTERS.terms.h1,
       faqJsonLd: null
     };
@@ -175,9 +198,10 @@ export function getSeoMetadata({ pageType, parsedKeyword, path = '/', isNotFound
     const description = getWorkTypeDescription(regionName, workType, serviceGroup);
     const canonical = `${baseUrl}/?k=${encodeURIComponent(`${routeKey}-${workType}`)}`;
 
-    const ogImg = serviceGroup === 'elastic'
-      ? (seoImages.elasticCoatOgImage || seoImages.defaultOgImage)
-      : (seoImages.groutOgImage || seoImages.defaultOgImage);
+    const groupOgPath = serviceGroup === 'elastic' ? seoImages.elasticCoatOgImage : seoImages.groutOgImage;
+    const ogImg = groupOgPath
+      ? (groupOgPath.startsWith('http') ? groupOgPath : `${baseUrl}${groupOgPath}`)
+      : defaultOgImage;
 
     // 화면 FAQ와 100% 동일한 FAQPage JSON-LD 생성
     const faqItems = getFaqItems(parsedKeyword);
@@ -203,6 +227,10 @@ export function getSeoMetadata({ pageType, parsedKeyword, path = '/', isNotFound
       ogDescription: description,
       ogUrl: canonical,
       ogImage: ogImg,
+      ogImageWidth,
+      ogImageHeight,
+      ogImageType,
+      ogImageAlt,
       h1: `${regionName} ${workType}`,
       faqJsonLd
     };
@@ -231,7 +259,11 @@ export function getSeoMetadata({ pageType, parsedKeyword, path = '/', isNotFound
     ogTitle: SEO_MASTERS.main.title,
     ogDescription: SEO_MASTERS.main.description,
     ogUrl: `${baseUrl}/`,
-    ogImage: seoImages.defaultOgImage,
+    ogImage: defaultOgImage,
+    ogImageWidth,
+    ogImageHeight,
+    ogImageType,
+    ogImageAlt,
     h1: SEO_MASTERS.main.h1,
     faqJsonLd: mainFaqJsonLd
   };
