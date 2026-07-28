@@ -71,13 +71,6 @@ export function Header({ onNavigate, currentPath }) {
               {item.label}
             </a>
           ))}
-          <a
-            href="/sitemap-seoul"
-            onClick={(e) => { e.preventDefault(); onNavigate('/sitemap-seoul'); }}
-            style={{ ...styles.navLink, ...(currentPath === '/sitemap-seoul' ? styles.navActive : {}) }}
-          >
-            지역 시공안내
-          </a>
         </nav>
 
         {/* PC Right CTA */}
@@ -116,13 +109,6 @@ export function Header({ onNavigate, currentPath }) {
                 </a>
               ))}
               <a
-                href="/sitemap-seoul"
-                onClick={(e) => { e.preventDefault(); onNavigate('/sitemap-seoul'); setMenuOpen(false); }}
-                style={styles.drawerLink}
-              >
-                지역 시공안내
-              </a>
-              <a
                 href="#consultation"
                 onClick={(e) => handleLinkClick(e, '#consultation')}
                 style={{ ...styles.drawerLink, color: 'var(--forest-green-main)', fontWeight: '600' }}
@@ -153,10 +139,6 @@ export function Footer({ onNavigate }) {
             <div style={styles.footerLinks}>
               <a href="#privacy" onClick={(e) => { e.preventDefault(); alert('개인정보처리방침 안내 준비 중입니다.'); }} style={styles.footerLink}>
                 개인정보처리방침
-              </a>
-              <span style={{ opacity: 0.3 }}>|</span>
-              <a href="/sitemap-seoul" onClick={(e) => { e.preventDefault(); onNavigate('/sitemap-seoul'); }} style={styles.footerLink}>
-                통합 허브 페이지 (sitemap-seoul)
               </a>
             </div>
           </div>

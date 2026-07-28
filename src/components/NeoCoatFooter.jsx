@@ -147,11 +147,6 @@ export function NeoCoatFooter({ onNavigate, isSimple = false }) {
               <li><a href="/#standard" onClick={(e) => handleLinkClick(e, '/#standard')}>시공 원칙</a></li>
               <li><a href="/#faq" onClick={(e) => handleLinkClick(e, '/#faq')}>FAQ</a></li>
               <li><a href="/#contact" onClick={(e) => handleLinkClick(e, '/#contact')}>문의</a></li>
-              <li style={{ marginTop: '8px' }}>
-                <a href="/sitemap-seoul" onClick={(e) => handleLinkClick(e, '/sitemap-seoul')} className="hub-link-btn">
-                  지역별 서비스 안내 ↗
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -248,11 +243,6 @@ export function NeoCoatFooter({ onNavigate, isSimple = false }) {
 
         .footer-link-list a:hover {
           color: var(--neo-color-accent, #0D9488);
-        }
-
-        .hub-link-btn {
-          color: #38BDF8 !important;
-          font-weight: 600;
         }
 
         .footer-info-block {

@@ -74,7 +74,6 @@ export default async function handler(req, res) {
     botContent += `  <h1>${meta.h1}</h1>\n`;
     botContent += `  <p>${meta.description}</p>\n`;
     botContent += `  <a href="/">홈으로 이동</a>\n`;
-    botContent += `  <a href="/sitemap-seoul">지역별 서비스 안내</a>\n`;
     botContent += `</div>\n`;
     html = html.replace('<div id="root"></div>', `<div id="root"></div>\n${botContent}`);
 
@@ -161,7 +160,6 @@ export default async function handler(req, res) {
       botContent += `  <h1>${meta.h1}</h1>\n`;
       botContent += `  <p>${meta.description}</p>\n`;
       botContent += `  <a href="/">홈으로 이동</a>\n`;
-      botContent += `  <a href="/sitemap-seoul">지역별 서비스 안내</a>\n`;
       botContent += `</div>\n`;
       html = html.replace('<div id="root"></div>', `<div id="root"></div>\n${botContent}`);
 
