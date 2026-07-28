@@ -94,9 +94,14 @@ export function NeoCoatSpaces({ activeTab, parsedKeyword, isDesktop }) {
                     {spImgSrc && !imgError[sp.id] ? (
                       <img
                         src={spImgSrc}
-                        alt={`${sp.name} 적용 공간 시공 이미지`}
+                        alt={sp.id === 'entrance' ? '현관 바닥 타일과 줄눈 상태' : `${sp.name} 적용 공간 시공 이미지`}
                         onError={() => handleImageError(sp.id)}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                          objectPosition: sp.id === 'entrance' ? 'center 60%' : 'center'
+                        }}
                       />
                     ) : (
                       <div className="space-img-placeholder">

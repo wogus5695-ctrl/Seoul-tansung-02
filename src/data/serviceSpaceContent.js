@@ -73,8 +73,8 @@ export const ELASTIC_SPACES = [
 // 4. 줄눈시공 적용 공간 (6개)
 export const GROUT_SPACES = [
   { id: "bathroom", name: "욕실", desc: "물과 세정제에 반복적으로 노출되어 기존 백시멘트의 변색과 마모를 확인해야 합니다." },
-  { id: "toilet", name: "화장실", desc: "바닥과 벽면 타일 틈의 오염 범위와 물 사용 환경을 함께 확인해야 합니다." },
   { id: "entrance", name: "현관", desc: "외부 먼지와 신발 오염이 집중되는 바닥 타일 틈의 상태를 확인해야 합니다." },
+  { id: "toilet", name: "화장실", desc: "바닥과 벽면 타일 틈의 오염 범위와 물 사용 환경을 함께 확인해야 합니다." },
   { id: "balcony", name: "베란다 바닥", desc: "먼지와 물기에 노출되는 바닥의 기존 줄눈과 타일 상태를 확인해야 합니다." },
   { id: "kitchenTile", name: "주방 타일 구간", desc: "기름과 생활 오염에 노출되는 타일 틈의 상태와 시공 가능 범위를 확인해야 합니다." },
   { id: "utilityFloor", name: "다용도실 바닥", desc: "물 사용과 수납이 반복되는 공간의 오염과 기존 백시멘트 상태를 확인해야 합니다." }
