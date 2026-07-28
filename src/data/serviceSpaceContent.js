@@ -70,14 +70,15 @@ export const ELASTIC_SPACES = [
   { id: "storageSpace", name: "창고형 보조공간", desc: "환기가 부족하거나 장기간 닫혀 있는 공간은 습기와 표면 오염 상태를 우선 확인해야 합니다." }
 ];
 
-// 4. 줄눈시공 적용 공간 (6개)
+// 4. 줄눈시공 적용 공간 (7개)
 export const GROUT_SPACES = [
-  { id: "bathroom", name: "욕실", desc: "물과 세정제에 반복적으로 노출되어 기존 백시멘트의 변색과 마모를 확인해야 합니다." },
   { id: "entrance", name: "현관", desc: "외부 먼지와 신발 오염이 집중되는 바닥 타일 틈의 상태를 확인해야 합니다." },
-  { id: "toilet", name: "화장실", desc: "바닥과 벽면 타일 틈의 오염 범위와 물 사용 환경을 함께 확인해야 합니다." },
+  { id: "bathroom", name: "욕실", desc: "물과 세정제에 반복적으로 노출되어 기존 백시멘트의 변색과 마모를 확인해야 합니다." },
   { id: "balcony", name: "베란다 바닥", desc: "먼지와 물기에 노출되는 바닥의 기존 줄눈과 타일 상태를 확인해야 합니다." },
   { id: "kitchenTile", name: "주방 타일 구간", desc: "기름과 생활 오염에 노출되는 타일 틈의 상태와 시공 가능 범위를 확인해야 합니다." },
-  { id: "utilityFloor", name: "다용도실 바닥", desc: "물 사용과 수납이 반복되는 공간의 오염과 기존 백시멘트 상태를 확인해야 합니다." }
+  { id: "utilityFloor", name: "다용도실 바닥", desc: "물 사용과 수납이 반복되는 공간의 오염과 기존 백시멘트 상태를 확인해야 합니다." },
+  { id: "laundryFloor", name: "세탁실 바닥", desc: "물 사용과 배수가 반복되는 세탁기 주변 바닥 타일 틈의 줄눈 상태를 확인해야 합니다." },
+  { id: "toilet", name: "화장실", desc: "바닥과 벽면 타일 틈의 오염 범위와 물 사용 환경을 함께 확인해야 합니다." }
 ];
 
 // 5. 작업명 키워드별 대표 서비스 & 대표 공간 매핑 데이터
@@ -89,12 +90,12 @@ export const WORKTYPE_DISPLAY_PRIORITY = {
   "탄성코트시공": { primaryService: "balconyElasticCoat", primarySpaces: ["balcony"] },
   "탄성코트업체": { primaryService: "elasticCoatConsulting", primarySpaces: ["balcony", "laundryRoom"] },
 
-  "욕실줄눈시공": { primaryService: "bathroomGrout", primarySpaces: ["bathroom"] },
-  "화장실줄눈시공": { primaryService: "bathroomGrout", primarySpaces: ["toilet"] },
-  "현관줄눈시공": { primaryService: "entranceGrout", primarySpaces: ["entrance"] },
-  "베란다줄눈시공": { primaryService: "balconyGrout", primarySpaces: ["balcony"] },
-  "줄눈시공": { primaryService: "bathroomGrout", primarySpaces: ["bathroom"] },
-  "줄눈시공업체": { primaryService: "groutConsulting", primarySpaces: ["bathroom", "entrance"] }
+  "욕실줄눈시공": { primaryService: "bathroomGrout", primarySpaces: ["bathroom", "entrance"] },
+  "화장실줄눈시공": { primaryService: "bathroomGrout", primarySpaces: ["bathroom", "entrance"] },
+  "현관줄눈시공": { primaryService: "entranceGrout", primarySpaces: ["entrance", "bathroom"] },
+  "베란다줄눈시공": { primaryService: "balconyGrout", primarySpaces: ["entrance", "bathroom"] },
+  "줄눈시공": { primaryService: "bathroomGrout", primarySpaces: ["entrance", "bathroom"] },
+  "줄눈시공업체": { primaryService: "groutConsulting", primarySpaces: ["entrance", "bathroom"] }
 };
 
 /**
@@ -126,13 +127,21 @@ export function getServicesByGroupAndTask(groupKey, taskName) {
  */
 export function getSpacesByGroupAndTask(groupKey, taskName) {
   const isElastic = groupKey === 'elasticCoat';
-  const baseSpaces = isElastic ? [...ELASTIC_SPACES] : [...GROUT_SPACES];
+  let baseSpaces = isElastic ? [...ELASTIC_SPACES] : [...GROUT_SPACES];
   
+  // Filter out toilet (화장실) from grout spaces to prevent overlap with bathroom (욕실)
+  if (!isElastic) {
+    baseSpaces = baseSpaces.filter(s => s.id !== 'toilet');
+  }
+
   const priorityConfig = taskName ? WORKTYPE_DISPLAY_PRIORITY[taskName] : null;
-  const primarySpaceIds = priorityConfig ? priorityConfig.primarySpaces : [];
+  const primarySpaceIds = priorityConfig
+    ? priorityConfig.primarySpaces
+    : (isElastic ? ['balcony', 'laundryRoom'] : ['entrance', 'bathroom']);
 
   if (primarySpaceIds.length > 0) {
     const matched = baseSpaces.filter(s => primarySpaceIds.includes(s.id));
+    matched.sort((a, b) => primarySpaceIds.indexOf(a.id) - primarySpaceIds.indexOf(b.id));
     const remaining = baseSpaces.filter(s => !primarySpaceIds.includes(s.id));
     return [...matched, ...remaining];
   }

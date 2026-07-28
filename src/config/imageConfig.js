@@ -33,7 +33,8 @@ export const imageConfig = {
     toilet: "",
     entrance: "",
     kitchenTile: "",
-    utilityFloor: ""
+    utilityFloor: "",
+    laundryFloor: ""
   },
   processImages: {
     elasticCoat: {
