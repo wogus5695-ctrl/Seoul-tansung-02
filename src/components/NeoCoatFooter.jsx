@@ -129,7 +129,7 @@ export function NeoCoatFooter({ onNavigate, isSimple = false }) {
               {/* 사업자정보 조건부 안심 출력 */}
               <div className="business-details-box">
                 <p className="info-row"><strong>상호명:</strong> {businessConfig.companyName || '네오코트'}</p>
-                {businessConfig.representative && <p className="info-row"><strong>대표자:</strong> {businessConfig.representative}</p>}
+                {businessConfig.representative && <p className="info-row"><strong>사업자명:</strong> {businessConfig.representative}</p>}
                 {businessConfig.businessNumber && <p className="info-row"><strong>사업자등록번호:</strong> {businessConfig.businessNumber}</p>}
                 {businessConfig.address && <p className="info-row"><strong>주소:</strong> {businessConfig.address}</p>}
                 {businessConfig.ecommerceNumber && <p className="info-row"><strong>통신판매업:</strong> {businessConfig.ecommerceNumber}</p>}
