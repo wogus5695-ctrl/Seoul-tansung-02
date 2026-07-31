@@ -2,7 +2,7 @@
 export const contactConfig = {
   phone: "01081896900",
   phoneDisplay: "010-8189-6900",
-  kakaoUrl: "",
+  kakaoUrl: "http://pf.kakao.com/_xirHxnX",
   representative: "김재현",
   businessNumber: "405-15-02677",
   address: "",
