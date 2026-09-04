@@ -17,20 +17,39 @@
       "permanent": true
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/sitemap-seoul",
-      "destination": "/api/seo"
+      "src": "/sitemap-seoul",
+      "dest": "/api/seo?path=/sitemap-seoul"
     },
     {
-      "source": "/",
+      "src": "/privacy-policy",
+      "dest": "/api/seo?path=/privacy-policy"
+    },
+    {
+      "src": "/terms",
+      "dest": "/api/seo?path=/terms"
+    },
+    {
+      "src": "/",
       "has": [
         {
           "type": "query",
           "key": "k"
         }
       ],
-      "destination": "/api/seo"
+      "dest": "/api/seo?path=/"
+    },
+    {
+      "src": "/",
+      "dest": "/api/seo?path=/"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/seo"
     }
   ]
 }

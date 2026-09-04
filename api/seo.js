@@ -47,9 +47,15 @@ function injectSeoHead(html, meta) {
 
 // Vercel / Netlify Serverless Function handler for Neo Coat SEO injection & 301 redirects
 export default async function handler(req, res) {
-  const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  const host = req.headers?.host || 'localhost';
+  const url = new URL(req.url, `http://${host}`);
   const kParam = url.searchParams.get('k')?.trim() || '';
-  const pathname = url.pathname;
+  
+  // Extract real requested pathname (from query param 'path', header 'x-matched-path', or url.pathname)
+  let pathname = url.searchParams.get('path') || req.headers?.['x-matched-path'] || url.pathname;
+  if (pathname === '/api/seo') {
+    pathname = '/';
+  }
 
   // 1. Check for empty k query (?k=) and redirect to main page (308 Permanent)
   const rawQuery = url.search;
@@ -68,14 +74,6 @@ export default async function handler(req, res) {
   if (!validPaths.includes(pathname)) {
     const meta = getSeoMetadata({ isNotFound: true, path: pathname });
     html = injectSeoHead(html, meta);
-
-    // H1 and navigation for not found page
-    let botContent = `\n<div style="display:none;" id="seo-pre-rendered">\n`;
-    botContent += `  <h1>${meta.h1}</h1>\n`;
-    botContent += `  <p>${meta.description}</p>\n`;
-    botContent += `  <a href="/">홈으로 이동</a>\n`;
-    botContent += `</div>\n`;
-    html = html.replace('<div id="root"></div>', `<div id="root"></div>\n${botContent}`);
 
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     return res.status(404).send(html);
@@ -108,60 +106,12 @@ export default async function handler(req, res) {
       const meta = getSeoMetadata({ parsedKeyword: parseResult });
       html = injectSeoHead(html, meta);
 
-      // Pre-rendered SEO content for search bots (H1, description, FAQ list, and internal linking links)
-      let botContent = `\n<div style="display:none;" id="seo-pre-rendered">\n`;
-      botContent += `  <h1>${meta.h1}</h1>\n`;
-      botContent += `  <p>${meta.description}</p>\n`;
-
-      // Pre-render FAQs
-      const faqItems = getFaqItems(parseResult);
-      if (faqItems && faqItems.length > 0) {
-        botContent += `  <h2>자주 묻는 질문</h2>\n`;
-        faqItems.forEach(item => {
-          botContent += `  <div>\n    <h3>${item.question}</h3>\n    <p>${item.answer}</p>\n  </div>\n`;
-        });
-      }
-
-      // Pre-render related linking links
-      const relatedServices = parseResult.service.relatedServices || [];
-      if (relatedServices.length > 0) {
-        botContent += `  <h2>관련 서비스 정보</h2>\n  <ul>\n`;
-        relatedServices.forEach(task => {
-          const href = generateDynamicUrl(parseResult.region.urlRegion, task);
-          botContent += `    <li><a href="${href}">${parseResult.region.name} ${task}</a></li>\n`;
-        });
-        botContent += `  </ul>\n`;
-      }
-
-      const activeRegions = getActiveRegions().filter(
-        r => r.parentId === parseResult.region.parentId && r.id !== parseResult.region.id
-      ).slice(0, 6);
-      if (activeRegions.length > 0) {
-        botContent += `  <h2>인근 시공 지역 바로가기</h2>\n  <ul>\n`;
-        activeRegions.forEach(reg => {
-          const href = generateDynamicUrl(reg.urlRegion, parseResult.service.keyword);
-          botContent += `    <li><a href="${href}">${reg.name} ${parseResult.service.keyword}</a></li>\n`;
-        });
-        botContent += `  </ul>\n`;
-      }
-
-      botContent += `</div>\n`;
-      html = html.replace('<div id="root"></div>', `<div id="root"></div>\n${botContent}`);
-
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
       return res.status(200).send(html);
     } else {
       // Invalid kParam -> Soft 404 / Invalid k handling
       const meta = getSeoMetadata({ isNotFound: true, path: '/' });
       html = injectSeoHead(html, meta);
-
-      // Pre-render not found screen content for search crawlers
-      let botContent = `\n<div style="display:none;" id="seo-pre-rendered">\n`;
-      botContent += `  <h1>${meta.h1}</h1>\n`;
-      botContent += `  <p>${meta.description}</p>\n`;
-      botContent += `  <a href="/">홈으로 이동</a>\n`;
-      botContent += `</div>\n`;
-      html = html.replace('<div id="root"></div>', `<div id="root"></div>\n${botContent}`);
 
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
       return res.status(404).send(html);
@@ -171,21 +121,6 @@ export default async function handler(req, res) {
   // 6. Root Main Page /
   const meta = getSeoMetadata({ path: '/' });
   html = injectSeoHead(html, meta);
-
-  // Pre-rendered content for bots on main page
-  let botContent = `\n<div style="display:none;" id="seo-pre-rendered">\n`;
-  botContent += `  <h1>${meta.h1}</h1>\n`;
-  botContent += `  <p>${meta.description}</p>\n`;
-
-  const mainFaqs = getFaqItems(null);
-  if (mainFaqs && mainFaqs.length > 0) {
-    botContent += `  <h2>자주 묻는 질문</h2>\n`;
-    mainFaqs.forEach(item => {
-      botContent += `  <div>\n    <h3>${item.question}</h3>\n    <p>${item.answer}</p>\n  </div>\n`;
-    });
-  }
-  botContent += `</div>\n`;
-  html = html.replace('<div id="root"></div>', `<div id="root"></div>\n${botContent}`);
 
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
   return res.status(200).send(html);
