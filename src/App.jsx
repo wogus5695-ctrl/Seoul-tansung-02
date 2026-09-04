@@ -15,6 +15,8 @@ import { NeoCoatFooter } from './components/NeoCoatFooter';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsPage } from './pages/TermsPage';
 import { getSeoMetadata } from './data/seoTemplates';
+import { getFaqItems } from './data/faqData';
+import { getInternalLinks } from './data/pageModelEngine';
 import {
   SectionContainer,
   PrimaryButton,
@@ -265,18 +267,7 @@ function App() {
   const activeGroup = parsedKeyword ? parsedKeyword.service.serviceGroup : 'both';
   const activeIntent = parsedKeyword ? parsedKeyword.service.searchIntent : 'general';
 
-  const currentFaqList = parsedKeyword 
-    ? parsedKeyword.service.faqSet.map(q => ({ question: q, answer: FAQ_CATALOG[q] || '상세 시공 문의 시 전문 답변을 준비해 드립니다.' }))
-    : [
-        { question: '기존 탄성코트가 들뜬 곳도 다시 시공할 수 있나요?', answer: FAQ_CATALOG['기존 탄성코트가 들뜬 곳도 다시 시공할 수 있나요?'] },
-        { question: '곰팡이나 결로가 있으면 바로 시공해도 되나요?', answer: FAQ_CATALOG['곰팡이나 결로가 있으면 바로 시공해도 되나요?'] },
-        { question: '탄성코트 시공 전에 짐을 모두 빼야 하나요?', answer: FAQ_CATALOG['탄성코트 시공 전에 짐을 모두 빼야 하나요?'] },
-        { question: '기존 줄눈을 제거하고 시공하나요?', answer: FAQ_CATALOG['기존 줄눈을 제거하고 시공하나요?'] },
-        { question: '욕실과 현관에 같은 자재를 사용하나요?', answer: FAQ_CATALOG['욕실과 현관에 같은 자재를 사용하나요?'] },
-        { question: '시공 후 언제부터 물을 사용할 수 있나요?', answer: FAQ_CATALOG['시공 후 언제부터 물을 사용할 수 있나요?'] },
-        { question: '줄눈 일부만 보수할 수 있나요?', answer: FAQ_CATALOG['줄눈 일부만 보수할 수 있나요?'] },
-        { question: '시공 전 기존 마감 상태를 확인하나요?', answer: FAQ_CATALOG['시공 전 기존 마감 상태를 확인하나요?'] }
-      ];
+  const currentFaqList = getFaqItems(parsedKeyword);
 
   // Sync title, meta tags, and canonical dynamically on mount/update
   useEffect(() => {
@@ -486,17 +477,9 @@ function App() {
 
   const activeSpaceKey = spaceGuideKeys[activeSpaceIndex] || spaceGuideKeys[0];
 
-  const relatedServicesLinks = parsedKeyword ? parsedKeyword.service.relatedServices.map(task => ({
-    label: `${parsedKeyword.region.name} ${task}`,
-    href: generateDynamicUrl(parsedKeyword.region.urlRegion, task)
-  })) : null;
-
-  const relatedRegionsLinks = parsedKeyword ? getActiveRegions().filter(
-    r => r.parentId === parsedKeyword.region.parentId && r.id !== parsedKeyword.region.id
-  ).slice(0, 6).map(reg => ({
-    label: `${reg.name} ${parsedKeyword.service.keyword}`,
-    href: generateDynamicUrl(reg.urlRegion, parsedKeyword.service.keyword)
-  })) : null;
+  const internalLinksData = getInternalLinks(parsedKeyword);
+  const relatedServicesLinks = internalLinksData ? internalLinksData.relatedServices : null;
+  const relatedRegionsLinks = internalLinksData ? internalLinksData.nearbyRegions : null;
 
   // Toggle district view
   const toggleDistrict = (distName) => {

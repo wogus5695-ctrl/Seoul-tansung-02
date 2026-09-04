@@ -3,6 +3,7 @@ import { brandConfig } from '../config/brandConfig.js';
 import { contactConfig } from '../config/contactConfig.js';
 import { imageConfig } from '../config/imageConfig.js';
 import { serviceContent } from '../data/serviceContent.js';
+import { getHeroContent } from '../data/pageModelEngine.js';
 
 /**
  * 네오코트 전용 비대칭 분할형 Hero 컴포넌트 (NeoCoatHero)
@@ -46,62 +47,32 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
     }
   };
 
-  // 동적/메인 데이터 바인딩
-  const isDynamic = !!parsedKeyword;
-  const regionName = isDynamic ? parsedKeyword.region.displayName : '';
-  const taskName = isDynamic ? parsedKeyword.service.keyword : '';
-  const serviceGroup = isDynamic ? (parsedKeyword.service.serviceGroup === 'elastic' ? 'elasticCoat' : 'grout') : 'main';
+  // 동적/메인 데이터 바인딩 (Pure Generator getHeroContent 활용)
+  const heroData = getHeroContent(parsedKeyword);
+  const { isDynamic, heroBadgeLabel, heroTitlePrefix, heroTitleSuffix, heroDescription, imageInfoLabel, qualityBadge, imageAltText } = heroData;
 
-  // 세부 문구 정보 추출
-  const currentServiceInfo = isDynamic && serviceContent[taskName] ? serviceContent[taskName] : null;
-
-  // 1. 상단 라벨
-  const heroBadgeLabel = isDynamic
-    ? `${regionName} ${taskName} 시공 안내`
-    : brandConfig.businessType;
-
-  // 2. H1 제목
+  // 2. H1 제목 (JSX 렌더링)
   const heroH1 = isDynamic ? (
     <>
       <span style={{ color: 'var(--neo-color-accent, #0D9488)', fontWeight: '800' }}>
-        {regionName} {taskName}
+        {heroTitlePrefix}
       </span>
       ,<br />
       <span style={{ color: 'var(--neo-color-primary, #1E3A8A)' }}>
-        공간 상태부터 확인하고 시공합니다
+        {heroTitleSuffix}
       </span>
     </>
   ) : (
     <>
       <span style={{ color: 'var(--neo-color-primary, #1E3A8A)' }}>
-        공간을 오래 지키는
+        {heroTitlePrefix}
       </span>
       <br />
       <span style={{ color: 'var(--neo-color-accent, #0D9488)', fontWeight: '800' }}>
-        새로운 코팅 기준
+        {heroTitleSuffix}
       </span>
     </>
   );
-
-  // 3. 보조 설명
-  const heroDescription = isDynamic
-    ? (currentServiceInfo ? currentServiceInfo.heroDescriptionTemplate : '공간에 필요한 작업 범위를 정확히 확인하고 세대 환경에 부합하는 마감 시공을 안내합니다.')
-    : '베란다와 세탁실의 벽면 상태부터 욕실과 현관의 타일 틈까지, 공간에 필요한 작업 범위를 확인하고 적합한 시공 방향을 안내합니다.';
-
-  // 4. 이미지 우측 상단 정보 라벨
-  const imageInfoLabel = isDynamic
-    ? (serviceGroup === 'elasticCoat' ? '벽면 상태 확인부터 마감까지' : '타일 틈 상태 확인부터 마감까지')
-    : '탄성코트·줄눈시공 전문 케어';
-
-  // 5. 품질 배지
-  const qualityBadge = isDynamic
-    ? (serviceGroup === 'elasticCoat' ? '바탕 상태 확인' : '기존 줄눈 상태 확인')
-    : '공정별 체크';
-
-  // ALT 태그 구조화
-  const imageAltText = isDynamic
-    ? `${regionName} ${taskName} 시공 이미지`
-    : `${brandConfig.brandName} 탄성코트 및 줄눈시공 대표 이미지`;
 
   // Hero 전용 이미지 경로 (Hero와 시공 전 확인사항 이미지 완전 독립 관리)
   const heroImageSrc = isDynamic && serviceGroup === 'grout'
