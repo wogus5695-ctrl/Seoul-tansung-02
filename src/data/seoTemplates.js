@@ -76,7 +76,7 @@ export function getWorkTypeDescription(displayRegion, workType, serviceGroup) {
     case '베란다탄성코트':
       return `${displayRegion} 베란다 탄성코트 상담이 필요하신가요? 벽면의 곰팡이와 오염, 기존 도막의 들뜸과 결로 흔적을 확인하고 필요한 작업 범위를 안내합니다.`;
     case '세탁실탄성코트':
-      return `${displayRegion} 세탁실 탄성코트 상담이 필요하신가요? 물 사용과 건조가 반복되는 공간의 습기, 오염, 기존 벽면 상태를 확인합니다.`;
+      return `${displayRegion} 세탁실탄성코트 시공 전 배관·수도 주변 물자국과 습기 원인, 기존 도막의 들뜸·박리 상태를 확인하고 필요한 바탕 정리와 작업 범위를 안내합니다.`;
     case '아파트탄성코트':
       return `${displayRegion} 아파트 탄성코트 시공을 알아보고 계신가요? 베란다·세탁실·실외기실 등 공간별 벽면 상태에 맞춰 작업 범위를 안내합니다.`;
     case '욕실줄눈시공':

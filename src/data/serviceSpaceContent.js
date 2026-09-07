@@ -14,7 +14,8 @@ export const ELASTIC_SERVICES = {
   "laundryElasticCoat": {
     id: "laundryElasticCoat",
     title: "세탁실 탄성코트",
-    description: "물 사용과 건조가 반복되는 세탁실의 습기, 오염, 기존 벽면 상태를 확인한 뒤 작업 범위를 구분합니다.",
+    description: "배관·수도 주변 상태와 습기 원인을 구분하고, 기존 도막의 들뜸·박리를 확인하여 세탁실에 필요한 바탕 정리와 작업 범위를 안내합니다.",
+    checkpoints: ["배관 주변 점검", "습기 원인 구분", "기존 도막 정리", "바탕 보수 범위"],
     group: "elasticCoat"
   },
   "apartmentElasticCoat": {
@@ -63,7 +64,7 @@ export const GROUT_SERVICES = {
 // 3. 탄성코트 적용 공간 (6개)
 export const ELASTIC_SPACES = [
   { id: "balcony", name: "베란다", desc: "외부 온도 차이와 환기 상태에 따라 결로와 벽면 오염이 발생하기 쉬운 공간입니다." },
-  { id: "laundryRoom", name: "세탁실", desc: "물 사용과 건조가 반복되어 습기와 기존 마감 손상을 함께 확인해야 합니다." },
+  { id: "laundryRoom", name: "세탁실", desc: "세탁기·건조기 사용과 배관·수도 설비 주변의 지속적인 습기 노출도를 점검하는 핵심 공간입니다." },
   { id: "outdoorUnitRoom", name: "실외기실", desc: "외기 유입과 온도 변화가 잦아 표면 오염과 분진 상태를 확인해야 합니다." },
   { id: "evacuationSpace", name: "대피공간", desc: "환기와 사용 빈도에 따라 곰팡이, 먼지, 기존 도막 상태가 달라질 수 있습니다." },
   { id: "utilityRoom", name: "다용도실", desc: "수납과 물 사용이 함께 이루어지는 경우 공간 전체의 습도와 오염 범위를 확인해야 합니다." },

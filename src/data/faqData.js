@@ -138,6 +138,35 @@ export const WORKTYPE_PRIORITY_FAQ = {
   }
 };
 
+// 5. 세탁실탄성코트 전용 FAQ (5개)
+export const LAUNDRY_ELASTIC_FAQ_LIST = [
+  {
+    id: "laundry-faq-1",
+    question: "습기와 물 사용이 많은 세탁실에도 탄성코트 시공이 가능한가요?",
+    answer: "세탁실은 물 사용과 배관 습기, 환기 상태에 따라 벽면 조건이 다를 수 있습니다. 시공 전 수분 상태와 기존 도막의 들뜸 여부를 확인하고 필요한 바탕 정리를 거쳐 적용할 수 있습니다."
+  },
+  {
+    id: "laundry-faq-2",
+    question: "세탁실 벽면의 물자국이 누수인지 결로인지 어떻게 확인하나요?",
+    answer: "특정 배관 연결부나 수도 주변에 지속적으로 물이 비치는 경우는 설비·누수 점검을 먼저 검토해야 합니다. 외부 기온 차나 환기 부족으로 인한 이슬 맺힘은 결로 가능성을 함께 점검해야 합니다."
+  },
+  {
+    id: "laundry-faq-3",
+    question: "기존 탄성코트가 들뜨거나 벗겨졌다면 어떻게 하나요?",
+    answer: "들뜨거나 박리된 기존 도막은 깔끔하게 긁어내고 표면을 정돈한 후 시공하는 것이 원칙입니다. 손상 범위와 바탕면 상태에 따라 부분 정리 또는 넓은 범위 보수가 결정됩니다."
+  },
+  {
+    id: "laundry-faq-4",
+    question: "시공 전에 세탁기나 건조기를 이동해야 하나요?",
+    answer: "벽면에 작업자가 접근할 수 있는 공간 확보가 필요하며, 가전 이동 여부는 설치 상태와 작업 범위에 따라 상담 시 확인합니다."
+  },
+  {
+    id: "laundry-faq-5",
+    question: "시공 후 환기와 건조는 어떻게 관리해야 하나요?",
+    answer: "건조·환기 시간은 사용 자재와 기온·습도·환기 상태에 따라 달라질 수 있으므로 시공 후 안내되는 관리 기준을 따릅니다."
+  }
+];
+
 /**
  * FAQ 5개 세트 동적 추출 함수 (Fallback 및 중복 제거 처리)
  */
@@ -147,6 +176,10 @@ export function getFaqItems(parsedKeyword) {
   }
 
   const taskName = parsedKeyword.service.keyword;
+  if (taskName === '세탁실탄성코트') {
+    return LAUNDRY_ELASTIC_FAQ_LIST;
+  }
+
   const isElastic = parsedKeyword.service.serviceGroup === 'elastic';
   const baseList = isElastic ? ELASTIC_BASE_FAQ_LIST : GROUT_BASE_FAQ_LIST;
   const priorityFaq = WORKTYPE_PRIORITY_FAQ[taskName];
