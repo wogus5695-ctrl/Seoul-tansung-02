@@ -27,7 +27,7 @@ import {
 // Ingest datasets
 import { seoulRegions } from './data/seoulRegions';
 import { serviceKeywords } from './data/serviceKeywords';
-import { parseAndValidateK, getActiveRegions, ENABLE_CAPITAL_REGION_EXPANSION, generateDynamicUrl, generateAbsoluteDynamicUrl } from './data/regionResolver';
+import { parseAndValidateK, getActiveRegions, getFilteredServices, ENABLE_CAPITAL_REGION_EXPANSION, generateDynamicUrl, generateAbsoluteDynamicUrl } from './data/regionResolver';
 import { incheonRegions } from './data/incheonRegions';
 import { gyeonggiRegions } from './data/gyeonggiRegions';
 import { keywordMetadata } from './data/keywordMetadata';
@@ -199,7 +199,7 @@ function App() {
     const totalTasksCount = serviceKeywords.length;
     
     // Total potential URL combinations
-    const totalUrlsCount = totalRegionsCount * totalTasksCount;
+    const totalUrlsCount = list.reduce((acc, r) => acc + getFilteredServices(r).length, 0);
 
     // Construct hierarchy
     const metroGroups = {
@@ -797,7 +797,9 @@ function App() {
                       let keywordLinkCount = 0;
                       Object.keys(city.districts).forEach(dk => {
                         childCount += city.districts[dk].regions.length;
-                        keywordLinkCount += city.districts[dk].regions.length * 12;
+                        city.districts[dk].regions.forEach(r => {
+                          keywordLinkCount += getFilteredServices(r).length;
+                        });
                       });
 
                       const isOpen = !!openDistricts[cityKey];
@@ -872,6 +874,7 @@ function App() {
                                           if (!isRegionMatched) return null;
 
                                           const isDongOpen = !!openDistricts[`dong-${reg.id}`];
+                                          const allowedServices = getFilteredServices(reg);
 
                                           return (
                                             <div
@@ -896,7 +899,7 @@ function App() {
                                                 }}
                                               >
                                                 <span>{reg.name}</span>
-                                                <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>{isDongOpen ? '접기' : '키워드 링크 보기 (12)'}</span>
+                                                <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>{isDongOpen ? '접기' : `키워드 링크 보기 (${allowedServices.length})`}</span>
                                               </div>
 
                                               {isDongOpen && (
@@ -908,7 +911,7 @@ function App() {
                                                   flexDirection: 'column',
                                                   gap: '6px'
                                                 }}>
-                                                  {serviceKeywords.map(tk => {
+                                                  {allowedServices.map(tk => {
                                                     const isFilterMatched = sitemapFilter === '전체' || tk.serviceGroup === (sitemapFilter === '탄성코트' ? 'elastic' : 'grout');
                                                     const isTaskSearchMatched = tk.keyword.includes(taskSearch);
                                                     if (!isFilterMatched || !isTaskSearchMatched) return null;

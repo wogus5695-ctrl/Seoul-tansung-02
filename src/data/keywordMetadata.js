@@ -8845,5 +8845,2313 @@ export const keywordMetadata = [
     "routeKey": "귀인동",
     "regionId": "gyeonggi-안양-동안-귀인",
     "type": "dong"
+  },
+  {
+      "displayRegion": "화성시",
+      "keywordName": "화성시",
+      "regionType": "시",
+      "legacySlug": "화성",
+      "originalSlug": "화성",
+      "parentRegion": "경기도",
+      "routeKey": "화성",
+      "regionId": "gyeonggi-화성",
+      "type": "city",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "화성",
+      "keywordName": "화성",
+      "regionType": "시",
+      "legacySlug": "화성",
+      "originalSlug": "화성",
+      "parentRegion": "경기도",
+      "routeKey": "화성",
+      "regionId": "gyeonggi-화성",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "동탄",
+      "keywordName": "동탄",
+      "regionType": "생활권",
+      "legacySlug": "동탄",
+      "originalSlug": "동탄",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "동탄",
+      "regionId": "gyeonggi-화성-동탄",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "동탄신도시",
+      "keywordName": "동탄신도시",
+      "regionType": "생활권",
+      "legacySlug": "동탄신도시",
+      "originalSlug": "동탄신도시",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "동탄신도시",
+      "regionId": "gyeonggi-화성-동탄",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "동탄동",
+      "keywordName": "동탄동",
+      "regionType": "행정동",
+      "legacySlug": "동탄동",
+      "originalSlug": "동탄동",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "동탄동",
+      "regionId": "gyeonggi-화성-동탄동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "진안동",
+      "keywordName": "진안동",
+      "regionType": "법정동",
+      "legacySlug": "진안동",
+      "originalSlug": "진안동",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "진안동",
+      "regionId": "gyeonggi-화성-진안동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "진안",
+      "keywordName": "진안",
+      "regionType": "법정동",
+      "legacySlug": "진안",
+      "originalSlug": "진안",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "진안",
+      "regionId": "gyeonggi-화성-진안동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "병점동",
+      "keywordName": "병점동",
+      "regionType": "법정동",
+      "legacySlug": "병점동",
+      "originalSlug": "병점동",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "병점동",
+      "regionId": "gyeonggi-화성-병점동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "병점",
+      "keywordName": "병점",
+      "regionType": "법정동",
+      "legacySlug": "병점",
+      "originalSlug": "병점",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "병점",
+      "regionId": "gyeonggi-화성-병점동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "안녕동",
+      "keywordName": "안녕동",
+      "regionType": "법정동",
+      "legacySlug": "안녕동",
+      "originalSlug": "안녕동",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "안녕동",
+      "regionId": "gyeonggi-화성-안녕동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "안녕",
+      "keywordName": "안녕",
+      "regionType": "법정동",
+      "legacySlug": "안녕",
+      "originalSlug": "안녕",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "안녕",
+      "regionId": "gyeonggi-화성-안녕동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "반월동",
+      "keywordName": "반월동",
+      "regionType": "법정동",
+      "legacySlug": "반월동",
+      "originalSlug": "반월동",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "반월동",
+      "regionId": "gyeonggi-화성-반월동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "반월",
+      "keywordName": "반월",
+      "regionType": "법정동",
+      "legacySlug": "반월",
+      "originalSlug": "반월",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "반월",
+      "regionId": "gyeonggi-화성-반월동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "기산동",
+      "keywordName": "기산동",
+      "regionType": "법정동",
+      "legacySlug": "기산동",
+      "originalSlug": "기산동",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "기산동",
+      "regionId": "gyeonggi-화성-기산동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "기산",
+      "keywordName": "기산",
+      "regionType": "법정동",
+      "legacySlug": "기산",
+      "originalSlug": "기산",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "기산",
+      "regionId": "gyeonggi-화성-기산동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "봉담읍",
+      "keywordName": "봉담읍",
+      "regionType": "읍",
+      "legacySlug": "봉담읍",
+      "originalSlug": "봉담읍",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "봉담읍",
+      "regionId": "gyeonggi-화성-봉담읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "봉담",
+      "keywordName": "봉담",
+      "regionType": "읍",
+      "legacySlug": "봉담",
+      "originalSlug": "봉담",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "봉담",
+      "regionId": "gyeonggi-화성-봉담읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "향남읍",
+      "keywordName": "향남읍",
+      "regionType": "읍",
+      "legacySlug": "향남읍",
+      "originalSlug": "향남읍",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "향남읍",
+      "regionId": "gyeonggi-화성-향남읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "향남",
+      "keywordName": "향남",
+      "regionType": "읍",
+      "legacySlug": "향남",
+      "originalSlug": "향남",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "향남",
+      "regionId": "gyeonggi-화성-향남읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "남양읍",
+      "keywordName": "남양읍",
+      "regionType": "읍",
+      "legacySlug": "남양읍",
+      "originalSlug": "남양읍",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "남양읍",
+      "regionId": "gyeonggi-화성-남양읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "남양",
+      "keywordName": "남양",
+      "regionType": "읍",
+      "legacySlug": "남양",
+      "originalSlug": "남양",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "남양",
+      "regionId": "gyeonggi-화성-남양읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "매송면",
+      "keywordName": "매송면",
+      "regionType": "면",
+      "legacySlug": "매송면",
+      "originalSlug": "매송면",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "매송면",
+      "regionId": "gyeonggi-화성-매송면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "매송",
+      "keywordName": "매송",
+      "regionType": "면",
+      "legacySlug": "매송",
+      "originalSlug": "매송",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "매송",
+      "regionId": "gyeonggi-화성-매송면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "비봉면",
+      "keywordName": "비봉면",
+      "regionType": "면",
+      "legacySlug": "비봉면",
+      "originalSlug": "비봉면",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "비봉면",
+      "regionId": "gyeonggi-화성-비봉면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "비봉",
+      "keywordName": "비봉",
+      "regionType": "면",
+      "legacySlug": "비봉",
+      "originalSlug": "비봉",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "비봉",
+      "regionId": "gyeonggi-화성-비봉면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "마도면",
+      "keywordName": "마도면",
+      "regionType": "면",
+      "legacySlug": "마도면",
+      "originalSlug": "마도면",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "마도면",
+      "regionId": "gyeonggi-화성-마도면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "마도",
+      "keywordName": "마도",
+      "regionType": "면",
+      "legacySlug": "마도",
+      "originalSlug": "마도",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "마도",
+      "regionId": "gyeonggi-화성-마도면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "송산면",
+      "keywordName": "송산면",
+      "regionType": "면",
+      "legacySlug": "송산면",
+      "originalSlug": "송산면",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "송산면",
+      "regionId": "gyeonggi-화성-송산면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "송산",
+      "keywordName": "송산",
+      "regionType": "면",
+      "legacySlug": "송산",
+      "originalSlug": "송산",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "송산",
+      "regionId": "gyeonggi-화성-송산면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "서신면",
+      "keywordName": "서신면",
+      "regionType": "면",
+      "legacySlug": "서신면",
+      "originalSlug": "서신면",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "서신면",
+      "regionId": "gyeonggi-화성-서신면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "서신",
+      "keywordName": "서신",
+      "regionType": "면",
+      "legacySlug": "서신",
+      "originalSlug": "서신",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "서신",
+      "regionId": "gyeonggi-화성-서신면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "팔탄면",
+      "keywordName": "팔탄면",
+      "regionType": "면",
+      "legacySlug": "팔탄면",
+      "originalSlug": "팔탄면",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "팔탄면",
+      "regionId": "gyeonggi-화성-팔탄면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "팔탄",
+      "keywordName": "팔탄",
+      "regionType": "면",
+      "legacySlug": "팔탄",
+      "originalSlug": "팔탄",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "팔탄",
+      "regionId": "gyeonggi-화성-팔탄면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "장안면",
+      "keywordName": "장안면",
+      "regionType": "면",
+      "legacySlug": "장안면",
+      "originalSlug": "장안면",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "장안면",
+      "regionId": "gyeonggi-화성-장안면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "장안",
+      "keywordName": "장안",
+      "regionType": "면",
+      "legacySlug": "장안",
+      "originalSlug": "장안",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "장안",
+      "regionId": "gyeonggi-화성-장안면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "우정읍",
+      "keywordName": "우정읍",
+      "regionType": "읍",
+      "legacySlug": "우정읍",
+      "originalSlug": "우정읍",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "우정읍",
+      "regionId": "gyeonggi-화성-우정읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "우정",
+      "keywordName": "우정",
+      "regionType": "읍",
+      "legacySlug": "우정",
+      "originalSlug": "우정",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "우정",
+      "regionId": "gyeonggi-화성-우정읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "양감면",
+      "keywordName": "양감면",
+      "regionType": "면",
+      "legacySlug": "양감면",
+      "originalSlug": "양감면",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "양감면",
+      "regionId": "gyeonggi-화성-양감면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "양감",
+      "keywordName": "양감",
+      "regionType": "면",
+      "legacySlug": "양감",
+      "originalSlug": "양감",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "양감",
+      "regionId": "gyeonggi-화성-양감면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "정남면",
+      "keywordName": "정남면",
+      "regionType": "면",
+      "legacySlug": "정남면",
+      "originalSlug": "정남면",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "정남면",
+      "regionId": "gyeonggi-화성-정남면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "정남",
+      "keywordName": "정남",
+      "regionType": "면",
+      "legacySlug": "정남",
+      "originalSlug": "정남",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "정남",
+      "regionId": "gyeonggi-화성-정남면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "새솔동",
+      "keywordName": "새솔동",
+      "regionType": "법정동",
+      "legacySlug": "새솔동",
+      "originalSlug": "새솔동",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "새솔동",
+      "regionId": "gyeonggi-화성-새솔동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "새솔",
+      "keywordName": "새솔",
+      "regionType": "법정동",
+      "legacySlug": "새솔",
+      "originalSlug": "새솔",
+      "parentRegion": "경기권 > 화성시",
+      "routeKey": "새솔",
+      "regionId": "gyeonggi-화성-새솔동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "오산시",
+      "keywordName": "오산시",
+      "regionType": "시",
+      "legacySlug": "오산",
+      "originalSlug": "오산",
+      "parentRegion": "경기도",
+      "routeKey": "오산",
+      "regionId": "gyeonggi-오산",
+      "type": "city",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "오산",
+      "keywordName": "오산",
+      "regionType": "시",
+      "legacySlug": "오산",
+      "originalSlug": "오산",
+      "parentRegion": "경기도",
+      "routeKey": "오산",
+      "regionId": "gyeonggi-오산",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "중앙동",
+      "keywordName": "중앙동",
+      "regionType": "행정동",
+      "legacySlug": "오산-중앙동",
+      "originalSlug": "오산-중앙동",
+      "parentRegion": "경기권 > 오산시",
+      "routeKey": "오산-중앙동",
+      "regionId": "gyeonggi-오산-중앙동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "대원동",
+      "keywordName": "대원동",
+      "regionType": "행정동",
+      "legacySlug": "대원동",
+      "originalSlug": "대원동",
+      "parentRegion": "경기권 > 오산시",
+      "routeKey": "대원동",
+      "regionId": "gyeonggi-오산-대원동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "남촌동",
+      "keywordName": "남촌동",
+      "regionType": "행정동",
+      "legacySlug": "오산-남촌동",
+      "originalSlug": "오산-남촌동",
+      "parentRegion": "경기권 > 오산시",
+      "routeKey": "오산-남촌동",
+      "regionId": "gyeonggi-오산-남촌동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "신장동",
+      "keywordName": "신장동",
+      "regionType": "행정동",
+      "legacySlug": "오산-신장동",
+      "originalSlug": "오산-신장동",
+      "parentRegion": "경기권 > 오산시",
+      "routeKey": "오산-신장동",
+      "regionId": "gyeonggi-오산-신장동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "세마동",
+      "keywordName": "세마동",
+      "regionType": "행정동",
+      "legacySlug": "세마동",
+      "originalSlug": "세마동",
+      "parentRegion": "경기권 > 오산시",
+      "routeKey": "세마동",
+      "regionId": "gyeonggi-오산-세마동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "세교",
+      "keywordName": "세교",
+      "regionType": "행정동",
+      "legacySlug": "세교",
+      "originalSlug": "세교",
+      "parentRegion": "경기권 > 오산시",
+      "routeKey": "세교",
+      "regionId": "gyeonggi-오산-세마동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "세마",
+      "keywordName": "세마",
+      "regionType": "행정동",
+      "legacySlug": "세마",
+      "originalSlug": "세마",
+      "parentRegion": "경기권 > 오산시",
+      "routeKey": "세마",
+      "regionId": "gyeonggi-오산-세마동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "초평동",
+      "keywordName": "초평동",
+      "regionType": "행정동",
+      "legacySlug": "오산-초평동",
+      "originalSlug": "오산-초평동",
+      "parentRegion": "경기권 > 오산시",
+      "routeKey": "오산-초평동",
+      "regionId": "gyeonggi-오산-초평동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "원동",
+      "keywordName": "원동",
+      "regionType": "법정동",
+      "legacySlug": "원동",
+      "originalSlug": "원동",
+      "parentRegion": "경기권 > 오산시",
+      "routeKey": "원동",
+      "regionId": "gyeonggi-오산-원동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "궐동",
+      "keywordName": "궐동",
+      "regionType": "법정동",
+      "legacySlug": "궐동",
+      "originalSlug": "궐동",
+      "parentRegion": "경기권 > 오산시",
+      "routeKey": "궐동",
+      "regionId": "gyeonggi-오산-궐동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "수청동",
+      "keywordName": "수청동",
+      "regionType": "법정동",
+      "legacySlug": "수청동",
+      "originalSlug": "수청동",
+      "parentRegion": "경기권 > 오산시",
+      "routeKey": "수청동",
+      "regionId": "gyeonggi-오산-수청동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "금암동",
+      "keywordName": "금암동",
+      "regionType": "법정동",
+      "legacySlug": "금암동",
+      "originalSlug": "금암동",
+      "parentRegion": "경기권 > 오산시",
+      "routeKey": "금암동",
+      "regionId": "gyeonggi-오산-금암동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "용인시",
+      "keywordName": "용인시",
+      "regionType": "시",
+      "legacySlug": "용인",
+      "originalSlug": "용인",
+      "parentRegion": "경기도",
+      "routeKey": "용인",
+      "regionId": "gyeonggi-용인",
+      "type": "city",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "용인",
+      "keywordName": "용인",
+      "regionType": "시",
+      "legacySlug": "용인",
+      "originalSlug": "용인",
+      "parentRegion": "경기도",
+      "routeKey": "용인",
+      "regionId": "gyeonggi-용인",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "수지구",
+      "keywordName": "수지구",
+      "regionType": "구",
+      "legacySlug": "수지구",
+      "originalSlug": "수지구",
+      "parentRegion": "경기권 > 용인시",
+      "routeKey": "수지구",
+      "regionId": "gyeonggi-용인-수지",
+      "type": "district",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "수지",
+      "keywordName": "수지",
+      "regionType": "구",
+      "legacySlug": "수지",
+      "originalSlug": "수지",
+      "parentRegion": "경기권 > 용인시",
+      "routeKey": "수지",
+      "regionId": "gyeonggi-용인-수지",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "기흥구",
+      "keywordName": "기흥구",
+      "regionType": "구",
+      "legacySlug": "기흥구",
+      "originalSlug": "기흥구",
+      "parentRegion": "경기권 > 용인시",
+      "routeKey": "기흥구",
+      "regionId": "gyeonggi-용인-기흥",
+      "type": "district",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "기흥",
+      "keywordName": "기흥",
+      "regionType": "구",
+      "legacySlug": "기흥",
+      "originalSlug": "기흥",
+      "parentRegion": "경기권 > 용인시",
+      "routeKey": "기흥",
+      "regionId": "gyeonggi-용인-기흥",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "처인구",
+      "keywordName": "처인구",
+      "regionType": "구",
+      "legacySlug": "처인구",
+      "originalSlug": "처인구",
+      "parentRegion": "경기권 > 용인시",
+      "routeKey": "처인구",
+      "regionId": "gyeonggi-용인-처인",
+      "type": "district",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "처인",
+      "keywordName": "처인",
+      "regionType": "구",
+      "legacySlug": "처인",
+      "originalSlug": "처인",
+      "parentRegion": "경기권 > 용인시",
+      "routeKey": "처인",
+      "regionId": "gyeonggi-용인-처인",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "풍덕천동",
+      "keywordName": "풍덕천동",
+      "regionType": "법정동",
+      "legacySlug": "풍덕천동",
+      "originalSlug": "풍덕천동",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "풍덕천동",
+      "regionId": "gyeonggi-용인-수지-풍덕천동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "풍덕천",
+      "keywordName": "풍덕천",
+      "regionType": "법정동",
+      "legacySlug": "풍덕천",
+      "originalSlug": "풍덕천",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "풍덕천",
+      "regionId": "gyeonggi-용인-수지-풍덕천동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "신봉동",
+      "keywordName": "신봉동",
+      "regionType": "법정동",
+      "legacySlug": "신봉동",
+      "originalSlug": "신봉동",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "신봉동",
+      "regionId": "gyeonggi-용인-수지-신봉동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "신봉",
+      "keywordName": "신봉",
+      "regionType": "법정동",
+      "legacySlug": "신봉",
+      "originalSlug": "신봉",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "신봉",
+      "regionId": "gyeonggi-용인-수지-신봉동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "죽전동",
+      "keywordName": "죽전동",
+      "regionType": "법정동",
+      "legacySlug": "죽전동",
+      "originalSlug": "죽전동",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "죽전동",
+      "regionId": "gyeonggi-용인-수지-죽전동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "죽전",
+      "keywordName": "죽전",
+      "regionType": "법정동",
+      "legacySlug": "죽전",
+      "originalSlug": "죽전",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "죽전",
+      "regionId": "gyeonggi-용인-수지-죽전동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "동천동",
+      "keywordName": "동천동",
+      "regionType": "법정동",
+      "legacySlug": "동천동",
+      "originalSlug": "동천동",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "동천동",
+      "regionId": "gyeonggi-용인-수지-동천동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "동천",
+      "keywordName": "동천",
+      "regionType": "법정동",
+      "legacySlug": "동천",
+      "originalSlug": "동천",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "동천",
+      "regionId": "gyeonggi-용인-수지-동천동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "고기동",
+      "keywordName": "고기동",
+      "regionType": "법정동",
+      "legacySlug": "고기동",
+      "originalSlug": "고기동",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "고기동",
+      "regionId": "gyeonggi-용인-수지-고기동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "고기",
+      "keywordName": "고기",
+      "regionType": "법정동",
+      "legacySlug": "고기",
+      "originalSlug": "고기",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "고기",
+      "regionId": "gyeonggi-용인-수지-고기동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "상현동",
+      "keywordName": "상현동",
+      "regionType": "법정동",
+      "legacySlug": "상현동",
+      "originalSlug": "상현동",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "상현동",
+      "regionId": "gyeonggi-용인-수지-상현동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "상현",
+      "keywordName": "상현",
+      "regionType": "법정동",
+      "legacySlug": "상현",
+      "originalSlug": "상현",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "상현",
+      "regionId": "gyeonggi-용인-수지-상현동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "성복동",
+      "keywordName": "성복동",
+      "regionType": "법정동",
+      "legacySlug": "성복동",
+      "originalSlug": "성복동",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "성복동",
+      "regionId": "gyeonggi-용인-수지-성복동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "성복",
+      "keywordName": "성복",
+      "regionType": "법정동",
+      "legacySlug": "성복",
+      "originalSlug": "성복",
+      "parentRegion": "경기권 > 용인시 > 수지구",
+      "routeKey": "성복",
+      "regionId": "gyeonggi-용인-수지-성복동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "신갈동",
+      "keywordName": "신갈동",
+      "regionType": "법정동",
+      "legacySlug": "신갈동",
+      "originalSlug": "신갈동",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "신갈동",
+      "regionId": "gyeonggi-용인-기흥-신갈동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "신갈",
+      "keywordName": "신갈",
+      "regionType": "법정동",
+      "legacySlug": "신갈",
+      "originalSlug": "신갈",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "신갈",
+      "regionId": "gyeonggi-용인-기흥-신갈동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "구갈동",
+      "keywordName": "구갈동",
+      "regionType": "법정동",
+      "legacySlug": "구갈동",
+      "originalSlug": "구갈동",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "구갈동",
+      "regionId": "gyeonggi-용인-기흥-구갈동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "구갈",
+      "keywordName": "구갈",
+      "regionType": "법정동",
+      "legacySlug": "구갈",
+      "originalSlug": "구갈",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "구갈",
+      "regionId": "gyeonggi-용인-기흥-구갈동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "상갈동",
+      "keywordName": "상갈동",
+      "regionType": "법정동",
+      "legacySlug": "상갈동",
+      "originalSlug": "상갈동",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "상갈동",
+      "regionId": "gyeonggi-용인-기흥-상갈동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "상갈",
+      "keywordName": "상갈",
+      "regionType": "법정동",
+      "legacySlug": "상갈",
+      "originalSlug": "상갈",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "상갈",
+      "regionId": "gyeonggi-용인-기흥-상갈동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "보라동",
+      "keywordName": "보라동",
+      "regionType": "법정동",
+      "legacySlug": "보라동",
+      "originalSlug": "보라동",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "보라동",
+      "regionId": "gyeonggi-용인-기흥-보라동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "보라",
+      "keywordName": "보라",
+      "regionType": "법정동",
+      "legacySlug": "보라",
+      "originalSlug": "보라",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "보라",
+      "regionId": "gyeonggi-용인-기흥-보라동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "기흥동",
+      "keywordName": "기흥동",
+      "regionType": "행정동",
+      "legacySlug": "기흥동",
+      "originalSlug": "기흥동",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "기흥동",
+      "regionId": "gyeonggi-용인-기흥-기흥동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "서농동",
+      "keywordName": "서농동",
+      "regionType": "행정동",
+      "legacySlug": "서농동",
+      "originalSlug": "서농동",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "서농동",
+      "regionId": "gyeonggi-용인-기흥-서농동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "구성동",
+      "keywordName": "구성동",
+      "regionType": "행정동",
+      "legacySlug": "구성동",
+      "originalSlug": "구성동",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "구성동",
+      "regionId": "gyeonggi-용인-기흥-구성동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "구성",
+      "keywordName": "구성",
+      "regionType": "행정동",
+      "legacySlug": "구성",
+      "originalSlug": "구성",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "구성",
+      "regionId": "gyeonggi-용인-기흥-구성동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "마북동",
+      "keywordName": "마북동",
+      "regionType": "법정동",
+      "legacySlug": "마북동",
+      "originalSlug": "마북동",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "마북동",
+      "regionId": "gyeonggi-용인-기흥-마북동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "마북",
+      "keywordName": "마북",
+      "regionType": "법정동",
+      "legacySlug": "마북",
+      "originalSlug": "마북",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "마북",
+      "regionId": "gyeonggi-용인-기흥-마북동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "동백동",
+      "keywordName": "동백동",
+      "regionType": "법정동",
+      "legacySlug": "동백동",
+      "originalSlug": "동백동",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "동백동",
+      "regionId": "gyeonggi-용인-기흥-동백동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "동백",
+      "keywordName": "동백",
+      "regionType": "법정동",
+      "legacySlug": "동백",
+      "originalSlug": "동백",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "동백",
+      "regionId": "gyeonggi-용인-기흥-동백동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "상하동",
+      "keywordName": "상하동",
+      "regionType": "법정동",
+      "legacySlug": "상하동",
+      "originalSlug": "상하동",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "상하동",
+      "regionId": "gyeonggi-용인-기흥-상하동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "상하",
+      "keywordName": "상하",
+      "regionType": "법정동",
+      "legacySlug": "상하",
+      "originalSlug": "상하",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "상하",
+      "regionId": "gyeonggi-용인-기흥-상하동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "보정동",
+      "keywordName": "보정동",
+      "regionType": "법정동",
+      "legacySlug": "보정동",
+      "originalSlug": "보정동",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "보정동",
+      "regionId": "gyeonggi-용인-기흥-보정동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "보정",
+      "keywordName": "보정",
+      "regionType": "법정동",
+      "legacySlug": "보정",
+      "originalSlug": "보정",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "보정",
+      "regionId": "gyeonggi-용인-기흥-보정동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "영덕동",
+      "keywordName": "영덕동",
+      "regionType": "법정동",
+      "legacySlug": "영덕동",
+      "originalSlug": "영덕동",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "영덕동",
+      "regionId": "gyeonggi-용인-기흥-영덕동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "영덕",
+      "keywordName": "영덕",
+      "regionType": "법정동",
+      "legacySlug": "영덕",
+      "originalSlug": "영덕",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "영덕",
+      "regionId": "gyeonggi-용인-기흥-영덕동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "흥덕",
+      "keywordName": "흥덕",
+      "regionType": "생활권",
+      "legacySlug": "흥덕",
+      "originalSlug": "흥덕",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "흥덕",
+      "regionId": "gyeonggi-용인-기흥-흥덕",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "흥덕지구",
+      "keywordName": "흥덕지구",
+      "regionType": "생활권",
+      "legacySlug": "흥덕지구",
+      "originalSlug": "흥덕지구",
+      "parentRegion": "경기권 > 용인시 > 기흥구",
+      "routeKey": "흥덕지구",
+      "regionId": "gyeonggi-용인-기흥-흥덕",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "포곡읍",
+      "keywordName": "포곡읍",
+      "regionType": "읍",
+      "legacySlug": "포곡읍",
+      "originalSlug": "포곡읍",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "포곡읍",
+      "regionId": "gyeonggi-용인-처인-포곡읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "포곡",
+      "keywordName": "포곡",
+      "regionType": "읍",
+      "legacySlug": "포곡",
+      "originalSlug": "포곡",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "포곡",
+      "regionId": "gyeonggi-용인-처인-포곡읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "모현읍",
+      "keywordName": "모현읍",
+      "regionType": "읍",
+      "legacySlug": "모현읍",
+      "originalSlug": "모현읍",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "모현읍",
+      "regionId": "gyeonggi-용인-처인-모현읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "모현",
+      "keywordName": "모현",
+      "regionType": "읍",
+      "legacySlug": "모현",
+      "originalSlug": "모현",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "모현",
+      "regionId": "gyeonggi-용인-처인-모현읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "남사읍",
+      "keywordName": "남사읍",
+      "regionType": "읍",
+      "legacySlug": "남사읍",
+      "originalSlug": "남사읍",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "남사읍",
+      "regionId": "gyeonggi-용인-처인-남사읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "남사",
+      "keywordName": "남사",
+      "regionType": "읍",
+      "legacySlug": "남사",
+      "originalSlug": "남사",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "남사",
+      "regionId": "gyeonggi-용인-처인-남사읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "이동읍",
+      "keywordName": "이동읍",
+      "regionType": "읍",
+      "legacySlug": "이동읍",
+      "originalSlug": "이동읍",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "이동읍",
+      "regionId": "gyeonggi-용인-처인-이동읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "이동",
+      "keywordName": "이동",
+      "regionType": "읍",
+      "legacySlug": "이동",
+      "originalSlug": "이동",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "이동",
+      "regionId": "gyeonggi-용인-처인-이동읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "원삼면",
+      "keywordName": "원삼면",
+      "regionType": "면",
+      "legacySlug": "원삼면",
+      "originalSlug": "원삼면",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "원삼면",
+      "regionId": "gyeonggi-용인-처인-원삼면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "원삼",
+      "keywordName": "원삼",
+      "regionType": "면",
+      "legacySlug": "원삼",
+      "originalSlug": "원삼",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "원삼",
+      "regionId": "gyeonggi-용인-처인-원삼면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "백암면",
+      "keywordName": "백암면",
+      "regionType": "면",
+      "legacySlug": "백암면",
+      "originalSlug": "백암면",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "백암면",
+      "regionId": "gyeonggi-용인-처인-백암면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "백암",
+      "keywordName": "백암",
+      "regionType": "면",
+      "legacySlug": "백암",
+      "originalSlug": "백암",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "백암",
+      "regionId": "gyeonggi-용인-처인-백암면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "양지면",
+      "keywordName": "양지면",
+      "regionType": "면",
+      "legacySlug": "양지면",
+      "originalSlug": "양지면",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "양지면",
+      "regionId": "gyeonggi-용인-처인-양지면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "양지",
+      "keywordName": "양지",
+      "regionType": "면",
+      "legacySlug": "양지",
+      "originalSlug": "양지",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "양지",
+      "regionId": "gyeonggi-용인-처인-양지면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "역북동",
+      "keywordName": "역북동",
+      "regionType": "법정동",
+      "legacySlug": "역북동",
+      "originalSlug": "역북동",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "역북동",
+      "regionId": "gyeonggi-용인-처인-역북동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "역북",
+      "keywordName": "역북",
+      "regionType": "법정동",
+      "legacySlug": "역북",
+      "originalSlug": "역북",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "역북",
+      "regionId": "gyeonggi-용인-처인-역북동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "삼가동",
+      "keywordName": "삼가동",
+      "regionType": "법정동",
+      "legacySlug": "삼가동",
+      "originalSlug": "삼가동",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "삼가동",
+      "regionId": "gyeonggi-용인-처인-삼가동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "삼가",
+      "keywordName": "삼가",
+      "regionType": "법정동",
+      "legacySlug": "삼가",
+      "originalSlug": "삼가",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "삼가",
+      "regionId": "gyeonggi-용인-처인-삼가동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "유방동",
+      "keywordName": "유방동",
+      "regionType": "법정동",
+      "legacySlug": "유방동",
+      "originalSlug": "유방동",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "유방동",
+      "regionId": "gyeonggi-용인-처인-유방동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "유방",
+      "keywordName": "유방",
+      "regionType": "법정동",
+      "legacySlug": "유방",
+      "originalSlug": "유방",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "유방",
+      "regionId": "gyeonggi-용인-처인-유방동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "고림동",
+      "keywordName": "고림동",
+      "regionType": "법정동",
+      "legacySlug": "고림동",
+      "originalSlug": "고림동",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "고림동",
+      "regionId": "gyeonggi-용인-처인-고림동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "고림",
+      "keywordName": "고림",
+      "regionType": "법정동",
+      "legacySlug": "고림",
+      "originalSlug": "고림",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "고림",
+      "regionId": "gyeonggi-용인-처인-고림동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "김량장동",
+      "keywordName": "김량장동",
+      "regionType": "법정동",
+      "legacySlug": "김량장동",
+      "originalSlug": "김량장동",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "김량장동",
+      "regionId": "gyeonggi-용인-처인-김량장동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "김량장",
+      "keywordName": "김량장",
+      "regionType": "법정동",
+      "legacySlug": "김량장",
+      "originalSlug": "김량장",
+      "parentRegion": "경기권 > 용인시 > 처인구",
+      "routeKey": "김량장",
+      "regionId": "gyeonggi-용인-처인-김량장동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "이천시",
+      "keywordName": "이천시",
+      "regionType": "시",
+      "legacySlug": "이천",
+      "originalSlug": "이천",
+      "parentRegion": "경기도",
+      "routeKey": "이천",
+      "regionId": "gyeonggi-이천",
+      "type": "city",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "이천",
+      "keywordName": "이천",
+      "regionType": "시",
+      "legacySlug": "이천",
+      "originalSlug": "이천",
+      "parentRegion": "경기도",
+      "routeKey": "이천",
+      "regionId": "gyeonggi-이천",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "창전동",
+      "keywordName": "창전동",
+      "regionType": "법정동",
+      "legacySlug": "창전동",
+      "originalSlug": "창전동",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "창전동",
+      "regionId": "gyeonggi-이천-창전동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "관고동",
+      "keywordName": "관고동",
+      "regionType": "법정동",
+      "legacySlug": "관고동",
+      "originalSlug": "관고동",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "관고동",
+      "regionId": "gyeonggi-이천-관고동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "중리동",
+      "keywordName": "중리동",
+      "regionType": "법정동",
+      "legacySlug": "중리동",
+      "originalSlug": "중리동",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "중리동",
+      "regionId": "gyeonggi-이천-중리동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "증포동",
+      "keywordName": "증포동",
+      "regionType": "법정동",
+      "legacySlug": "증포동",
+      "originalSlug": "증포동",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "증포동",
+      "regionId": "gyeonggi-이천-증포동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "송정동",
+      "keywordName": "송정동",
+      "regionType": "법정동",
+      "legacySlug": "이천-송정동",
+      "originalSlug": "이천-송정동",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "이천-송정동",
+      "regionId": "gyeonggi-이천-송정동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "갈산동",
+      "keywordName": "갈산동",
+      "regionType": "법정동",
+      "legacySlug": "갈산동",
+      "originalSlug": "갈산동",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "갈산동",
+      "regionId": "gyeonggi-이천-갈산동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "안흥동",
+      "keywordName": "안흥동",
+      "regionType": "법정동",
+      "legacySlug": "안흥동",
+      "originalSlug": "안흥동",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "안흥동",
+      "regionId": "gyeonggi-이천-안흥동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "부발읍",
+      "keywordName": "부발읍",
+      "regionType": "읍",
+      "legacySlug": "부발읍",
+      "originalSlug": "부발읍",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "부발읍",
+      "regionId": "gyeonggi-이천-부발읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "부발",
+      "keywordName": "부발",
+      "regionType": "읍",
+      "legacySlug": "부발",
+      "originalSlug": "부발",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "부발",
+      "regionId": "gyeonggi-이천-부발읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "장호원읍",
+      "keywordName": "장호원읍",
+      "regionType": "읍",
+      "legacySlug": "장호원읍",
+      "originalSlug": "장호원읍",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "장호원읍",
+      "regionId": "gyeonggi-이천-장호원읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "장호원",
+      "keywordName": "장호원",
+      "regionType": "읍",
+      "legacySlug": "장호원",
+      "originalSlug": "장호원",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "장호원",
+      "regionId": "gyeonggi-이천-장호원읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "마장면",
+      "keywordName": "마장면",
+      "regionType": "면",
+      "legacySlug": "마장면",
+      "originalSlug": "마장면",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "마장면",
+      "regionId": "gyeonggi-이천-마장면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "마장",
+      "keywordName": "마장",
+      "regionType": "면",
+      "legacySlug": "마장",
+      "originalSlug": "마장",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "마장",
+      "regionId": "gyeonggi-이천-마장면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "신둔면",
+      "keywordName": "신둔면",
+      "regionType": "면",
+      "legacySlug": "신둔면",
+      "originalSlug": "신둔면",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "신둔면",
+      "regionId": "gyeonggi-이천-신둔면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "신둔",
+      "keywordName": "신둔",
+      "regionType": "면",
+      "legacySlug": "신둔",
+      "originalSlug": "신둔",
+      "parentRegion": "경기권 > 이천시",
+      "routeKey": "신둔",
+      "regionId": "gyeonggi-이천-신둔면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "평택시",
+      "keywordName": "평택시",
+      "regionType": "시",
+      "legacySlug": "평택",
+      "originalSlug": "평택",
+      "parentRegion": "경기도",
+      "routeKey": "평택",
+      "regionId": "gyeonggi-평택",
+      "type": "city",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "평택",
+      "keywordName": "평택",
+      "regionType": "시",
+      "legacySlug": "평택",
+      "originalSlug": "평택",
+      "parentRegion": "경기도",
+      "routeKey": "평택",
+      "regionId": "gyeonggi-평택",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "팽성읍",
+      "keywordName": "팽성읍",
+      "regionType": "읍",
+      "legacySlug": "팽성읍",
+      "originalSlug": "팽성읍",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "팽성읍",
+      "regionId": "gyeonggi-평택-팽성읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "팽성",
+      "keywordName": "팽성",
+      "regionType": "읍",
+      "legacySlug": "팽성",
+      "originalSlug": "팽성",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "팽성",
+      "regionId": "gyeonggi-평택-팽성읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "안중읍",
+      "keywordName": "안중읍",
+      "regionType": "읍",
+      "legacySlug": "안중읍",
+      "originalSlug": "안중읍",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "안중읍",
+      "regionId": "gyeonggi-평택-안중읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "안중",
+      "keywordName": "안중",
+      "regionType": "읍",
+      "legacySlug": "안중",
+      "originalSlug": "안중",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "안중",
+      "regionId": "gyeonggi-평택-안중읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "포승읍",
+      "keywordName": "포승읍",
+      "regionType": "읍",
+      "legacySlug": "포승읍",
+      "originalSlug": "포승읍",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "포승읍",
+      "regionId": "gyeonggi-평택-포승읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "포승",
+      "keywordName": "포승",
+      "regionType": "읍",
+      "legacySlug": "포승",
+      "originalSlug": "포승",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "포승",
+      "regionId": "gyeonggi-평택-포승읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "청북읍",
+      "keywordName": "청북읍",
+      "regionType": "읍",
+      "legacySlug": "청북읍",
+      "originalSlug": "청북읍",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "청북읍",
+      "regionId": "gyeonggi-평택-청북읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "청북",
+      "keywordName": "청북",
+      "regionType": "읍",
+      "legacySlug": "청북",
+      "originalSlug": "청북",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "청북",
+      "regionId": "gyeonggi-평택-청북읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "송탄동",
+      "keywordName": "송탄동",
+      "regionType": "행정동",
+      "legacySlug": "송탄동",
+      "originalSlug": "송탄동",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "송탄동",
+      "regionId": "gyeonggi-평택-송탄동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "송탄",
+      "keywordName": "송탄",
+      "regionType": "행정동",
+      "legacySlug": "송탄",
+      "originalSlug": "송탄",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "송탄",
+      "regionId": "gyeonggi-평택-송탄동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "비전동",
+      "keywordName": "비전동",
+      "regionType": "법정동",
+      "legacySlug": "비전동",
+      "originalSlug": "비전동",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "비전동",
+      "regionId": "gyeonggi-평택-비전동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "비전",
+      "keywordName": "비전",
+      "regionType": "법정동",
+      "legacySlug": "비전",
+      "originalSlug": "비전",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "비전",
+      "regionId": "gyeonggi-평택-비전동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "용이동",
+      "keywordName": "용이동",
+      "regionType": "법정동",
+      "legacySlug": "용이동",
+      "originalSlug": "용이동",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "용이동",
+      "regionId": "gyeonggi-평택-용이동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "용이",
+      "keywordName": "용이",
+      "regionType": "법정동",
+      "legacySlug": "용이",
+      "originalSlug": "용이",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "용이",
+      "regionId": "gyeonggi-평택-용이동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "동삭동",
+      "keywordName": "동삭동",
+      "regionType": "법정동",
+      "legacySlug": "동삭동",
+      "originalSlug": "동삭동",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "동삭동",
+      "regionId": "gyeonggi-평택-동삭동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "동삭",
+      "keywordName": "동삭",
+      "regionType": "법정동",
+      "legacySlug": "동삭",
+      "originalSlug": "동삭",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "동삭",
+      "regionId": "gyeonggi-평택-동삭동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "세교동",
+      "keywordName": "세교동",
+      "regionType": "법정동",
+      "legacySlug": "세교동",
+      "originalSlug": "세교동",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "세교동",
+      "regionId": "gyeonggi-평택-세교동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "고덕면",
+      "keywordName": "고덕면",
+      "regionType": "면",
+      "legacySlug": "고덕면",
+      "originalSlug": "고덕면",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "고덕면",
+      "regionId": "gyeonggi-평택-고덕면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "고덕",
+      "keywordName": "고덕",
+      "regionType": "면",
+      "legacySlug": "고덕",
+      "originalSlug": "고덕",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "고덕",
+      "regionId": "gyeonggi-평택-고덕면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "신장동",
+      "keywordName": "신장동",
+      "regionType": "법정동",
+      "legacySlug": "평택-신장동",
+      "originalSlug": "평택-신장동",
+      "parentRegion": "경기권 > 평택시",
+      "routeKey": "평택-신장동",
+      "regionId": "gyeonggi-평택-신장동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "안성시",
+      "keywordName": "안성시",
+      "regionType": "시",
+      "legacySlug": "안성",
+      "originalSlug": "안성",
+      "parentRegion": "경기도",
+      "routeKey": "안성",
+      "regionId": "gyeonggi-안성",
+      "type": "city",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "안성",
+      "keywordName": "안성",
+      "regionType": "시",
+      "legacySlug": "안성",
+      "originalSlug": "안성",
+      "parentRegion": "경기도",
+      "routeKey": "안성",
+      "regionId": "gyeonggi-안성",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "공도읍",
+      "keywordName": "공도읍",
+      "regionType": "읍",
+      "legacySlug": "공도읍",
+      "originalSlug": "공도읍",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "공도읍",
+      "regionId": "gyeonggi-안성-공도읍",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "공도",
+      "keywordName": "공도",
+      "regionType": "읍",
+      "legacySlug": "공도",
+      "originalSlug": "공도",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "공도",
+      "regionId": "gyeonggi-안성-공도읍",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "보개면",
+      "keywordName": "보개면",
+      "regionType": "면",
+      "legacySlug": "보개면",
+      "originalSlug": "보개면",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "보개면",
+      "regionId": "gyeonggi-안성-보개면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "보개",
+      "keywordName": "보개",
+      "regionType": "면",
+      "legacySlug": "보개",
+      "originalSlug": "보개",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "보개",
+      "regionId": "gyeonggi-안성-보개면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "대덕면",
+      "keywordName": "대덕면",
+      "regionType": "면",
+      "legacySlug": "대덕면",
+      "originalSlug": "대덕면",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "대덕면",
+      "regionId": "gyeonggi-안성-대덕면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "대덕",
+      "keywordName": "대덕",
+      "regionType": "면",
+      "legacySlug": "대덕",
+      "originalSlug": "대덕",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "대덕",
+      "regionId": "gyeonggi-안성-대덕면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "양성면",
+      "keywordName": "양성면",
+      "regionType": "면",
+      "legacySlug": "양성면",
+      "originalSlug": "양성면",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "양성면",
+      "regionId": "gyeonggi-안성-양성면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "양성",
+      "keywordName": "양성",
+      "regionType": "면",
+      "legacySlug": "양성",
+      "originalSlug": "양성",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "양성",
+      "regionId": "gyeonggi-안성-양성면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "죽산면",
+      "keywordName": "죽산면",
+      "regionType": "면",
+      "legacySlug": "죽산면",
+      "originalSlug": "죽산면",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "죽산면",
+      "regionId": "gyeonggi-안성-죽산면",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "죽산",
+      "keywordName": "죽산",
+      "regionType": "면",
+      "legacySlug": "죽산",
+      "originalSlug": "죽산",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "죽산",
+      "regionId": "gyeonggi-안성-죽산면",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "아양동",
+      "keywordName": "아양동",
+      "regionType": "법정동",
+      "legacySlug": "아양동",
+      "originalSlug": "아양동",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "아양동",
+      "regionId": "gyeonggi-안성-아양동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "아양",
+      "keywordName": "아양",
+      "regionType": "법정동",
+      "legacySlug": "아양",
+      "originalSlug": "아양",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "아양",
+      "regionId": "gyeonggi-안성-아양동",
+      "type": "alias"
+  },
+  {
+      "displayRegion": "옥산동",
+      "keywordName": "옥산동",
+      "regionType": "법정동",
+      "legacySlug": "옥산동",
+      "originalSlug": "옥산동",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "옥산동",
+      "regionId": "gyeonggi-안성-옥산동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
+  },
+  {
+      "displayRegion": "당왕동",
+      "keywordName": "당왕동",
+      "regionType": "법정동",
+      "legacySlug": "당왕동",
+      "originalSlug": "당왕동",
+      "parentRegion": "경기권 > 안성시",
+      "routeKey": "당왕동",
+      "regionId": "gyeonggi-안성-당왕동",
+      "type": "dong",
+      "serviceScope": [
+          "elastic"
+      ]
   }
 ];

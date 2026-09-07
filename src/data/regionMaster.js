@@ -1,6 +1,4 @@
 // 바름공간 계층형 지역 마스터 구조 데이터 (Region Master)
-// 최신 행정구역에 부합하도록 구조화되었으며, 중복 명칭 분리 및 긴 키워드 정규화가 완료되었습니다.
-
 export const regionMaster = {
   "provinces": [
     {
@@ -630,6 +628,90 @@ export const regionMaster = {
       "enabled": true,
       "generatePage": true,
       "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성",
+      "name": "화성시",
+      "displayName": "화성시",
+      "level": "city",
+      "parentId": "gyeonggi",
+      "provinceId": "gyeonggi",
+      "aliases": [
+        "화성"
+      ],
+      "enabled": true,
+      "generatePage": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-오산",
+      "name": "오산시",
+      "displayName": "오산시",
+      "level": "city",
+      "parentId": "gyeonggi",
+      "provinceId": "gyeonggi",
+      "aliases": [
+        "오산"
+      ],
+      "enabled": true,
+      "generatePage": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인",
+      "name": "용인시",
+      "displayName": "용인시",
+      "level": "city",
+      "parentId": "gyeonggi",
+      "provinceId": "gyeonggi",
+      "aliases": [
+        "용인"
+      ],
+      "enabled": true,
+      "generatePage": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-이천",
+      "name": "이천시",
+      "displayName": "이천시",
+      "level": "city",
+      "parentId": "gyeonggi",
+      "provinceId": "gyeonggi",
+      "aliases": [
+        "이천"
+      ],
+      "enabled": true,
+      "generatePage": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-평택",
+      "name": "평택시",
+      "displayName": "평택시",
+      "level": "city",
+      "parentId": "gyeonggi",
+      "provinceId": "gyeonggi",
+      "aliases": [
+        "평택"
+      ],
+      "enabled": true,
+      "generatePage": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-안성",
+      "name": "안성시",
+      "displayName": "안성시",
+      "level": "city",
+      "parentId": "gyeonggi",
+      "provinceId": "gyeonggi",
+      "aliases": [
+        "안성"
+      ],
+      "enabled": true,
+      "generatePage": true,
+      "sortOrder": 1
     }
   ],
   "districts": [
@@ -850,6 +932,51 @@ export const regionMaster = {
       "provinceId": "gyeonggi",
       "cityId": "gyeonggi-안산",
       "aliases": [],
+      "enabled": true,
+      "generatePage": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-수지",
+      "name": "수지구",
+      "displayName": "수지구",
+      "level": "district",
+      "parentId": "gyeonggi-용인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "aliases": [
+        "수지"
+      ],
+      "enabled": true,
+      "generatePage": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥",
+      "name": "기흥구",
+      "displayName": "기흥구",
+      "level": "district",
+      "parentId": "gyeonggi-용인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "aliases": [
+        "기흥"
+      ],
+      "enabled": true,
+      "generatePage": true,
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-처인",
+      "name": "처인구",
+      "displayName": "처인구",
+      "level": "district",
+      "parentId": "gyeonggi-용인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "aliases": [
+        "처인"
+      ],
       "enabled": true,
       "generatePage": true,
       "sortOrder": 1
@@ -16827,6 +16954,1914 @@ export const regionMaster = {
       "sortOrder": 1,
       "collisionResolved": true,
       "requiresCollisionReview": false
+    },
+    {
+      "id": "gyeonggi-화성-동탄",
+      "name": "동탄",
+      "displayName": "동탄",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "동탄신도시"
+      ],
+      "sourceNames": [
+        "동탄"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "동탄",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-동탄동",
+      "name": "동탄동",
+      "displayName": "동탄동",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "동탄동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "동탄동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-진안동",
+      "name": "진안동",
+      "displayName": "진안동",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "진안"
+      ],
+      "sourceNames": [
+        "진안동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "진안동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-병점동",
+      "name": "병점동",
+      "displayName": "병점동",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "병점"
+      ],
+      "sourceNames": [
+        "병점동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "병점동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-안녕동",
+      "name": "안녕동",
+      "displayName": "안녕동",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "안녕"
+      ],
+      "sourceNames": [
+        "안녕동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "안녕동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-반월동",
+      "name": "반월동",
+      "displayName": "반월동",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "반월"
+      ],
+      "sourceNames": [
+        "반월동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "반월동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-기산동",
+      "name": "기산동",
+      "displayName": "기산동",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "기산"
+      ],
+      "sourceNames": [
+        "기산동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "기산동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-봉담읍",
+      "name": "봉담읍",
+      "displayName": "봉담읍",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "봉담"
+      ],
+      "sourceNames": [
+        "봉담읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "봉담읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-향남읍",
+      "name": "향남읍",
+      "displayName": "향남읍",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "향남"
+      ],
+      "sourceNames": [
+        "향남읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "향남읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-남양읍",
+      "name": "남양읍",
+      "displayName": "남양읍",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "남양"
+      ],
+      "sourceNames": [
+        "남양읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "남양읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-매송면",
+      "name": "매송면",
+      "displayName": "매송면",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "매송"
+      ],
+      "sourceNames": [
+        "매송면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "매송면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-비봉면",
+      "name": "비봉면",
+      "displayName": "비봉면",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "비봉"
+      ],
+      "sourceNames": [
+        "비봉면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "비봉면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-마도면",
+      "name": "마도면",
+      "displayName": "마도면",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "마도"
+      ],
+      "sourceNames": [
+        "마도면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "마도면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-송산면",
+      "name": "송산면",
+      "displayName": "송산면",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "송산"
+      ],
+      "sourceNames": [
+        "송산면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "송산면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-서신면",
+      "name": "서신면",
+      "displayName": "서신면",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "서신"
+      ],
+      "sourceNames": [
+        "서신면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "서신면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-팔탄면",
+      "name": "팔탄면",
+      "displayName": "팔탄면",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "팔탄"
+      ],
+      "sourceNames": [
+        "팔탄면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "팔탄면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-장안면",
+      "name": "장안면",
+      "displayName": "장안면",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "장안"
+      ],
+      "sourceNames": [
+        "장안면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "장안면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-우정읍",
+      "name": "우정읍",
+      "displayName": "우정읍",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "우정"
+      ],
+      "sourceNames": [
+        "우정읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "우정읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-양감면",
+      "name": "양감면",
+      "displayName": "양감면",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "양감"
+      ],
+      "sourceNames": [
+        "양감면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "양감면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-정남면",
+      "name": "정남면",
+      "displayName": "정남면",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "정남"
+      ],
+      "sourceNames": [
+        "정남면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "정남면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-화성-새솔동",
+      "name": "새솔동",
+      "displayName": "새솔동",
+      "level": "dong",
+      "parentId": "gyeonggi-화성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-화성",
+      "districtId": null,
+      "aliases": [
+        "새솔"
+      ],
+      "sourceNames": [
+        "새솔동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "새솔동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-오산-중앙동",
+      "name": "중앙동",
+      "displayName": "중앙동",
+      "level": "dong",
+      "parentId": "gyeonggi-오산",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-오산",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "중앙동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "오산-중앙동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-오산-대원동",
+      "name": "대원동",
+      "displayName": "대원동",
+      "level": "dong",
+      "parentId": "gyeonggi-오산",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-오산",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "대원동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "대원동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-오산-남촌동",
+      "name": "남촌동",
+      "displayName": "남촌동",
+      "level": "dong",
+      "parentId": "gyeonggi-오산",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-오산",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "남촌동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "오산-남촌동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-오산-신장동",
+      "name": "신장동",
+      "displayName": "신장동",
+      "level": "dong",
+      "parentId": "gyeonggi-오산",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-오산",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "신장동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "오산-신장동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-오산-세마동",
+      "name": "세마동",
+      "displayName": "세마동",
+      "level": "dong",
+      "parentId": "gyeonggi-오산",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-오산",
+      "districtId": null,
+      "aliases": [
+        "세교",
+        "세마"
+      ],
+      "sourceNames": [
+        "세마동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "세마동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-오산-초평동",
+      "name": "초평동",
+      "displayName": "초평동",
+      "level": "dong",
+      "parentId": "gyeonggi-오산",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-오산",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "초평동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "오산-초평동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-오산-원동",
+      "name": "원동",
+      "displayName": "원동",
+      "level": "dong",
+      "parentId": "gyeonggi-오산",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-오산",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "원동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "원동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-오산-궐동",
+      "name": "궐동",
+      "displayName": "궐동",
+      "level": "dong",
+      "parentId": "gyeonggi-오산",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-오산",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "궐동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "궐동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-오산-수청동",
+      "name": "수청동",
+      "displayName": "수청동",
+      "level": "dong",
+      "parentId": "gyeonggi-오산",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-오산",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "수청동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "수청동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-오산-금암동",
+      "name": "금암동",
+      "displayName": "금암동",
+      "level": "dong",
+      "parentId": "gyeonggi-오산",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-오산",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "금암동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "금암동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-수지-풍덕천동",
+      "name": "풍덕천동",
+      "displayName": "풍덕천동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-수지",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-수지",
+      "aliases": [
+        "풍덕천"
+      ],
+      "sourceNames": [
+        "풍덕천동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "풍덕천동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-수지-신봉동",
+      "name": "신봉동",
+      "displayName": "신봉동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-수지",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-수지",
+      "aliases": [
+        "신봉"
+      ],
+      "sourceNames": [
+        "신봉동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "신봉동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-수지-죽전동",
+      "name": "죽전동",
+      "displayName": "죽전동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-수지",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-수지",
+      "aliases": [
+        "죽전"
+      ],
+      "sourceNames": [
+        "죽전동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "죽전동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-수지-동천동",
+      "name": "동천동",
+      "displayName": "동천동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-수지",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-수지",
+      "aliases": [
+        "동천"
+      ],
+      "sourceNames": [
+        "동천동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "동천동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-수지-고기동",
+      "name": "고기동",
+      "displayName": "고기동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-수지",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-수지",
+      "aliases": [
+        "고기"
+      ],
+      "sourceNames": [
+        "고기동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "고기동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-수지-상현동",
+      "name": "상현동",
+      "displayName": "상현동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-수지",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-수지",
+      "aliases": [
+        "상현"
+      ],
+      "sourceNames": [
+        "상현동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "상현동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-수지-성복동",
+      "name": "성복동",
+      "displayName": "성복동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-수지",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-수지",
+      "aliases": [
+        "성복"
+      ],
+      "sourceNames": [
+        "성복동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "성복동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥-신갈동",
+      "name": "신갈동",
+      "displayName": "신갈동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-기흥",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-기흥",
+      "aliases": [
+        "신갈"
+      ],
+      "sourceNames": [
+        "신갈동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "신갈동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥-구갈동",
+      "name": "구갈동",
+      "displayName": "구갈동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-기흥",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-기흥",
+      "aliases": [
+        "구갈"
+      ],
+      "sourceNames": [
+        "구갈동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "구갈동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥-상갈동",
+      "name": "상갈동",
+      "displayName": "상갈동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-기흥",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-기흥",
+      "aliases": [
+        "상갈"
+      ],
+      "sourceNames": [
+        "상갈동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "상갈동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥-보라동",
+      "name": "보라동",
+      "displayName": "보라동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-기흥",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-기흥",
+      "aliases": [
+        "보라"
+      ],
+      "sourceNames": [
+        "보라동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "보라동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥-기흥동",
+      "name": "기흥동",
+      "displayName": "기흥동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-기흥",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-기흥",
+      "aliases": [],
+      "sourceNames": [
+        "기흥동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "기흥동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥-서농동",
+      "name": "서농동",
+      "displayName": "서농동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-기흥",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-기흥",
+      "aliases": [],
+      "sourceNames": [
+        "서농동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "서농동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥-구성동",
+      "name": "구성동",
+      "displayName": "구성동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-기흥",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-기흥",
+      "aliases": [
+        "구성"
+      ],
+      "sourceNames": [
+        "구성동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "구성동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥-마북동",
+      "name": "마북동",
+      "displayName": "마북동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-기흥",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-기흥",
+      "aliases": [
+        "마북"
+      ],
+      "sourceNames": [
+        "마북동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "마북동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥-동백동",
+      "name": "동백동",
+      "displayName": "동백동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-기흥",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-기흥",
+      "aliases": [
+        "동백"
+      ],
+      "sourceNames": [
+        "동백동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "동백동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥-상하동",
+      "name": "상하동",
+      "displayName": "상하동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-기흥",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-기흥",
+      "aliases": [
+        "상하"
+      ],
+      "sourceNames": [
+        "상하동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "상하동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥-보정동",
+      "name": "보정동",
+      "displayName": "보정동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-기흥",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-기흥",
+      "aliases": [
+        "보정"
+      ],
+      "sourceNames": [
+        "보정동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "보정동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥-영덕동",
+      "name": "영덕동",
+      "displayName": "영덕동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-기흥",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-기흥",
+      "aliases": [
+        "영덕"
+      ],
+      "sourceNames": [
+        "영덕동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "영덕동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-기흥-흥덕",
+      "name": "흥덕",
+      "displayName": "흥덕",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-기흥",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-기흥",
+      "aliases": [
+        "흥덕지구"
+      ],
+      "sourceNames": [
+        "흥덕"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "흥덕",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-처인-포곡읍",
+      "name": "포곡읍",
+      "displayName": "포곡읍",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-처인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-처인",
+      "aliases": [
+        "포곡"
+      ],
+      "sourceNames": [
+        "포곡읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "포곡읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-처인-모현읍",
+      "name": "모현읍",
+      "displayName": "모현읍",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-처인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-처인",
+      "aliases": [
+        "모현"
+      ],
+      "sourceNames": [
+        "모현읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "모현읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-처인-남사읍",
+      "name": "남사읍",
+      "displayName": "남사읍",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-처인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-처인",
+      "aliases": [
+        "남사"
+      ],
+      "sourceNames": [
+        "남사읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "남사읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-처인-이동읍",
+      "name": "이동읍",
+      "displayName": "이동읍",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-처인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-처인",
+      "aliases": [
+        "이동"
+      ],
+      "sourceNames": [
+        "이동읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "이동읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-처인-원삼면",
+      "name": "원삼면",
+      "displayName": "원삼면",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-처인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-처인",
+      "aliases": [
+        "원삼"
+      ],
+      "sourceNames": [
+        "원삼면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "원삼면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-처인-백암면",
+      "name": "백암면",
+      "displayName": "백암면",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-처인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-처인",
+      "aliases": [
+        "백암"
+      ],
+      "sourceNames": [
+        "백암면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "백암면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-처인-양지면",
+      "name": "양지면",
+      "displayName": "양지면",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-처인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-처인",
+      "aliases": [
+        "양지"
+      ],
+      "sourceNames": [
+        "양지면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "양지면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-처인-역북동",
+      "name": "역북동",
+      "displayName": "역북동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-처인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-처인",
+      "aliases": [
+        "역북"
+      ],
+      "sourceNames": [
+        "역북동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "역북동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-처인-삼가동",
+      "name": "삼가동",
+      "displayName": "삼가동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-처인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-처인",
+      "aliases": [
+        "삼가"
+      ],
+      "sourceNames": [
+        "삼가동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "삼가동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-처인-유방동",
+      "name": "유방동",
+      "displayName": "유방동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-처인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-처인",
+      "aliases": [
+        "유방"
+      ],
+      "sourceNames": [
+        "유방동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "유방동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-처인-고림동",
+      "name": "고림동",
+      "displayName": "고림동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-처인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-처인",
+      "aliases": [
+        "고림"
+      ],
+      "sourceNames": [
+        "고림동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "고림동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-용인-처인-김량장동",
+      "name": "김량장동",
+      "displayName": "김량장동",
+      "level": "dong",
+      "parentId": "gyeonggi-용인-처인",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-용인",
+      "districtId": "gyeonggi-용인-처인",
+      "aliases": [
+        "김량장"
+      ],
+      "sourceNames": [
+        "김량장동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "김량장동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-이천-창전동",
+      "name": "창전동",
+      "displayName": "창전동",
+      "level": "dong",
+      "parentId": "gyeonggi-이천",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-이천",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "창전동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "창전동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-이천-관고동",
+      "name": "관고동",
+      "displayName": "관고동",
+      "level": "dong",
+      "parentId": "gyeonggi-이천",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-이천",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "관고동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "관고동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-이천-중리동",
+      "name": "중리동",
+      "displayName": "중리동",
+      "level": "dong",
+      "parentId": "gyeonggi-이천",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-이천",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "중리동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "중리동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-이천-증포동",
+      "name": "증포동",
+      "displayName": "증포동",
+      "level": "dong",
+      "parentId": "gyeonggi-이천",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-이천",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "증포동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "증포동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-이천-송정동",
+      "name": "송정동",
+      "displayName": "송정동",
+      "level": "dong",
+      "parentId": "gyeonggi-이천",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-이천",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "송정동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "이천-송정동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-이천-갈산동",
+      "name": "갈산동",
+      "displayName": "갈산동",
+      "level": "dong",
+      "parentId": "gyeonggi-이천",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-이천",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "갈산동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "갈산동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-이천-안흥동",
+      "name": "안흥동",
+      "displayName": "안흥동",
+      "level": "dong",
+      "parentId": "gyeonggi-이천",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-이천",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "안흥동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "안흥동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-이천-부발읍",
+      "name": "부발읍",
+      "displayName": "부발읍",
+      "level": "dong",
+      "parentId": "gyeonggi-이천",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-이천",
+      "districtId": null,
+      "aliases": [
+        "부발"
+      ],
+      "sourceNames": [
+        "부발읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "부발읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-이천-장호원읍",
+      "name": "장호원읍",
+      "displayName": "장호원읍",
+      "level": "dong",
+      "parentId": "gyeonggi-이천",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-이천",
+      "districtId": null,
+      "aliases": [
+        "장호원"
+      ],
+      "sourceNames": [
+        "장호원읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "장호원읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-이천-마장면",
+      "name": "마장면",
+      "displayName": "마장면",
+      "level": "dong",
+      "parentId": "gyeonggi-이천",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-이천",
+      "districtId": null,
+      "aliases": [
+        "마장"
+      ],
+      "sourceNames": [
+        "마장면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "마장면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-이천-신둔면",
+      "name": "신둔면",
+      "displayName": "신둔면",
+      "level": "dong",
+      "parentId": "gyeonggi-이천",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-이천",
+      "districtId": null,
+      "aliases": [
+        "신둔"
+      ],
+      "sourceNames": [
+        "신둔면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "신둔면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-평택-팽성읍",
+      "name": "팽성읍",
+      "displayName": "팽성읍",
+      "level": "dong",
+      "parentId": "gyeonggi-평택",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-평택",
+      "districtId": null,
+      "aliases": [
+        "팽성"
+      ],
+      "sourceNames": [
+        "팽성읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "팽성읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-평택-안중읍",
+      "name": "안중읍",
+      "displayName": "안중읍",
+      "level": "dong",
+      "parentId": "gyeonggi-평택",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-평택",
+      "districtId": null,
+      "aliases": [
+        "안중"
+      ],
+      "sourceNames": [
+        "안중읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "안중읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-평택-포승읍",
+      "name": "포승읍",
+      "displayName": "포승읍",
+      "level": "dong",
+      "parentId": "gyeonggi-평택",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-평택",
+      "districtId": null,
+      "aliases": [
+        "포승"
+      ],
+      "sourceNames": [
+        "포승읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "포승읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-평택-청북읍",
+      "name": "청북읍",
+      "displayName": "청북읍",
+      "level": "dong",
+      "parentId": "gyeonggi-평택",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-평택",
+      "districtId": null,
+      "aliases": [
+        "청북"
+      ],
+      "sourceNames": [
+        "청북읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "청북읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-평택-송탄동",
+      "name": "송탄동",
+      "displayName": "송탄동",
+      "level": "dong",
+      "parentId": "gyeonggi-평택",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-평택",
+      "districtId": null,
+      "aliases": [
+        "송탄"
+      ],
+      "sourceNames": [
+        "송탄동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "송탄동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-평택-비전동",
+      "name": "비전동",
+      "displayName": "비전동",
+      "level": "dong",
+      "parentId": "gyeonggi-평택",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-평택",
+      "districtId": null,
+      "aliases": [
+        "비전"
+      ],
+      "sourceNames": [
+        "비전동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "비전동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-평택-용이동",
+      "name": "용이동",
+      "displayName": "용이동",
+      "level": "dong",
+      "parentId": "gyeonggi-평택",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-평택",
+      "districtId": null,
+      "aliases": [
+        "용이"
+      ],
+      "sourceNames": [
+        "용이동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "용이동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-평택-동삭동",
+      "name": "동삭동",
+      "displayName": "동삭동",
+      "level": "dong",
+      "parentId": "gyeonggi-평택",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-평택",
+      "districtId": null,
+      "aliases": [
+        "동삭"
+      ],
+      "sourceNames": [
+        "동삭동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "동삭동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-평택-세교동",
+      "name": "세교동",
+      "displayName": "세교동",
+      "level": "dong",
+      "parentId": "gyeonggi-평택",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-평택",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "세교동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "세교동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-평택-고덕면",
+      "name": "고덕면",
+      "displayName": "고덕면",
+      "level": "dong",
+      "parentId": "gyeonggi-평택",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-평택",
+      "districtId": null,
+      "aliases": [
+        "고덕"
+      ],
+      "sourceNames": [
+        "고덕면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "고덕면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-평택-신장동",
+      "name": "신장동",
+      "displayName": "신장동",
+      "level": "dong",
+      "parentId": "gyeonggi-평택",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-평택",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "신장동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "평택-신장동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-안성-공도읍",
+      "name": "공도읍",
+      "displayName": "공도읍",
+      "level": "dong",
+      "parentId": "gyeonggi-안성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-안성",
+      "districtId": null,
+      "aliases": [
+        "공도"
+      ],
+      "sourceNames": [
+        "공도읍"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "공도읍",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-안성-보개면",
+      "name": "보개면",
+      "displayName": "보개면",
+      "level": "dong",
+      "parentId": "gyeonggi-안성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-안성",
+      "districtId": null,
+      "aliases": [
+        "보개"
+      ],
+      "sourceNames": [
+        "보개면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "보개면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-안성-대덕면",
+      "name": "대덕면",
+      "displayName": "대덕면",
+      "level": "dong",
+      "parentId": "gyeonggi-안성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-안성",
+      "districtId": null,
+      "aliases": [
+        "대덕"
+      ],
+      "sourceNames": [
+        "대덕면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "대덕면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-안성-양성면",
+      "name": "양성면",
+      "displayName": "양성면",
+      "level": "dong",
+      "parentId": "gyeonggi-안성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-안성",
+      "districtId": null,
+      "aliases": [
+        "양성"
+      ],
+      "sourceNames": [
+        "양성면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "양성면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-안성-죽산면",
+      "name": "죽산면",
+      "displayName": "죽산면",
+      "level": "dong",
+      "parentId": "gyeonggi-안성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-안성",
+      "districtId": null,
+      "aliases": [
+        "죽산"
+      ],
+      "sourceNames": [
+        "죽산면"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "죽산면",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-안성-아양동",
+      "name": "아양동",
+      "displayName": "아양동",
+      "level": "dong",
+      "parentId": "gyeonggi-안성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-안성",
+      "districtId": null,
+      "aliases": [
+        "아양"
+      ],
+      "sourceNames": [
+        "아양동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "아양동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-안성-옥산동",
+      "name": "옥산동",
+      "displayName": "옥산동",
+      "level": "dong",
+      "parentId": "gyeonggi-안성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-안성",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "옥산동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "옥산동",
+      "sortOrder": 1
+    },
+    {
+      "id": "gyeonggi-안성-당왕동",
+      "name": "당왕동",
+      "displayName": "당왕동",
+      "level": "dong",
+      "parentId": "gyeonggi-안성",
+      "provinceId": "gyeonggi",
+      "cityId": "gyeonggi-안성",
+      "districtId": null,
+      "aliases": [],
+      "sourceNames": [
+        "당왕동"
+      ],
+      "status": "active",
+      "enabled": true,
+      "generatePage": true,
+      "slugKey": "당왕동",
+      "sortOrder": 1
     }
   ]
 };

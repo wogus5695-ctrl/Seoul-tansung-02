@@ -198,7 +198,7 @@ export function getSeoMetadata({ pageType, parsedKeyword, path = '/', isNotFound
     const regionName = parsedKeyword.region.displayName;
     const workType = parsedKeyword.service.keyword;
     const serviceGroup = parsedKeyword.service.serviceGroup;
-    const routeKey = parsedKeyword.region.urlRegion || parsedKeyword.region.routeKey || parsedKeyword.region.displayName;
+    const routeKey = parsedKeyword.region.canonicalRouteKey || parsedKeyword.region.urlRegion || parsedKeyword.region.routeKey || parsedKeyword.region.displayName;
 
     const title = getWorkTypeTitle(regionName, workType);
     const description = getWorkTypeDescription(regionName, workType, serviceGroup);

@@ -4,7 +4,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getActiveRegions, generateAbsoluteDynamicUrl } from '../src/data/regionResolver.js';
+import { getActiveRegions, getFilteredServices, generateAbsoluteDynamicUrl } from '../src/data/regionResolver.js';
 import { serviceKeywords } from '../src/data/serviceKeywords.js';
 
 import { contactConfig } from '../src/config/contactConfig.js';
@@ -31,10 +31,11 @@ async function generateSitemap() {
   urls.push(`${SITE_URL}/privacy-policy`);
   urls.push(`${SITE_URL}/terms`);
 
-  // 4. Dynamic keywords combinations using correct urlRegion token
+  // 4. Dynamic keywords combinations using correct urlRegion token and region-scoped services
   let count = 0;
   activeRegions.forEach(reg => {
-    serviceKeywords.forEach(tk => {
+    const allowed = getFilteredServices(reg);
+    allowed.forEach(tk => {
       urls.push(generateAbsoluteDynamicUrl(SITE_URL, reg.urlRegion, tk.keyword));
       count++;
     });

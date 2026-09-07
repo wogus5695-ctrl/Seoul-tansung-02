@@ -38,7 +38,16 @@ export function matchServiceSuffix(normalizedK) {
 const activeRegionIndex = new Map();
 const previewRegionIndex = new Map();
 
+const canonicalScopeMap = new Map();
+const canonicalRouteKeyMap = new Map();
+
 function buildIndexes() {
+  keywordMetadata.forEach(item => {
+    if (item.type !== 'alias' && item.regionId && item.routeKey) {
+      canonicalRouteKeyMap.set(item.regionId, item.routeKey);
+    }
+  });
+
   keywordMetadata.forEach(item => {
     const displaySlug = normalizeKeywordParam(item.displayRegion);
     const slug = normalizeKeywordParam(item.routeKey);
@@ -106,6 +115,8 @@ function buildIndexes() {
 
     const entry = {
       id: item.type === 'alias' ? `${item.regionId}-alias` : item.regionId,
+      regionId: item.regionId,
+      canonicalRouteKey: canonicalRouteKeyMap.get(item.regionId) || item.routeKey,
       name: item.keywordName || item.displayRegion,
       type: type,
       parentId: masterEntity?.parentId || metro,
@@ -116,11 +127,17 @@ function buildIndexes() {
       officialName: officialName,
       displayName: item.keywordName || item.displayRegion,
       urlRegion: item.routeKey,
+      serviceScope: item.serviceScope || null,
+      isAlias: item.type === 'alias',
       aliases: [],
       collisionResolved: true,
       requiresCollisionReview: false,
       active: true
     };
+
+    if (item.serviceScope && item.regionId) {
+      canonicalScopeMap.set(item.regionId, item.serviceScope);
+    }
 
     const legacySlug = normalizeKeywordParam(item.legacySlug);
 
@@ -140,6 +157,61 @@ function buildIndexes() {
 }
 
 buildIndexes();
+
+export function registerRegionScope(regionId, serviceScope) {
+  if (regionId && serviceScope) {
+    canonicalScopeMap.set(regionId, serviceScope);
+  }
+}
+
+export function getRegionServiceScope(region) {
+  if (!region) return null;
+  if (region.serviceScope) return region.serviceScope;
+  if (region.regionId && canonicalScopeMap.has(region.regionId)) {
+    return canonicalScopeMap.get(region.regionId);
+  }
+  return null;
+}
+
+export function isServiceAllowed(region, service) {
+  if (!region || !service) return false;
+
+  const scope = getRegionServiceScope(region);
+  if (!scope || (Array.isArray(scope) && scope.length === 0)) {
+    return true; // Backward compatible default: null/undefined/empty scope allows ALL 12 services
+  }
+
+  let targetGroup = '';
+  if (typeof service === 'string') {
+    const matched = serviceKeywords.find(s => s.keyword === service);
+    targetGroup = matched ? matched.serviceGroup : service;
+  } else if (service && service.serviceGroup) {
+    targetGroup = service.serviceGroup;
+  }
+
+  if (targetGroup === 'elasticCoat') targetGroup = 'elastic';
+
+  if (Array.isArray(scope)) {
+    return scope.some(s => s === targetGroup || (s === 'elastic' && targetGroup === 'elastic') || (s === 'grout' && targetGroup === 'grout') || s === 'all');
+  }
+
+  if (typeof scope === 'string') {
+    if (scope === 'all') return true;
+    if (scope === 'elastic' || scope === 'elasticCoat') return targetGroup === 'elastic';
+    if (scope === 'grout') return targetGroup === 'grout';
+  }
+
+  return true;
+}
+
+export function getFilteredServices(region) {
+  if (!region) return serviceKeywords;
+  const scope = getRegionServiceScope(region);
+  if (!scope || (Array.isArray(scope) && scope.length === 0)) {
+    return serviceKeywords;
+  }
+  return serviceKeywords.filter(s => isServiceAllowed(region, s));
+}
 
 export function findRegionByUrlToken(urlRegion, usePreview = false) {
   const normToken = normalizeKeywordParam(urlRegion);
@@ -164,6 +236,10 @@ export function parseAndValidateK(kParam, usePreview = false) {
   const region = findRegionByUrlToken(urlRegionToken, usePreview);
   if (!region) return { region: null, service: null, isValid: false };
 
+  if (!isServiceAllowed(region, service)) {
+    return { region, service, isValid: false };
+  }
+
   return {
     region,
     service,
@@ -176,6 +252,7 @@ export function getActiveRegions() {
   const seen = new Set();
   
   for (const region of activeRegionIndex.values()) {
+    if (region.isAlias) continue;
     const key = normalizeKeywordParam(region.urlRegion);
     if (!key || seen.has(key)) continue;
     seen.add(key);

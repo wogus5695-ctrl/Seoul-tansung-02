@@ -3,7 +3,7 @@ import { getDiagnosisItems } from './diagnosisContent.js';
 import { getServicesByGroupAndTask, getSpacesByGroupAndTask } from './serviceSpaceContent.js';
 import { WORK_STANDARD_CONTENT } from './processData.js';
 import { getFaqItems } from './faqData.js';
-import { getActiveRegions, generateDynamicUrl } from './regionResolver.js';
+import { getActiveRegions, generateDynamicUrl, isServiceAllowed } from './regionResolver.js';
 import { serviceContent } from './serviceContent.js';
 import { brandConfig } from '../config/brandConfig.js';
 
@@ -64,13 +64,15 @@ export function getHeroContent(parsedKeyword) {
 export function getInternalLinks(parsedKeyword) {
   if (!parsedKeyword) return null;
 
-  const relatedServices = parsedKeyword.service.relatedServices ? parsedKeyword.service.relatedServices.map(task => ({
-    label: `${parsedKeyword.region.name} ${task}`,
-    href: generateDynamicUrl(parsedKeyword.region.urlRegion, task)
-  })) : [];
+  const relatedServices = parsedKeyword.service.relatedServices ? parsedKeyword.service.relatedServices
+    .filter(task => isServiceAllowed(parsedKeyword.region, task))
+    .map(task => ({
+      label: `${parsedKeyword.region.name} ${task}`,
+      href: generateDynamicUrl(parsedKeyword.region.urlRegion, task)
+    })) : [];
 
   const nearbyRegions = getActiveRegions().filter(
-    r => r.parentId === parsedKeyword.region.parentId && r.id !== parsedKeyword.region.id
+    r => r.parentId === parsedKeyword.region.parentId && r.id !== parsedKeyword.region.id && isServiceAllowed(r, parsedKeyword.service)
   ).slice(0, 6).map(reg => ({
     label: `${reg.name} ${parsedKeyword.service.keyword}`,
     href: generateDynamicUrl(reg.urlRegion, parsedKeyword.service.keyword)
