@@ -2,6 +2,8 @@ import { parseAndValidateK, getActiveRegions, generateDynamicUrl } from '../src/
 import { serviceKeywords } from '../src/data/serviceKeywords.js';
 import { getSeoMetadata } from '../src/data/seoTemplates.js';
 import { getFaqItems } from '../src/data/faqData.js';
+import { getDynamicPageModel } from '../src/data/pageModelEngine.js';
+import { generateSemanticBodyHtml } from '../src/data/semanticBodyRenderer.js';
 import fs from 'fs';
 import path from 'path';
 
@@ -105,6 +107,20 @@ export default async function handler(req, res) {
     if (parseResult.isValid) {
       const meta = getSeoMetadata({ parsedKeyword: parseResult });
       html = injectSeoHead(html, meta);
+
+      // P0-2C.1 Pilot: Inject Semantic Initial HTML Body for Pilot WorkTypes in 압구정동
+      const pilotKParams = [
+        '압구정동-탄성코트',
+        '압구정동-세탁실탄성코트',
+        '압구정동-탄성코트업체',
+        '압구정동-욕실줄눈시공'
+      ];
+
+      if (pilotKParams.includes(kParam) || pilotKParams.includes(decodeURIComponent(kParam))) {
+        const pageModel = getDynamicPageModel({ parsedKeyword: parseResult });
+        const semanticHtml = generateSemanticBodyHtml(pageModel);
+        html = html.replace('<div id="root"></div>', `<div id="root">${semanticHtml}</div>`);
+      }
 
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
       return res.status(200).send(html);
