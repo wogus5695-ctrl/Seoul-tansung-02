@@ -167,6 +167,151 @@ export const LAUNDRY_ELASTIC_FAQ_LIST = [
   }
 ];
 
+// 6. 탄성코트 전용 FAQ (5개)
+export const GENERAL_ELASTIC_FAQ_LIST = [
+  {
+    id: "general-elastic-faq-1",
+    question: "탄성코트는 어떤 벽면 상태일 때 시공이 필요한가요?",
+    answer: "기존 페인트나 탄성코트가 들뜨고 부풀어 오르거나, 베란다·세탁실 벽면에 오염 및 결로 흔적이 반복될 때 바탕 정리를 거쳐 시공을 검토할 수 있습니다."
+  },
+  {
+    id: "general-elastic-faq-2",
+    question: "곰팡이나 결로 흔적이 있는 벽면에도 시공할 수 있나요?",
+    answer: "오염된 표면 위에 그대로 덧칠하는 것은 적절하지 않을 수 있습니다. 습도 환경과 표면 상태를 확인하고, 들뜬 도막 긁어내기 및 바탕 정리를 진행한 후 시공하는 것이 원칙입니다."
+  },
+  {
+    id: "general-elastic-faq-3",
+    question: "기존 페인트나 탄성코트가 들떠 있는 경우 다시 시공할 수 있나요?",
+    answer: "현장 점검 시 기존 도막의 접착 상태와 손상 범위를 확인한 뒤 재시공 가능 여부와 정리 범위를 판단하게 됩니다."
+  },
+  {
+    id: "general-elastic-faq-4",
+    question: "벽면 일부만 오염된 경우 부분 보수가 가능한가요?",
+    answer: "손상 범위가 국소적이고 주변 도막 접착력이 양호하다면 부분 정리를 검토할 수 있습니다. 다만 손상이 여러 구역에 퍼져 있다면 전체 상태를 확인하는 것이 안전합니다."
+  },
+  {
+    id: "general-elastic-faq-5",
+    question: "탄성코트 시공 후 건조와 환기 관리는 어떻게 하나요?",
+    answer: "건조 및 환기 시간은 사용 자재, 기온, 습도, 환기 상태 등 현장 조건에 따라 달라지므로 시공 후 안내받은 관리 지침을 지켜주시는 것이 좋습니다."
+  }
+];
+
+// 7. 탄성코트시공 전용 FAQ (5개)
+export const PROCESS_ELASTIC_FAQ_LIST = [
+  {
+    id: "process-elastic-faq-1",
+    question: "탄성코트시공은 어떤 순서와 과정으로 진행되나요?",
+    answer: "현장 보양 및 마스킹 -> 손상 도막 긁어내기 -> 벽면 균열 및 바탕면 보수 필요 여부 확인 -> 선택 자재 적용 마감 -> 현장 건조 및 안내 순으로 진행됩니다."
+  },
+  {
+    id: "process-elastic-faq-2",
+    question: "기존 도막을 긁어내는 바탕 정리 작업이 왜 중요한가요?",
+    answer: "접착력을 잃고 들뜬 도막 위에 덧칠하면 신규 마감재까지 함께 박리될 수 있으므로, 손상 부위를 정돈하고 바탕면을 고르게 만드는 작업이 선행되어야 합니다."
+  },
+  {
+    id: "process-elastic-faq-3",
+    question: "시공 작업 시 주변 오염을 방지하는 보양 작업은 어떻게 이루어지나요?",
+    answer: "샷시, 유리창, 수도꼭지, 전등, 계량기 등 자재가 묻으면 안 되는 구조물 전체를 전용 비닐과 마스킹 테이프로 세심하게 보호합니다."
+  },
+  {
+    id: "process-elastic-faq-4",
+    question: "시공 후 완충 건조 시간은 어떻게 관리되나요?",
+    answer: "사용 자재와 현장의 기온·습도·환기 환경에 따라 건조 시간이 달라지므로, 충분히 경화될 때까지 벽면 접촉이나 수분 노출을 자제하는 관리가 필요합니다."
+  },
+  {
+    id: "process-elastic-faq-5",
+    question: "시공 전 사용자가 미리 준비해야 할 사항은 무엇인가요?",
+    answer: "작업자가 벽면에 접근하여 보양 및 작업할 수 있는 동선 공간을 확보해 주시고, 물 비침이 의심되는 구역은 사전에 알려주시면 상담에 도움이 됩니다."
+  }
+];
+
+// 8. 베란다탄성코트 전용 FAQ (5개)
+export const BALCONY_ELASTIC_FAQ_LIST = [
+  {
+    id: "balcony-elastic-faq-1",
+    question: "베란다 결로나 곰팡이 오염이 심한 벽면에도 시공이 가능한가요?",
+    answer: "벽면의 수분 상태와 오염 원인을 먼저 점검해야 합니다. 환기 및 외벽 온도차 환경을 확인하고 들뜬 페인트를 정돈한 후 선택 자재 마감을 적용합니다."
+  },
+  {
+    id: "balcony-elastic-faq-2",
+    question: "베란다 창 주변이나 외벽 접점의 미세 균열은 어떻게 보수하나요?",
+    answer: "균열의 폭과 표면 상태를 확인하여 적절한 보수재로 바탕을 정돈한 후 탄성코트 작업 범위를 결정합니다."
+  },
+  {
+    id: "balcony-elastic-faq-3",
+    question: "베란다와 연결된 실외기실이나 다용도실도 함께 확인할 수 있나요?",
+    answer: "베란다와 연결된 실외기실/다용도실도 공기 흐름과 벽면 상태를 함께 확인하여 시공 필요 여부를 결정할 수 있습니다."
+  },
+  {
+    id: "balcony-elastic-faq-4",
+    question: "기존 베란다 탄성코트가 들떠 있는 경우 어떻게 조치하나요?",
+    answer: "현장 확인 시 기존 도막의 접착 상태와 손상 범위를 점검한 뒤 긁어내기 및 바탕 정리 범위를 정해 재시공 여부를 판단합니다."
+  },
+  {
+    id: "balcony-elastic-faq-5",
+    question: "베란다 탄성코트 시공 후 환기와 습기 관리는 어떻게 하나요?",
+    answer: "평소 베란다 창문을 통한 주기적인 환기를 권장하며, 벽면 건조 상태는 현장의 기온·습도 지침에 맞춰 관리하는 것이 안전합니다."
+  }
+];
+
+// 9. 아파트탄성코트 전용 FAQ (5개)
+export const APARTMENT_ELASTIC_FAQ_LIST = [
+  {
+    id: "apartment-elastic-faq-1",
+    question: "신축 아파트 입주 시에도 발코니 탄성코트 시공을 검토하나요?",
+    answer: "신축 아파트도 외기 온도 차이로 발코니 습도가 올라갈 수 있습니다. 입주 전 바탕면 상태를 확인하고 탄성 마감을 적용해 쾌적성을 높일 수 있습니다."
+  },
+  {
+    id: "apartment-elastic-faq-2",
+    question: "구축 아파트의 오래된 탄성코트나 수성페인트는 어떻게 작업하나요?",
+    answer: "세월이 지나 들뜨거나 오염된 도막의 접착 상태를 점검하여 손상 부위를 긁어내고 바탕 보수를 거쳐 시공을 진행합니다."
+  },
+  {
+    id: "apartment-elastic-faq-3",
+    question: "아파트 입주 청소나 이사 일정 중 언제 탄성코트를 시공하는 것이 좋나요?",
+    answer: "보양 비닐 설치 및 마감재 건조 시간이 필요하므로, 일반적으로 이사나 입주 청소 전에 탄성코트 시공을 완료하는 일정을 권장합니다."
+  },
+  {
+    id: "apartment-elastic-faq-4",
+    question: "아파트 베란다, 세탁실, 실외기실을 한 번에 확인할 수 있나요?",
+    answer: "발코니 전체 공간의 벽면 상태와 작업 필요 여부를 한 번에 통합 점검하여 균일한 마감 범위를 결정할 수 있습니다."
+  },
+  {
+    id: "apartment-elastic-faq-5",
+    question: "현재 거주 중인 아파트 세대에서도 탄성코트 시공이 가능한가요?",
+    answer: "거주 중에도 시공할 수 있습니다. 다만 작업 대상 벽면 앞의 물건이나 가전을 이동하여 작업 동선을 확보해 주시는 조치가 필요합니다."
+  }
+];
+
+// 10. 탄성코트업체 전용 FAQ (5개)
+export const AGENCY_ELASTIC_FAQ_LIST = [
+  {
+    id: "agency-elastic-faq-1",
+    question: "탄성코트 업체를 비교할 때 어떤 항목을 확인해야 하나요?",
+    answer: "들뜬 도막을 꼼꼼히 긁어내는지, 보양 작업을 세심하게 진행하는지, 바탕 처리 기준과 사후 관리 지침을 투명하게 설명하는지 확인하는 것이 좋습니다."
+  },
+  {
+    id: "agency-elastic-faq-2",
+    question: "탄성코트 시공 견적은 어떤 요소에 따라 차이가 나나요?",
+    answer: "시공 면적, 기존 도막 긁어내기 작업량, 바탕 보수 범위, 가전/가구 보양 난이도에 따라 정직하게 산정됩니다."
+  },
+  {
+    id: "agency-elastic-faq-3",
+    question: "바탕면 긁어내기 작업이나 균열 보수가 시공 범위에 포함되는지 확인하는 방법은?",
+    answer: "단순 덧칠 시공인지 바탕 전처리가 포함된 정석 작업인지 상담 시 사전에 명확히 안내받는 것이 중요합니다."
+  },
+  {
+    id: "agency-elastic-faq-4",
+    question: "시공 후 A/S 및 사후 관리 기준은 어떻게 확인하나요?",
+    answer: "자재 경화 지침과 하자 발생 시 처리 기준, 환기 안내 지침을 성실히 제시하는 업체를 선택하는 것이 안전합니다."
+  },
+  {
+    id: "agency-elastic-faq-5",
+    question: "방문 전 현장 사진만으로 대략적인 업체 상담이 가능한가요?",
+    answer: "작업 공간 전체 모습과 기존 들뜸/오염이 보이는 벽면 사진을 보내주시면 대략적인 예상 작업 범위와 사전 상담이 가능합니다."
+  }
+];
+
 /**
  * FAQ 5개 세트 동적 추출 함수 (Fallback 및 중복 제거 처리)
  */
@@ -176,9 +321,12 @@ export function getFaqItems(parsedKeyword) {
   }
 
   const taskName = parsedKeyword.service.keyword;
-  if (taskName === '세탁실탄성코트') {
-    return LAUNDRY_ELASTIC_FAQ_LIST;
-  }
+  if (taskName === '세탁실탄성코트') return LAUNDRY_ELASTIC_FAQ_LIST;
+  if (taskName === '탄성코트') return GENERAL_ELASTIC_FAQ_LIST;
+  if (taskName === '탄성코트시공') return PROCESS_ELASTIC_FAQ_LIST;
+  if (taskName === '베란다탄성코트') return BALCONY_ELASTIC_FAQ_LIST;
+  if (taskName === '아파트탄성코트') return APARTMENT_ELASTIC_FAQ_LIST;
+  if (taskName === '탄성코트업체') return AGENCY_ELASTIC_FAQ_LIST;
 
   const isElastic = parsedKeyword.service.serviceGroup === 'elastic';
   const baseList = isElastic ? ELASTIC_BASE_FAQ_LIST : GROUT_BASE_FAQ_LIST;

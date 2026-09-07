@@ -73,12 +73,18 @@ export function getWorkTypeTitle(displayRegion, workType) {
  */
 export function getWorkTypeDescription(displayRegion, workType, serviceGroup) {
   switch (workType) {
+    case '탄성코트':
+      return `${displayRegion} 탄성코트 시공을 고민하고 계신가요? 기존 도막의 들뜸·박리와 오염 상태를 점검하여 현재 벽면에 탄성코트가 필요한지 판단할 수 있도록 안내합니다.`;
+    case '탄성코트시공':
+      return `${displayRegion} 탄성코트 시공 과정을 확인해보세요. 바탕 정리, 보양, 손상 부위 보수부터 탄성코트 마감과 건조·관리 기준까지 시공 단계별 안내를 제공합니다.`;
     case '베란다탄성코트':
-      return `${displayRegion} 베란다 탄성코트 상담이 필요하신가요? 벽면의 곰팡이와 오염, 기존 도막의 들뜸과 결로 흔적을 확인하고 필요한 작업 범위를 안내합니다.`;
+      return `${displayRegion} 베란다 탄성코트 상담이 필요하신가요? 외벽 접점과 창 주변, 온도차 및 환기 환경을 점검하고 기존 도막 상태에 맞는 작업 범위를 안내합니다.`;
     case '세탁실탄성코트':
       return `${displayRegion} 세탁실탄성코트 시공 전 배관·수도 주변 물자국과 습기 원인, 기존 도막의 들뜸·박리 상태를 확인하고 필요한 바탕 정리와 작업 범위를 안내합니다.`;
     case '아파트탄성코트':
-      return `${displayRegion} 아파트 탄성코트 시공을 알아보고 계신가요? 베란다·세탁실·실외기실 등 공간별 벽면 상태에 맞춰 작업 범위를 안내합니다.`;
+      return `${displayRegion} 아파트 탄성코트 시공을 알아보고 계신가요? 신축·구축, 입주 전후 등 현장 상태와 공간별(베란다·세탁실·실외기실) 벽면 조건에 맞춘 작업 범위를 안내합니다.`;
+    case '탄성코트업체':
+      return `${displayRegion} 탄성코트 업체 선택 기준을 확인하세요. 견적 구성, 바탕 정리 및 보양 포함 여부, A/S 기준 등 합리적인 비교 판단 요소를 안내합니다.`;
     case '욕실줄눈시공':
       return `${displayRegion} 욕실 줄눈시공 상담이 필요하신가요? 타일 틈의 오염과 기존 백시멘트 상태, 물 사용 환경을 확인하고 시공 범위를 안내합니다.`;
     case '현관줄눈시공':
