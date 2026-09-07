@@ -51,6 +51,8 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
   const heroData = getHeroContent(parsedKeyword);
   const { isDynamic, heroBadgeLabel, heroTitlePrefix, heroTitleSuffix, heroDescription, imageInfoLabel, qualityBadge, imageAltText } = heroData;
 
+  const serviceGroup = parsedKeyword?.service?.serviceGroup ?? 'elastic';
+
   // 2. H1 제목 (JSX 렌더링)
   const heroH1 = isDynamic ? (
     <>
