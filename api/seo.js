@@ -2,6 +2,8 @@ import { parseAndValidateK, getActiveRegions, generateDynamicUrl } from '../src/
 import { serviceKeywords } from '../src/data/serviceKeywords.js';
 import { getSeoMetadata } from '../src/data/seoTemplates.js';
 import { getFaqItems } from '../src/data/faqData.js';
+import { getDynamicPageModel } from '../src/data/pageModelEngine.js';
+import { renderSemanticBody } from '../src/data/semanticBodyRenderer.js';
 import fs from 'fs';
 import path from 'path';
 
@@ -105,6 +107,13 @@ export default async function handler(req, res) {
     if (parseResult.isValid) {
       const meta = getSeoMetadata({ parsedKeyword: parseResult });
       html = injectSeoHead(html, meta);
+
+      // Pilot: Elastic only semantic body injection for initial first-byte HTML
+      if (parseResult.service?.serviceGroup === 'elastic') {
+        const pageModel = getDynamicPageModel({ parsedKeyword: parseResult });
+        const semanticHtml = renderSemanticBody(pageModel);
+        html = html.replace(/<div id="root">\s*<\/div>/i, `<div id="root">${semanticHtml}</div>`);
+      }
 
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
       return res.status(200).send(html);
