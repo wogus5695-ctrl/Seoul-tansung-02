@@ -48,6 +48,16 @@ function buildIndexes() {
     }
   });
 
+  const displaySlugCounts = new Map();
+  keywordMetadata.forEach(item => {
+    const d = normalizeKeywordParam(item.displayRegion);
+    if (d) {
+      displaySlugCounts.set(d, (displaySlugCounts.get(d) || 0) + 1);
+    }
+  });
+
+  const deferredDisplayEntries = [];
+
   keywordMetadata.forEach(item => {
     const displaySlug = normalizeKeywordParam(item.displayRegion);
     const slug = normalizeKeywordParam(item.routeKey);
@@ -141,17 +151,31 @@ function buildIndexes() {
 
     const legacySlug = normalizeKeywordParam(item.legacySlug);
 
-    if (displaySlug) {
-      activeRegionIndex.set(displaySlug, entry);
-      previewRegionIndex.set(displaySlug, entry);
-    }
-    if (slug && slug !== displaySlug) {
+    if (slug) {
       activeRegionIndex.set(slug, entry);
       previewRegionIndex.set(slug, entry);
     }
+    if (displaySlug && displaySlug !== slug) {
+      deferredDisplayEntries.push({ displaySlug, entry });
+    }
     if (legacySlug && legacySlug !== slug && legacySlug !== displaySlug) {
-      activeRegionIndex.set(legacySlug, entry);
-      previewRegionIndex.set(legacySlug, entry);
+      if (!activeRegionIndex.has(legacySlug)) {
+        activeRegionIndex.set(legacySlug, entry);
+        previewRegionIndex.set(legacySlug, entry);
+      }
+    }
+  });
+
+  deferredDisplayEntries.forEach(({ displaySlug, entry }) => {
+    if (!activeRegionIndex.has(displaySlug)) {
+      if (displaySlugCounts.get(displaySlug) === 1) {
+        activeRegionIndex.set(displaySlug, entry);
+      }
+    }
+    if (!previewRegionIndex.has(displaySlug)) {
+      if (displaySlugCounts.get(displaySlug) === 1) {
+        previewRegionIndex.set(displaySlug, entry);
+      }
     }
   });
 }
