@@ -243,3 +243,22 @@ export const serviceKeywords = [
     imagePlaceholderKey: 'TOILET_GROUT_IMAGE'
   }
 ];
+
+// Core Elastic CRO Rollout Targets (6개 탄성코트 전 서비스)
+export const CORE_ELASTIC_CRO_TARGETS = new Set([
+  '탄성코트',
+  '탄성코트시공',
+  '베란다탄성코트',
+  '세탁실탄성코트',
+  '아파트탄성코트',
+  '탄성코트업체'
+]);
+
+/**
+ * 주어진 서비스 키워드가 Core Elastic CRO 대상인지 판별하는 헬퍼 함수
+ */
+export function isElasticCroTarget(serviceKeyword) {
+  if (!serviceKeyword) return false;
+  return CORE_ELASTIC_CRO_TARGETS.has(serviceKeyword);
+}
+

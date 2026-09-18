@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { WORK_STANDARD_CONTENT } from '../data/processData.js';
+import { isElasticCroTarget } from '../data/serviceKeywords.js';
 
 // 세탁실탄성코트 Pilot MO용 3단계 핵심 Summary 데이터
 const LAUNDRY_PILOT_SUMMARY_STEPS = [
@@ -24,14 +25,14 @@ const LAUNDRY_PILOT_SUMMARY_STEPS = [
  * 네오코트 시공 원칙 컴포넌트 (NeoCoatStandard)
  * - 딥 블루 (#1E3A8A) 고품격 브랜드 영역
  * - PC: 5개 원칙 연결선 선형 타임라인 (01 ─ 02 ─ 03 ─ 04 ─ 05) 유지
- * - 모바일(세탁실탄성코트 Pilot): 기본 3개 핵심 Summary 노출 + 5단계 전환 토글 스위치
+ * - 모바일(Core Elastic CRO Targets): 기본 3개 핵심 Summary 노출 + 5단계 전환 토글 스위치
  * - 모바일(기타 키워드): 기존 수직 타임라인 유지
  * - 단색 틸/화이트 라인 아이콘 적용
  */
 export function NeoCoatStandard({ parsedKeyword }) {
   const { label, title, description, principles } = WORK_STANDARD_CONTENT;
   const taskName = parsedKeyword?.service?.keyword;
-  const isCompactStandard = taskName === '세탁실탄성코트' || taskName === '베란다탄성코트';
+  const isCompactStandard = isElasticCroTarget(taskName);
   const [isDetailOpen, setIsDetailOpen] = useState(false);
 
   // 원칙별 단색 SVG 라인 아이콘 맵

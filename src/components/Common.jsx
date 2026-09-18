@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { siteConfig } from '../config';
+import { isElasticCroTarget } from '../data/serviceKeywords.js';
 
 // 1. Header Component with Mobile Hamburger Menu and Keyboard accessibility
 export function Header({ onNavigate, currentPath }) {
@@ -330,20 +331,42 @@ export function ServiceSection({ id, label, title, description, children }) {
 }
 
 // 10. SEOContentSection Component
+const SAFE_REGION_CONTENT_MAP = {
+  '세탁실탄성코트': {
+    titleSuffix: '세탁실탄성코트 상담 시 확인하는 부분',
+    body: '세탁실의 기존 도막 상태와 배관 주변 습기, 곰팡이·오염·들뜸 여부 등을 확인한 뒤 현재 상태에 필요한 작업 범위를 안내합니다. 벽면 상태와 주변 설비 환경에 따라 바탕 정리와 보수 범위가 달라질 수 있습니다.'
+  },
+  '베란다탄성코트': {
+    titleSuffix: '베란다탄성코트 상담 시 확인하는 부분',
+    body: '베란다 벽면의 기존 도막 상태와 창틀·외벽 접점의 균열, 결로 흔적 및 곰팡이·오염 여부 등을 확인한 뒤 현재 상태에 필요한 작업 범위를 안내합니다. 벽면의 들뜸 상태와 시공 환경에 따라 바탕 정리와 보수 범위가 달라질 수 있습니다.'
+  },
+  '탄성코트': {
+    titleSuffix: '탄성코트 상담 시 확인하는 부분',
+    body: '기존 도막 상태, 곰팡이·오염·들뜸 여부, 벽면과 주변 환경을 확인한 뒤 현재 상태에 필요한 작업 범위를 안내합니다. 바탕 상태에 따라 정리 및 보수 범위가 달라질 수 있습니다.'
+  },
+  '탄성코트시공': {
+    titleSuffix: '탄성코트시공 상담 시 확인하는 부분',
+    body: '기존 벽면 및 도막 상태, 보수 필요 범위, 주변 보양 대상과 시공 전 확인이 필요한 요소를 점검한 뒤 필요한 작업 범위를 안내합니다. 바탕면 손상 정도에 따라 공정별 작업 기준이 달라질 수 있습니다.'
+  },
+  '아파트탄성코트': {
+    titleSuffix: '아파트탄성코트 상담 시 확인하는 부분',
+    body: '아파트의 베란다·세탁실·실외기실 등 시공 예정 공간의 기존 도막 상태와 곰팡이·오염·들뜸 여부를 확인하고 공간별 필요한 작업 범위를 안내합니다. 세대별 구조와 벽면 환경에 따라 바탕 정리와 보수 범위가 달라질 수 있습니다.'
+  },
+  '탄성코트업체': {
+    titleSuffix: '탄성코트업체 상담 시 확인하는 부분',
+    body: '시공 예정 공간과 기존 벽면 상태, 보수 필요 범위 및 주변 설비 환경을 확인한 뒤 정직한 상담에 필요한 작업 범위를 안내합니다. 과장된 덧칠 대신 현장 상태에 맞춘 바탕 정리를 우선 검토합니다.'
+  }
+};
+
 export function SEOContentSection({ keywordInfo }) {
   if (!keywordInfo) return null;
 
-  const isLaundryPilot = keywordInfo.service === '세탁실탄성코트';
-  const isBalconyPilot = keywordInfo.service === '베란다탄성코트';
+  const isElastic = isElasticCroTarget(keywordInfo.service);
 
-  if (isLaundryPilot || isBalconyPilot) {
-    const isBalcony = isBalconyPilot;
-    const sectionTitle = isBalcony
-      ? `${keywordInfo.region} 베란다탄성코트 상담 시 확인하는 부분`
-      : `${keywordInfo.region} 세탁실탄성코트 상담 시 확인하는 부분`;
-    const sectionBody = isBalcony
-      ? '베란다 벽면의 기존 도막 상태와 창틀·외벽 접점의 균열, 결로 흔적 및 곰팡이·오염 여부 등을 확인한 뒤 현재 상태에 필요한 작업 범위를 안내합니다. 벽면의 들뜸 상태와 시공 환경에 따라 바탕 정리와 보수 범위가 달라질 수 있습니다.'
-      : '세탁실의 기존 도막 상태와 배관 주변 습기, 곰팡이·오염·들뜸 여부 등을 확인한 뒤 현재 상태에 필요한 작업 범위를 안내합니다. 벽면 상태와 주변 설비 환경에 따라 바탕 정리와 보수 범위가 달라질 수 있습니다.';
+  if (isElastic) {
+    const safeContent = SAFE_REGION_CONTENT_MAP[keywordInfo.service] || SAFE_REGION_CONTENT_MAP['세탁실탄성코트'];
+    const sectionTitle = `${keywordInfo.region} ${safeContent.titleSuffix}`;
+    const sectionBody = safeContent.body;
 
     return (
       <section

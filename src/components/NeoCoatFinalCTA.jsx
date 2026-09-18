@@ -1,6 +1,7 @@
 import React from 'react';
 import { contactConfig } from '../config/contactConfig.js';
 import { imageConfig } from '../config/imageConfig.js';
+import { isElasticCroTarget } from '../data/serviceKeywords.js';
 
 // Intent별 3가지 사진 상담 안내 데이터
 const CONSULTATION_GUIDE_BY_INTENT = {
@@ -37,19 +38,87 @@ const CONSULTATION_GUIDE_BY_INTENT = {
       title: '주변 환경',
       desc: '창틀·샷시·우수관 등 벽면과 접하는 주변 환경'
     }
+  ],
+  '탄성코트': [
+    {
+      num: '01',
+      title: '공간 전체',
+      desc: '시공을 확인하려는 공간 전체가 보이는 사진'
+    },
+    {
+      num: '02',
+      title: '문제가 있는 부분',
+      desc: '곰팡이·오염·들뜸 등 벽면 상태가 보이는 부분'
+    },
+    {
+      num: '03',
+      title: '주변 환경',
+      desc: '창틀·배관·설비 등 벽면과 접하는 주변 환경'
+    }
+  ],
+  '탄성코트시공': [
+    {
+      num: '01',
+      title: '시공 예정 공간',
+      desc: '작업 예정 공간의 전체 구조가 보이는 사진'
+    },
+    {
+      num: '02',
+      title: '기존 도막 상태',
+      desc: '현재 벽면 마감과 들뜸·오염 등이 보이는 부분'
+    },
+    {
+      num: '03',
+      title: '보수 필요 부위',
+      desc: '균열·박리 등 바탕 정리가 필요해 보이는 부분'
+    }
+  ],
+  '아파트탄성코트': [
+    {
+      num: '01',
+      title: '시공 예정 공간',
+      desc: '베란다·세탁실·실외기실 등 작업 예정 공간 전체'
+    },
+    {
+      num: '02',
+      title: '벽면 상태',
+      desc: '곰팡이·오염·들뜸 등 기존 도막 상태가 보이는 부분'
+    },
+    {
+      num: '03',
+      title: '주변 설비',
+      desc: '창틀·배관·수전·실외기 주변 등 작업 범위와 접하는 환경'
+    }
+  ],
+  '탄성코트업체': [
+    {
+      num: '01',
+      title: '시공 예정 공간',
+      desc: '상담하려는 공간 전체가 보이는 사진'
+    },
+    {
+      num: '02',
+      title: '현재 벽면 상태',
+      desc: '기존 도막과 문제 부위가 확인되는 사진'
+    },
+    {
+      num: '03',
+      title: '작업 희망 범위',
+      desc: '시공을 원하는 벽면 및 주변 공간이 함께 보이는 사진'
+    }
   ]
 };
 
 /**
  * 네오코트 최종 문의 CTA 섹션 (NeoCoatFinalCTA)
  * - 딥 블루 (`#1E3A8A`) 배경의 브랜드 하단 배너
- * - 세탁실/베란다탄성코트: MO 복원 + 3가지 사진 안내 가이드 카드 탑재
+ * - Core Elastic CRO Targets: MO 복원 + 3가지 사진 안내 가이드 카드 탑재
  * - 기타 Intent: 기존 PC 배너 유지 및 MO 비노출 격리
  * - 전화번호/카카오URL 미확정 시 안전하게 `#contact` 앵커 이동 및 빈 링크 방지
  */
 export function NeoCoatFinalCTA({ parsedKeyword, onNavigate }) {
   const taskName = parsedKeyword?.service?.keyword;
-  const isConsultationActive = taskName === '세탁실탄성코트' || taskName === '베란다탄성코트';
+  const isConsultationActive = isElasticCroTarget(taskName);
   const guideItems = CONSULTATION_GUIDE_BY_INTENT[taskName] || CONSULTATION_GUIDE_BY_INTENT['세탁실탄성코트'];
 
   const getPhotoContactHref = () => {

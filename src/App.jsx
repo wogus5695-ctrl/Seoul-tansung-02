@@ -27,7 +27,7 @@ import {
 
 // Ingest datasets
 import { seoulRegions } from './data/seoulRegions';
-import { serviceKeywords } from './data/serviceKeywords';
+import { serviceKeywords, isElasticCroTarget } from './data/serviceKeywords';
 import { parseAndValidateK, getActiveRegions, getFilteredServices, ENABLE_CAPITAL_REGION_EXPANSION, generateDynamicUrl, generateAbsoluteDynamicUrl } from './data/regionResolver';
 import { incheonRegions } from './data/incheonRegions';
 import { gyeonggiRegions } from './data/gyeonggiRegions';
@@ -985,7 +985,7 @@ function App() {
         {/* 1. HERO SECTION */}
         <NeoCoatHero parsedKeyword={parsedKeyword} onNavigate={navigate} />
 
-        {parsedKeyword?.service?.keyword === '세탁실탄성코트' || parsedKeyword?.service?.keyword === '베란다탄성코트' ? (
+        {isElasticCroTarget(parsedKeyword?.service?.keyword) ? (
           <>
             {/* 2. IMAGE-FIRST BEFORE & AFTER EVIDENCE SECTION (EXACT INTENT ONLY) */}
             <NeoCoatBeforeAfter parsedKeyword={parsedKeyword} />
@@ -1009,7 +1009,7 @@ function App() {
           parsedKeyword={parsedKeyword}
           onNavigate={navigate}
           isDesktop={isDesktop}
-          collapseSecondaryOnMobile={parsedKeyword?.service?.keyword === '세탁실탄성코트' || parsedKeyword?.service?.keyword === '베란다탄성코트'}
+          collapseSecondaryOnMobile={isElasticCroTarget(parsedKeyword?.service?.keyword)}
         />
         <NeoCoatSpaces
           activeTab={serviceTab}
