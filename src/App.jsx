@@ -1018,7 +1018,7 @@ function App() {
         />
 
         {/* 4. NEO COAT STANDARD */}
-        <NeoCoatStandard />
+        <NeoCoatStandard parsedKeyword={parsedKeyword} />
 
         {/* 5. CASES SECTION (Conditional Rendering via featureConfig) */}
         {featureConfig.caseStudies && (

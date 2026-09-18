@@ -332,6 +332,79 @@ export function ServiceSection({ id, label, title, description, children }) {
 // 10. SEOContentSection Component
 export function SEOContentSection({ keywordInfo }) {
   if (!keywordInfo) return null;
+
+  const isLaundryPilot = keywordInfo.service === '세탁실탄성코트';
+
+  if (isLaundryPilot) {
+    return (
+      <section
+        className="neo-region-safe-guide"
+        aria-label={`${keywordInfo.region} 세탁실탄성코트 시공 안내`}
+        style={{
+          backgroundColor: '#F8FAFC',
+          borderTop: '1px solid #E2E8F0',
+          padding: '48px 0',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '860px',
+            margin: '0 auto',
+            padding: '0 var(--mobile-side-margin, 20px)',
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: '#FFFFFF',
+              border: '1px solid #E2E8F0',
+              borderRadius: '16px',
+              padding: '28px 24px',
+              boxShadow: '0 2px 8px rgba(15, 23, 42, 0.03)',
+              textAlign: 'left',
+            }}
+          >
+            <div
+              style={{
+                fontSize: '12.5px',
+                fontWeight: '700',
+                color: 'var(--neo-color-accent, #0D9488)',
+                letterSpacing: '0.5px',
+                marginBottom: '8px',
+                textTransform: 'uppercase',
+              }}
+            >
+              시공 환경 안내
+            </div>
+            <h3
+              style={{
+                fontSize: '18px',
+                fontWeight: '700',
+                color: 'var(--neo-color-primary, #1E3A8A)',
+                marginBottom: '12px',
+                wordBreak: 'keep-all',
+                lineHeight: '1.4',
+              }}
+            >
+              {keywordInfo.region} 세탁실탄성코트 상담 시 확인하는 부분
+            </h3>
+            <p
+              style={{
+                fontSize: '14.5px',
+                color: 'var(--neo-color-text-secondary, #475569)',
+                lineHeight: '1.65',
+                margin: 0,
+                wordBreak: 'keep-all',
+              }}
+            >
+              세탁실의 기존 도막 상태와 배관 주변 습기, 곰팡이·오염·들뜸 여부 등을 확인한 뒤 현재 상태에 필요한 작업 범위를 안내합니다. 벽면 상태와 주변 설비 환경에 따라 바탕 정리와 보수 범위가 달라질 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Non-pilot intents: preserve original layout and text
   return (
     <SectionContainer background="beige">
       <div style={styles.seoBox}>

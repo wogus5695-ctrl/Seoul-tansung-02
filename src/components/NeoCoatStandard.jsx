@@ -1,15 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { WORK_STANDARD_CONTENT } from '../data/processData.js';
+
+// 세탁실탄성코트 Pilot MO용 3단계 핵심 Summary 데이터
+const LAUNDRY_PILOT_SUMMARY_STEPS = [
+  {
+    num: '01',
+    title: '바탕 상태 확인',
+    desc: '기존 상태와 필요한 작업 범위를 확인합니다.'
+  },
+  {
+    num: '02',
+    title: '보양·공정별 시공',
+    desc: '주변 공간을 보호하고 필요한 공정을 순서대로 진행합니다.'
+  },
+  {
+    num: '03',
+    title: '마감 확인 및 관리',
+    desc: '마감 상태와 건조·관리 내용을 확인합니다.'
+  }
+];
 
 /**
  * 네오코트 시공 원칙 컴포넌트 (NeoCoatStandard)
  * - 딥 블루 (#1E3A8A) 고품격 브랜드 영역
- * - PC: 5개 원칙 연결선 선형 타임라인 (01 ─ 02 ─ 03 ─ 04 ─ 05)
- * - 모바일: 수직 타임라인 (좌측 번호/연결선 + 우측 제목/설명)
+ * - PC: 5개 원칙 연결선 선형 타임라인 (01 ─ 02 ─ 03 ─ 04 ─ 05) 유지
+ * - 모바일(세탁실탄성코트 Pilot): 기본 3개 핵심 Summary 노출 + 5단계 전환 토글 스위치
+ * - 모바일(기타 키워드): 기존 수직 타임라인 유지
  * - 단색 틸/화이트 라인 아이콘 적용
  */
-export function NeoCoatStandard() {
+export function NeoCoatStandard({ parsedKeyword }) {
   const { label, title, description, principles } = WORK_STANDARD_CONTENT;
+  const isLaundryPilot = parsedKeyword?.service?.keyword === '세탁실탄성코트';
+  const [isDetailOpen, setIsDetailOpen] = useState(false);
 
   // 원칙별 단색 SVG 라인 아이콘 맵
   const renderStandardIcon = (id) => {
@@ -129,8 +151,33 @@ export function NeoCoatStandard() {
           </p>
         </div>
 
-        {/* 5 Principles Linear Timeline (PC & Mobile Responsive) */}
-        <div className="neo-standard-timeline">
+        {/* 1. Laundry Pilot MO Summary 3 Steps (Mobile only when isLaundryPilot && !isDetailOpen) */}
+        {isLaundryPilot && !isDetailOpen && (
+          <div className="pilot-mo-summary-stack">
+            {LAUNDRY_PILOT_SUMMARY_STEPS.map((item, idx) => (
+              <div key={item.num} className="pilot-summary-item">
+                <div className="step-num-icon-row">
+                  <div className="step-num-badge">{item.num}</div>
+                  <h3 className="card-h3" style={{ fontSize: '16.5px', color: '#FFFFFF', margin: 0, fontWeight: '700' }}>
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="body-default" style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.8)', margin: '4px 0 0 0', paddingLeft: '4px', lineHeight: '1.55', wordBreak: 'keep-all' }}>
+                  {item.desc}
+                </p>
+                {idx < LAUNDRY_PILOT_SUMMARY_STEPS.length - 1 && (
+                  <div className="pilot-summary-line" />
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* 2. 5 Principles Linear Timeline (PC always, MO depends on isDetailOpen for Pilot) */}
+        <div
+          id="standard-full-detail"
+          className={`neo-standard-timeline ${isLaundryPilot ? (isDetailOpen ? 'pilot-mo-full-open' : 'pilot-mo-full-closed') : ''}`}
+        >
           {principles.map((item, idx) => (
             <div key={item.id} className="neo-standard-step-item">
               <div className="step-num-icon-row">
@@ -152,6 +199,21 @@ export function NeoCoatStandard() {
             </div>
           ))}
         </div>
+
+        {/* 3. Laundry Pilot Detail Toggle Button (MO only) */}
+        {isLaundryPilot && (
+          <div className="pilot-standard-toggle-wrapper">
+            <button
+              type="button"
+              onClick={() => setIsDetailOpen(prev => !prev)}
+              aria-expanded={isDetailOpen}
+              aria-controls="standard-full-detail"
+              className="pilot-standard-toggle-btn"
+            >
+              <span>{isDetailOpen ? '네오코트 5단계 시공 기준 접기 ▴' : '네오코트 5단계 시공 기준 자세히 보기 ▾'}</span>
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Standard Timeline Styling */}
@@ -166,10 +228,10 @@ export function NeoCoatStandard() {
 
         @media (min-width: 1024px) {
           .neo-standard-timeline {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
-            align-items: start;
+            display: grid !important;
+            grid-template-columns: repeat(5, 1fr) !important;
+            gap: 20px !important;
+            align-items: start !important;
           }
         }
 
@@ -233,7 +295,65 @@ export function NeoCoatStandard() {
           margin-left: 20px;
         }
 
+        /* MO Pilot Summary 3 Steps Styling */
+        .pilot-mo-summary-stack {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          text-align: left;
+        }
+
+        .pilot-summary-item {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .pilot-summary-line {
+          width: 2px;
+          height: 16px;
+          background-color: rgba(255, 255, 255, 0.2);
+          margin: 10px 0 10px 18px;
+        }
+
+        .pilot-standard-toggle-wrapper {
+          margin-top: 24px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .pilot-standard-toggle-btn {
+          width: 100%;
+          max-width: 400px;
+          min-height: 48px;
+          padding: 12px 20px;
+          border-radius: 12px;
+          background-color: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          color: #FFFFFF;
+          font-size: 14.5px;
+          font-weight: 600;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          transition: all 0.2s ease;
+        }
+
+        .pilot-standard-toggle-btn:hover {
+          background-color: rgba(255, 255, 255, 0.15);
+          border-color: rgba(255, 255, 255, 0.4);
+        }
+
         @media (max-width: 767px) {
+          .pilot-mo-full-closed {
+            display: none !important;
+          }
+          .pilot-mo-full-open {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 16px !important;
+          }
           .neo-standard-timeline {
             gap: 16px !important;
           }
@@ -267,9 +387,21 @@ export function NeoCoatStandard() {
           }
         }
 
+        @media (min-width: 768px) {
+          .pilot-mo-summary-stack {
+            display: none !important;
+          }
+          .pilot-standard-toggle-wrapper {
+            display: none !important;
+          }
+        }
+
         @media (min-width: 1024px) {
           .mobile-timeline-line {
             display: none;
+          }
+          .pilot-mo-full-closed {
+            display: grid !important;
           }
         }
       `,
