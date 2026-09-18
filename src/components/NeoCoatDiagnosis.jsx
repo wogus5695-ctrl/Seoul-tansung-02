@@ -436,11 +436,20 @@ export function NeoCoatDiagnosis({ parsedKeyword, isCompact = false, isDesktop =
         .pc-only-desc {
           display: inline;
         }
+        /* CRO Unified Diagnosis for all Core Elastic: Hide decorative image on both PC and MO */
+        .neo-diagnosis.is-compact-pilot .neo-diagnosis-left {
+          display: none !important;
+        }
+        .neo-diagnosis.is-compact-pilot .neo-diagnosis-grid {
+          display: block !important;
+          max-width: 860px;
+          margin: 0 auto;
+        }
+        .neo-diagnosis.is-compact-pilot .neo-diagnosis-right {
+          max-width: 100% !important;
+        }
 
         @media (max-width: 767px) {
-          .neo-diagnosis.is-compact-pilot .neo-diagnosis-left {
-            display: none !important;
-          }
           .mobile-only-title,
           .mobile-only-desc {
             display: inline !important;

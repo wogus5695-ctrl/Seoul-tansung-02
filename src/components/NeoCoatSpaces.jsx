@@ -174,7 +174,7 @@ export function NeoCoatSpaces({ activeTab, parsedKeyword, isDesktop }) {
                 gap: '6px'
               }}
             >
-              <span>{showMore ? '적용 공간 접기' : '다른 적용 공간 3곳 보기'}</span>
+              <span>{showMore ? '적용 공간 접기' : '다른 적용 공간 더 보기'}</span>
               <svg
                 width="16"
                 height="16"
