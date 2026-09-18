@@ -10,15 +10,23 @@ import { getDiagnosisItems } from '../data/diagnosisContent.js';
  * - 접속 서비스군 및 12개 세부 작업명에 따른 첫 번째 문제 항목 우선순위 자동 정렬
  * - 접근성 ARIA (aria-expanded, aria-controls, button) 및 키보드 조작 완벽 지원
  */
-export function NeoCoatDiagnosis({ parsedKeyword, isCompact = false }) {
-  const [openIndex, setOpenIndex] = useState(isCompact ? -1 : 0); // 컴팩트 모드에서는 기본 닫힘
+export function NeoCoatDiagnosis({ parsedKeyword, isCompact = false, isDesktop = false }) {
+  const isPc = isDesktop || (typeof window !== 'undefined' && window.innerWidth >= 1024);
+
+  const getDefaultOpenIndex = () => {
+    if (isPc) return 0; // PC는 첫 번째 항목 항상 기본 열림 유지
+    if (isCompact) return -1; // MO 세탁실 파일럿에서는 전체 기본 닫힘
+    return 0; // 일반 모바일 화면에서는 기존처럼 첫 항목 열림 유지
+  };
+
+  const [openIndex, setOpenIndex] = useState(getDefaultOpenIndex());
   const [showMore, setShowMore] = useState(false);
   const [imgError, setImgError] = useState(false);
 
-  // isCompact 또는 parsedKeyword 변경 시 openIndex 동기화
+  // isCompact, isDesktop 또는 parsedKeyword 변경 시 openIndex 동기화
   React.useEffect(() => {
-    setOpenIndex(isCompact ? -1 : 0);
-  }, [isCompact, parsedKeyword]);
+    setOpenIndex(getDefaultOpenIndex());
+  }, [isCompact, isDesktop, parsedKeyword]);
 
   // 동적/메인 구분
   const isDynamic = !!parsedKeyword;
@@ -52,6 +60,7 @@ export function NeoCoatDiagnosis({ parsedKeyword, isCompact = false }) {
   return (
     <section
       aria-labelledby="diagnosis-title"
+      className={`neo-diagnosis ${isCompact ? 'is-compact-pilot' : ''}`}
       style={{
         backgroundColor: 'var(--neo-color-bg-white, #FFFFFF)',
         padding: isCompact ? '48px 0' : '80px 0',
@@ -429,6 +438,9 @@ export function NeoCoatDiagnosis({ parsedKeyword, isCompact = false }) {
         }
 
         @media (max-width: 767px) {
+          .neo-diagnosis.is-compact-pilot .neo-diagnosis-left {
+            display: none !important;
+          }
           .mobile-only-title,
           .mobile-only-desc {
             display: inline !important;

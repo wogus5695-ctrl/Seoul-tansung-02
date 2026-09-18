@@ -10,8 +10,16 @@ import { getServicesByGroupAndTask } from '../data/serviceSpaceContent.js';
  * - 대표 카드 하단에만 '시공 범위 상담하기' CTA 배치
  * - 이미지가 존재할 때만 표시하고, 미등록 시 중립 아이콘 Placeholder 안전 노출
  */
-export function NeoCoatServices({ activeTab, onTabChange, parsedKeyword, onNavigate, isDesktop }) {
+export function NeoCoatServices({
+  activeTab,
+  onTabChange,
+  parsedKeyword,
+  onNavigate,
+  isDesktop,
+  collapseSecondaryOnMobile = false
+}) {
   const [imgError, setImgError] = useState({});
+  const [showAllSecondary, setShowAllSecondary] = useState(false);
 
   const taskName = parsedKeyword ? parsedKeyword.service.keyword : '';
   const { primary, secondary } = getServicesByGroupAndTask(activeTab, taskName);
@@ -236,9 +244,46 @@ export function NeoCoatServices({ activeTab, onTabChange, parsedKeyword, onNavig
             </div>
           </div>
 
+          {/* Mobile Secondary Services Toggle Button (세탁실탄성코트 Pilot) */}
+          {collapseSecondaryOnMobile && (
+            <div className="secondary-services-toggle-wrap">
+              <button
+                type="button"
+                id="toggle-secondary-services-btn"
+                aria-expanded={showAllSecondary}
+                aria-controls="secondary-services-container"
+                onClick={() => setShowAllSecondary(prev => !prev)}
+                className="secondary-services-toggle-btn"
+              >
+                <span>
+                  {showAllSecondary
+                    ? `다른 ${activeTab === 'elasticCoat' ? '탄성코트' : '줄눈시공'} 서비스 접기`
+                    : `다른 ${activeTab === 'elasticCoat' ? '탄성코트' : '줄눈시공'} 서비스 보기 (${secondary.length})`}
+                </span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  style={{
+                    transform: showAllSecondary ? 'rotate(180deg)' : 'rotate(0deg)',
+                    transition: 'transform 0.25s ease',
+                  }}
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+            </div>
+          )}
+
           {/* RIGHT: 작은 보조 서비스 카드 3개 스택 (45~52%) */}
-          <div className="neo-secondary-services-stack">
-            {secondary.slice(0, isDesktop ? 3 : 2).map((sec) => {
+          <div
+            id="secondary-services-container"
+            className={`neo-secondary-services-stack ${collapseSecondaryOnMobile && !isDesktop && !showAllSecondary ? 'is-collapsed-mobile' : ''}`}
+          >
+            {(collapseSecondaryOnMobile ? secondary : secondary.slice(0, isDesktop ? 3 : 2)).map((sec) => {
               const secImgSrc = imageConfig.serviceImages[sec.id] || '';
 
               return (
@@ -421,6 +466,41 @@ export function NeoCoatServices({ activeTab, onTabChange, parsedKeyword, onNavig
         }
         .pc-only-services-title {
           display: inline;
+        }
+
+        .secondary-services-toggle-wrap {
+          display: none;
+        }
+
+        @media (max-width: 1023px) {
+          .secondary-services-toggle-wrap {
+            display: block;
+            width: 100%;
+          }
+          .secondary-services-toggle-btn {
+            width: 100%;
+            min-height: 48px;
+            padding: 12px 20px;
+            background-color: var(--neo-color-bg-white, #FFFFFF);
+            border: 1px solid var(--neo-color-border, #E2E8F0);
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--neo-color-primary, #1E3A8A);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+            transition: all 0.2s ease;
+          }
+          .secondary-services-toggle-btn:active {
+            background-color: var(--neo-color-bg-blue-light, #EFF6FF);
+          }
+          .neo-secondary-services-stack.is-collapsed-mobile {
+            display: none !important;
+          }
         }
 
         @media (max-width: 767px) {

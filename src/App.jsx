@@ -992,13 +992,13 @@ function App() {
 
             {/* 3. TRUST STRIP & COMPACT PROBLEM DIAGNOSIS */}
             <NeoCoatTrustStrip />
-            <NeoCoatDiagnosis parsedKeyword={parsedKeyword} isCompact={true} />
+            <NeoCoatDiagnosis parsedKeyword={parsedKeyword} isCompact={true} isDesktop={isDesktop} />
           </>
         ) : (
           <>
             {/* 2. TRUST STRIP & PROBLEM DIAGNOSIS SECTIONS */}
             <NeoCoatTrustStrip />
-            <NeoCoatDiagnosis parsedKeyword={parsedKeyword} />
+            <NeoCoatDiagnosis parsedKeyword={parsedKeyword} isDesktop={isDesktop} />
           </>
         )}
 
@@ -1009,6 +1009,7 @@ function App() {
           parsedKeyword={parsedKeyword}
           onNavigate={navigate}
           isDesktop={isDesktop}
+          collapseSecondaryOnMobile={parsedKeyword?.service?.keyword === '세탁실탄성코트'}
         />
         <NeoCoatSpaces
           activeTab={serviceTab}
