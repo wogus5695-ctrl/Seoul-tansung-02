@@ -166,6 +166,18 @@ export function getPublishedCaseStudies(groupKey, taskName) {
   return publishedList.sort((a, b) => (a.displayOrder || 99) - (b.displayOrder || 99));
 }
 
+export const BROAD_ELASTIC_INTENTS = new Set([
+  '탄성코트',
+  '탄성코트시공',
+  '아파트탄성코트',
+  '탄성코트업체'
+]);
+
+export const SHARED_ELASTIC_EVIDENCE_CASE_IDS = [
+  'elastic-case-01',
+  'balcony-case-01'
+];
+
 /**
  * Intent별 실제 시공 사례 추출 함수 (Exact Intent Matching)
  * - 작업명과 정확히 일치하고 published 상태이며 beforeImage & afterImage가 유효한 사례만 반환
@@ -176,6 +188,52 @@ export function getExactIntentCases(taskName) {
   return CASE_STUDIES.elasticCoat.filter(
     c => c.status === 'published' && c.workType === taskName && c.beforeImage && c.afterImage
   );
+}
+
+/**
+ * Intent별 실제 시공 사례 추출 셀렉터 (CRO Architecture)
+ * - Exact Space Intent (세탁실탄성코트, 베란다탄성코트): 각각 고유한 published 2건 반환
+ * - Broad Elastic Intent (탄성코트, 탄성코트시공, 아파트탄성코트, 탄성코트업체):
+ *   검증 완료된 세탁실(Case 01) 및 베란다(Case 01)의 실제 현장 2건을 Shared Evidence로 재사용
+ * - 그 외(줄눈 등): 빈 배열 반환 (0건)
+ */
+export function getBeforeAfterCasesForIntent(serviceKeyword) {
+  if (!serviceKeyword) return [];
+
+  if (serviceKeyword === '세탁실탄성코트') {
+    return CASE_STUDIES.elasticCoat.filter(
+      c => c.status === 'published' && c.workType === '세탁실탄성코트' && c.beforeImage && c.afterImage
+    );
+  }
+
+  if (serviceKeyword === '베란다탄성코트') {
+    return CASE_STUDIES.elasticCoat.filter(
+      c => c.status === 'published' && c.workType === '베란다탄성코트' && c.beforeImage && c.afterImage
+    );
+  }
+
+  if (BROAD_ELASTIC_INTENTS.has(serviceKeyword)) {
+    const laundryCase = CASE_STUDIES.elasticCoat.find(c => c.id === 'elastic-case-01');
+    const balconyCase = CASE_STUDIES.elasticCoat.find(c => c.id === 'balcony-case-01');
+    if (!laundryCase || !balconyCase) return [];
+
+    return [
+      {
+        ...laundryCase,
+        id: 'shared-elastic-case-01',
+        caseLabel: 'CASE 01',
+        title: '세탁실 벽면 탄성코트 시공 전후'
+      },
+      {
+        ...balconyCase,
+        id: 'shared-balcony-case-01',
+        caseLabel: 'CASE 02',
+        title: '베란다 벽면 탄성코트 시공 전후'
+      }
+    ];
+  }
+
+  return [];
 }
 
 /**

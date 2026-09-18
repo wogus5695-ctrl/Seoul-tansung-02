@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { getExactIntentCases } from '../data/caseData.js';
+import { getBeforeAfterCasesForIntent, BROAD_ELASTIC_INTENTS } from '../data/caseData.js';
 
 /**
  * 네오코트 시공 전후 비교 컴포넌트 (NeoCoatBeforeAfter)
- * - Exact Intent 시공 전후 증거 섹션
+ * - Exact Space & Shared Broad Elastic 시공 전후 증거 섹션
  * - PC: CASE별 [시공 전 | 시공 후] 1:1 좌우 비교 카드 + 하단 설명 캡션
  * - 모바일: 시공 전(사진+캡션) -> 시공 후(사진+캡션) 1컬럼 수직 스택
  * - 순수 시공 전후 팩트 기반 기술 (과장/인증/결로누수 확정 금지)
@@ -13,11 +13,13 @@ export function NeoCoatBeforeAfter({ parsedKeyword }) {
   const [imgErrors, setImgErrors] = useState({});
 
   const taskName = parsedKeyword?.service?.keyword;
-  const cases = getExactIntentCases(taskName);
+  const cases = getBeforeAfterCasesForIntent(taskName);
 
   if (!cases || cases.length === 0) {
     return null;
   }
+
+  const isBroadElastic = BROAD_ELASTIC_INTENTS.has(taskName);
 
   const handleImgError = (key) => {
     setImgErrors((prev) => ({ ...prev, [key]: true }));
@@ -69,7 +71,7 @@ export function NeoCoatBeforeAfter({ parsedKeyword }) {
               lineHeight: '1.3',
             }}
           >
-            실제 시공 전후를 비교해보세요
+            {isBroadElastic ? '실제 탄성코트 시공 전후를 비교해보세요' : '실제 시공 전후를 비교해보세요'}
           </h2>
           <p
             className="ba-intro-desc"
@@ -86,10 +88,15 @@ export function NeoCoatBeforeAfter({ parsedKeyword }) {
                 <span className="pc-text">베란다 벽면의 기존 상태를 정리하고 탄성코트로 마감한 실제 작업 사례입니다.</span>
                 <span className="mo-text">베란다 벽면의 기존 상태를 정리하고<br />탄성코트로 마감한 실제 작업 사례입니다.</span>
               </>
-            ) : (
+            ) : taskName === '세탁실탄성코트' ? (
               <>
                 <span className="pc-text">오염된 기존 벽면을 정리하고 탄성코트로 마감한 실제 현장입니다.</span>
                 <span className="mo-text">오염된 기존 벽면을 정리하고<br />탄성코트로 마감한 실제 현장입니다.</span>
+              </>
+            ) : (
+              <>
+                <span className="pc-text">기존 벽면 상태를 정리하고 탄성코트로 마감한 실제 작업 사례입니다.</span>
+                <span className="mo-text">기존 벽면 상태를 정리하고<br />탄성코트로 마감한 실제 작업 사례입니다.</span>
               </>
             )}
           </p>
