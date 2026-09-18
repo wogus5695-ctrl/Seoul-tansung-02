@@ -52,6 +52,7 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
   const { isDynamic, heroBadgeLabel, heroTitlePrefix, heroTitleSuffix, heroDescription, imageInfoLabel, qualityBadge, imageAltText } = heroData;
 
   const serviceGroup = parsedKeyword?.service?.serviceGroup ?? 'elastic';
+  const isElastic = serviceGroup === 'elastic';
 
   // 2. H1 제목 (JSX 렌더링)
   const heroH1 = isDynamic ? (
@@ -84,6 +85,7 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
   return (
     <section
       aria-labelledby="hero-title"
+      className={`neo-hero-section ${isElastic ? 'is-elastic' : 'is-grout'}`}
       style={{
         backgroundColor: 'var(--neo-color-bg-main, #F8FAFC)',
         padding: '48px 0 64px 0',
@@ -258,32 +260,34 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
               )}
             </div>
 
-            {/* 5. Trust Points List */}
-            <div className="neo-trust-points">
-              <div className="trust-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--neo-color-primary, #1E3A8A)" strokeWidth="2.2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" strokeLinecap="round" strokeLinejoin="round"/>
-                  <polyline points="22 4 12 14.01 9 11.01" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <span>공간 상태 확인</span>
+            {/* 5. Trust Points List (PC only, removed for elastic to prevent duplicate with NeoCoatTrustStrip) */}
+            {!isElastic && (
+              <div className="neo-trust-points">
+                <div className="trust-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--neo-color-primary, #1E3A8A)" strokeWidth="2.2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" strokeLinecap="round" strokeLinejoin="round"/>
+                    <polyline points="22 4 12 14.01 9 11.01" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span>공간 상태 확인</span>
+                </div>
+                <div className="trust-divider" />
+                <div className="trust-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--neo-color-primary, #1E3A8A)" strokeWidth="2.2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" strokeLinecap="round"/>
+                    <line x1="8" y1="21" x2="16" y2="21" strokeLinecap="round"/>
+                    <line x1="12" y1="17" x2="12" y2="21" strokeLinecap="round"/>
+                  </svg>
+                  <span>공정별 작업 안내</span>
+                </div>
+                <div className="trust-divider" />
+                <div className="trust-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--neo-color-accent, #0D9488)" strokeWidth="2.2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span>시공 후 마감 확인</span>
+                </div>
               </div>
-              <div className="trust-divider" />
-              <div className="trust-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--neo-color-primary, #1E3A8A)" strokeWidth="2.2">
-                  <rect x="2" y="3" width="20" height="14" rx="2" strokeLinecap="round"/>
-                  <line x1="8" y1="21" x2="16" y2="21" strokeLinecap="round"/>
-                  <line x1="12" y1="17" x2="12" y2="21" strokeLinecap="round"/>
-                </svg>
-                <span>공정별 작업 안내</span>
-              </div>
-              <div className="trust-divider" />
-              <div className="trust-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--neo-color-accent, #0D9488)" strokeWidth="2.2">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <span>시공 후 마감 확인</span>
-              </div>
-            </div>
+            )}
           </div>
 
           {/* ====================================================
@@ -295,6 +299,9 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
                 <img
                   src={heroImageSrc}
                   alt={imageAltText}
+                  fetchPriority="high"
+                  loading="eager"
+                  decoding="async"
                   onError={() => setImgError(true)}
                   style={{
                     width: '100%',
@@ -487,20 +494,51 @@ export function NeoCoatHero({ parsedKeyword, onNavigate }) {
             display: none !important;
           }
           .hero-h1 {
-            font-size: 32px !important;
+            font-size: 30px !important;
             line-height: 1.25 !important;
             letter-spacing: -0.01em !important;
-          }
-          .hero-sub-desc::before {
-            content: "습기와 오염, 기존 도막 상태를 확인한 뒤\\A현재 공간에 필요한 작업 범위를 안내합니다.";
-            display: block;
-            white-space: pre-line;
+            margin-bottom: 14px !important;
           }
           .hero-sub-desc {
-            font-size: 16px !important;
-            line-height: 1.65 !important;
-            font-size: 0px !important;
-            color: transparent !important;
+            font-size: 15px !important;
+            line-height: 1.6 !important;
+            color: var(--neo-color-text-secondary, #475569) !important;
+            margin-bottom: 24px !important;
+          }
+
+          /* Elastic-specific Mobile Compression & Dual CTA Duplicate Removal */
+          .neo-hero-section.is-elastic {
+            padding: 28px 0 36px 0 !important;
+          }
+          .neo-hero-section.is-elastic .uppercase-track {
+            margin-bottom: 8px !important;
+          }
+          .neo-hero-section.is-elastic .neo-hero-grid {
+            gap: 20px !important;
+          }
+          .neo-hero-section.is-elastic .hero-sub-desc {
+            margin-bottom: 0px !important;
+          }
+          .neo-hero-section.is-elastic .neo-hero-cta-group {
+            display: none !important;
+          }
+          .neo-hero-section.is-elastic .neo-hero-image-card {
+            aspect-ratio: 16 / 10 !important;
+            border-radius: 16px !important;
+          }
+          .neo-hero-section.is-elastic .neo-hero-overlay-label {
+            bottom: 10px !important;
+            left: 10px !important;
+            padding: 5px 10px !important;
+            font-size: 11.5px !important;
+            border-radius: 8px !important;
+          }
+          .neo-hero-section.is-elastic .neo-hero-quality-badge {
+            top: 10px !important;
+            right: 10px !important;
+            padding: 4px 9px !important;
+            font-size: 11px !important;
+            border-radius: 12px !important;
           }
         }
 
