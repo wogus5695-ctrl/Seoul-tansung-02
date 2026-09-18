@@ -10,10 +10,15 @@ import { getDiagnosisItems } from '../data/diagnosisContent.js';
  * - 접속 서비스군 및 12개 세부 작업명에 따른 첫 번째 문제 항목 우선순위 자동 정렬
  * - 접근성 ARIA (aria-expanded, aria-controls, button) 및 키보드 조작 완벽 지원
  */
-export function NeoCoatDiagnosis({ parsedKeyword }) {
-  const [openIndex, setOpenIndex] = useState(0); // 첫 번째 항목 기본 열림
+export function NeoCoatDiagnosis({ parsedKeyword, isCompact = false }) {
+  const [openIndex, setOpenIndex] = useState(isCompact ? -1 : 0); // 컴팩트 모드에서는 기본 닫힘
   const [showMore, setShowMore] = useState(false);
   const [imgError, setImgError] = useState(false);
+
+  // isCompact 또는 parsedKeyword 변경 시 openIndex 동기화
+  React.useEffect(() => {
+    setOpenIndex(isCompact ? -1 : 0);
+  }, [isCompact, parsedKeyword]);
 
   // 동적/메인 구분
   const isDynamic = !!parsedKeyword;
@@ -49,7 +54,7 @@ export function NeoCoatDiagnosis({ parsedKeyword }) {
       aria-labelledby="diagnosis-title"
       style={{
         backgroundColor: 'var(--neo-color-bg-white, #FFFFFF)',
-        padding: '80px 0',
+        padding: isCompact ? '48px 0' : '80px 0',
         borderTop: '1px solid var(--neo-color-border, #E2E8F0)',
         borderBottom: '1px solid var(--neo-color-border, #E2E8F0)',
       }}

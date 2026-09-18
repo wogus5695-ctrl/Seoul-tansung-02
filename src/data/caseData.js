@@ -10,38 +10,48 @@ export const CASE_STUDIES = {
     {
       id: "elastic-case-01",
       serviceGroup: "elasticCoat",
-      workType: "베란다탄성코트",
-      title: "베란다 벽면 탄성코트 시공",
+      workType: "세탁실탄성코트",
+      caseLabel: "CASE 01",
+      title: "세탁실 배관 주변 오염 정돈 및 탄성코트 시공",
       locationLabel: "",
-      spaceType: "베란다",
-      beforeImage: "",
-      afterImage: "",
-      beforeObjectPosition: "center",
-      afterObjectPosition: "center",
-      summary: "결로와 습기로 인한 기존 벽면 들뜸과 곰팡이를 정돈하고 친환경 세라믹 탄성 마감을 완료했습니다.",
-      issues: ["기존 도막 들뜸 및 박리", "벽면 곰팡이 오염", "창호 주변 결로 흔적"],
-      workDetails: ["주변 창호 및 설비 보양", "들뜬 도막 긁어내기 및 바탕 정돈", "탄성코트 분사 및 마감 검수"],
+      spaceType: "세탁실",
+      beforeImage: "/images/cases/elastic/elastic-case-01-before.webp",
+      afterImage: "/images/cases/elastic/elastic-case-01-after.webp",
+      beforeCaption: "배관 주변 벽면에 넓은 곰팡이·오염 흔적이 확인된 상태",
+      afterCaption: "벽면 정리 후 탄성코트 마감이 완료된 상태",
+      beforeAlt: "배관 주변 벽면에 곰팡이와 오염이 있는 시공 전 상태",
+      afterAlt: "벽면 탄성코트 마감이 완료된 시공 후 상태",
+      beforeObjectPosition: "center top",
+      afterObjectPosition: "center top",
+      summary: "배관 주변 오염된 기존 벽면을 정돈하고 탄성코트로 마감한 실제 현장입니다.",
+      issues: ["배관 주변 벽면 곰팡이·오염 흔적", "기존 도막 오염"],
+      workDetails: ["기존 벽면 정리 및 보양", "탄성코트 도포 및 마감 검수"],
       featured: true,
       displayOrder: 1,
-      status: "draft"
+      status: "published"
     },
     {
       id: "elastic-case-02",
       serviceGroup: "elasticCoat",
       workType: "세탁실탄성코트",
-      title: "세탁실 습기 방지 탄성코트",
+      caseLabel: "CASE 02",
+      title: "세탁실 창호 하부 오염 정돈 및 탄성코트 시공",
       locationLabel: "",
       spaceType: "세탁실",
-      beforeImage: "",
-      afterImage: "",
-      beforeObjectPosition: "center",
-      afterObjectPosition: "center",
-      summary: "세탁기 및 건조기 사용으로 습도가 높은 세탁실 배관 주변 및 벽체의 바탕 정리를 거쳐 시공했습니다.",
-      issues: ["습기로 인한 표면 분진", "배관 주변 도막 손상"],
-      workDetails: ["세탁기 배관 보양", "표면 정리 및 프라이머 처리", "세라믹 탄성 마감"],
-      featured: false,
+      beforeImage: "/images/cases/elastic/elastic-case-02-before.webp",
+      afterImage: "/images/cases/elastic/elastic-case-02-after.webp",
+      beforeCaption: "창호 하부 벽면에 오염과 얼룩이 넓게 남아 있는 상태",
+      afterCaption: "바탕면 정리 후 탄성코트 마감이 완료된 상태",
+      beforeAlt: "창호 아래 벽면에 오염이 있는 시공 전 상태",
+      afterAlt: "창호 아래 벽면 탄성코트 마감이 완료된 상태",
+      beforeObjectPosition: "center center",
+      afterObjectPosition: "center center",
+      summary: "창호 하부 벽면 오염을 정돈하고 탄성코트로 마감한 실제 현장입니다.",
+      issues: ["창호 하부 벽면 오염 및 얼룩", "기존 바탕면 노후"],
+      workDetails: ["바탕면 정리 및 창호 보양", "탄성코트 도포 및 마감"],
+      featured: true,
       displayOrder: 2,
-      status: "draft"
+      status: "published"
     }
   ],
   grout: [
@@ -108,4 +118,18 @@ export function getPublishedCaseStudies(groupKey, taskName) {
   }
 
   return publishedList.sort((a, b) => (a.displayOrder || 99) - (b.displayOrder || 99));
+}
+
+/**
+ * 세탁실탄성코트 파일럿 전용 사례 추출 함수
+ * - 오직 세탁실탄성코트 작업일 때만 Case 01, Case 02 반환
+ * - 타 작업명 또는 메인 페이지에서는 빈 배열 반환하여 100% 격리
+ */
+export function getLaundryPilotCases(taskName) {
+  if (taskName !== '세탁실탄성코트') {
+    return [];
+  }
+  return CASE_STUDIES.elasticCoat.filter(
+    c => c.status === 'published' && c.workType === '세탁실탄성코트' && c.beforeImage && c.afterImage
+  );
 }

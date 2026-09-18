@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { siteConfig, featureConfig } from './config';
 import { NeoCoatHeader } from './components/NeoCoatHeader';
 import { NeoCoatHero } from './components/NeoCoatHero';
+import { NeoCoatBeforeAfter } from './components/NeoCoatBeforeAfter';
 import { NeoCoatTrustStrip } from './components/NeoCoatTrustStrip';
 import { NeoCoatDiagnosis } from './components/NeoCoatDiagnosis';
 import { NeoCoatServices } from './components/NeoCoatServices';
@@ -984,9 +985,22 @@ function App() {
         {/* 1. HERO SECTION */}
         <NeoCoatHero parsedKeyword={parsedKeyword} onNavigate={navigate} />
 
-        {/* 2. TRUST STRIP & PROBLEM DIAGNOSIS SECTIONS */}
-        <NeoCoatTrustStrip />
-        <NeoCoatDiagnosis parsedKeyword={parsedKeyword} />
+        {parsedKeyword?.service?.keyword === '세탁실탄성코트' ? (
+          <>
+            {/* 2. IMAGE-FIRST BEFORE & AFTER EVIDENCE SECTION (PILOT) */}
+            <NeoCoatBeforeAfter parsedKeyword={parsedKeyword} />
+
+            {/* 3. TRUST STRIP & COMPACT PROBLEM DIAGNOSIS */}
+            <NeoCoatTrustStrip />
+            <NeoCoatDiagnosis parsedKeyword={parsedKeyword} isCompact={true} />
+          </>
+        ) : (
+          <>
+            {/* 2. TRUST STRIP & PROBLEM DIAGNOSIS SECTIONS */}
+            <NeoCoatTrustStrip />
+            <NeoCoatDiagnosis parsedKeyword={parsedKeyword} />
+          </>
+        )}
 
         {/* 3. SERVICES SELECTION & SPACES MAPPING SECTIONS */}
         <NeoCoatServices

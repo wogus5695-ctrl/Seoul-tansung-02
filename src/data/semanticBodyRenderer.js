@@ -23,7 +23,7 @@ function escapeHtml(str) {
 export function renderSemanticBody(pageModel) {
   if (!pageModel) return '';
 
-  const { hero, diagnosis, services, spaces, faq, internalLinks } = pageModel;
+  const { hero, beforeAfter, diagnosis, services, spaces, faq, internalLinks } = pageModel;
 
   // 1. Hero Section (Exact React H1 text from heroTitlePrefix & heroTitleSuffix)
   const heroHtml = `
@@ -43,6 +43,46 @@ export function renderSemanticBody(pageModel) {
       </p>
     </section>
   `;
+
+  // 1-B. Before & After Evidence Section (Pilot: 세탁실탄성코트)
+  let beforeAfterHtml = '';
+  if (beforeAfter && beforeAfter.cases && beforeAfter.cases.length > 0) {
+    const casesHtml = beforeAfter.cases.map((c, idx) => `
+      <article class="ba-case-item" style="border: 1px solid #E2E8F0; border-radius: 14px; padding: 20px; margin-bottom: 20px; background-color: #FFFFFF;">
+        <h3 class="ba-case-title" style="font-size: 1.1rem; font-weight: 700; color: #1E3A8A; margin-bottom: 14px;">
+          <span style="font-size: 12px; font-weight: 800; color: #0D9488; background-color: #ECFDF5; padding: 3px 8px; border-radius: 6px; margin-right: 8px;">${escapeHtml(c.caseLabel || `CASE 0${idx + 1}`)}</span>
+          ${escapeHtml(c.title)}
+        </h3>
+        <div class="ba-case-images" style="display: flex; flex-direction: column; gap: 14px;">
+          <figure style="margin: 0;">
+            <div style="font-size: 12px; font-weight: 700; color: #475569; margin-bottom: 4px;">시공 전 (BEFORE)</div>
+            <img src="${escapeHtml(c.beforeImage)}" alt="${escapeHtml(c.beforeAlt)}" loading="lazy" decoding="async" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #E2E8F0; display: block;" />
+            <figcaption style="font-size: 0.9rem; color: #475569; margin-top: 6px; line-height: 1.5;">${escapeHtml(c.beforeCaption)}</figcaption>
+          </figure>
+          <figure style="margin: 0;">
+            <div style="font-size: 12px; font-weight: 700; color: #0D9488; margin-bottom: 4px;">시공 후 (AFTER)</div>
+            <img src="${escapeHtml(c.afterImage)}" alt="${escapeHtml(c.afterAlt)}" loading="lazy" decoding="async" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #E2E8F0; display: block;" />
+            <figcaption style="font-size: 0.9rem; color: #1E3A8A; font-weight: 600; margin-top: 6px; line-height: 1.5;">${escapeHtml(c.afterCaption)}</figcaption>
+          </figure>
+        </div>
+      </article>
+    `).join('');
+
+    beforeAfterHtml = `
+      <section class="neo-before-after" aria-labelledby="before-after-title" style="padding: 60px 20px; max-width: 1280px; margin: 0 auto; border-top: 1px solid #E2E8F0;">
+        <div style="font-size: 0.85rem; font-weight: bold; color: #0D9488; letter-spacing: 1px; margin-bottom: 8px;">BEFORE &amp; AFTER</div>
+        <h2 id="before-after-title" class="section-h2" style="font-size: 1.85rem; font-weight: 700; color: #1E3A8A; margin-bottom: 16px; word-break: keep-all;">
+          ${escapeHtml(beforeAfter.title)}
+        </h2>
+        <p class="section-desc" style="font-size: 1rem; color: #475569; line-height: 1.65; max-width: 640px; margin-bottom: 28px; word-break: keep-all;">
+          ${escapeHtml(beforeAfter.intro)}
+        </p>
+        <div class="ba-cases-list">
+          ${casesHtml}
+        </div>
+      </section>
+    `;
+  }
 
   // 2. Diagnosis Section
   const diagnosisItemsHtml = (diagnosis.items || []).map((item, idx) => `
@@ -199,6 +239,7 @@ export function renderSemanticBody(pageModel) {
   return `
     <main class="semantic-entry" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #0F172A; background-color: #F8FAFC; min-height: 100vh;">
       ${heroHtml}
+      ${beforeAfterHtml}
       ${diagnosisHtml}
       ${servicesHtml}
       ${spacesHtml}

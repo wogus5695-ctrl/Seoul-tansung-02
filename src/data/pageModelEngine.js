@@ -6,6 +6,7 @@ import { getFaqItems } from './faqData.js';
 import { getActiveRegions, generateDynamicUrl, isServiceAllowed } from './regionResolver.js';
 import { serviceContent } from './serviceContent.js';
 import { brandConfig } from '../config/brandConfig.js';
+import { getLaundryPilotCases } from './caseData.js';
 
 /**
  * Pure generator for Hero Content
@@ -100,9 +101,18 @@ export function getDynamicPageModel({ parsedKeyword, path = '/', isNotFound = fa
   const faqItems = getFaqItems(isNotFound ? null : parsedKeyword);
   const internalLinks = getInternalLinks(isNotFound ? null : parsedKeyword);
 
+  const pilotCases = getLaundryPilotCases(taskName);
+  const beforeAfter = pilotCases && pilotCases.length > 0 ? {
+    eyebrow: 'BEFORE & AFTER',
+    title: '실제 시공 전후를 비교해보세요',
+    intro: '오염된 기존 벽면을 정리하고 탄성코트로 마감한 실제 현장입니다.',
+    cases: pilotCases
+  } : null;
+
   return {
     metadata,
     hero,
+    beforeAfter,
     diagnosis: {
       title: '표면의 문제보다 발생 원인을 먼저 확인합니다',
       intro: '곰팡이와 오염, 도막 들뜸이나 줄눈 변색은 공간의 습도와 사용 환경, 기존 마감 상태에 따라 원인이 달라질 수 있습니다. 시공 전 현재 상태와 작업 범위를 구분해서 확인해야 합니다.',
