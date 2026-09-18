@@ -985,9 +985,9 @@ function App() {
         {/* 1. HERO SECTION */}
         <NeoCoatHero parsedKeyword={parsedKeyword} onNavigate={navigate} />
 
-        {parsedKeyword?.service?.keyword === '세탁실탄성코트' ? (
+        {parsedKeyword?.service?.keyword === '세탁실탄성코트' || parsedKeyword?.service?.keyword === '베란다탄성코트' ? (
           <>
-            {/* 2. IMAGE-FIRST BEFORE & AFTER EVIDENCE SECTION (PILOT) */}
+            {/* 2. IMAGE-FIRST BEFORE & AFTER EVIDENCE SECTION (EXACT INTENT ONLY) */}
             <NeoCoatBeforeAfter parsedKeyword={parsedKeyword} />
 
             {/* 3. TRUST STRIP & COMPACT PROBLEM DIAGNOSIS */}
@@ -1009,7 +1009,7 @@ function App() {
           parsedKeyword={parsedKeyword}
           onNavigate={navigate}
           isDesktop={isDesktop}
-          collapseSecondaryOnMobile={parsedKeyword?.service?.keyword === '세탁실탄성코트'}
+          collapseSecondaryOnMobile={parsedKeyword?.service?.keyword === '세탁실탄성코트' || parsedKeyword?.service?.keyword === '베란다탄성코트'}
         />
         <NeoCoatSpaces
           activeTab={serviceTab}

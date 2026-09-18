@@ -2,34 +2,55 @@ import React from 'react';
 import { contactConfig } from '../config/contactConfig.js';
 import { imageConfig } from '../config/imageConfig.js';
 
-// 세탁실탄성코트 Pilot용 3가지 사진 상담 안내 데이터
-const CONSULTATION_GUIDE_ITEMS = [
-  {
-    num: '01',
-    title: '공간 전체',
-    desc: '세탁실 전체 구조와 벽면이 보이는 사진'
-  },
-  {
-    num: '02',
-    title: '문제가 있는 부분',
-    desc: '곰팡이·오염·들뜸 등이 보이는 벽면'
-  },
-  {
-    num: '03',
-    title: '주변 설비',
-    desc: '배관·수도 설비·창틀 등 주변 환경'
-  }
-];
+// Intent별 3가지 사진 상담 안내 데이터
+const CONSULTATION_GUIDE_BY_INTENT = {
+  '세탁실탄성코트': [
+    {
+      num: '01',
+      title: '공간 전체',
+      desc: '세탁실 전체 구조와 벽면이 보이는 사진'
+    },
+    {
+      num: '02',
+      title: '문제가 있는 부분',
+      desc: '곰팡이·오염·들뜸 등이 보이는 벽면'
+    },
+    {
+      num: '03',
+      title: '주변 설비',
+      desc: '배관·수도 설비·창틀 등 주변 환경'
+    }
+  ],
+  '베란다탄성코트': [
+    {
+      num: '01',
+      title: '공간 전체',
+      desc: '베란다 전체 구조와 벽면이 보이는 사진'
+    },
+    {
+      num: '02',
+      title: '문제가 있는 부분',
+      desc: '곰팡이·오염·들뜸 또는 창틀 주변 상태가 보이는 부분'
+    },
+    {
+      num: '03',
+      title: '주변 환경',
+      desc: '창틀·샷시·우수관 등 벽면과 접하는 주변 환경'
+    }
+  ]
+};
 
 /**
  * 네오코트 최종 문의 CTA 섹션 (NeoCoatFinalCTA)
  * - 딥 블루 (`#1E3A8A`) 배경의 브랜드 하단 배너
- * - 세탁실탄성코트 Pilot: MO 복원 + 3가지 사진 안내 가이드 카드 탑재
+ * - 세탁실/베란다탄성코트: MO 복원 + 3가지 사진 안내 가이드 카드 탑재
  * - 기타 Intent: 기존 PC 배너 유지 및 MO 비노출 격리
  * - 전화번호/카카오URL 미확정 시 안전하게 `#contact` 앵커 이동 및 빈 링크 방지
  */
 export function NeoCoatFinalCTA({ parsedKeyword, onNavigate }) {
-  const isLaundryPilot = parsedKeyword?.service?.keyword === '세탁실탄성코트';
+  const taskName = parsedKeyword?.service?.keyword;
+  const isConsultationActive = taskName === '세탁실탄성코트' || taskName === '베란다탄성코트';
+  const guideItems = CONSULTATION_GUIDE_BY_INTENT[taskName] || CONSULTATION_GUIDE_BY_INTENT['세탁실탄성코트'];
 
   const getPhotoContactHref = () => {
     if (contactConfig && contactConfig.kakaoUrl && contactConfig.kakaoUrl.trim() !== '') {
@@ -67,7 +88,7 @@ export function NeoCoatFinalCTA({ parsedKeyword, onNavigate }) {
 
   return (
     <section
-      className={`neo-final-cta-section ${isLaundryPilot ? 'is-laundry-pilot' : 'is-legacy'}`}
+      className={`neo-final-cta-section ${isConsultationActive ? 'is-laundry-pilot' : 'is-legacy'}`}
       aria-labelledby="final-cta-title"
       style={{
         backgroundColor: 'var(--neo-color-primary, #1E3A8A)',
@@ -101,9 +122,9 @@ export function NeoCoatFinalCTA({ parsedKeyword, onNavigate }) {
           zIndex: 1,
         }}
       >
-        {isLaundryPilot ? (
+        {isConsultationActive ? (
           /* ============================================================ */
-          /* 세탁실탄성코트 PILOT: 사진 상담 안내 중심 FINAL CONSULTATION */
+          /* 탄성코트 PILOT: 사진 상담 안내 중심 FINAL CONSULTATION */
           /* ============================================================ */
           <div className="laundry-pilot-consultation">
             <div className="consultation-header">
@@ -118,7 +139,7 @@ export function NeoCoatFinalCTA({ parsedKeyword, onNavigate }) {
 
             {/* 3 Guide Cards */}
             <div className="consultation-guide-grid">
-              {CONSULTATION_GUIDE_ITEMS.map(item => (
+              {guideItems.map(item => (
                 <div key={item.num} className="guide-card">
                   <div className="guide-card-header">
                     <span className="guide-num">{item.num}</span>

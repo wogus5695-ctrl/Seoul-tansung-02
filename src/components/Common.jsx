@@ -334,12 +334,21 @@ export function SEOContentSection({ keywordInfo }) {
   if (!keywordInfo) return null;
 
   const isLaundryPilot = keywordInfo.service === '세탁실탄성코트';
+  const isBalconyPilot = keywordInfo.service === '베란다탄성코트';
 
-  if (isLaundryPilot) {
+  if (isLaundryPilot || isBalconyPilot) {
+    const isBalcony = isBalconyPilot;
+    const sectionTitle = isBalcony
+      ? `${keywordInfo.region} 베란다탄성코트 상담 시 확인하는 부분`
+      : `${keywordInfo.region} 세탁실탄성코트 상담 시 확인하는 부분`;
+    const sectionBody = isBalcony
+      ? '베란다 벽면의 기존 도막 상태와 창틀·외벽 접점의 균열, 결로 흔적 및 곰팡이·오염 여부 등을 확인한 뒤 현재 상태에 필요한 작업 범위를 안내합니다. 벽면의 들뜸 상태와 시공 환경에 따라 바탕 정리와 보수 범위가 달라질 수 있습니다.'
+      : '세탁실의 기존 도막 상태와 배관 주변 습기, 곰팡이·오염·들뜸 여부 등을 확인한 뒤 현재 상태에 필요한 작업 범위를 안내합니다. 벽면 상태와 주변 설비 환경에 따라 바탕 정리와 보수 범위가 달라질 수 있습니다.';
+
     return (
       <section
         className="neo-region-safe-guide"
-        aria-label={`${keywordInfo.region} 세탁실탄성코트 시공 안내`}
+        aria-label={`${keywordInfo.region} ${keywordInfo.service} 시공 안내`}
         style={{
           backgroundColor: '#F8FAFC',
           borderTop: '1px solid #E2E8F0',
@@ -385,7 +394,7 @@ export function SEOContentSection({ keywordInfo }) {
                 lineHeight: '1.4',
               }}
             >
-              {keywordInfo.region} 세탁실탄성코트 상담 시 확인하는 부분
+              {sectionTitle}
             </h3>
             <p
               style={{
@@ -396,7 +405,7 @@ export function SEOContentSection({ keywordInfo }) {
                 wordBreak: 'keep-all',
               }}
             >
-              세탁실의 기존 도막 상태와 배관 주변 습기, 곰팡이·오염·들뜸 여부 등을 확인한 뒤 현재 상태에 필요한 작업 범위를 안내합니다. 벽면 상태와 주변 설비 환경에 따라 바탕 정리와 보수 범위가 달라질 수 있습니다.
+              {sectionBody}
             </p>
           </div>
         </div>

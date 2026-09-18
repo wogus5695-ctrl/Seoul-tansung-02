@@ -6,7 +6,7 @@ import { getFaqItems } from './faqData.js';
 import { getActiveRegions, generateDynamicUrl, isServiceAllowed } from './regionResolver.js';
 import { serviceContent } from './serviceContent.js';
 import { brandConfig } from '../config/brandConfig.js';
-import { getLaundryPilotCases } from './caseData.js';
+import { getExactIntentCases, getLaundryPilotCases } from './caseData.js';
 
 /**
  * Pure generator for Hero Content
@@ -101,11 +101,15 @@ export function getDynamicPageModel({ parsedKeyword, path = '/', isNotFound = fa
   const faqItems = getFaqItems(isNotFound ? null : parsedKeyword);
   const internalLinks = getInternalLinks(isNotFound ? null : parsedKeyword);
 
-  const pilotCases = getLaundryPilotCases(taskName);
+  const pilotCases = getExactIntentCases(taskName);
+  const beforeAfterIntro = taskName === '베란다탄성코트'
+    ? '베란다 벽면의 기존 상태를 정리하고 탄성코트로 마감한 실제 작업 사례입니다.'
+    : '오염된 기존 벽면을 정리하고 탄성코트로 마감한 실제 현장입니다.';
+
   const beforeAfter = pilotCases && pilotCases.length > 0 ? {
     eyebrow: 'BEFORE & AFTER',
     title: '실제 시공 전후를 비교해보세요',
-    intro: '오염된 기존 벽면을 정리하고 탄성코트로 마감한 실제 현장입니다.',
+    intro: beforeAfterIntro,
     cases: pilotCases
   } : null;
 

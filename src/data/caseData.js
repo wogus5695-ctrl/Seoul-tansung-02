@@ -52,6 +52,52 @@ export const CASE_STUDIES = {
       featured: true,
       displayOrder: 2,
       status: "published"
+    },
+    {
+      id: "balcony-case-01",
+      serviceGroup: "elasticCoat",
+      workType: "베란다탄성코트",
+      caseLabel: "CASE 01",
+      title: "베란다 창호 및 코너 벽면 오염 정돈 및 탄성코트 시공",
+      locationLabel: "",
+      spaceType: "베란다",
+      beforeImage: "/images/cases/elastic/balcony-case-01-before.webp",
+      afterImage: "/images/cases/elastic/balcony-case-01-after.webp",
+      beforeCaption: "창호 주변 벽면과 코너에 곰팡이와 오염 흔적이 확인된 상태",
+      afterCaption: "바탕면 정리 후 탄성코트 마감이 완료된 상태",
+      beforeAlt: "베란다 창호 주변 벽면과 코너의 시공 전 상태",
+      afterAlt: "베란다 벽면 탄성코트 마감 후 상태",
+      beforeObjectPosition: "center center",
+      afterObjectPosition: "center center",
+      summary: "창호 주변과 벽면 코너의 오염 흔적을 정돈하고 탄성코트로 마감한 실제 현장입니다.",
+      issues: ["창호 주변 벽면 오염", "코너 부위 곰팡이 흔적"],
+      workDetails: ["기존 벽면 정리 및 창호 보양", "탄성코트 도포 및 마감"],
+      featured: true,
+      displayOrder: 1,
+      status: "published"
+    },
+    {
+      id: "balcony-case-02",
+      serviceGroup: "elasticCoat",
+      workType: "베란다탄성코트",
+      caseLabel: "CASE 02",
+      title: "베란다 천장 및 창호 상부 접점 정돈 및 탄성코트 시공",
+      locationLabel: "",
+      spaceType: "베란다",
+      beforeImage: "/images/cases/elastic/balcony-case-02-before.webp",
+      afterImage: "/images/cases/elastic/balcony-case-02-after.webp",
+      beforeCaption: "천장 및 창호 상부 접점에 오염과 균열 흔적이 확인된 상태",
+      afterCaption: "바탕면 정리 후 탄성코트 마감이 완료된 상태",
+      beforeAlt: "베란다 천장 및 창호 상부의 시공 전 상태",
+      afterAlt: "베란다 천장 탄성코트 마감 후 상태",
+      beforeObjectPosition: "center center",
+      afterObjectPosition: "center center",
+      summary: "천장과 창호 상부 접점의 오염 흔적을 정돈하고 탄성코트로 마감한 실제 현장입니다.",
+      issues: ["창호 상부 접점 오염", "천장 균열 흔적"],
+      workDetails: ["접점 부위 바탕 정리 및 보양", "탄성코트 도포 및 마감"],
+      featured: true,
+      displayOrder: 2,
+      status: "published"
     }
   ],
   grout: [
@@ -121,15 +167,20 @@ export function getPublishedCaseStudies(groupKey, taskName) {
 }
 
 /**
- * 세탁실탄성코트 파일럿 전용 사례 추출 함수
- * - 오직 세탁실탄성코트 작업일 때만 Case 01, Case 02 반환
- * - 타 작업명 또는 메인 페이지에서는 빈 배열 반환하여 100% 격리
+ * Intent별 실제 시공 사례 추출 함수 (Exact Intent Matching)
+ * - 작업명과 정확히 일치하고 published 상태이며 beforeImage & afterImage가 유효한 사례만 반환
+ * - 일치하는 사례가 없으면 빈 배열 반환 (0 fallback)
+ */
+export function getExactIntentCases(taskName) {
+  if (!taskName) return [];
+  return CASE_STUDIES.elasticCoat.filter(
+    c => c.status === 'published' && c.workType === taskName && c.beforeImage && c.afterImage
+  );
+}
+
+/**
+ * 세탁실탄성코트 파일럿 하위 호환 함수
  */
 export function getLaundryPilotCases(taskName) {
-  if (taskName !== '세탁실탄성코트') {
-    return [];
-  }
-  return CASE_STUDIES.elasticCoat.filter(
-    c => c.status === 'published' && c.workType === '세탁실탄성코트' && c.beforeImage && c.afterImage
-  );
+  return getExactIntentCases(taskName);
 }

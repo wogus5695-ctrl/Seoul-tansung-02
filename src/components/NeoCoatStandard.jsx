@@ -30,7 +30,8 @@ const LAUNDRY_PILOT_SUMMARY_STEPS = [
  */
 export function NeoCoatStandard({ parsedKeyword }) {
   const { label, title, description, principles } = WORK_STANDARD_CONTENT;
-  const isLaundryPilot = parsedKeyword?.service?.keyword === '세탁실탄성코트';
+  const taskName = parsedKeyword?.service?.keyword;
+  const isCompactStandard = taskName === '세탁실탄성코트' || taskName === '베란다탄성코트';
   const [isDetailOpen, setIsDetailOpen] = useState(false);
 
   // 원칙별 단색 SVG 라인 아이콘 맵
@@ -151,8 +152,8 @@ export function NeoCoatStandard({ parsedKeyword }) {
           </p>
         </div>
 
-        {/* 1. Laundry Pilot MO Summary 3 Steps (Mobile only when isLaundryPilot && !isDetailOpen) */}
-        {isLaundryPilot && !isDetailOpen && (
+        {/* 1. Compact Standard MO Summary 3 Steps (Mobile only when isCompactStandard && !isDetailOpen) */}
+        {isCompactStandard && !isDetailOpen && (
           <div className="pilot-mo-summary-stack">
             {LAUNDRY_PILOT_SUMMARY_STEPS.map((item, idx) => (
               <div key={item.num} className="pilot-summary-item">
@@ -176,7 +177,7 @@ export function NeoCoatStandard({ parsedKeyword }) {
         {/* 2. 5 Principles Linear Timeline (PC always, MO depends on isDetailOpen for Pilot) */}
         <div
           id="standard-full-detail"
-          className={`neo-standard-timeline ${isLaundryPilot ? (isDetailOpen ? 'pilot-mo-full-open' : 'pilot-mo-full-closed') : ''}`}
+          className={`neo-standard-timeline ${isCompactStandard ? (isDetailOpen ? 'pilot-mo-full-open' : 'pilot-mo-full-closed') : ''}`}
         >
           {principles.map((item, idx) => (
             <div key={item.id} className="neo-standard-step-item">
@@ -200,8 +201,8 @@ export function NeoCoatStandard({ parsedKeyword }) {
           ))}
         </div>
 
-        {/* 3. Laundry Pilot Detail Toggle Button (MO only) */}
-        {isLaundryPilot && (
+        {/* 3. Compact Standard Detail Toggle Button (MO only) */}
+        {isCompactStandard && (
           <div className="pilot-standard-toggle-wrapper">
             <button
               type="button"

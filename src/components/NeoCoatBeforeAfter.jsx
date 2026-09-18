@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { getLaundryPilotCases } from '../data/caseData.js';
+import { getExactIntentCases } from '../data/caseData.js';
 
 /**
  * 네오코트 시공 전후 비교 컴포넌트 (NeoCoatBeforeAfter)
- * - PHASE 2-B 세탁실탄성코트 파일럿 전용 Image-First 증거 섹션
+ * - Exact Intent 시공 전후 증거 섹션
  * - PC: CASE별 [시공 전 | 시공 후] 1:1 좌우 비교 카드 + 하단 설명 캡션
  * - 모바일: 시공 전(사진+캡션) -> 시공 후(사진+캡션) 1컬럼 수직 스택
  * - 순수 시공 전후 팩트 기반 기술 (과장/인증/결로누수 확정 금지)
- * - 유효한 이미지가 없는 경우 자동 렌더링 생략 (null 반환)
+ * - 유효한 이미지가 없는 경우 자동 렌더링 생략 (null 반환, 0 gap)
  */
 export function NeoCoatBeforeAfter({ parsedKeyword }) {
   const [imgErrors, setImgErrors] = useState({});
 
   const taskName = parsedKeyword?.service?.keyword;
-  const cases = getLaundryPilotCases(taskName);
+  const cases = getExactIntentCases(taskName);
 
   if (!cases || cases.length === 0) {
     return null;
@@ -81,8 +81,17 @@ export function NeoCoatBeforeAfter({ parsedKeyword }) {
               wordBreak: 'keep-all',
             }}
           >
-            <span className="pc-text">오염된 기존 벽면을 정리하고 탄성코트로 마감한 실제 현장입니다.</span>
-            <span className="mo-text">오염된 기존 벽면을 정리하고<br />탄성코트로 마감한 실제 현장입니다.</span>
+            {taskName === '베란다탄성코트' ? (
+              <>
+                <span className="pc-text">베란다 벽면의 기존 상태를 정리하고 탄성코트로 마감한 실제 작업 사례입니다.</span>
+                <span className="mo-text">베란다 벽면의 기존 상태를 정리하고<br />탄성코트로 마감한 실제 작업 사례입니다.</span>
+              </>
+            ) : (
+              <>
+                <span className="pc-text">오염된 기존 벽면을 정리하고 탄성코트로 마감한 실제 현장입니다.</span>
+                <span className="mo-text">오염된 기존 벽면을 정리하고<br />탄성코트로 마감한 실제 현장입니다.</span>
+              </>
+            )}
           </p>
         </div>
 
